@@ -50,6 +50,24 @@ const differentiators = [
   },
 ];
 
+const MOAT =
+  "The privacy promise is easy to claim. The execution is not. Medscribe runs a fine-tuned medical model entirely on the phone, built and measured rather than bolted on.";
+
+const moat = [
+  {
+    title: "A model tuned for this job",
+    body: "A compact, multi-task model handles label scanning, structured extraction, and safe medication Q&A on the device. Fine-tuning lifted prescription-label field extraction from 0% to 97% in evaluation.",
+  },
+  {
+    title: "Safety you can measure",
+    body: "Each release is scored against a held-out set for grounding and safe refusals. Unsafe-prompt refusals reached 100% after tuning, so “defers to a clinician” is a tested behavior, not a hope.",
+  },
+  {
+    title: "Context that compounds",
+    body: "Real visit transcripts, a real medication list, and bundled drug facts fuse into one local record, value that grows with use and is hard to replicate without the same on-device capture.",
+  },
+];
+
 const scenarios = [
   {
     title: "The ER that doesn't know you",
@@ -162,6 +180,27 @@ export default function ExecutiveSummaryPage() {
           </p>
           <div className="grid gap-4 md:grid-cols-3">
             {differentiators.map((item) => (
+              <Card key={item.title} className="card-hover">
+                <CardHeader>
+                  <CardTitle className="text-lg">{item.title}</CardTitle>
+                  <CardDescription>{item.body}</CardDescription>
+                </CardHeader>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        {/* Under the hood */}
+        <section className="space-y-6">
+          <SectionLabel>Under the hood</SectionLabel>
+          <h2 className="font-serif text-3xl font-semibold tracking-tight sm:text-4xl">
+            Easy to claim. Hard to copy.
+          </h2>
+          <p className="max-w-4xl leading-relaxed text-muted-foreground">
+            {MOAT}
+          </p>
+          <div className="grid gap-4 md:grid-cols-3">
+            {moat.map((item) => (
               <Card key={item.title} className="card-hover">
                 <CardHeader>
                   <CardTitle className="text-lg">{item.title}</CardTitle>
@@ -288,6 +327,26 @@ export default function ExecutiveSummaryPage() {
           </p>
           <div className="mt-1 grid grid-cols-3 gap-x-4">
             {differentiators.map((item) => (
+              <p
+                key={item.title}
+                className="text-[11pt] leading-[1.25] text-slate-700"
+              >
+                <span className="font-semibold text-foreground">
+                  {item.title}.
+                </span>{" "}
+                {item.body}
+              </p>
+            ))}
+          </div>
+        </section>
+
+        {/* Under The Hood */}
+        <section className="border-b border-teal-900/10 py-1">
+          <h2 className="font-serif text-[12pt] font-semibold tracking-tight text-foreground">
+            Under The Hood
+          </h2>
+          <div className="mt-0.5 grid grid-cols-3 gap-x-4">
+            {moat.map((item) => (
               <p
                 key={item.title}
                 className="text-[11pt] leading-[1.25] text-slate-700"
