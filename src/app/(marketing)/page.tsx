@@ -332,7 +332,7 @@ export default function HomePage() {
               variant="outline"
               className="border-white/30 bg-white text-primary-button hover:bg-white/90"
             >
-              <a href="https://soconnor.dev">
+              <a href="mailto:sean@soconnor.dev?subject=Medscribe%20TestFlight%20invite%20request&body=Hi%20Sean%2C%0D%0A%0D%0AI%27d%20like%20a%20TestFlight%20invite%20to%20try%20Medscribe.%20I%27m%20managing%20medications%2C%20visits%2C%20or%20emergency%20context%20for%20someone%20I%20care%20for.%0D%0A%0D%0AThanks%21">
                 Request an invite
               </a>
             </Button>
