@@ -93,18 +93,15 @@ export default function HomePage() {
       {/* Hero */}
       <section className="grid items-center gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(230px,280px)] lg:gap-14">
         <div className="space-y-6">
-          <div className="animate-fade-in-up space-y-4">
-            <SectionLabel>Private complex-care context</SectionLabel>
-            <h1 className="font-serif text-4xl leading-[1.05] font-semibold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-              Medscribe
-            </h1>
-            <p className="max-w-xl font-serif text-3xl leading-tight font-semibold tracking-tight text-foreground sm:text-4xl">
+          <div className="animate-fade-in-up space-y-5">
+            <SectionLabel>Medscribe · Private complex-care context</SectionLabel>
+            <h1 className="max-w-2xl font-serif text-4xl leading-[1.05] font-semibold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
               Be known when care gets complicated
-            </p>
+            </h1>
             <p className="max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Medscribe is a private medical context app for families managing
-              complex care. It keeps visits, medications, baseline, contacts,
-              allergies, and emergency facts ready before the chart catches up.
+              A private medical context app for families managing complex care.
+              It keeps visits, medications, baseline, contacts, allergies, and
+              emergency facts ready before the chart catches up.
             </p>
             <p className="text-sm text-muted-foreground">{today}</p>
           </div>
@@ -147,7 +144,7 @@ export default function HomePage() {
         <div className="grid gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-start">
           <div className="space-y-3">
             <h2 className="font-serif text-3xl font-semibold tracking-tight sm:text-4xl">
-              Be known before the handoff breaks
+              The story scatters right when it matters
             </h2>
             <p className="max-w-xl leading-relaxed text-muted-foreground">
               A daughter remembers the medication schedule. A spouse knows what
@@ -181,7 +178,7 @@ export default function HomePage() {
             return (
               <Card
                 key={action.title}
-                className={`card-hover ${action.featured ? "border-primary/20 bg-primary text-white" : ""}`}
+                className={`card-hover ${action.featured ? "border-primary-button/20 bg-primary-button text-white" : ""}`}
               >
                 <CardHeader className="gap-3">
                   <div
@@ -263,7 +260,7 @@ export default function HomePage() {
             <p className="text-sm leading-relaxed text-foreground">
               All AI models run on your device. No health data is uploaded for
               processing. The medication chatbot stays in drug-information
-              territory — it defers dosing and diagnosis questions to your
+              territory. It defers dosing and diagnosis questions to your
               clinician or pharmacist.
             </p>
           </CardContent>
@@ -319,7 +316,7 @@ export default function HomePage() {
 
       {/* CTA */}
       <section className="animate-fade-in-up">
-        <Card className="overflow-hidden border-primary/20 bg-primary text-white">
+        <Card className="overflow-hidden border-primary-button/20 bg-primary-button text-white">
           <CardHeader className="gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div className="space-y-2">
               <CardTitle className="text-white">Try Medscribe on iOS</CardTitle>
@@ -333,7 +330,7 @@ export default function HomePage() {
               asChild
               size="lg"
               variant="outline"
-              className="border-white/30 bg-white text-primary hover:bg-white/90"
+              className="border-white/30 bg-white text-primary-button hover:bg-white/90"
             >
               <a href="https://soconnor.dev">
                 Request an invite

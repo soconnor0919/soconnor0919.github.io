@@ -3,10 +3,6 @@ import "~/styles/globals.css";
 import { type Metadata } from "next";
 import { Instrument_Sans, Playfair_Display } from "next/font/google";
 
-import { ScreenBackground } from "~/components/screen-background";
-import { SiteFooter } from "~/components/site-footer";
-import { SiteHeader } from "~/components/site-header";
-
 const instrumentSans = Instrument_Sans({
   subsets: ["latin"],
   variable: "--font-instrument-sans",
@@ -18,7 +14,10 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Medscribe — be known when care gets complicated",
+  title: {
+    default: "Medscribe | Be known when care gets complicated",
+    template: "Medscribe | %s",
+  },
   description:
     "A private, emergency-ready medical context app for families managing complex care. Keep visits, medications, baseline, allergies, and caregiver handoffs current on device.",
   icons: {
@@ -43,12 +42,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${instrumentSans.variable} ${playfair.variable}`}>
-      <body className="min-h-screen">
-        <ScreenBackground />
-        <SiteHeader />
-        <main>{children}</main>
-        <SiteFooter />
-      </body>
+      <body className="min-h-screen">{children}</body>
     </html>
   );
 }

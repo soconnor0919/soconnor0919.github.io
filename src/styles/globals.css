@@ -4,11 +4,13 @@
   --font-sans: var(--font-instrument-sans), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
 
+  /* Light palette: mirrors the app's `lightColors` (constants/colors.ts). */
   --color-canvas: #f8fafc;
   --color-surface: #ffffff;
   --color-surface-soft: #f1f5f9;
   --color-primary: #0f766e;
   --color-primary-light: #ccfbf1;
+  --color-primary-button: #0f766e;
   --color-foreground: #0f172a;
   --color-muted-foreground: #64748b;
   --color-border-soft: #e2e8f0;
@@ -17,6 +19,35 @@
 }
 
 @layer base {
+  :root {
+    color-scheme: light;
+    --grid-line: rgba(15, 23, 42, 0.055);
+  }
+
+  /*
+   * Dark palette: mirrors the app's `darkColors` (constants/colors.ts).
+   * `--color-primary` stays the bright accent (text/icons/borders); filled
+   * buttons use the muted `--color-primary-button` so white text keeps its
+   * contrast, matching the app's primary vs. primaryButton split.
+   */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: dark;
+      --color-canvas: #0b1220;
+      --color-surface: #1e293b;
+      --color-surface-soft: #111827;
+      --color-primary: #2dd4bf;
+      --color-primary-light: #134e4a;
+      --color-primary-button: #115e59;
+      --color-foreground: #f1f5f9;
+      --color-muted-foreground: #94a3b8;
+      --color-border-soft: #334155;
+      --color-success: #34d399;
+      --color-success-light: #064e3b;
+      --grid-line: rgba(45, 212, 191, 0.08);
+    }
+  }
+
   html {
     scroll-behavior: smooth;
   }
@@ -57,9 +88,13 @@
   animation: fade-in-up 0.5s ease-out 0.3s both;
 }
 
-.summary-sheet {
+/*
+ * Branded one-page PDF sheet: a green-to-white gradient washed over a faint
+ * teal grid. Only rendered for print (the on-screen page mirrors the homepage).
+ */
+.print-sheet {
   background:
-    linear-gradient(135deg, rgba(240, 253, 250, 0.92), rgba(255, 255, 255, 0.96) 38%, rgba(236, 253, 245, 0.9)),
+    linear-gradient(150deg, #ccfbf1 0%, #f0fdfa 30%, #ffffff 64%),
     linear-gradient(rgba(15, 118, 110, 0.07) 1px, transparent 1px),
     linear-gradient(90deg, rgba(15, 118, 110, 0.06) 1px, transparent 1px);
   background-size: auto, 22px 22px, 22px 22px;
@@ -96,7 +131,7 @@
     animation: none !important;
   }
 
-  .summary-sheet {
+  .print-sheet {
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
   }

@@ -8,6 +8,8 @@ export const env = createEnv({
    */
   server: {
     NODE_ENV: z.enum(["development", "test", "production"]),
+    // Optional site-wide password gate via `/login`, enforced in `src/proxy.ts`.
+    SITE_PASSWORD: z.string().optional(),
   },
 
   /**
@@ -25,6 +27,7 @@ export const env = createEnv({
    */
   runtimeEnv: {
     NODE_ENV: process.env.NODE_ENV,
+    SITE_PASSWORD: process.env.SITE_PASSWORD,
     // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
   },
   /**
