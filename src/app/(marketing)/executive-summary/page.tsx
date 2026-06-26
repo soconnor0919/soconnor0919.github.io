@@ -2,13 +2,17 @@ import type { CSSProperties } from "react";
 
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 import { MedscribeLogo } from "~/components/medscribe-logo";
 import { PhoneMockup } from "~/components/phone-mockup";
 import { PrintButton } from "~/components/print-button";
 import { SectionLabel } from "~/components/section-label";
+import { Badge } from "~/components/ui/badge";
 import {
   Card,
+  CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
@@ -188,6 +192,49 @@ export default function ExecutiveSummaryPage() {
               </Card>
             ))}
           </div>
+        </section>
+
+        {/* Where we fit */}
+        <section className="space-y-5">
+          <SectionLabel>Where we fit</SectionLabel>
+          <h2 className="font-serif text-3xl font-semibold tracking-tight sm:text-4xl">
+            The field is full of slices.
+          </h2>
+          <p className="max-w-3xl leading-relaxed text-muted-foreground">
+            Visit recorders, medication apps, record vaults, emergency IDs, and
+            caregiver tools each solve one part of the problem. None keeps a
+            private, patient-owned record current day to day and ready to hand
+            over in a crisis.
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {[
+              "Visit recorders",
+              "Medication apps",
+              "Record vaults",
+              "Emergency IDs",
+              "Caregiver tools",
+            ].map((slice) => (
+              <Badge key={slice} variant="outline">
+                {slice}
+              </Badge>
+            ))}
+          </div>
+          <Card className="border-primary-button/20 bg-primary-button text-white">
+            <CardContent className="pt-5">
+              <p className="leading-relaxed">
+                Medscribe connects the daily loop to the emergency handoff: one
+                private record that stays current through normal use and is ready
+                when the system does not know the patient.
+              </p>
+            </CardContent>
+          </Card>
+          <Link
+            href="/landscape"
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-primary underline-offset-4 hover:underline"
+          >
+            See the full landscape
+            <ArrowRight className="size-4" />
+          </Link>
         </section>
 
         {/* Under the hood */}

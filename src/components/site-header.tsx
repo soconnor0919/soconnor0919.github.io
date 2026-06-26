@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { FileText, Home, Menu, X } from "lucide-react";
+import { FileText, Home, Layers, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -11,6 +11,7 @@ import { cn } from "~/lib/utils";
 const navLinks = [
   { href: "/", label: "About", icon: Home },
   { href: "/executive-summary", label: "Summary", icon: FileText },
+  { href: "/landscape", label: "Landscape", icon: Layers },
 ];
 
 export function SiteHeader() {
