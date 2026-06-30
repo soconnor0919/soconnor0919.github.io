@@ -36,6 +36,9 @@ const PROBLEM =
 const PROBLEM_BROADER =
   "This is not a rare edge case. It happens every day, to patients with Parkinson's, diabetes, heart disease, dementia, and a hundred other conditions that require precise, continuous management across a fragmented system. The failure is not that families don't care. The failure is that the patient's context does not travel with them.";
 
+const WHO_ITS_FOR =
+  "Anyone managing serious, ongoing care across a fragmented health system — and the families who coordinate it. It spans conditions and ages, and eventually touches almost everyone. The failure is simple: the patient's context does not travel with them.";
+
 const DIFFERENTIATION =
   "The market is full of AI visit recorders, medication trackers, health-record apps, and emergency QR cards, each owning one slice. None owns the whole job. In Medscribe, the daily tools are the maintenance system for one emergency-ready record.";
 
@@ -82,8 +85,8 @@ const scenarios = [
     body: "An adult child manages a parent's medications, appointments, and history. When they're not there, the context disappears: a sibling visits, a home aide covers, a shift changes. Critical details live in one person's memory.",
   },
   {
-    title: "The new diabetic, overwhelmed",
-    body: "A newly diagnosed patient leaves with insulin timing, diet changes, and follow-ups they half-remember. By the next visit, the provider can't tell what was understood, tried, or missed.",
+    title: "The newly diagnosed, overwhelmed",
+    body: "After a new diagnosis, a patient leaves with a changed medication schedule, lifestyle instructions, and follow-ups they half-remember. By the next visit, the provider can't tell what was understood, tried, or missed.",
   },
 ];
 
@@ -99,6 +102,24 @@ const impact = [
   {
     title: "Patients and providers aligned",
     body: "Families see what changed and why; providers get a current snapshot instead of reconstructing it from a stressed family's memory.",
+  },
+];
+
+const FOR_HEALTH_SYSTEMS =
+  "Out-of-hospital care is the blind spot. A health system loses sight of the patient the moment they leave, and only learns what happened when they return, often in worse shape. Medscribe turns that gap into an ongoing connection the system can offer under its own brand.";
+
+const forHealthSystems = [
+  {
+    title: "An ongoing touchstone",
+    body: "The system stays informed about care between visits and gives patients a reason to keep coming back, instead of going dark until the next admission.",
+  },
+  {
+    title: "A branded surface, not a cost center",
+    body: "Skinned per provider, Medscribe becomes a revenue-generating, patient-facing presence the system owns, rather than another expense line.",
+  },
+  {
+    title: "Complements the EHR, doesn't compete",
+    body: "It integrates with Epic or any EHR rather than replacing it. The patient stays in control, and because the record is patient-owned, it persists even if the system changes EHRs.",
   },
 ];
 
@@ -281,6 +302,27 @@ export default function ExecutiveSummaryPage() {
           </div>
         </section>
 
+        {/* For health systems */}
+        <section className="space-y-6">
+          <SectionLabel>For health systems</SectionLabel>
+          <h2 className="font-serif text-3xl font-semibold tracking-tight sm:text-4xl">
+            An ongoing touchstone, not another portal.
+          </h2>
+          <p className="max-w-4xl leading-relaxed text-muted-foreground">
+            {FOR_HEALTH_SYSTEMS}
+          </p>
+          <div className="grid gap-4 md:grid-cols-3">
+            {forHealthSystems.map((item) => (
+              <Card key={item.title} className="card-hover">
+                <CardHeader>
+                  <CardTitle className="text-lg">{item.title}</CardTitle>
+                  <CardDescription>{item.body}</CardDescription>
+                </CardHeader>
+              </Card>
+            ))}
+          </div>
+        </section>
+
         {/* Beta */}
         <section className="flex flex-col gap-5 rounded-xl border border-border-soft bg-surface p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
           <p className="max-w-xl text-sm leading-relaxed text-muted-foreground">
@@ -299,29 +341,29 @@ export default function ExecutiveSummaryPage() {
       {/* ===================== PRINT: dense one-page PDF ===================== */}
       <article
         style={printLightTokens}
-        className="print-sheet hidden overflow-hidden print:flex print:h-[10.5in] print:flex-col print:justify-between print:px-[0.4in] print:py-[0.25in] print:text-[11pt] print:leading-[1.25]"
+        className="print-sheet hidden print:flex print:h-[10.5in] print:flex-col print:px-[0.5in] print:pt-[0.26in] print:pb-[0.1in] print:text-[11pt] print:leading-[1.22]"
       >
         {/* Header */}
-        <header className="grid grid-cols-[minmax(0,1fr)_1.1in] items-stretch gap-3 border-b border-teal-900/10 pb-2">
+        <header className="grid grid-cols-[minmax(0,1fr)_0.94in] items-stretch gap-4 border-b border-teal-900/10 pb-1.5">
           <div className="flex flex-col justify-between py-0.5">
-            <p className="text-[11pt] font-semibold tracking-[0.15em] text-primary uppercase">
+            <p className="text-[10pt] font-semibold tracking-[0.18em] text-primary uppercase">
               Executive Summary · June 2026
             </p>
-            <div className="mt-2 flex items-center gap-2.5">
+            <div className="mt-1.5 flex items-center gap-2.5">
               <MedscribeLogo className="h-[20pt] w-auto text-foreground" />
               <h1 className="font-serif text-[22pt] leading-none font-semibold tracking-tight text-foreground">
                 Medscribe
               </h1>
             </div>
-            <p className="mt-2 font-serif text-[12pt] leading-snug font-medium tracking-tight text-foreground italic">
+            <p className="mt-1.5 font-serif text-[12pt] leading-snug font-medium tracking-tight text-foreground italic">
               {TAGLINE}
             </p>
-            <p className="mt-3 text-[11pt] leading-[1.25] text-slate-700">
+            <p className="mt-2 text-[11pt] leading-[1.22] text-slate-700">
               {SNAPSHOT}
             </p>
           </div>
           <div className="flex justify-end">
-            <div className="h-[2in] w-[0.94in] overflow-hidden rounded-[11px] border-[3px] border-slate-950 bg-white shadow-[0_8px_18px_rgba(15,23,42,0.14)]">
+            <div className="h-[1.78in] w-[0.88in] overflow-hidden rounded-[11px] border-[3px] border-slate-950 bg-white shadow-[0_8px_18px_rgba(15,23,42,0.14)]">
               <Image
                 src="/screenshots/home.png"
                 alt="Medscribe home screen"
@@ -336,47 +378,35 @@ export default function ExecutiveSummaryPage() {
         </header>
 
         {/* The Problem */}
-        <section className="border-b border-teal-900/10 py-1">
-          <h2 className="font-serif text-[12pt] font-semibold tracking-tight text-foreground">
+        <section className="border-b border-teal-900/10 pt-1.5 pb-1">
+          <h2 className="font-serif text-[12.5pt] font-semibold tracking-tight text-foreground">
             The Problem
           </h2>
-          <p className="mt-0.5 text-[11pt] leading-[1.25] text-slate-700">
-            {PROBLEM} {PROBLEM_BROADER}
+          <p className="mt-1 text-[11pt] leading-[1.22] text-slate-700">
+            {PROBLEM}
           </p>
         </section>
 
-        {/* Who This Is For */}
-        <section className="border-b border-teal-900/10 py-1">
-          <h2 className="font-serif text-[12pt] font-semibold tracking-tight text-foreground">
-            Who This Is For
+        {/* Who It's For */}
+        <section className="border-b border-teal-900/10 pt-1.5 pb-1">
+          <h2 className="font-serif text-[12.5pt] font-semibold tracking-tight text-foreground">
+            Who It&apos;s For
           </h2>
-          <div className="mt-0.5 grid grid-cols-3 gap-x-4">
-            {scenarios.map((scenario) => (
-              <div key={scenario.title}>
-                <p className="text-[11pt] font-semibold leading-[1.25] text-foreground">
-                  {scenario.title}
-                </p>
-                <p className="text-[11pt] leading-[1.25] text-slate-700">
-                  {scenario.body}
-                </p>
-              </div>
-            ))}
-          </div>
+          <p className="mt-1 text-[11pt] leading-[1.22] text-slate-700">
+            {WHO_ITS_FOR}
+          </p>
         </section>
 
         {/* Why This Is Different */}
-        <section className="border-b border-teal-900/10 py-1">
-          <h2 className="font-serif text-[12pt] font-semibold tracking-tight text-foreground">
+        <section className="border-b border-teal-900/10 pt-1.5 pb-1">
+          <h2 className="font-serif text-[12.5pt] font-semibold tracking-tight text-foreground">
             Why This Is Different
           </h2>
-          <p className="mt-0.5 text-[11pt] leading-[1.25] text-slate-700">
-            {DIFFERENTIATION}
-          </p>
-          <div className="mt-1 grid grid-cols-3 gap-x-4">
+          <div className="mt-1.5 grid grid-cols-3 gap-x-6">
             {differentiators.map((item) => (
               <p
                 key={item.title}
-                className="text-[11pt] leading-[1.25] text-slate-700"
+                className="text-[11pt] leading-[1.22] text-slate-700"
               >
                 <span className="font-semibold text-foreground">
                   {item.title}.
@@ -388,15 +418,15 @@ export default function ExecutiveSummaryPage() {
         </section>
 
         {/* Under The Hood */}
-        <section className="border-b border-teal-900/10 py-1">
-          <h2 className="font-serif text-[12pt] font-semibold tracking-tight text-foreground">
+        <section className="border-b border-teal-900/10 pt-1.5 pb-1">
+          <h2 className="font-serif text-[12.5pt] font-semibold tracking-tight text-foreground">
             Under The Hood
           </h2>
-          <div className="mt-0.5 grid grid-cols-3 gap-x-4">
+          <div className="mt-1 grid grid-cols-3 gap-x-6">
             {moat.map((item) => (
               <p
                 key={item.title}
-                className="text-[11pt] leading-[1.25] text-slate-700"
+                className="text-[11pt] leading-[1.22] text-slate-700"
               >
                 <span className="font-semibold text-foreground">
                   {item.title}.
@@ -407,16 +437,16 @@ export default function ExecutiveSummaryPage() {
           </div>
         </section>
 
-        {/* Impact */}
-        <section className="py-1">
-          <h2 className="font-serif text-[12pt] font-semibold tracking-tight text-foreground">
-            Impact
+        {/* For Health Systems */}
+        <section className="pt-1.5">
+          <h2 className="font-serif text-[12.5pt] font-semibold tracking-tight text-foreground">
+            For Health Systems
           </h2>
-          <div className="mt-0.5 grid grid-cols-3 gap-x-4">
-            {impact.map((item) => (
+          <div className="mt-1 grid grid-cols-3 gap-x-6">
+            {forHealthSystems.map((item) => (
               <p
                 key={item.title}
-                className="text-[11pt] leading-[1.25] text-slate-700"
+                className="text-[11pt] leading-[1.22] text-slate-700"
               >
                 <span className="font-semibold text-foreground">
                   {item.title}.
@@ -427,7 +457,7 @@ export default function ExecutiveSummaryPage() {
           </div>
         </section>
 
-        <footer className="flex items-center justify-between border-t border-teal-900/10 pt-1 text-[11pt] text-slate-500">
+        <footer className="mt-auto flex items-center justify-between border-t border-teal-900/10 pt-1.5 text-[10pt] text-slate-500">
           <p>Sean O&apos;Connor</p>
           <p className="text-slate-400">
             A beta is available on iOS through TestFlight.
