@@ -31,13 +31,13 @@ const SNAPSHOT =
   "Medscribe is a private, patient-owned medical record and companion for people managing ongoing care and the families beside them. It captures visits, makes medications and instructions easy to understand and keep current day to day, and stays ready to hand to a caregiver, a new specialist, or an ER. Everything runs on the device; nothing is uploaded.";
 
 const PROBLEM =
-  "Care is fragmented and hard to carry. Patients forget most of what they're told in a visit, juggle medications with no clear picture of what each is for, and lose track of what changed and why. Then they end up somewhere new — a covering doctor, a specialist, an ER outside their network — and none of it travels with them. The family knows, but can't produce a clear, current record under pressure.";
+  "Care is fragmented and hard to carry. Patients forget most of what they're told in a visit, juggle medications with no clear picture of what each is for, and lose track of what changed and why. Then they end up somewhere new: a covering doctor, a specialist, an ER outside their network, and none of it travels with them. The family knows, but can't produce a clear, current record under pressure.";
 
 const PROBLEM_BROADER =
   "This is not a rare edge case. It happens every day, to patients with Parkinson's, diabetes, heart disease, dementia, and a hundred other conditions that require precise, continuous management across a fragmented system. The failure is not that families don't care. The failure is that the patient's context does not travel with them.";
 
 const WHO_ITS_FOR =
-  "Anyone managing serious, ongoing care across a fragmented health system — and the families who coordinate it. It spans conditions and ages, and eventually touches almost everyone. The failure is simple: the patient's context does not travel with them.";
+  "Anyone managing serious, ongoing care across a fragmented health system, and the families who coordinate it. It spans conditions and ages, and eventually touches almost everyone. The failure is simple: the patient's context does not travel with them.";
 
 const DIFFERENTIATION =
   "The market is full of AI visit recorders, medication trackers, health-record apps, and emergency QR cards, each owning one slice. None owns the whole job. In Medscribe, the daily tools are the maintenance system for one emergency-ready record.";
@@ -45,7 +45,7 @@ const DIFFERENTIATION =
 const differentiators = [
   {
     title: "The record is the product",
-    body: "Recording, scanning, reminders, and Q&A all feed one private record you actually keep current — useful every day and ready to hand over when it counts. Competitors ship visit summaries; we ship the record you own and carry.",
+    body: "Recording, scanning, reminders, and Q&A all feed one private record you actually keep current, useful every day and ready to hand over when it counts. Competitors ship visit summaries; we ship the record you own and carry.",
   },
   {
     title: "Private by architecture",
@@ -111,11 +111,11 @@ const FOR_HEALTH_SYSTEMS =
 const forHealthSystems = [
   {
     title: "An ongoing touchstone",
-    body: "The system stays informed about care between visits and gives patients a reason to keep coming back, instead of going dark until the next admission.",
+    body: "The record lives on the patient's device; they choose what to share back, securely and revocably. That gives the system a consented window into care between visits, and a reason patients return instead of going dark.",
   },
   {
     title: "A branded surface, not a cost center",
-    body: "Skinned per provider, Medscribe becomes a revenue-generating, patient-facing presence the system owns, rather than another expense line.",
+    body: "Skinned per provider, it is a patient-facing presence the system owns, working the levers it is measured on: keeping patients in-network, improving medication adherence and follow-through, and reducing avoidable readmissions.",
   },
   {
     title: "Complements the EHR, doesn't compete",
@@ -341,7 +341,7 @@ export default function ExecutiveSummaryPage() {
       {/* ===================== PRINT: dense one-page PDF ===================== */}
       <article
         style={printLightTokens}
-        className="print-sheet hidden print:flex print:h-[10.5in] print:flex-col print:px-[0.4in] print:pt-[0.22in] print:pb-[0.1in] print:text-[11pt] print:leading-[1.22]"
+        className="print-sheet hidden print:flex print:h-[10.5in] print:flex-col print:px-[0.4in] print:pt-[0.22in] print:pb-[0.1in] print:text-[11pt] print:leading-[1.2]"
       >
         {/* Header */}
         <header className="grid grid-cols-[minmax(0,1fr)_0.94in] items-stretch gap-4 border-b border-teal-900/10 pb-1.5">
@@ -358,7 +358,7 @@ export default function ExecutiveSummaryPage() {
             <p className="mt-1.5 font-serif text-[12pt] leading-snug font-medium tracking-tight text-foreground italic">
               {TAGLINE}
             </p>
-            <p className="mt-2 text-[11pt] leading-[1.22] text-slate-700">
+            <p className="mt-2 text-[11pt] leading-[1.2] text-slate-700">
               {SNAPSHOT}
             </p>
           </div>
@@ -378,27 +378,27 @@ export default function ExecutiveSummaryPage() {
         </header>
 
         {/* The Problem */}
-        <section className="border-b border-teal-900/10 pt-1.5 pb-1">
+        <section className="border-b border-teal-900/10 pt-1 pb-1">
           <h2 className="font-serif text-[12.5pt] font-semibold tracking-tight text-foreground">
             The Problem
           </h2>
-          <p className="mt-1 text-[11pt] leading-[1.22] text-slate-700">
+          <p className="mt-1 text-[11pt] leading-[1.2] text-slate-700">
             {PROBLEM}
           </p>
         </section>
 
         {/* Who It's For */}
-        <section className="border-b border-teal-900/10 pt-1.5 pb-1">
+        <section className="border-b border-teal-900/10 pt-1 pb-1">
           <h2 className="font-serif text-[12.5pt] font-semibold tracking-tight text-foreground">
             Who It&apos;s For
           </h2>
-          <p className="mt-1 text-[11pt] leading-[1.22] text-slate-700">
+          <p className="mt-1 text-[11pt] leading-[1.2] text-slate-700">
             {WHO_ITS_FOR}
           </p>
         </section>
 
         {/* Why This Is Different */}
-        <section className="border-b border-teal-900/10 pt-1.5 pb-1">
+        <section className="border-b border-teal-900/10 pt-1 pb-1">
           <h2 className="font-serif text-[12.5pt] font-semibold tracking-tight text-foreground">
             Why This Is Different
           </h2>
@@ -406,7 +406,7 @@ export default function ExecutiveSummaryPage() {
             {differentiators.map((item) => (
               <p
                 key={item.title}
-                className="text-[11pt] leading-[1.22] text-slate-700"
+                className="text-[11pt] leading-[1.2] text-slate-700"
               >
                 <span className="font-semibold text-foreground">
                   {item.title}.
@@ -418,7 +418,7 @@ export default function ExecutiveSummaryPage() {
         </section>
 
         {/* Under The Hood */}
-        <section className="border-b border-teal-900/10 pt-1.5 pb-1">
+        <section className="border-b border-teal-900/10 pt-1 pb-1">
           <h2 className="font-serif text-[12.5pt] font-semibold tracking-tight text-foreground">
             Under The Hood
           </h2>
@@ -426,7 +426,7 @@ export default function ExecutiveSummaryPage() {
             {moat.map((item) => (
               <p
                 key={item.title}
-                className="text-[11pt] leading-[1.22] text-slate-700"
+                className="text-[11pt] leading-[1.2] text-slate-700"
               >
                 <span className="font-semibold text-foreground">
                   {item.title}.
@@ -438,7 +438,7 @@ export default function ExecutiveSummaryPage() {
         </section>
 
         {/* For Health Systems */}
-        <section className="pt-1.5">
+        <section className="pt-1">
           <h2 className="font-serif text-[12.5pt] font-semibold tracking-tight text-foreground">
             For Health Systems
           </h2>
@@ -446,7 +446,7 @@ export default function ExecutiveSummaryPage() {
             {forHealthSystems.map((item) => (
               <p
                 key={item.title}
-                className="text-[11pt] leading-[1.22] text-slate-700"
+                className="text-[11pt] leading-[1.2] text-slate-700"
               >
                 <span className="font-semibold text-foreground">
                   {item.title}.
