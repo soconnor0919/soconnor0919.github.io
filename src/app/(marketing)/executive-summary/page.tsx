@@ -28,10 +28,10 @@ const TAGLINE =
   "Your medical truth, in your pocket, and only where you say it goes.";
 
 const SNAPSHOT =
-  "Medscribe is a private, emergency-ready medical record for families managing complex care. Patients and caregivers keep medications, visits, timing, and baseline current day to day, so a clinician or provider can be handed exactly what matters when the system does not know the patient.";
+  "Medscribe is a private, patient-owned medical record and companion for people managing ongoing care and the families beside them. It captures visits, makes medications and instructions easy to understand and keep current day to day, and stays ready to hand to a caregiver, a new specialist, or an ER. Everything runs on the device; nothing is uploaded.";
 
 const PROBLEM =
-  "Someone managing a serious condition ends up somewhere new: an ER outside their network, a covering doctor, a hospital that runs different software. Their records don't transfer. The team assesses them on how they present, not on their baseline, their exact medication timing, or what changed at their last visit. The family is there and they know, but they can't produce a clear, structured record under pressure.";
+  "Care is fragmented and hard to carry. Patients forget most of what they're told in a visit, juggle medications with no clear picture of what each is for, and lose track of what changed and why. Then they end up somewhere new — a covering doctor, a specialist, an ER outside their network — and none of it travels with them. The family knows, but can't produce a clear, current record under pressure.";
 
 const PROBLEM_BROADER =
   "This is not a rare edge case. It happens every day, to patients with Parkinson's, diabetes, heart disease, dementia, and a hundred other conditions that require precise, continuous management across a fragmented system. The failure is not that families don't care. The failure is that the patient's context does not travel with them.";
@@ -45,7 +45,7 @@ const DIFFERENTIATION =
 const differentiators = [
   {
     title: "The record is the product",
-    body: "Recording, scanning, reminders, and Q&A keep one private, emergency-ready record accurate. Competitors ship visit summaries; we ship a record you can hand over in a crisis.",
+    body: "Recording, scanning, reminders, and Q&A all feed one private record you actually keep current — useful every day and ready to hand over when it counts. Competitors ship visit summaries; we ship the record you own and carry.",
   },
   {
     title: "Private by architecture",
@@ -341,7 +341,7 @@ export default function ExecutiveSummaryPage() {
       {/* ===================== PRINT: dense one-page PDF ===================== */}
       <article
         style={printLightTokens}
-        className="print-sheet hidden print:flex print:h-[10.5in] print:flex-col print:px-[0.5in] print:pt-[0.26in] print:pb-[0.1in] print:text-[11pt] print:leading-[1.22]"
+        className="print-sheet hidden print:flex print:h-[10.5in] print:flex-col print:px-[0.4in] print:pt-[0.22in] print:pb-[0.1in] print:text-[11pt] print:leading-[1.22]"
       >
         {/* Header */}
         <header className="grid grid-cols-[minmax(0,1fr)_0.94in] items-stretch gap-4 border-b border-teal-900/10 pb-1.5">
