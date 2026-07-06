@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { redirect } from "next/navigation";
 
 import { SectionLabel } from "~/components/section-label";
 import {
@@ -63,6 +64,11 @@ const bundle = [
 ];
 
 export default function LandscapePage() {
+  // Unpublished for now — not part of what external contacts (e.g. the
+  // Northwell introduction) should see. Content is kept in place, not
+  // deleted, so this is a one-line revert when we want it public again.
+  redirect("/");
+
   return (
     <div className="mx-auto max-w-6xl space-y-14 px-4 py-10 sm:px-6 lg:space-y-20 lg:py-14">
       {/* Hero */}

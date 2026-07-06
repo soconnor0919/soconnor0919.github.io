@@ -2,8 +2,6 @@ import type { CSSProperties } from "react";
 
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 
 import { MedscribeLogo } from "~/components/medscribe-logo";
 import { PhoneMockup } from "~/components/phone-mockup";
@@ -250,13 +248,6 @@ export default function ExecutiveSummaryPage() {
               </p>
             </CardContent>
           </Card>
-          <Link
-            href="/landscape"
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-primary underline-offset-4 hover:underline"
-          >
-            See the full landscape
-            <ArrowRight className="size-4" />
-          </Link>
         </section>
 
         {/* Under the hood */}
