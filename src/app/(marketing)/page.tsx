@@ -158,6 +158,11 @@ export default function HomePage() {
               In a crisis, those details are scattered across people, portals, and
               memory.
             </p>
+            <p className="max-w-xl text-sm leading-relaxed text-muted-foreground/80 italic">
+              I built the first version of Medscribe after watching my own family
+              try to hold this together for my grandfather. The record scattered
+              right when we needed it most.
+            </p>
           </div>
           <div className="rounded-lg border border-border-soft bg-surface p-5 shadow-[0_1px_4px_rgba(0,0,0,0.05)]">
             <div className="flex items-start gap-3">
@@ -271,28 +276,6 @@ export default function HomePage() {
             </p>
           </CardContent>
         </Card>
-      </section>
-
-      {/* Screenshot strip */}
-      <section className="animate-fade-in-up space-y-6">
-        <SectionLabel>What travels with them</SectionLabel>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {[
-            { src: "/screenshots/emergency-record.png", label: "Emergency record" },
-            { src: "/screenshots/appointment-summary.png", label: "Visit summary" },
-            { src: "/screenshots/medications.png", label: "Medication list" },
-            { src: "/screenshots/chat.png", label: "Medication questions" },
-          ].map((shot) => (
-            <Card key={shot.src} className="card-hover overflow-hidden">
-              <div className="flex min-h-[270px] items-start justify-center bg-surface-soft p-4">
-                <PhoneMockup src={shot.src} alt={shot.label} width={112} />
-              </div>
-              <p className="border-t border-border-soft px-4 py-3 text-center text-sm font-medium text-muted-foreground">
-                {shot.label}
-              </p>
-            </Card>
-          ))}
-        </div>
       </section>
 
       {/* Impact */}
