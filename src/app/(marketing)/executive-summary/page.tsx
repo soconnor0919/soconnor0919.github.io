@@ -9,6 +9,7 @@ import { MedscribeLogo } from "~/components/medscribe-logo";
 import { PhoneMockup } from "~/components/phone-mockup";
 import { PrintButton } from "~/components/print-button";
 import { SectionLabel } from "~/components/section-label";
+import { BETA_FOOTER_NOTE, BETA_SUMMARY } from "~/lib/beta";
 import { Badge } from "~/components/ui/badge";
 import {
   Card,
@@ -326,9 +327,7 @@ export default function ExecutiveSummaryPage() {
         {/* Beta */}
         <section className="flex flex-col gap-5 rounded-xl border border-border-soft bg-surface p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
           <p className="max-w-xl text-sm leading-relaxed text-muted-foreground">
-            A beta is available on iOS through TestFlight. Everything runs
-            privately on the device, so no health data leaves the phone. If
-            you&apos;d like to try it, reach out.
+            {BETA_SUMMARY} If you&apos;d like to try it, reach out.
           </p>
           <PrintButton size="lg" className="shrink-0" />
         </section>
@@ -459,9 +458,7 @@ export default function ExecutiveSummaryPage() {
 
         <footer className="mt-auto flex items-center justify-between border-t border-teal-900/10 pt-1.5 text-[10pt] text-slate-500">
           <p>Sean O&apos;Connor</p>
-          <p className="text-slate-400">
-            A beta is available on iOS through TestFlight.
-          </p>
+          <p className="text-slate-400">{BETA_FOOTER_NOTE}</p>
         </footer>
       </article>
     </>

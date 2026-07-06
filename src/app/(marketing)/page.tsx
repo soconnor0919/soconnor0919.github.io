@@ -13,6 +13,11 @@ import {
 import { FeatureShowcase } from "~/components/feature-showcase";
 import { PhoneMockup } from "~/components/phone-mockup";
 import { SectionLabel } from "~/components/section-label";
+import {
+  BETA_CTA_BODY,
+  BETA_CTA_TITLE,
+  BETA_INVITE_MAILTO,
+} from "~/lib/beta";
 import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
 import {
@@ -119,8 +124,9 @@ export default function HomePage() {
           </div>
 
           <div className="animate-fade-in-up-delay-2 flex flex-wrap gap-2">
-            <Badge variant="success">On TestFlight</Badge>
-            <Badge variant="outline">iOS</Badge>
+            <Badge variant="success">Beta available</Badge>
+            <Badge variant="outline">iOS · TestFlight</Badge>
+            <Badge variant="outline">Android · Play internal</Badge>
             <Badge variant="outline">Emergency-ready</Badge>
             <Badge variant="outline">No cloud AI</Badge>
           </div>
@@ -319,11 +325,9 @@ export default function HomePage() {
         <Card className="overflow-hidden border-primary-button/20 bg-primary-button text-white">
           <CardHeader className="gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div className="space-y-2">
-              <CardTitle className="text-white">Try Medscribe on iOS</CardTitle>
+              <CardTitle className="text-white">{BETA_CTA_TITLE}</CardTitle>
               <CardDescription className="text-white/75">
-                The app is live on TestFlight. Reach out for an invite if
-                you&apos;re managing medications, visits, or emergency context for
-                someone you love.
+                {BETA_CTA_BODY}
               </CardDescription>
             </div>
             <Button
@@ -332,9 +336,7 @@ export default function HomePage() {
               variant="outline"
               className="border-white/30 bg-white text-primary-button hover:bg-white/90"
             >
-              <a href="mailto:sean@soconnor.dev?subject=Medscribe%20TestFlight%20invite%20request&body=Hi%20Sean%2C%0D%0A%0D%0AI%27d%20like%20a%20TestFlight%20invite%20to%20try%20Medscribe.%20I%27m%20managing%20medications%2C%20visits%2C%20or%20emergency%20context%20for%20someone%20I%20care%20for.%0D%0A%0D%0AThanks%21">
-                Request an invite
-              </a>
+              <a href={BETA_INVITE_MAILTO}>Request an invite</a>
             </Button>
           </CardHeader>
         </Card>

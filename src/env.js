@@ -18,7 +18,10 @@ export const env = createEnv({
    * `NEXT_PUBLIC_`.
    */
   client: {
-    // NEXT_PUBLIC_CLIENTVAR: z.string(),
+    /** Umami website ID — omit to disable analytics. */
+    NEXT_PUBLIC_UMAMI_WEBSITE_ID: z.string().optional(),
+    /** Umami script URL (defaults to Umami Cloud). */
+    NEXT_PUBLIC_UMAMI_SCRIPT_URL: z.string().url().optional(),
   },
 
   /**
@@ -28,7 +31,8 @@ export const env = createEnv({
   runtimeEnv: {
     NODE_ENV: process.env.NODE_ENV,
     SITE_PASSWORD: process.env.SITE_PASSWORD,
-    // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
+    NEXT_PUBLIC_UMAMI_WEBSITE_ID: process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID,
+    NEXT_PUBLIC_UMAMI_SCRIPT_URL: process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL,
   },
   /**
    * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially
