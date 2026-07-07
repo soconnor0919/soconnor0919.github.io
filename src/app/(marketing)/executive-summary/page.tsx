@@ -323,9 +323,17 @@ export default function ExecutiveSummaryPage() {
           <PrintButton size="lg" className="shrink-0" />
         </section>
 
-        <p className="border-t border-border-soft pt-6 text-sm text-muted-foreground">
-          Sean O&apos;Connor
-        </p>
+        <div className="space-y-3 border-t border-border-soft pt-6">
+          <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground italic">
+            I built the first version of Medscribe after watching my own family
+            try to hold this together for my grandfather. The record scattered
+            right when we needed it most.
+          </p>
+          <p className="text-sm text-muted-foreground">
+            Sean O&apos;Connor · Bucknell University, Computer Science &amp;
+            Engineering
+          </p>
+        </div>
       </div>
 
       {/* ===================== PRINT: dense one-page PDF ===================== */}
