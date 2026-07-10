@@ -8,7 +8,6 @@ import { PhoneMockup } from "~/components/phone-mockup";
 import { PrintButton } from "~/components/print-button";
 import { SectionLabel } from "~/components/section-label";
 import { BETA_FOOTER_NOTE, BETA_SUMMARY } from "~/lib/beta";
-import { Badge } from "~/components/ui/badge";
 import {
   Card,
   CardContent,
@@ -105,20 +104,20 @@ const impact = [
 ];
 
 const FOR_HEALTH_SYSTEMS =
-  "Out-of-hospital care is the blind spot. A health system loses sight of the patient the moment they leave, and only learns what happened when they return, often in worse shape. Medscribe turns that gap into an ongoing connection the system can offer under its own brand.";
+  "Epic is the definitive record of care inside the network. What no institutional EHR is built to be is the record the patient owns and carries everywhere else: the out-of-network ER, the specialist on another Epic instance, the months between visits at home. That out-of-hospital stretch is a structural blind spot, not a flaw in any one system. Medscribe fills it on the patient's own device, and — only with the patient's consent — hands that context back, so the gap becomes an ongoing connection instead of a black box.";
 
 const forHealthSystems = [
   {
-    title: "An ongoing touchstone",
-    body: "The record lives on the patient's device; they choose what to share back, securely and revocably. That gives the system a consented window into care between visits, and a reason patients return instead of going dark.",
+    title: "Reaches where the EHR can't",
+    body: "The record lives on the patient's device and travels with them: the out-of-network ER, the covering specialist, the weeks at home between visits. It stays current exactly where an institutional system loses sight of the patient.",
   },
   {
-    title: "A branded surface, not a cost center",
-    body: "Skinned per provider, it is a patient-facing presence the system owns, working the levers it is measured on: keeping patients in-network, improving medication adherence and follow-through, and reducing avoidable readmissions.",
+    title: "Feeds context back into Epic",
+    body: "With the patient's consent, the out-of-network and between-visit context Medscribe captures returns into the workflows you already run. It raises the value of the EHR investment rather than competing for budget or attention.",
   },
   {
-    title: "Complements the EHR, doesn't compete",
-    body: "It integrates with Epic or any EHR rather than replacing it. The patient stays in control, and because the record is patient-owned, it persists even if the system changes EHRs.",
+    title: "Patient-owned, so it persists",
+    body: "A branded, patient-facing surface that works the levers systems are measured on — in-network retention, medication adherence, avoidable readmissions. Because the record belongs to the patient, it holds even if the system changes EHRs.",
   },
 ];
 
@@ -212,33 +211,6 @@ export default function ExecutiveSummaryPage() {
               </Card>
             ))}
           </div>
-        </section>
-
-        {/* Where we fit */}
-        <section className="space-y-5">
-          <SectionLabel>Where we fit</SectionLabel>
-          <h2 className="font-serif text-3xl font-semibold tracking-tight sm:text-4xl">
-            The field is full of slices.
-          </h2>
-          <p className="max-w-3xl leading-relaxed text-muted-foreground">
-            Visit recorders, medication apps, record vaults, emergency IDs, and
-            caregiver tools each solve one part of the problem. None keeps a
-            private, patient-owned record current day to day and ready to hand
-            over in a crisis.
-          </p>
-          <div className="flex flex-wrap gap-2">
-            {[
-              "Visit recorders",
-              "Medication apps",
-              "Record vaults",
-              "Emergency IDs",
-              "Caregiver tools",
-            ].map((slice) => (
-              <Badge key={slice} variant="outline">
-                {slice}
-              </Badge>
-            ))}
-          </div>
           <Card className="border-primary-button/20 bg-primary-button text-white">
             <CardContent className="pt-5">
               <p className="leading-relaxed">
@@ -323,17 +295,9 @@ export default function ExecutiveSummaryPage() {
           <PrintButton size="lg" className="shrink-0" />
         </section>
 
-        <div className="space-y-3 border-t border-border-soft pt-6">
-          <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground italic">
-            I built the first version of Medscribe after watching my own family
-            try to hold this together for my grandfather. The record scattered
-            right when we needed it most.
-          </p>
-          <p className="text-sm text-muted-foreground">
-            Sean O&apos;Connor · Bucknell University, Computer Science &amp;
-            Engineering
-          </p>
-        </div>
+        <p className="border-t border-border-soft pt-6 text-sm text-muted-foreground">
+          Sean O&apos;Connor
+        </p>
       </div>
 
       {/* ===================== PRINT: dense one-page PDF ===================== */}

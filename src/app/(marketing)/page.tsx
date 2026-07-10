@@ -243,7 +243,9 @@ export default function HomePage() {
           <p className="max-w-2xl text-muted-foreground">
             The crowded space already has visit recorders, medication apps, and
             caregiver portals. Medscribe&apos;s wedge is the private, portable
-            context layer families control before an institution is ready.
+            context layer families control before an institution is ready — and
+            it works alongside the systems a care team already uses, not instead
+            of them.
           </p>
         </div>
 
