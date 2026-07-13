@@ -1,14 +1,14 @@
 export function SiteFooter() {
   return (
     <footer className="print-hidden border-t border-border-soft bg-surface/70">
-      <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-10 text-sm text-muted-foreground sm:px-6 sm:flex-row sm:items-center sm:justify-between">
+      <div className="mx-auto flex max-w-5xl flex-col gap-4 px-4 py-10 text-sm text-muted-foreground sm:px-6 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <p className="font-serif text-base font-semibold text-foreground">Medscribe</p>
           <p className="mt-1 max-w-md leading-relaxed">
             Be known when care gets complicated.
           </p>
         </div>
-        <div>
+        <div className="sm:text-right">
           <p>
             Built by{" "}
             <a
@@ -17,6 +17,9 @@ export function SiteFooter() {
             >
               Sean O&apos;Connor
             </a>
+          </p>
+          <p className="mt-1 text-xs text-muted-foreground/80">
+            &copy; {new Date().getFullYear()} Hadlock Holdings LLC
           </p>
         </div>
       </div>
