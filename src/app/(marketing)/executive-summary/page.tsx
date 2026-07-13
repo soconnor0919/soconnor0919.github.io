@@ -1,6 +1,7 @@
 import type { CSSProperties } from "react";
 
 import type { Metadata } from "next";
+import { redirect } from "next/navigation";
 import Image from "next/image";
 
 import { MedscribeLogo } from "~/components/medscribe-logo";
@@ -131,6 +132,11 @@ const printLightTokens = {
 } as CSSProperties;
 
 export default function ExecutiveSummaryPage() {
+  // The home page is now the executive summary (single-page site). This deep
+  // page is retired but kept in place — its content (incl. the print one-pager)
+  // is a one-line revert away if we want a longer version back.
+  redirect("/");
+
   return (
     <>
       {/* ===================== SCREEN ===================== */}
