@@ -96,7 +96,7 @@ const accessFit = [
 export default function HomePage() {
   return (
     <>
-      <section className="relative isolate min-h-[calc(100svh-4rem)] overflow-hidden px-4 pt-14 sm:px-6 sm:pt-20 lg:pt-24">
+      <section className="relative isolate min-h-[calc(100svh-4rem)] overflow-x-clip px-4 pt-14 sm:px-6 sm:pt-20 lg:pt-24">
         <div className="bg-primary-light/55 absolute top-0 left-1/2 -z-10 h-[38rem] w-[68rem] max-w-[120vw] -translate-x-1/2 rounded-full blur-3xl" />
         <div className="mx-auto max-w-7xl text-center">
           <div className="animate-fade-in-up flex items-center justify-center gap-3">
@@ -127,29 +127,31 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="relative mx-auto mt-12 h-[44rem] max-w-5xl sm:h-[58rem] lg:mt-8 lg:h-[64rem]">
-          <div className="absolute top-24 left-1/2 w-[17rem] -translate-x-[86%] -rotate-6 sm:top-28 sm:w-[22rem] lg:top-32 lg:w-[26rem]">
-            <ProductDevice
-              src="/screenshots/product-bezel-2026-08-20/summary-natural.webp"
-              darkSrc="/screenshots/product-bezel-2026-08-20/summary-natural-dark.webp"
-              alt="Medscribe visit summary in a natural titanium iPhone product bezel"
-              className="pitch-device-motion pitch-device-drift-left"
-              sizes="(min-width: 1024px) 416px, (min-width: 640px) 352px, 272px"
-              priority
-            />
-          </div>
-          <div className="absolute top-0 left-1/2 z-10 w-[18rem] -translate-x-[14%] rotate-5 sm:w-[23rem] lg:w-[28rem]">
-            <ProductDevice
-              src="/screenshots/product-bezel-2026-08-20/home-black.webp"
-              darkSrc="/screenshots/product-bezel-2026-08-20/home-black-dark.webp"
-              alt="Medscribe home screen in a black titanium iPhone product bezel"
-              className="pitch-device-motion pitch-device-drift-right"
-              sizes="(min-width: 1024px) 448px, (min-width: 640px) 368px, 288px"
-              priority
-            />
+        <div className="pitch-hero-stage relative mx-auto mt-12 h-[190svh] max-w-5xl lg:mt-8">
+          <div className="sticky top-16 h-[calc(100svh-4rem)]">
+            <div className="absolute top-24 left-1/2 w-[17rem] -translate-x-[86%] -rotate-6 sm:top-28 sm:w-[22rem] lg:top-32 lg:w-[26rem]">
+              <ProductDevice
+                src="/screenshots/product-bezel-2026-08-20/summary-natural.webp"
+                darkSrc="/screenshots/product-bezel-2026-08-20/summary-natural-dark.webp"
+                alt="Medscribe visit summary in a natural titanium iPhone product bezel"
+                className="pitch-hero-phone pitch-hero-phone-left"
+                sizes="(min-width: 1024px) 416px, (min-width: 640px) 352px, 272px"
+                priority
+              />
+            </div>
+            <div className="absolute top-0 left-1/2 z-10 w-[18rem] -translate-x-[14%] rotate-5 sm:w-[23rem] lg:w-[28rem]">
+              <ProductDevice
+                src="/screenshots/product-bezel-2026-08-20/home-black.webp"
+                darkSrc="/screenshots/product-bezel-2026-08-20/home-black-dark.webp"
+                alt="Medscribe home screen in a black titanium iPhone product bezel"
+                className="pitch-hero-phone pitch-hero-phone-right"
+                sizes="(min-width: 1024px) 448px, (min-width: 640px) 368px, 288px"
+                priority
+              />
+            </div>
           </div>
         </div>
-        <p className="text-muted-foreground relative z-20 mx-auto pb-8 text-center text-xs font-medium tracking-wide">
+        <p className="text-muted-foreground relative z-20 mx-auto mt-4 pb-8 text-center text-xs font-medium tracking-wide">
           Illustrative profile · Medscribe interface
         </p>
       </section>
