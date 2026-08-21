@@ -131,6 +131,7 @@ export default function HomePage() {
               src="/screenshots/pitch/summary-natural.webp"
               darkSrc="/screenshots/pitch/summary-natural-dark.webp"
               alt="Medscribe visit summary in a natural titanium iPhone product bezel"
+              className="pitch-device-motion pitch-device-drift-left"
               sizes="(min-width: 1024px) 416px, (min-width: 640px) 352px, 272px"
               priority
             />
@@ -140,6 +141,7 @@ export default function HomePage() {
               src="/screenshots/pitch/home-black.webp"
               darkSrc="/screenshots/pitch/home-black-dark.webp"
               alt="Medscribe home screen in a black titanium iPhone product bezel"
+              className="pitch-device-motion pitch-device-drift-right"
               sizes="(min-width: 1024px) 448px, (min-width: 640px) 368px, 288px"
               priority
             />
@@ -151,7 +153,7 @@ export default function HomePage() {
       </section>
 
       <section className="pitch-lazy border-border-soft bg-surface/80 flex min-h-[78svh] items-center border-y px-4 py-24 sm:px-6 lg:py-32">
-        <div className="mx-auto max-w-6xl text-center">
+        <div className="pitch-copy-motion mx-auto max-w-6xl text-center">
           <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase">
             The missing picture
           </p>
@@ -190,10 +192,10 @@ export default function HomePage() {
           </div>
 
           <ol className="space-y-8 sm:space-y-12">
-            {visitMoments.map((moment) => (
+            {visitMoments.map((moment, index) => (
               <li
                 key={moment.number}
-                className="border-border-soft bg-surface relative overflow-hidden rounded-[2.5rem] border px-5 pt-8 shadow-[0_30px_90px_rgba(15,23,42,0.08)] sm:px-10 sm:pt-10 dark:shadow-[0_30px_90px_rgba(0,0,0,0.25)]"
+                className="pitch-card-motion border-border-soft bg-surface relative overflow-hidden rounded-[2.5rem] border px-5 pt-8 shadow-[0_30px_90px_rgba(15,23,42,0.08)] sm:px-10 sm:pt-10 dark:shadow-[0_30px_90px_rgba(0,0,0,0.25)]"
               >
                 <div className="relative z-10 max-w-xl">
                   <div className="flex items-center gap-3">
@@ -217,6 +219,7 @@ export default function HomePage() {
                     src={moment.image}
                     darkSrc={moment.darkImage}
                     alt={moment.alt}
+                    className={`pitch-device-motion ${index % 2 === 0 ? "pitch-device-drift-right" : "pitch-device-drift-left"}`}
                     sizes="(min-width: 1024px) 336px, (min-width: 640px) 320px, 72vw"
                   />
                 </div>
@@ -229,7 +232,7 @@ export default function HomePage() {
       <section className="pitch-lazy relative isolate overflow-hidden bg-[#082f2c] px-4 py-24 text-white sm:px-6 lg:py-36">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_78%_18%,rgba(45,212,191,0.25),transparent_32%),radial-gradient(circle_at_16%_80%,rgba(20,184,166,0.15),transparent_28%)]" />
         <div className="mx-auto max-w-7xl">
-          <div className="mx-auto max-w-4xl text-center">
+          <div className="pitch-copy-motion mx-auto max-w-4xl text-center">
             <p className="text-xs font-bold tracking-[0.2em] text-teal-200 uppercase">
               Between visits
             </p>
@@ -249,6 +252,7 @@ export default function HomePage() {
                   src="/screenshots/pitch/medication-detail-natural.webp"
                   darkSrc="/screenshots/pitch/medication-detail-natural-dark.webp"
                   alt="Medscribe medication detail in a natural titanium iPhone product bezel"
+                  className="pitch-device-motion pitch-device-drift-left"
                   sizes="(min-width: 1024px) 368px, (min-width: 640px) 336px, 272px"
                 />
               </div>
@@ -257,6 +261,7 @@ export default function HomePage() {
                   src="/screenshots/pitch/medications-black.webp"
                   darkSrc="/screenshots/pitch/medications-black-dark.webp"
                   alt="Medscribe medication list in a black titanium iPhone product bezel"
+                  className="pitch-device-motion pitch-device-drift-right"
                   sizes="(min-width: 1024px) 384px, (min-width: 640px) 352px, 288px"
                 />
               </div>
@@ -297,7 +302,7 @@ export default function HomePage() {
 
       <section className="pitch-lazy bg-[#f0ece4] px-4 py-24 sm:px-6 lg:py-36 dark:bg-[#111827]">
         <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[1fr_0.9fr] lg:gap-24">
-          <div className="order-2 lg:order-1">
+          <div className="pitch-copy-motion order-2 lg:order-1">
             <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase">
               Ask from the record
             </p>
@@ -319,6 +324,7 @@ export default function HomePage() {
               src="/screenshots/pitch/ask-black.webp"
               darkSrc="/screenshots/pitch/ask-black-dark.webp"
               alt="Medscribe Ask response grounded in local health context, shown in a black titanium iPhone product bezel"
+              className="pitch-device-motion pitch-device-drift-right"
               sizes="(min-width: 1024px) 432px, (min-width: 640px) 384px, 78vw"
             />
           </div>
@@ -334,10 +340,11 @@ export default function HomePage() {
                 src="/screenshots/pitch/know-me-natural.webp"
                 darkSrc="/screenshots/pitch/know-me-natural-dark.webp"
                 alt="Medscribe Know Me handoff record in a natural titanium iPhone product bezel"
+                className="pitch-device-motion pitch-device-drift-left"
                 sizes="(min-width: 1024px) 448px, (min-width: 640px) 400px, 80vw"
               />
             </div>
-            <div>
+            <div className="pitch-copy-motion">
               <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase">
                 At the handoff
               </p>
@@ -425,7 +432,7 @@ export default function HomePage() {
       <section className="pitch-lazy relative isolate overflow-hidden bg-[#070d15] px-4 py-24 text-white sm:px-6 lg:py-36">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(45,212,191,0.13),transparent_36%)]" />
         <div className="mx-auto max-w-7xl">
-          <div className="mx-auto max-w-4xl text-center">
+          <div className="pitch-copy-motion mx-auto max-w-4xl text-center">
             <p className="text-xs font-bold tracking-[0.2em] text-teal-300 uppercase">
               A precise privacy boundary
             </p>
@@ -486,7 +493,7 @@ export default function HomePage() {
       </section>
 
       <section className="pitch-lazy flex min-h-[82svh] items-center px-4 py-24 sm:px-6 lg:py-32">
-        <div className="mx-auto w-full max-w-6xl overflow-hidden rounded-[3rem] border border-teal-900/10 bg-[linear-gradient(145deg,#ccfbf1_0%,#f0fdfa_44%,#ffffff_100%)] px-6 py-16 text-center shadow-[0_35px_110px_rgba(15,118,110,0.15)] sm:px-10 lg:px-20 lg:py-24 dark:border-teal-300/10 dark:bg-[linear-gradient(145deg,#134e4a_0%,#0f2930_48%,#111827_100%)]">
+        <div className="pitch-copy-motion mx-auto w-full max-w-6xl overflow-hidden rounded-[3rem] border border-teal-900/10 bg-[linear-gradient(145deg,#ccfbf1_0%,#f0fdfa_44%,#ffffff_100%)] px-6 py-16 text-center shadow-[0_35px_110px_rgba(15,118,110,0.15)] sm:px-10 lg:px-20 lg:py-24 dark:border-teal-300/10 dark:bg-[linear-gradient(145deg,#134e4a_0%,#0f2930_48%,#111827_100%)]">
           <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase">
             The right beta participant
           </p>

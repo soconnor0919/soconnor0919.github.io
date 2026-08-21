@@ -26,12 +26,13 @@ export function ProductDevice({
 }: ProductDeviceProps) {
   const shared = {
     alt,
-    width: 810,
-    height: 1656,
+    width: 1350,
+    height: 2760,
     sizes,
     priority,
+    quality: 92,
     className: cn(
-      "h-auto w-full drop-shadow-[0_35px_35px_rgba(15,23,42,0.22)] dark:drop-shadow-[0_38px_42px_rgba(0,0,0,0.5)]",
+      "h-auto w-full translate-z-0 drop-shadow-[0_35px_35px_rgba(15,23,42,0.22)] dark:drop-shadow-[0_38px_42px_rgba(0,0,0,0.5)]",
       className,
     ),
   };

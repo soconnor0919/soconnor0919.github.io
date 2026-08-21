@@ -99,6 +99,97 @@
   contain-intrinsic-size: auto 1000px;
 }
 
+/*
+ * Scroll-scrubbed product motion. This stays CSS-only so the long homepage
+ * remains a server component and ships no scroll listener or animation
+ * runtime. Browsers without view timelines simply render the resting layout.
+ */
+.pitch-device-motion {
+  --pitch-enter-x: 0px;
+  --pitch-enter-rotate: 0deg;
+  --pitch-exit-x: 0px;
+  --pitch-exit-rotate: 0deg;
+  backface-visibility: hidden;
+  transform-origin: center;
+}
+
+.pitch-device-drift-left {
+  --pitch-enter-x: -2.25rem;
+  --pitch-enter-rotate: -2deg;
+  --pitch-exit-x: 1.5rem;
+  --pitch-exit-rotate: 1.25deg;
+}
+
+.pitch-device-drift-right {
+  --pitch-enter-x: 2.25rem;
+  --pitch-enter-rotate: 2deg;
+  --pitch-exit-x: -1.5rem;
+  --pitch-exit-rotate: -1.25deg;
+}
+
+@keyframes pitch-device-scroll {
+  0% {
+    opacity: 0.42;
+    transform: translate3d(var(--pitch-enter-x), 7rem, 0) scale(0.92)
+      rotate(var(--pitch-enter-rotate));
+  }
+  38% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+  }
+  72% {
+    opacity: 1;
+    transform: translate3d(0, -1.5rem, 0) scale(1.018) rotate(0deg);
+  }
+  100% {
+    opacity: 0.78;
+    transform: translate3d(var(--pitch-exit-x), -5rem, 0) scale(0.97)
+      rotate(var(--pitch-exit-rotate));
+  }
+}
+
+@keyframes pitch-copy-scroll {
+  from {
+    opacity: 0.2;
+    transform: translate3d(0, 3.5rem, 0) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes pitch-card-scroll {
+  from {
+    opacity: 0.58;
+    transform: translate3d(0, 4rem, 0) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@supports (animation-timeline: view()) {
+  .pitch-device-motion {
+    animation: pitch-device-scroll linear both;
+    animation-timeline: view(block);
+    animation-range: entry 0% exit 100%;
+  }
+
+  .pitch-copy-motion {
+    animation: pitch-copy-scroll linear both;
+    animation-timeline: view(block);
+    animation-range: entry 5% cover 38%;
+  }
+
+  .pitch-card-motion {
+    animation: pitch-card-scroll linear both;
+    animation-timeline: view(block);
+    animation-range: entry 0% cover 32%;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -115,6 +206,14 @@
 
   .card-hover:hover {
     transform: none;
+  }
+
+  .pitch-device-motion,
+  .pitch-copy-motion,
+  .pitch-card-motion {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
 }
 

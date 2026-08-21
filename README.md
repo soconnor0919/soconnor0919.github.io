@@ -70,5 +70,8 @@ Export **in-app content only** from the simulator or device — no simulator chr
 The CSS frame dimensions assume tall iPhone screenshots and are controlled in
 `src/components/phone-mockup.tsx`. Use `captureMode="simulator"` only for old
 captures that already include device chrome. Homepage product images are
-composited separately at 810 × 1656 with transparent backgrounds and rendered
-through `src/components/product-device.tsx`.
+composited at the bezel source size of 1350 × 2760 with transparent
+backgrounds and rendered responsively through
+`src/components/product-device.tsx`. The homepage uses CSS view timelines for
+scroll-scrubbed device and chapter motion, with a static fallback and a
+reduced-motion override.
