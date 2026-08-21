@@ -162,7 +162,7 @@ export function WalgreensPrintSummary() {
           <div className="mx-auto w-[186px] rounded-[28px] border-[6px] border-slate-950 bg-slate-950 p-1 shadow-[0_18px_45px_rgba(15,23,42,0.18)]">
             <div className="overflow-hidden rounded-[19px] bg-white">
               <Image
-                src="/screenshots/medications.png"
+                src="/screenshots/product-glass-2026-08-20/medications-light.png"
                 alt="Medscribe medications screen"
                 width={1206}
                 height={2622}
@@ -225,7 +225,9 @@ export function WalgreensPrintSummary() {
       <PrintPage page={2}>
         <section className="pt-3">
           <p className="northwell-print-label">Who it helps</p>
-          <h2 className="northwell-print-title">Every capability pays off twice</h2>
+          <h2 className="northwell-print-title">
+            Every capability pays off twice
+          </h2>
           <p className="northwell-print-lede max-w-[660px]">
             The features that make Medscribe genuinely useful to the patient are
             the same ones that move the numbers Walgreens is measured on.
@@ -287,7 +289,8 @@ export function WalgreensPrintSummary() {
             </h3>
             <p className="mt-2 text-[10.5px] leading-[1.5] text-slate-600">
               Live in beta on iOS and Android today. The core patient experience
-              ships now; the business layer is what a partnership builds together.
+              ships now; the business layer is what a partnership builds
+              together.
             </p>
           </div>
           <div>

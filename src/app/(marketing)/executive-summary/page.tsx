@@ -49,7 +49,7 @@ const differentiators = [
   },
   {
     title: "Private by architecture",
-    body: "AI runs on-device: no cloud processing, no health-data upload, no tracking, no account. Others say \"encrypted\" while their store disclosures admit cloud collection.",
+    body: 'AI runs on-device: no cloud processing, no health-data upload, no tracking, no account. Others say "encrypted" while their store disclosures admit cloud collection.',
   },
   {
     title: "Facts-first, not a guess",
@@ -147,21 +147,22 @@ export default function ExecutiveSummaryPage() {
           <div className="space-y-5">
             <SectionLabel>Executive Summary · June 2026</SectionLabel>
             <div className="space-y-3">
-              <h1 className="font-serif text-5xl font-semibold tracking-tight text-foreground sm:text-6xl">
+              <h1 className="text-foreground font-serif text-5xl font-semibold tracking-tight sm:text-6xl">
                 Medscribe
               </h1>
-              <p className="font-serif text-xl font-semibold tracking-tight text-foreground sm:text-2xl">
+              <p className="text-foreground font-serif text-xl font-semibold tracking-tight sm:text-2xl">
                 {TAGLINE}
               </p>
             </div>
-            <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
+            <p className="text-muted-foreground text-base leading-relaxed sm:text-lg">
               {SNAPSHOT}
             </p>
           </div>
 
           <div className="justify-self-center lg:justify-self-end">
             <PhoneMockup
-              src="/screenshots/home.png"
+              src="/screenshots/product-glass-2026-08-20/home-light.png"
+              darkSrc="/screenshots/product-glass-2026-08-20/home-dark.png"
               alt="Medscribe home screen"
               width={200}
               priority
@@ -175,9 +176,9 @@ export default function ExecutiveSummaryPage() {
           <h2 className="font-serif text-3xl font-semibold tracking-tight sm:text-4xl">
             The patient&apos;s context does not travel with them.
           </h2>
-          <div className="grid gap-6 leading-relaxed text-muted-foreground lg:grid-cols-2 lg:gap-10">
+          <div className="text-muted-foreground grid gap-6 leading-relaxed lg:grid-cols-2 lg:gap-10">
             <p>{PROBLEM}</p>
-            <p className="font-medium text-foreground">{PROBLEM_BROADER}</p>
+            <p className="text-foreground font-medium">{PROBLEM_BROADER}</p>
           </div>
         </section>
 
@@ -205,7 +206,7 @@ export default function ExecutiveSummaryPage() {
           <h2 className="font-serif text-3xl font-semibold tracking-tight sm:text-4xl">
             Everyone owns a slice. We own the whole job.
           </h2>
-          <p className="max-w-4xl leading-relaxed text-muted-foreground">
+          <p className="text-muted-foreground max-w-4xl leading-relaxed">
             {DIFFERENTIATION}
           </p>
           <div className="grid gap-4 md:grid-cols-3">
@@ -222,8 +223,8 @@ export default function ExecutiveSummaryPage() {
             <CardContent className="pt-5">
               <p className="leading-relaxed">
                 Medscribe connects the daily loop to the emergency handoff: one
-                private record that stays current through normal use and is ready
-                when the system does not know the patient.
+                private record that stays current through normal use and is
+                ready when the system does not know the patient.
               </p>
             </CardContent>
           </Card>
@@ -235,7 +236,7 @@ export default function ExecutiveSummaryPage() {
           <h2 className="font-serif text-3xl font-semibold tracking-tight sm:text-4xl">
             Easy to claim. Hard to copy.
           </h2>
-          <p className="max-w-4xl leading-relaxed text-muted-foreground">
+          <p className="text-muted-foreground max-w-4xl leading-relaxed">
             {MOAT}
           </p>
           <div className="grid gap-4 md:grid-cols-3">
@@ -279,7 +280,7 @@ export default function ExecutiveSummaryPage() {
           <h2 className="font-serif text-3xl font-semibold tracking-tight sm:text-4xl">
             An ongoing touchstone, not another portal.
           </h2>
-          <p className="max-w-4xl leading-relaxed text-muted-foreground">
+          <p className="text-muted-foreground max-w-4xl leading-relaxed">
             {FOR_HEALTH_SYSTEMS}
           </p>
           <div className="grid gap-4 md:grid-cols-3">
@@ -295,14 +296,14 @@ export default function ExecutiveSummaryPage() {
         </section>
 
         {/* Beta */}
-        <section className="flex flex-col gap-5 rounded-xl border border-border-soft bg-surface p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
-          <p className="max-w-xl text-sm leading-relaxed text-muted-foreground">
+        <section className="border-border-soft bg-surface flex flex-col gap-5 rounded-xl border p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
+          <p className="text-muted-foreground max-w-xl text-sm leading-relaxed">
             {BETA_SUMMARY} If you&apos;d like to try it, reach out.
           </p>
           <PrintButton size="lg" className="shrink-0" />
         </section>
 
-        <p className="border-t border-border-soft pt-6 text-sm text-muted-foreground">
+        <p className="border-border-soft text-muted-foreground border-t pt-6 text-sm">
           Sean O&apos;Connor
         </p>
       </div>
@@ -315,16 +316,16 @@ export default function ExecutiveSummaryPage() {
         {/* Header */}
         <header className="grid grid-cols-[minmax(0,1fr)_0.94in] items-stretch gap-4 border-b border-teal-900/10 pb-1.5">
           <div className="flex flex-col justify-between py-0.5">
-            <p className="text-[10pt] font-semibold tracking-[0.18em] text-primary uppercase">
+            <p className="text-primary text-[10pt] font-semibold tracking-[0.18em] uppercase">
               Executive Summary · June 2026
             </p>
             <div className="mt-1.5 flex items-center gap-2.5">
-              <MedscribeLogo className="h-[20pt] w-auto text-foreground" />
-              <h1 className="font-serif text-[22pt] leading-none font-semibold tracking-tight text-foreground">
+              <MedscribeLogo className="text-foreground h-[20pt] w-auto" />
+              <h1 className="text-foreground font-serif text-[22pt] leading-none font-semibold tracking-tight">
                 Medscribe
               </h1>
             </div>
-            <p className="mt-1.5 font-serif text-[12pt] leading-snug font-medium tracking-tight text-foreground italic">
+            <p className="text-foreground mt-1.5 font-serif text-[12pt] leading-snug font-medium tracking-tight italic">
               {TAGLINE}
             </p>
             <p className="mt-2 text-[11pt] leading-[1.2] text-slate-700">
@@ -334,7 +335,7 @@ export default function ExecutiveSummaryPage() {
           <div className="flex justify-end">
             <div className="h-[1.78in] w-[0.88in] overflow-hidden rounded-[11px] border-[3px] border-slate-950 bg-white shadow-[0_8px_18px_rgba(15,23,42,0.14)]">
               <Image
-                src="/screenshots/home.png"
+                src="/screenshots/product-glass-2026-08-20/home-light.png"
                 alt="Medscribe home screen"
                 width={1206}
                 height={2622}
@@ -348,7 +349,7 @@ export default function ExecutiveSummaryPage() {
 
         {/* The Problem */}
         <section className="border-b border-teal-900/10 pt-1 pb-1">
-          <h2 className="font-serif text-[12.5pt] font-semibold tracking-tight text-foreground">
+          <h2 className="text-foreground font-serif text-[12.5pt] font-semibold tracking-tight">
             The Problem
           </h2>
           <p className="mt-1 text-[11pt] leading-[1.2] text-slate-700">
@@ -358,7 +359,7 @@ export default function ExecutiveSummaryPage() {
 
         {/* Who It's For */}
         <section className="border-b border-teal-900/10 pt-1 pb-1">
-          <h2 className="font-serif text-[12.5pt] font-semibold tracking-tight text-foreground">
+          <h2 className="text-foreground font-serif text-[12.5pt] font-semibold tracking-tight">
             Who It&apos;s For
           </h2>
           <p className="mt-1 text-[11pt] leading-[1.2] text-slate-700">
@@ -368,7 +369,7 @@ export default function ExecutiveSummaryPage() {
 
         {/* Why This Is Different */}
         <section className="border-b border-teal-900/10 pt-1 pb-1">
-          <h2 className="font-serif text-[12.5pt] font-semibold tracking-tight text-foreground">
+          <h2 className="text-foreground font-serif text-[12.5pt] font-semibold tracking-tight">
             Why This Is Different
           </h2>
           <div className="mt-1.5 grid grid-cols-3 gap-x-6">
@@ -377,7 +378,7 @@ export default function ExecutiveSummaryPage() {
                 key={item.title}
                 className="text-[11pt] leading-[1.2] text-slate-700"
               >
-                <span className="font-semibold text-foreground">
+                <span className="text-foreground font-semibold">
                   {item.title}.
                 </span>{" "}
                 {item.body}
@@ -388,7 +389,7 @@ export default function ExecutiveSummaryPage() {
 
         {/* Under The Hood */}
         <section className="border-b border-teal-900/10 pt-1 pb-1">
-          <h2 className="font-serif text-[12.5pt] font-semibold tracking-tight text-foreground">
+          <h2 className="text-foreground font-serif text-[12.5pt] font-semibold tracking-tight">
             Under The Hood
           </h2>
           <div className="mt-1 grid grid-cols-3 gap-x-6">
@@ -397,7 +398,7 @@ export default function ExecutiveSummaryPage() {
                 key={item.title}
                 className="text-[11pt] leading-[1.2] text-slate-700"
               >
-                <span className="font-semibold text-foreground">
+                <span className="text-foreground font-semibold">
                   {item.title}.
                 </span>{" "}
                 {item.body}
@@ -408,7 +409,7 @@ export default function ExecutiveSummaryPage() {
 
         {/* For Health Systems */}
         <section className="pt-1">
-          <h2 className="font-serif text-[12.5pt] font-semibold tracking-tight text-foreground">
+          <h2 className="text-foreground font-serif text-[12.5pt] font-semibold tracking-tight">
             For Health Systems
           </h2>
           <div className="mt-1 grid grid-cols-3 gap-x-6">
@@ -417,7 +418,7 @@ export default function ExecutiveSummaryPage() {
                 key={item.title}
                 className="text-[11pt] leading-[1.2] text-slate-700"
               >
-                <span className="font-semibold text-foreground">
+                <span className="text-foreground font-semibold">
                   {item.title}.
                 </span>{" "}
                 {item.body}

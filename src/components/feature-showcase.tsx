@@ -26,7 +26,8 @@ const features = [
       "The person reviews generated information",
       "Structured visit-to-record change review is still roadmap",
     ],
-    image: "/screenshots/visit-detail.png",
+    image: "/screenshots/product-glass-2026-08-20/visits-light.png",
+    darkImage: "/screenshots/product-glass-2026-08-20/visits-dark.png",
     alt: "Synthetic Medscribe beta visit detail showing a visit summary and follow-up information",
   },
   {
@@ -41,7 +42,9 @@ const features = [
       "Bundled facts and known pairs use named reference datasets",
       "Coverage is intentionally bounded, not a complete interaction check",
     ],
-    image: "/screenshots/medication-detail.png",
+    image: "/screenshots/product-glass-2026-08-20/medication-detail-light.png",
+    darkImage:
+      "/screenshots/product-glass-2026-08-20/medication-detail-dark.png",
     alt: "Synthetic Medscribe beta medication detail with schedule and medication information",
   },
   {
@@ -56,7 +59,8 @@ const features = [
       "The local model helps with conversational phrasing",
       "High-risk or unsupported questions defer to a professional",
     ],
-    image: "/screenshots/chat-response.png",
+    image: "/screenshots/product-glass-2026-08-20/ask-light.png",
+    darkImage: "/screenshots/product-glass-2026-08-20/ask-dark.png",
     alt: "Synthetic Medscribe beta answer with medication context and a safety boundary",
   },
   {
@@ -71,7 +75,8 @@ const features = [
       "The person can show or share the snapshot they reviewed",
       "It complements—not replaces—clinical verification",
     ],
-    image: "/screenshots/emergency-record.png",
+    image: "/screenshots/product-glass-2026-08-20/know-me-light.png",
+    darkImage: "/screenshots/product-glass-2026-08-20/know-me-dark.png",
     alt: "Synthetic Medscribe beta Know Me handoff with active medications and review state",
   },
 ] as const;
@@ -181,7 +186,12 @@ export function FeatureShowcase() {
 
       <div className="justify-self-center lg:justify-self-end">
         <div className="border-border-soft bg-surface-soft/80 rounded-[2.5rem] border p-5 shadow-[0_30px_80px_rgba(15,23,42,0.10)] sm:p-7">
-          <PhoneMockup src={active.image} alt={active.alt} width={220} />
+          <PhoneMockup
+            src={active.image}
+            darkSrc={active.darkImage}
+            alt={active.alt}
+            width={220}
+          />
           <p className="text-muted-foreground mt-4 text-center text-xs">
             Synthetic demo data · beta interface
           </p>

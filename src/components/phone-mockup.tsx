@@ -1,9 +1,10 @@
-import Image from "next/image";
+import { getImageProps } from "next/image";
 
 import { cn } from "~/lib/utils";
 
 interface PhoneMockupProps {
   src: string;
+  darkSrc?: string;
   alt: string;
   className?: string;
   priority?: boolean;
@@ -15,6 +16,7 @@ interface PhoneMockupProps {
 
 export function PhoneMockup({
   src,
+  darkSrc,
   alt,
   className,
   priority,
@@ -22,6 +24,21 @@ export function PhoneMockup({
   captureMode = "raw",
 }: PhoneMockupProps) {
   const isSimulatorCapture = captureMode === "simulator";
+  const shared = {
+    alt,
+    width: 1206,
+    height: 2622,
+    sizes: `${width}px`,
+    priority,
+    className: cn(
+      "absolute inset-0 h-full w-full object-cover",
+      isSimulatorCapture ? "scale-[1.22] object-[50%_58%]" : "object-top",
+    ),
+  };
+  const { props: lightProps } = getImageProps({ src, ...shared });
+  const darkProps = darkSrc
+    ? getImageProps({ src: darkSrc, ...shared }).props
+    : null;
 
   return (
     <div
@@ -32,17 +49,16 @@ export function PhoneMockup({
       style={{ width }}
     >
       <div className="bg-surface relative aspect-[1206/2622] overflow-hidden rounded-[1.65rem]">
-        <Image
-          src={src}
-          alt={alt}
-          fill
-          priority={priority}
-          sizes={`${width}px`}
-          className={cn(
-            "object-cover",
-            isSimulatorCapture ? "scale-[1.22] object-[50%_58%]" : "object-top",
-          )}
-        />
+        <picture>
+          {darkProps ? (
+            <source
+              media="(prefers-color-scheme: dark)"
+              srcSet={darkProps.srcSet}
+              sizes={darkProps.sizes}
+            />
+          ) : null}
+          <img {...lightProps} alt={alt} />
+        </picture>
       </div>
     </div>
   );

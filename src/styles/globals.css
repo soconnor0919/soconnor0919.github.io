@@ -106,8 +106,10 @@
  */
 .pitch-device-motion {
   --pitch-enter-x: 0px;
+  --pitch-enter-y: 7rem;
   --pitch-enter-rotate: 0deg;
   --pitch-exit-x: 0px;
+  --pitch-exit-y: -5rem;
   --pitch-exit-rotate: 0deg;
   backface-visibility: hidden;
   transform-origin: center;
@@ -130,8 +132,8 @@
 @keyframes pitch-device-scroll {
   0% {
     opacity: 0.42;
-    transform: translate3d(var(--pitch-enter-x), 7rem, 0) scale(0.92)
-      rotate(var(--pitch-enter-rotate));
+    transform: translate3d(var(--pitch-enter-x), var(--pitch-enter-y), 0)
+      scale(0.92) rotate(var(--pitch-enter-rotate));
   }
   38% {
     opacity: 1;
@@ -143,8 +145,8 @@
   }
   100% {
     opacity: 0.78;
-    transform: translate3d(var(--pitch-exit-x), -5rem, 0) scale(0.97)
-      rotate(var(--pitch-exit-rotate));
+    transform: translate3d(var(--pitch-exit-x), var(--pitch-exit-y), 0)
+      scale(0.97) rotate(var(--pitch-exit-rotate));
   }
 }
 
@@ -187,6 +189,24 @@
     animation: pitch-card-scroll linear both;
     animation-timeline: view(block);
     animation-range: entry 0% cover 32%;
+  }
+}
+
+/* Keep the product choreography visible on phones without crowding the copy. */
+@media (max-width: 639px) {
+  .pitch-device-motion {
+    --pitch-enter-y: 4rem;
+    --pitch-exit-y: -3rem;
+  }
+
+  .pitch-device-drift-left {
+    --pitch-enter-x: -1.25rem;
+    --pitch-exit-x: 0.75rem;
+  }
+
+  .pitch-device-drift-right {
+    --pitch-enter-x: 1.25rem;
+    --pitch-exit-x: -0.75rem;
   }
 }
 

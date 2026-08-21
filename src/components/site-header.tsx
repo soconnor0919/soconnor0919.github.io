@@ -5,6 +5,7 @@ import { MedscribeLogo } from "~/components/medscribe-logo";
 import { Button } from "~/components/ui/button";
 
 const navigation = [
+  { href: "/", label: "Home" },
   { href: "/how-it-works", label: "How it works" },
   { href: "/privacy", label: "Privacy & evidence" },
 ] as const;
@@ -12,10 +13,10 @@ const navigation = [
 export function SiteHeader() {
   return (
     <header className="print-hidden border-border-soft/70 bg-canvas/88 sticky top-0 z-50 border-b backdrop-blur-lg">
-      <div className="mx-auto flex h-16 max-w-6xl items-center gap-5 px-4 sm:px-6">
+      <div className="relative mx-auto flex h-16 max-w-6xl items-center gap-5 px-4 sm:px-6">
         <Link
           href="/"
-          className="text-foreground focus-visible:ring-primary/40 flex shrink-0 items-center gap-2.5 rounded-md transition-opacity outline-none hover:opacity-75 focus-visible:ring-2"
+          className="text-foreground focus-visible:ring-primary/40 absolute left-1/2 flex shrink-0 -translate-x-1/2 items-center gap-2.5 rounded-md transition-opacity outline-none hover:opacity-75 focus-visible:ring-2 md:static md:translate-x-0"
           aria-label="Medscribe home"
         >
           <MedscribeLogo className="h-7 w-auto" />

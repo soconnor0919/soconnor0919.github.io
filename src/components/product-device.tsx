@@ -13,8 +13,8 @@ type ProductDeviceProps = {
 
 /**
  * A precomposited product capture using the licensed device bezels in
- * `public/screenshots/pitch`. Keeping the frame in the source image preserves
- * the bezel details without adding layout or client-side work.
+ * `public/screenshots/pitch-glass-2026-08-20`. Keeping the frame in the source
+ * image preserves the bezel details without adding layout or client-side work.
  */
 export function ProductDevice({
   src,

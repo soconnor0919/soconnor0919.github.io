@@ -55,7 +55,10 @@ bun run start
 
 Screenshots live in `public/screenshots/`. The long-form homepage uses
 precomposited, transparent iPhone product-bezel assets in
-`public/screenshots/pitch/`; supporting pages use the lightweight CSS frame.
+`public/screenshots/pitch-glass-2026-08-20/`; supporting pages use versioned raw
+captures from `public/screenshots/product-glass-2026-08-20/` in the lightweight
+CSS frame. Versioned paths keep newly captured UI from being hidden by stale
+browser or image-optimizer caches.
 Public pages label product imagery as synthetic demo data and beta UI.
 
 ### Capturing raw screenshots for the site
@@ -73,5 +76,5 @@ captures that already include device chrome. Homepage product images are
 composited at the bezel source size of 1350 × 2760 with transparent
 backgrounds and rendered responsively through
 `src/components/product-device.tsx`. The homepage uses CSS view timelines for
-scroll-scrubbed device and chapter motion, with a static fallback and a
-reduced-motion override.
+scroll-scrubbed device and chapter motion on desktop and mobile, with a static
+fallback and a reduced-motion override.

@@ -127,7 +127,7 @@ export function NorthwellPrintSummary() {
           <div className="mx-auto w-[194px] rounded-[28px] border-[6px] border-slate-950 bg-slate-950 p-1 shadow-[0_18px_45px_rgba(15,23,42,0.18)]">
             <div className="overflow-hidden rounded-[19px] bg-white">
               <Image
-                src="/screenshots/home.png"
+                src="/screenshots/product-glass-2026-08-20/home-light.png"
                 alt="Medscribe home screen"
                 width={1206}
                 height={2622}
