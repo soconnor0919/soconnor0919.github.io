@@ -127,7 +127,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="relative mx-auto mt-12 h-[36rem] max-w-5xl sm:h-[46rem] lg:mt-8 lg:h-[54rem]">
+        <div className="relative mx-auto mt-12 h-[44rem] max-w-5xl sm:h-[58rem] lg:mt-8 lg:h-[64rem]">
           <div className="absolute top-24 left-1/2 w-[17rem] -translate-x-[86%] -rotate-6 sm:top-28 sm:w-[22rem] lg:top-32 lg:w-[26rem]">
             <ProductDevice
               src="/screenshots/product-bezel-2026-08-20/summary-natural.webp"
@@ -148,10 +148,10 @@ export default function HomePage() {
               priority
             />
           </div>
-          <p className="text-muted-foreground absolute inset-x-0 bottom-5 text-center text-xs font-medium tracking-wide sm:bottom-10">
-            Illustrative profile · Medscribe interface
-          </p>
         </div>
+        <p className="text-muted-foreground relative z-20 mx-auto pb-8 text-center text-xs font-medium tracking-wide">
+          Illustrative profile · Medscribe interface
+        </p>
       </section>
 
       <section className="pitch-lazy border-border-soft bg-surface/80 flex min-h-[78svh] items-center border-y px-4 py-24 sm:px-6 lg:py-32">
