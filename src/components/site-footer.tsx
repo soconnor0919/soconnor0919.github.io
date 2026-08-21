@@ -1,24 +1,69 @@
+import Link from "next/link";
+
+import { MedscribeLogo } from "~/components/medscribe-logo";
+
+const footerLinks = [
+  { href: "/how-it-works", label: "How it works" },
+  { href: "/privacy", label: "Privacy & evidence" },
+  { href: "/beta", label: "Beta access" },
+] as const;
+
 export function SiteFooter() {
   return (
-    <footer className="print-hidden border-t border-border-soft bg-surface/70">
-      <div className="mx-auto flex max-w-5xl flex-col gap-4 px-4 py-10 text-sm text-muted-foreground sm:px-6 sm:flex-row sm:items-center sm:justify-between">
+    <footer className="print-hidden border-border-soft bg-surface/80 border-t">
+      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 text-sm sm:px-6 md:grid-cols-[1.3fr_0.7fr_0.7fr]">
         <div>
-          <p className="font-serif text-base font-semibold text-foreground">Medscribe</p>
-          <p className="mt-1 max-w-md leading-relaxed">
-            Be known when care gets complicated.
+          <Link
+            href="/"
+            className="text-foreground focus-visible:ring-primary/40 inline-flex items-center gap-2.5 rounded-md outline-none focus-visible:ring-2"
+          >
+            <MedscribeLogo className="h-7 w-auto" />
+            <span className="font-serif text-lg font-semibold">Medscribe</span>
+          </Link>
+          <p className="text-muted-foreground mt-4 max-w-md leading-relaxed">
+            A private, patient-controlled beta for keeping visits, medications,
+            and critical context together on the device you carry.
+          </p>
+          <p className="text-muted-foreground mt-3 text-xs leading-relaxed">
+            Medscribe does not diagnose, prescribe, or replace emergency
+            services or a clinician&apos;s verification.
           </p>
         </div>
-        <div className="sm:text-right">
-          <p>
+
+        <nav aria-label="Footer product navigation">
+          <p className="text-foreground font-semibold">Product</p>
+          <ul className="text-muted-foreground mt-3 space-y-2.5">
+            {footerLinks.map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className="hover:text-foreground focus-visible:ring-primary/40 rounded-sm underline-offset-4 outline-none hover:underline focus-visible:ring-2"
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <div>
+          <p className="text-foreground font-semibold">Contact</p>
+          <p className="text-muted-foreground mt-3 leading-relaxed">
             Built by{" "}
             <a
               href="https://soconnor.dev"
-              className="text-foreground underline-offset-4 hover:underline"
+              className="text-foreground focus-visible:ring-primary/40 rounded-sm underline-offset-4 outline-none hover:underline focus-visible:ring-2"
             >
               Sean O&apos;Connor
             </a>
           </p>
-          <p className="mt-1 text-xs text-muted-foreground/80">
+          <a
+            href="mailto:sean@soconnor.dev?subject=Medscribe%20website%20question"
+            className="text-foreground focus-visible:ring-primary/40 mt-2 inline-block rounded-sm underline-offset-4 outline-none hover:underline focus-visible:ring-2"
+          >
+            sean@soconnor.dev
+          </a>
+          <p className="text-muted-foreground/80 mt-5 text-xs">
             &copy; {new Date().getFullYear()} Hadlock Holdings LLC
           </p>
         </div>

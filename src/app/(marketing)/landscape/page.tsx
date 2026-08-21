@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   title: "Solution Landscape",
   description:
     "How the medical-context space is divided today, and the combined job no existing product owns.",
+  robots: { index: false, follow: false, nocache: true },
 };
 
 const INTRO =

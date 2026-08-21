@@ -17,11 +17,12 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "Medscribe | Be known when care gets complicated",
+    default: "Medscribe | Carry the context when care gets complicated",
     template: "Medscribe | %s",
   },
   description:
-    "A private, emergency-ready medical context app for families managing complex care. Keep visits, medications, baseline, allergies, and caregiver handoffs current on device.",
+    "A private, patient-controlled beta that helps keep visits, medications, and critical context together on your device.",
+  applicationName: "Medscribe",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -29,12 +30,14 @@ export const metadata: Metadata = {
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
     ],
-    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
   },
   openGraph: {
     title: "Medscribe",
     description:
-      "Be known when care gets complicated. Private medical context for families managing complex care.",
+      "Carry the context when care gets complicated. Private, patient-controlled medical context on your device.",
     type: "website",
   },
 };
@@ -43,7 +46,10 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${instrumentSans.variable} ${playfair.variable}`}>
+    <html
+      lang="en"
+      className={`${instrumentSans.variable} ${playfair.variable}`}
+    >
       <body className="min-h-screen">
         {children}
         <UmamiAnalytics />

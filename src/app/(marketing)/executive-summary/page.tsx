@@ -21,6 +21,7 @@ export const metadata: Metadata = {
   title: "Executive Summary",
   description:
     "One-page executive summary for Medscribe, a private medical context app for families managing complex care.",
+  robots: { index: false, follow: false, nocache: true },
 };
 
 const TAGLINE =

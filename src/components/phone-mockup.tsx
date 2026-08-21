@@ -1,7 +1,4 @@
-"use client";
-
 import Image from "next/image";
-import { IPhoneMockup } from "react-device-mockup";
 
 import { cn } from "~/lib/utils";
 
@@ -27,33 +24,26 @@ export function PhoneMockup({
   const isSimulatorCapture = captureMode === "simulator";
 
   return (
-    <div className={cn("mx-auto w-fit drop-shadow-[0_18px_45px_rgba(15,23,42,0.14)]", className)}>
-      <IPhoneMockup
-        screenWidth={width}
-        screenType="island"
-        frameColor="#111827"
-        statusbarColor="#f8fafc"
-        hideStatusBar
-        hideNavBar
-        transparentNavBar
-      >
-        <div className="relative h-full w-full overflow-hidden bg-surface">
-          <Image
-            src={src}
-            alt={alt}
-            width={1206}
-            height={2622}
-            priority={priority}
-            unoptimized
-            className={cn(
-              "h-full w-full object-cover",
-              isSimulatorCapture
-                ? "scale-[1.22] object-[50%_58%]"
-                : "object-top",
-            )}
-          />
-        </div>
-      </IPhoneMockup>
+    <div
+      className={cn(
+        "mx-auto overflow-hidden rounded-[2.25rem] border-[7px] border-slate-950 bg-slate-950 p-1 shadow-[0_24px_60px_rgba(15,23,42,0.18)]",
+        className,
+      )}
+      style={{ width }}
+    >
+      <div className="bg-surface relative aspect-[1206/2622] overflow-hidden rounded-[1.65rem]">
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          priority={priority}
+          sizes={`${width}px`}
+          className={cn(
+            "object-cover",
+            isSimulatorCapture ? "scale-[1.22] object-[50%_58%]" : "object-top",
+          )}
+        />
+      </div>
     </div>
   );
 }

@@ -1,14 +1,13 @@
 "use client";
 
+import type { KeyboardEvent } from "react";
 import { useState } from "react";
 import {
   CalendarDays,
-  Camera,
   Check,
   ContactRound,
-  Home,
   MessageCircle,
-  Shield,
+  Pill,
 } from "lucide-react";
 
 import { PhoneMockup } from "~/components/phone-mockup";
@@ -16,105 +15,108 @@ import { cn } from "~/lib/utils";
 
 const features = [
   {
-    id: "home",
-    label: "Profile",
-    icon: Home,
-    title: "One profile for the person you care for",
-    description:
-      "Visits, medications, reminders, and questions live together under the person they belong to.",
-    points: [
-      "Switch between everyone you care for",
-      "One home for the whole picture",
-      "Nothing scattered across apps",
-    ],
-    image: "/screenshots/home.png",
-    alt: "Medscribe home dashboard with record visit, search, medications, and ask shortcuts",
-  },
-  {
-    id: "context",
-    label: "Context",
-    icon: ContactRound,
-    title: "The context behind the handoff",
-    description:
-      "Conditions, medication changes, visit summaries, and caregiver notes stay close enough to become useful when time is short.",
-    points: [
-      "Baseline, allergies, and conditions up front",
-      "Time-critical medications flagged",
-      "A source trail behind each fact",
-    ],
-    image: "/screenshots/emergency-record.png",
-    alt: "Medscribe emergency record with critical care context",
-  },
-  {
     id: "visits",
     label: "Visits",
     icon: CalendarDays,
-    title: "Visit recordings that refresh the record",
+    title: "Turn a visit into context you can review",
     description:
-      "A visit can become searchable context, so a medication change or follow-up instruction does not depend on memory alone.",
+      "Type or paste notes, import a portal screenshot or document, or use consent-gated recording. The beta creates a local summary for the person to check.",
     points: [
-      "Consent-gated, on-device recording",
-      "Searchable transcript and summary",
-      "Follow-ups captured, not forgotten",
+      "Supported transcription and summarization run on device",
+      "The person reviews generated information",
+      "Structured visit-to-record change review is still roadmap",
     ],
-    image: "/screenshots/visit-timeline.png",
-    alt: "Medscribe visit timeline with appointment cards",
+    image: "/screenshots/visit-detail.png",
+    alt: "Synthetic Medscribe beta visit detail showing a visit summary and follow-up information",
   },
   {
-    id: "meds",
-    label: "Meds",
-    icon: Camera,
-    title: "Medication OCR, reminders, and history",
+    id: "medications",
+    label: "Medications",
+    icon: Pill,
+    title: "Keep the daily medication picture close",
     description:
-      "Prescription labels, reminders, refill alerts, and dose history help the family see what is supposed to happen and what actually happened.",
+      "Scan a label, correct the extracted fields, set reminders, follow refills, and see a local intake history without asking a language model to invent drug facts.",
     points: [
-      "Scan labels with the camera",
-      "Reminders and refill alerts",
-      "Dose history at a glance",
+      "Label text remains editable before it becomes the record",
+      "Bundled facts and known pairs use named reference datasets",
+      "Coverage is intentionally bounded, not a complete interaction check",
     ],
-    image: "/screenshots/medications.png",
-    alt: "Medscribe medications screen with active medications",
+    image: "/screenshots/medication-detail.png",
+    alt: "Synthetic Medscribe beta medication detail with schedule and medication information",
   },
   {
-    id: "ask",
-    label: "Ask",
+    id: "questions",
+    label: "Questions",
     icon: MessageCircle,
-    title: "Medication questions grounded in the record",
+    title: "Facts first, fluent answers second",
     description:
-      "Plain-language questions can draw from the person's record and bundled FDA facts, while keeping diagnosis and dosing with clinicians.",
+      "Medication questions can use the person’s local record and bundled fields. Dosing changes, diagnosis, and treatment decisions stay with a clinician or pharmacist.",
     points: [
-      "Plain-language answers",
-      "Grounded in the record and FDA facts",
-      "Defers dosing and diagnosis to clinicians",
+      "Known facts render from bundled data",
+      "The local model helps with conversational phrasing",
+      "High-risk or unsupported questions defer to a professional",
     ],
-    image: "/screenshots/chat.png",
-    alt: "Medscribe Ask chat answering a question about blood pressure medications",
+    image: "/screenshots/chat-response.png",
+    alt: "Synthetic Medscribe beta answer with medication context and a safety boundary",
   },
   {
-    id: "privacy",
-    label: "Privacy",
-    icon: Shield,
-    title: "Private by architecture, not policy",
+    id: "handoff",
+    label: "Know Me",
+    icon: ContactRound,
+    title: "Prepare one readable handoff",
     description:
-      "The sensitive work happens on device, so the family record is not another cloud inbox waiting to be mined.",
+      "The Know Me view brings selected medications, allergies, conditions, baseline, and contacts together. Current, unconfirmed, and review-needed states make uncertainty visible.",
     points: [
-      "On-device AI, no cloud processing",
-      "No inbox to breach or mine",
-      "You control what is ever shared",
+      "Medication schedules can include source and confirmation",
+      "The person can show or share the snapshot they reviewed",
+      "It complements—not replaces—clinical verification",
     ],
-    image: "/screenshots/settings.png",
-    alt: "Medscribe settings showing on-device AI models and privacy notice",
+    image: "/screenshots/emergency-record.png",
+    alt: "Synthetic Medscribe beta Know Me handoff with active medications and review state",
   },
 ] as const;
 
+type FeatureId = (typeof features)[number]["id"];
+
 export function FeatureShowcase() {
-  const [activeId, setActiveId] = useState<(typeof features)[number]["id"]>("home");
-  const active = features.find((f) => f.id === activeId) ?? features[0];
+  const [activeId, setActiveId] = useState<FeatureId>("visits");
+  const active =
+    features.find((feature) => feature.id === activeId) ?? features[0];
+
+  const onTabKeyDown = (event: KeyboardEvent<HTMLButtonElement>) => {
+    const activeIndex = features.findIndex(
+      (feature) => feature.id === activeId,
+    );
+    let nextIndex: number | undefined;
+
+    if (event.key === "ArrowRight" || event.key === "ArrowDown") {
+      nextIndex = (activeIndex + 1) % features.length;
+    } else if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
+      nextIndex = (activeIndex - 1 + features.length) % features.length;
+    } else if (event.key === "Home") {
+      nextIndex = 0;
+    } else if (event.key === "End") {
+      nextIndex = features.length - 1;
+    }
+
+    if (nextIndex === undefined) return;
+
+    event.preventDefault();
+    const nextFeature = features[nextIndex];
+    if (!nextFeature) return;
+
+    setActiveId(nextFeature.id);
+    document.getElementById(`feature-tab-${nextFeature.id}`)?.focus();
+  };
 
   return (
-    <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-12">
-      <div className="flex flex-col gap-5">
-        <div className="flex flex-wrap gap-2">
+    <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-16">
+      <div className="flex min-w-0 flex-col gap-6">
+        <div
+          role="tablist"
+          aria-label="Explore the Medscribe beta"
+          className="flex max-w-full gap-2 overflow-x-auto pb-1"
+        >
           {features.map((feature) => {
             const Icon = feature.icon;
             const isActive = feature.id === activeId;
@@ -122,49 +124,67 @@ export function FeatureShowcase() {
             return (
               <button
                 key={feature.id}
+                id={`feature-tab-${feature.id}`}
                 type="button"
+                role="tab"
+                aria-selected={isActive}
+                aria-controls={`feature-panel-${feature.id}`}
+                tabIndex={isActive ? 0 : -1}
                 onClick={() => setActiveId(feature.id)}
+                onKeyDown={onTabKeyDown}
                 className={cn(
-                  "inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-sm font-medium transition-all",
+                  "focus-visible:ring-primary/40 inline-flex min-h-11 shrink-0 items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition-colors outline-none focus-visible:ring-2",
                   isActive
                     ? "border-primary-button bg-primary-button text-white shadow-sm"
-                    : "border-border-soft bg-surface text-muted-foreground hover:border-primary/20 hover:text-foreground",
+                    : "border-border-soft bg-surface text-muted-foreground hover:border-primary/30 hover:text-foreground",
                 )}
               >
-                <Icon className="size-4" />
+                <Icon className="size-4" aria-hidden="true" />
                 {feature.label}
               </button>
             );
           })}
         </div>
 
-        <div className="space-y-2">
-          <h3 className="font-serif text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
+        <div
+          id={`feature-panel-${active.id}`}
+          role="tabpanel"
+          aria-labelledby={`feature-tab-${active.id}`}
+          tabIndex={0}
+          className="focus-visible:ring-primary/40 rounded-xl outline-none focus-visible:ring-2"
+        >
+          <p className="text-primary text-xs font-bold tracking-[0.14em] uppercase">
+            Current beta
+          </p>
+          <h3 className="text-foreground mt-3 max-w-xl font-serif text-3xl font-semibold tracking-tight sm:text-4xl">
             {active.title}
           </h3>
-          <p className="max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+          <p className="text-muted-foreground mt-4 max-w-xl leading-relaxed">
             {active.description}
           </p>
-        </div>
 
-        <ul className="grid gap-x-5 gap-y-2.5 sm:grid-cols-2">
-          {active.points.map((point) => (
-            <li
-              key={point}
-              className="flex items-start gap-2 text-sm leading-snug text-foreground"
-            >
-              <span className="mt-0.5 flex size-4 shrink-0 items-center justify-center rounded-full bg-primary-light">
-                <Check className="size-3 text-primary" />
-              </span>
-              <span>{point}</span>
-            </li>
-          ))}
-        </ul>
+          <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+            {active.points.map((point) => (
+              <li
+                key={point}
+                className="text-foreground flex items-start gap-2.5 text-sm leading-relaxed"
+              >
+                <span className="bg-primary-light mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full">
+                  <Check className="text-primary size-3" aria-hidden="true" />
+                </span>
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
 
       <div className="justify-self-center lg:justify-self-end">
-        <div className="flex items-center justify-center rounded-2xl border border-border-soft bg-gradient-to-b from-surface-soft to-primary-light/30 p-6 shadow-[0_18px_45px_rgba(15,23,42,0.10)]">
-          <PhoneMockup src={active.image} alt={active.alt} width={188} />
+        <div className="border-border-soft bg-surface-soft/80 rounded-[2.5rem] border p-5 shadow-[0_30px_80px_rgba(15,23,42,0.10)] sm:p-7">
+          <PhoneMockup src={active.image} alt={active.alt} width={220} />
+          <p className="text-muted-foreground mt-4 text-center text-xs">
+            Synthetic demo data · beta interface
+          </p>
         </div>
       </div>
     </div>
