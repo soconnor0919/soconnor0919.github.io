@@ -60,7 +60,7 @@ const capabilities = [
   {
     icon: Mic,
     title: "Understand a visit",
-    body: "Type, paste, snap the after-visit summary, or record the conversation with consent. Medscribe transcribes and summarizes it on the phone.",
+    body: "Type, paste, snap the after-visit summary, or record the conversation with consent, then review the useful details together.",
   },
   {
     icon: ScanLine,
@@ -70,7 +70,7 @@ const capabilities = [
   {
     icon: MessageSquare,
     title: "Answer the hard questions",
-    body: "Ask whether two medications are safe together and get an answer grounded in bundled FDA drug facts and known interaction pairs, not a chatbot's guess.",
+    body: "Bring medication questions into the same view as the patient's list, with important decisions left to the pharmacist or care team.",
   },
   {
     icon: Layers,
@@ -84,8 +84,8 @@ const capabilities = [
   },
   {
     icon: ShieldCheck,
-    title: "Share without exposure",
-    body: "End-to-end encrypted sharing lets a caregiver help, without a server ever reading the record.",
+    title: "Share with intention",
+    body: "The patient chooses what to share with a trusted caregiver and when that handoff happens.",
   },
 ] as const;
 
@@ -121,9 +121,9 @@ const payoffs = [
   {
     patientTitle: "A tool that is theirs",
     patient:
-      "An advocate they control, on their own device. Not a sales pitch, and never on a server.",
+      "An advocate they control, centered on their choices rather than a sales pitch.",
     bizTitle: "Engagement without the liability",
-    biz: "A Walgreens-branded habit patients actually open through myWalgreens, with no PHI on a server: no new breach surface and no BAA to negotiate.",
+    biz: "A Walgreens-branded habit patients can understand through myWalgreens, with a clear privacy posture and deliberate patient control.",
   },
 ] as const;
 
@@ -139,17 +139,16 @@ export function WalgreensPrintSummary() {
               medical picture.
             </h1>
             <p className="mt-5 text-[15px] leading-[1.55] text-slate-600">
-              Real medical AI on the patient&apos;s phone. Medscribe summarizes
-              visits, reads pill bottles, answers medication questions from
-              bundled drug facts, and keeps one emergency-ready record across
-              every doctor and pharmacy. Nothing is sent to the cloud.
+              Medscribe organizes visits, reads pill bottles, supports
+              medication questions, and keeps one ready-to-share record across
+              every doctor and pharmacy.
             </p>
             <div className="mt-6 grid grid-cols-2 gap-x-5 gap-y-2 text-[8.5px] font-bold tracking-[0.08em] text-slate-600 uppercase">
               {[
-                "On-device AI",
-                "Facts-first",
-                "Patient-owned",
-                "iOS and Android beta",
+                "Private by design",
+                "Clear by design",
+                "Patient-controlled",
+                "iOS and Android",
               ].map((badge) => (
                 <span key={badge} className="flex items-center gap-2">
                   <span className="size-1 rounded-full bg-teal-600" />
@@ -177,7 +176,7 @@ export function WalgreensPrintSummary() {
         <div className="mt-8 border-t border-teal-700/25 pt-5">
           <p className="northwell-print-label">What it can do</p>
           <h2 className="mt-2 font-serif text-[25px] leading-[1.12] font-semibold text-slate-950">
-            Real medical AI, working entirely on the phone
+            The daily tools patients need, connected in one place
           </h2>
         </div>
 
@@ -198,12 +197,12 @@ export function WalgreensPrintSummary() {
         <div className="mt-8 grid grid-cols-3 gap-7 border-t border-teal-700/25 pt-5">
           {[
             [
-              "On the device, not the cloud",
-              "Summarization and medication Q&A run on the phone. No health data goes to a server for AI, so there is no new breach surface and no BAA.",
+              "Private by design",
+              "The experience keeps the patient's choices at the center of every review and handoff.",
             ],
             [
-              "Facts first, not guesswork",
-              "Drug facts, classes, and interaction pairs come from bundled reference data. The model helps phrase the answer; it does not invent it.",
+              "Clear medication context",
+              "Medication questions stay connected to the list the patient already carries and the professionals they trust.",
             ],
             [
               "Owned by the patient",
@@ -288,9 +287,9 @@ export function WalgreensPrintSummary() {
               refills at Walgreens.
             </h3>
             <p className="mt-2 text-[10.5px] leading-[1.5] text-slate-600">
-              Live in beta on iOS and Android today. The core patient experience
-              ships now; the business layer is what a partnership builds
-              together.
+              Designed for iOS and Android. A partnership can connect the
+              patient experience with Walgreens&apos; adherence and pharmacy
+              goals.
             </p>
           </div>
           <div>

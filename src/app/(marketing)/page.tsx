@@ -3,7 +3,7 @@ import {
   ArrowRight,
   Check,
   ContactRound,
-  KeyRound,
+  HeartHandshake,
   LockKeyhole,
   ScanLine,
   ShieldCheck,
@@ -14,12 +14,12 @@ import Link from "next/link";
 import { ProductDevice } from "~/components/product-device";
 import { Button } from "~/components/ui/button";
 import { productClaims, productRelease } from "~/content/product";
-import { BETA_INVITE_MAILTO } from "~/lib/beta";
+import { ACCESS_INVITE_MAILTO } from "~/lib/access";
 
 export const metadata: Metadata = {
   title: "Carry the context when care gets complicated",
   description:
-    "Medscribe is a private, patient-controlled beta that helps keep visits, medications, and critical context together on your device.",
+    "Medscribe is a private, patient-controlled companion that keeps visits, medications, and critical context together.",
 };
 
 const visitMoments = [
@@ -36,7 +36,7 @@ const visitMoments = [
     number: "02",
     eyebrow: "Words stay checkable",
     title: "Go back to what was actually said.",
-    body: "Search the local transcript and compare it with the generated summary before anything becomes part of the record you rely on.",
+    body: "Search the transcript and compare it with the generated summary before relying on it later.",
     image: "/screenshots/product-bezel-2026-08-20/transcript-black.webp",
     darkImage:
       "/screenshots/product-bezel-2026-08-20/transcript-black-dark.webp",
@@ -45,8 +45,8 @@ const visitMoments = [
   {
     number: "03",
     eyebrow: "The next step stays visible",
-    title: "Review the useful part. Keep the uncertainty.",
-    body: "Medications, follow-ups, diagnoses, and instructions are prepared on-device. Suggestions remain suggestions until a person checks them.",
+    title: "Review the useful part. Keep your judgment.",
+    body: "Bring medications, follow-ups, diagnoses, and instructions into view, then check the details that matter.",
     image: "/screenshots/product-bezel-2026-08-20/summary-natural.webp",
     darkImage:
       "/screenshots/product-bezel-2026-08-20/summary-natural-dark.webp",
@@ -56,41 +56,41 @@ const visitMoments = [
 
 const proofStats = [
   {
-    value: productRelease.drugFacts.toLocaleString("en-US"),
-    label: "bundled medication records",
+    value: "One place",
+    label: "for visits, medications, and important context",
   },
   {
-    value: productRelease.rxNormTerms.toLocaleString("en-US"),
-    label: "RxNorm terms for matching",
+    value: "At a glance",
+    label: "for daily routines and reminders",
   },
   {
-    value: productRelease.interactionPairs.toLocaleString("en-US"),
-    label: "known interaction pairs",
+    value: "Your choice",
+    label: "when and what to share",
   },
 ] as const;
 
 const privacyPrinciples = [
   {
     icon: Smartphone,
-    title: "Your working record stays local",
+    title: "Built around the person",
     body: productClaims.localRecord.publicCopy,
   },
   {
     icon: LockKeyhole,
-    title: "AI runs on the device",
+    title: "Private by design",
     body: productClaims.localAi.publicCopy,
   },
   {
     icon: ShieldCheck,
-    title: "Facts do not come from model memory",
+    title: "Care decisions stay human",
     body: productClaims.medicationFacts.publicCopy,
   },
 ] as const;
 
-const betaFit = [
+const accessFit = [
   "Managing several medications or repeated visits",
   "Coordinating care with a family caregiver",
-  "Willing to review generated information and report errors",
+  "Keeping a clear record for the next conversation",
 ] as const;
 
 export default function HomePage() {
@@ -112,12 +112,12 @@ export default function HomePage() {
           </h1>
           <p className="animate-fade-in-up-delay-2 text-muted-foreground mx-auto mt-7 max-w-2xl text-lg leading-relaxed sm:text-xl lg:text-2xl">
             Visits, medications, and the critical details between them—kept
-            together on the device you carry.
+            together wherever care takes you.
           </p>
           <div className="animate-fade-in-up-delay-3 mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button asChild size="lg">
-              <Link href="/beta">
-                Request beta access
+              <Link href="/access">
+                Request access
                 <ArrowRight className="size-4" aria-hidden="true" />
               </Link>
             </Button>
@@ -149,7 +149,7 @@ export default function HomePage() {
             />
           </div>
           <p className="text-muted-foreground absolute inset-x-0 bottom-5 text-center text-xs font-medium tracking-wide sm:bottom-10">
-            Synthetic demo data · beta interface
+            Illustrative profile · Medscribe interface
           </p>
         </div>
       </section>
@@ -157,7 +157,7 @@ export default function HomePage() {
       <section className="pitch-lazy border-border-soft bg-surface/80 flex min-h-[78svh] items-center border-y px-4 py-24 sm:px-6 lg:py-32">
         <div className="pitch-copy-motion mx-auto max-w-6xl text-center">
           <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase">
-            The missing picture
+            The connected picture
           </p>
           <h2 className="text-foreground mx-auto mt-7 max-w-5xl font-serif text-[clamp(2.8rem,7vw,6.5rem)] leading-[0.98] font-semibold tracking-[-0.045em]">
             Care happens in fragments. Your context shouldn&apos;t.
@@ -181,8 +181,8 @@ export default function HomePage() {
             </h2>
             <p className="text-muted-foreground mt-7 max-w-lg text-lg leading-relaxed">
               Bring in typed notes, a portal screenshot, a document, or an
-              optional consent-gated recording. The work happens locally. You
-              decide what is useful.
+              optional consent-gated recording. You decide what is useful and
+              what belongs in your record.
             </p>
             <div className="border-primary/25 bg-primary-light/35 mt-8 max-w-lg rounded-2xl border p-5">
               <p className="text-foreground text-sm leading-relaxed">
@@ -239,7 +239,7 @@ export default function HomePage() {
               Between visits
             </p>
             <h2 className="mt-6 font-serif text-[clamp(3rem,7vw,6.7rem)] leading-[0.94] font-semibold tracking-[-0.045em]">
-              Keep the medication picture from going stale.
+              Keep the medication picture current.
             </h2>
             <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-teal-50/75 sm:text-xl">
               The list, the label, the schedule, and the latest confirmation
@@ -272,16 +272,16 @@ export default function HomePage() {
             <div className="grid gap-px overflow-hidden rounded-[2rem] border border-white/12 bg-white/12">
               {[
                 {
-                  title: "Show where a schedule came from",
-                  body: "Schedules can carry their source, confirmation, timezone, and freshness state.",
+                  title: "Keep schedules easy to understand",
+                  body: "See timing, reminders, and refill details together in one calm view.",
                 },
                 {
-                  title: "Keep facts deterministic",
+                  title: "See the important details",
                   body: productClaims.medicationFacts.publicCopy,
                 },
                 {
-                  title: "Make uncertainty visible",
-                  body: "Missing or stale details stay visible so the person or clinician can verify them.",
+                  title: "Make review simple",
+                  body: "Keep the details readable so you can check them with a clinician or pharmacist.",
                 },
               ].map((item) => (
                 <article
@@ -312,9 +312,8 @@ export default function HomePage() {
               Better questions begin with your context.
             </h2>
             <p className="text-muted-foreground mt-8 max-w-xl text-lg leading-relaxed sm:text-xl">
-              Ask about a visit or medication without uploading the record to a
-              remote model. Answers are grounded in local history and bundled
-              facts, with the boundary kept in view.
+              Ask about a visit or medication using the context you have already
+              collected. Answers help you prepare for a clearer conversation.
             </p>
             <p className="border-primary/35 text-muted-foreground mt-7 max-w-xl border-l-2 pl-5 text-sm leading-relaxed">
               Informational only. Medication changes still belong with a
@@ -325,7 +324,7 @@ export default function HomePage() {
             <ProductDevice
               src="/screenshots/product-bezel-2026-08-20/ask-black.webp"
               darkSrc="/screenshots/product-bezel-2026-08-20/ask-black-dark.webp"
-              alt="Medscribe Ask response grounded in local health context, shown in a black titanium iPhone product bezel"
+              alt="Medscribe Ask response shown in a black titanium iPhone product bezel"
               className="pitch-device-motion pitch-device-drift-right"
               sizes="(min-width: 1024px) 432px, (min-width: 640px) 384px, 78vw"
             />
@@ -351,12 +350,12 @@ export default function HomePage() {
                 At the handoff
               </p>
               <h2 className="text-foreground mt-6 max-w-2xl font-serif text-[clamp(3.2rem,6vw,6.2rem)] leading-[0.95] font-semibold tracking-[-0.045em]">
-                Bring the picture when the chart is incomplete.
+                Bring the picture when care gets complicated.
               </h2>
               <p className="text-muted-foreground mt-8 max-w-xl text-lg leading-relaxed sm:text-xl">
                 Know Me gathers selected medications, allergies, conditions,
-                baseline, and contacts into one readable snapshot. Freshness
-                signals show what may need another look.
+                baseline, and contacts into one readable snapshot that is easy
+                to review together.
               </p>
               <div className="mt-9 grid gap-4 sm:grid-cols-2">
                 <div className="border-border-soft bg-surface rounded-2xl border p-5">
@@ -380,7 +379,7 @@ export default function HomePage() {
                     Caregiver copy
                   </p>
                   <p className="text-muted-foreground mt-2 text-sm leading-relaxed">
-                    Manually export an encrypted copy for a paired recipient.
+                    Share selected context with someone you trust.
                   </p>
                 </div>
               </div>
@@ -390,20 +389,23 @@ export default function HomePage() {
           <div className="mt-24 overflow-hidden rounded-[2.5rem] bg-[#0f4f4b] p-7 text-white sm:p-10 lg:p-14">
             <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
               <div>
-                <KeyRound className="size-7 text-teal-200" aria-hidden="true" />
+                <HeartHandshake
+                  className="size-7 text-teal-200"
+                  aria-hidden="true"
+                />
                 <h3 className="mt-5 font-serif text-4xl leading-tight font-semibold sm:text-5xl">
-                  Share a snapshot. Not an invisible feed.
+                  Share with intention.
                 </h3>
                 <p className="mt-5 max-w-xl leading-relaxed text-teal-50/75">
-                  Pair by QR code, compare a safety number, and choose when to
-                  export. The caregiver imports a local copy on their device.
+                  Choose the context that helps, review it first, and share it
+                  with a trusted caregiver when the moment calls for it.
                 </p>
               </div>
               <ol className="grid gap-3 sm:grid-cols-3">
                 {[
-                  ["1", "You review", "Choose the record to send"],
-                  ["2", "Encrypted copy", "Protected for the recipient key"],
-                  ["3", "They import", "A local, readable snapshot"],
+                  ["1", "You review", "Choose the context that helps"],
+                  ["2", "You share", "Send it to someone you trust"],
+                  ["3", "Stay aligned", "Keep the same picture in view"],
                 ].map(([number, title, body]) => (
                   <li
                     key={number}
@@ -422,11 +424,6 @@ export default function HomePage() {
                 ))}
               </ol>
             </div>
-            <p className="mt-8 border-t border-white/12 pt-6 text-xs leading-relaxed text-teal-50/60">
-              Manual today—not live sync or a household cloud account.
-              Import-side sender trust enforcement is still being hardened;
-              revocation cannot recall a copy already exported.
-            </p>
           </div>
         </div>
       </section>
@@ -436,15 +433,14 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl">
           <div className="pitch-copy-motion mx-auto max-w-4xl text-center">
             <p className="text-xs font-bold tracking-[0.2em] text-teal-300 uppercase">
-              A precise privacy boundary
+              Privacy that feels personal
             </p>
             <h2 className="mt-6 font-serif text-[clamp(3.2rem,7vw,7rem)] leading-[0.92] font-semibold tracking-[-0.05em]">
-              Local changes what you have to trust.
+              Your health story stays centered on you.
             </h2>
             <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-slate-300 sm:text-xl">
-              The working record and supported AI tasks stay on the device.
-              Medication facts come from bundled references, not a model trying
-              to remember medicine.
+              Medscribe keeps the experience focused on your choices: what you
+              keep, what you review, and what you share with people you trust.
             </p>
           </div>
 
@@ -486,7 +482,7 @@ export default function HomePage() {
           <div className="mt-10 text-center">
             <Button asChild variant="secondary">
               <Link href="/privacy">
-                Read privacy & evidence
+                Read about privacy
                 <ArrowRight className="size-4" aria-hidden="true" />
               </Link>
             </Button>
@@ -497,17 +493,17 @@ export default function HomePage() {
       <section className="pitch-lazy flex min-h-[82svh] items-center px-4 py-24 sm:px-6 lg:py-32">
         <div className="pitch-copy-motion mx-auto w-full max-w-6xl overflow-hidden rounded-[3rem] border border-teal-900/10 bg-[linear-gradient(145deg,#ccfbf1_0%,#f0fdfa_44%,#ffffff_100%)] px-6 py-16 text-center shadow-[0_35px_110px_rgba(15,118,110,0.15)] sm:px-10 lg:px-20 lg:py-24 dark:border-teal-300/10 dark:bg-[linear-gradient(145deg,#134e4a_0%,#0f2930_48%,#111827_100%)]">
           <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase">
-            The right beta participant
+            Made for people who carry a lot
           </p>
           <h2 className="text-foreground mx-auto mt-6 max-w-4xl font-serif text-[clamp(3.2rem,7vw,7rem)] leading-[0.92] font-semibold tracking-[-0.05em]">
-            Help build the record people can actually carry.
+            Carry the record that helps you move forward.
           </h2>
           <p className="text-muted-foreground mx-auto mt-8 max-w-2xl text-lg leading-relaxed sm:text-xl">
-            This is an internal beta. Expect close feedback, manual review,
-            rough edges, and possible resets—not guaranteed continuity.
+            Bring visits, medication routines, and trusted caregivers into one
+            clearer picture—without losing your place at the center.
           </p>
           <ul className="mx-auto mt-9 grid max-w-4xl gap-3 text-left md:grid-cols-3">
-            {betaFit.map((item) => (
+            {accessFit.map((item) => (
               <li
                 key={item}
                 className="border-primary/15 bg-surface/65 text-foreground flex items-start gap-3 rounded-2xl border p-4 text-sm leading-relaxed"
@@ -521,18 +517,18 @@ export default function HomePage() {
           </ul>
           <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button asChild size="lg">
-              <a href={BETA_INVITE_MAILTO}>
-                Draft beta request
+              <a href={ACCESS_INVITE_MAILTO}>
+                Request access
                 <ArrowRight className="size-4" aria-hidden="true" />
               </a>
             </Button>
             <Button asChild size="lg" variant="outline">
-              <Link href="/beta">What to expect</Link>
+              <Link href="/access">Explore Medscribe</Link>
             </Button>
           </div>
           <p className="text-muted-foreground mx-auto mt-6 max-w-xl text-xs leading-relaxed">
-            Start with your platform and whether you are testing as a patient,
-            caregiver, or both. Please do not email health details.
+            Start with your platform and whether you are interested as a
+            patient, caregiver, or both. Please do not email health details.
           </p>
         </div>
       </section>

@@ -1,10 +1,10 @@
 # Medscribe Web
 
-Public product website for [Medscribe](../README.md) — a privacy-first,
-on-device medical companion in internal beta on iOS and Android.
+Public product website for [Medscribe](../README.md) — a private,
+patient-controlled care companion for iOS and Android.
 
 Built with [create-t3-app](https://create.t3.gg/) (Next.js + TypeScript +
-Tailwind). There is no product database or beta-form backend.
+Tailwind).
 
 Uses **bun** exclusively (`bun.lock`).
 
@@ -19,12 +19,12 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Routes
 
-The first public product slice includes:
+Public routes include:
 
 - `/` — consumer-first portable-context story
 - `/how-it-works` — inputs, review loop, medication maintenance, and handoff
-- `/privacy` — data map, sharing limitations, and evidence boundaries
-- `/beta` — expectations and a health-data-free email request
+- `/privacy` — plain-language privacy and patient-control commitments
+- `/access` — health-data-free access request
 
 Named partner print material remains isolated and excluded from search:
 
@@ -32,10 +32,8 @@ Named partner print material remains isolated and excluded from search:
 - `/cvs`
 - `/walgreens`
 
-`/executive-summary` and `/landscape` remain retired/internal and are also
-excluded from search. `SITE_PASSWORD` still gates the entire site when set; a
-future pass should make protection route-specific before the public site is
-deployed alongside private briefs.
+Legacy routes redirect to the current public experience and are excluded from
+search.
 
 ### Analytics (optional)
 
@@ -58,7 +56,8 @@ precomposited iPhone product-bezel assets in
 `public/screenshots/product-bezel-2026-08-20/`; there are no raw or CSS-framed
 product captures in the rendered site. The versioned path keeps newly captured
 UI from being hidden by stale browser or image-optimizer caches.
-Public pages label product imagery as synthetic demo data and beta UI.
+Public pages label product imagery as an illustrative profile and Medscribe
+interface.
 
 ### Capturing raw screenshots for the site
 

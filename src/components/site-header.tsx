@@ -7,7 +7,7 @@ import { Button } from "~/components/ui/button";
 const navigation = [
   { href: "/", label: "Home" },
   { href: "/how-it-works", label: "How it works" },
-  { href: "/privacy", label: "Privacy & evidence" },
+  { href: "/privacy", label: "Privacy" },
 ] as const;
 
 export function SiteHeader() {
@@ -39,7 +39,7 @@ export function SiteHeader() {
             </Link>
           ))}
           <Button asChild size="sm" className="ml-2">
-            <Link href="/beta">Request beta access</Link>
+            <Link href="/access">Request access</Link>
           </Button>
         </nav>
 
@@ -62,10 +62,10 @@ export function SiteHeader() {
               </Link>
             ))}
             <Link
-              href="/beta"
+              href="/access"
               className="bg-primary-button hover:bg-primary-button/90 focus-visible:ring-primary/40 mt-1 rounded-xl px-4 py-3 text-center text-sm font-semibold text-white outline-none focus-visible:ring-2"
             >
-              Request beta access
+              Request access
             </Link>
           </nav>
         </details>

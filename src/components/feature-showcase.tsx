@@ -20,15 +20,15 @@ const features = [
     icon: CalendarDays,
     title: "Turn a visit into context you can review",
     description:
-      "Type or paste notes, import a portal screenshot or document, or use consent-gated recording. The beta creates a local summary for the person to check.",
+      "Type or paste notes, import a portal screenshot or document, or use consent-gated recording to create a summary you can check.",
     points: [
-      "Supported transcription and summarization run on device",
-      "The person reviews generated information",
-      "Structured visit-to-record change review is still roadmap",
+      "Keep the visit and summary easy to revisit",
+      "Review important details before relying on them",
+      "Carry follow-ups into the next conversation",
     ],
     image: "/screenshots/product-bezel-2026-08-20/visits-natural.webp",
     darkImage: "/screenshots/product-bezel-2026-08-20/visits-natural-dark.webp",
-    alt: "Synthetic Medscribe beta visit detail showing a visit summary and follow-up information",
+    alt: "Illustrative Medscribe visit detail showing a visit summary and follow-up information",
   },
   {
     id: "medications",
@@ -36,17 +36,17 @@ const features = [
     icon: Pill,
     title: "Keep the daily medication picture close",
     description:
-      "Scan a label, correct the extracted fields, set reminders, follow refills, and see a local intake history without asking a language model to invent drug facts.",
+      "Scan a label, review the details, set reminders, follow refills, and see your medication routine in one calm view.",
     points: [
-      "Label text remains editable before it becomes the record",
-      "Bundled facts and known pairs use named reference datasets",
-      "Coverage is intentionally bounded, not a complete interaction check",
+      "Review medication details before saving them",
+      "Keep schedules and reminders easy to understand",
+      "Bring important questions to a clinician or pharmacist",
     ],
     image:
       "/screenshots/product-bezel-2026-08-20/medication-detail-natural.webp",
     darkImage:
       "/screenshots/product-bezel-2026-08-20/medication-detail-natural-dark.webp",
-    alt: "Synthetic Medscribe beta medication detail with schedule and medication information",
+    alt: "Illustrative Medscribe medication detail with schedule and medication information",
   },
   {
     id: "questions",
@@ -54,15 +54,15 @@ const features = [
     icon: MessageCircle,
     title: "Facts first, fluent answers second",
     description:
-      "Medication questions can use the person’s local record and bundled fields. Dosing changes, diagnosis, and treatment decisions stay with a clinician or pharmacist.",
+      "Ask about a visit or medication using the context you have already collected. Dosing changes, diagnosis, and treatment decisions stay with a clinician or pharmacist.",
     points: [
-      "Known facts render from bundled data",
-      "The local model helps with conversational phrasing",
+      "Keep answers connected to your own context",
+      "Prepare for a clearer care conversation",
       "High-risk or unsupported questions defer to a professional",
     ],
     image: "/screenshots/product-bezel-2026-08-20/ask-black.webp",
     darkImage: "/screenshots/product-bezel-2026-08-20/ask-black-dark.webp",
-    alt: "Synthetic Medscribe beta answer with medication context and a safety boundary",
+    alt: "Illustrative Medscribe answer with medication context and a safety boundary",
   },
   {
     id: "handoff",
@@ -72,14 +72,14 @@ const features = [
     description:
       "The Know Me view brings selected medications, allergies, conditions, baseline, and contacts together. Current, unconfirmed, and review-needed states make uncertainty visible.",
     points: [
-      "Medication schedules can include source and confirmation",
+      "Medication schedules stay easy to review",
       "The person can show or share the snapshot they reviewed",
       "It complements—not replaces—clinical verification",
     ],
     image: "/screenshots/product-bezel-2026-08-20/know-me-natural.webp",
     darkImage:
       "/screenshots/product-bezel-2026-08-20/know-me-natural-dark.webp",
-    alt: "Synthetic Medscribe beta Know Me handoff with active medications and review state",
+    alt: "Illustrative Medscribe Know Me handoff with active medications and review state",
   },
 ] as const;
 
@@ -121,7 +121,7 @@ export function FeatureShowcase() {
       <div className="flex min-w-0 flex-col gap-6">
         <div
           role="tablist"
-          aria-label="Explore the Medscribe beta"
+          aria-label="Explore Medscribe"
           className="flex max-w-full gap-2 overflow-x-auto pb-1"
         >
           {features.map((feature) => {
@@ -161,7 +161,7 @@ export function FeatureShowcase() {
           className="focus-visible:ring-primary/40 rounded-xl outline-none focus-visible:ring-2"
         >
           <p className="text-primary text-xs font-bold tracking-[0.14em] uppercase">
-            Current beta
+            Medscribe
           </p>
           <h3 className="text-foreground mt-3 max-w-xl font-serif text-3xl font-semibold tracking-tight sm:text-4xl">
             {active.title}
@@ -195,7 +195,7 @@ export function FeatureShowcase() {
             width={220}
           />
           <p className="text-muted-foreground mt-4 text-center text-xs">
-            Synthetic demo data · beta interface
+            Illustrative profile · Medscribe interface
           </p>
         </div>
       </div>

@@ -1,0 +1,2 @@
+export const ACCESS_INVITE_MAILTO =
+  "mailto:sean@soconnor.dev?subject=Medscribe%20access&body=Hi%20Sean%2C%0D%0A%0D%0AI%27m%20interested%20in%20Medscribe.%0D%0A%0D%0APlatform%20(iOS%20or%20Android)%3A%0D%0AI%27m%20interested%20as%20a%20(patient%2C%20caregiver%2C%20or%20both)%3A%0D%0A%0D%0APlease%20do%20not%20include%20diagnoses%2C%20medication%20names%2C%20or%20other%20health%20details%20in%20this%20email.%0D%0A%0D%0AThanks%21";

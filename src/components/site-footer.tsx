@@ -4,8 +4,8 @@ import { MedscribeLogo } from "~/components/medscribe-logo";
 
 const footerLinks = [
   { href: "/how-it-works", label: "How it works" },
-  { href: "/privacy", label: "Privacy & evidence" },
-  { href: "/beta", label: "Beta access" },
+  { href: "/privacy", label: "Privacy" },
+  { href: "/access", label: "Request access" },
 ] as const;
 
 export function SiteFooter() {
@@ -21,8 +21,8 @@ export function SiteFooter() {
             <span className="font-serif text-lg font-semibold">Medscribe</span>
           </Link>
           <p className="text-muted-foreground mt-4 max-w-md leading-relaxed">
-            A private, patient-controlled beta for keeping visits, medications,
-            and critical context together on the device you carry.
+            A private, patient-controlled way to keep visits, medications, and
+            important care context together.
           </p>
           <p className="text-muted-foreground mt-3 text-xs leading-relaxed">
             Medscribe does not diagnose, prescribe, or replace emergency

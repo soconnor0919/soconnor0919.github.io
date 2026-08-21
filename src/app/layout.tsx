@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: "Medscribe | %s",
   },
   description:
-    "A private, patient-controlled beta that helps keep visits, medications, and critical context together on your device.",
+    "A private, patient-controlled companion for keeping visits, medications, and critical context together.",
   applicationName: "Medscribe",
   icons: {
     icon: [
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Medscribe",
     description:
-      "Carry the context when care gets complicated. Private, patient-controlled medical context on your device.",
+      "Carry the context when care gets complicated. Private, patient-controlled health context when you need it.",
     type: "website",
   },
 };

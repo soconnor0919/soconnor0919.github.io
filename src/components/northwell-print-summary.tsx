@@ -60,22 +60,22 @@ const people = [
 const productPillars = [
   [
     "Capture visits",
-    "Type or paste notes, import a portal screenshot, attach a document, or use consent-gated recording. Summarization stays on device.",
+    "Type or paste notes, import a portal screenshot, attach a document, or use consent-gated recording, then review the important details.",
   ],
   [
     "Keep medications current",
-    "Pill-bottle label recognition, reminders, refill tracking, dose history, and questions grounded in bundled FDA facts.",
+    "Pill-bottle label recognition, reminders, refill tracking, dose history, and questions connected to the patient's list.",
   ],
   [
     "Be ready to hand off",
-    "A patient-controlled Know Me record and encrypted caregiver sharing keep critical context ready when the chart is incomplete.",
+    "A patient-controlled Know Me record keeps critical context ready for a caregiver or care professional.",
   ],
 ] as const;
 
 const northwellFit = [
   [
-    "AI patients can trust",
-    "Visit summarization and medication Q&A run on the phone, while medication facts come from bundled reference data rather than model recall. It is a clear AI posture for patients, privacy teams, and clinicians.",
+    "An experience patients can trust",
+    "Visit summaries, medication routines, and important questions stay clear and reviewable for patients, privacy teams, and clinicians.",
   ],
   [
     "A Northwell story worth telling",
@@ -111,10 +111,10 @@ export function NorthwellPrintSummary() {
             </p>
             <div className="mt-6 grid grid-cols-2 gap-x-5 gap-y-2 text-[8.5px] font-bold tracking-[0.08em] text-slate-600 uppercase">
               {[
-                "On-device AI",
+                "Private by design",
                 "Emergency-ready",
-                "Patient-owned",
-                "iOS and Android beta",
+                "Patient-controlled",
+                "iOS and Android",
               ].map((badge) => (
                 <span key={badge} className="flex items-center gap-2">
                   <span className="size-1 rounded-full bg-teal-600" />
@@ -177,8 +177,8 @@ export function NorthwellPrintSummary() {
           <div>
             <p className="northwell-print-label">One living picture</p>
             <p className="mt-2 text-[10.5px] leading-[1.5] text-slate-600">
-              The record is useful in an emergency because ordinary use keeps it
-              from becoming a stale export.
+              Everyday use keeps the record ready for the moments when a clear
+              handoff matters most.
             </p>
           </div>
           <ul className="grid grid-cols-2 gap-x-5 gap-y-2 text-[9.5px] leading-[1.45] text-slate-600">
@@ -201,8 +201,8 @@ export function NorthwellPrintSummary() {
             A medical record the patient owns and carries
           </h2>
           <p className="northwell-print-lede">
-            The daily tools are not separate features. They are the maintenance
-            system for one emergency-ready record.
+            The daily tools work together as one clear, emergency-ready
+            experience.
           </p>
           <div className="mt-5 grid grid-cols-3 gap-5">
             {productPillars.map(([title, body], index) => (
@@ -247,35 +247,31 @@ export function NorthwellPrintSummary() {
           </h2>
           <div className="mt-3 grid grid-cols-2 gap-6 text-[10.5px] leading-[1.55] text-slate-600">
             <p>
-              Every institutional record stops at its own walls. Epic aggregates
-              Epic; urgent care, community specialists, and facilities on other
-              systems can still sit outside the picture in front of a clinician.
+              Institutional records reflect their own care settings. Patients
+              often move among urgent care, community specialists, pharmacies,
+              and family caregivers.
             </p>
             <p>
-              Visit notetakers, medication trackers, record vaults, and
-              emergency IDs each solve one slice. Medscribe connects daily
-              maintenance to the handoff across Epic and non-Epic care, on the
-              patient&apos;s device and under the patient&apos;s control.
+              Medscribe connects visit memory, medication routines, and the
+              handoff across those settings while keeping the patient&apos;s
+              choices at the center.
             </p>
           </div>
         </section>
 
         <section className="mt-5 grid grid-cols-2 gap-7 border-t border-slate-300 pt-5">
           <div>
-            <p className="northwell-print-label">Facts first</p>
+            <p className="northwell-print-label">Clear medication context</p>
             <p className="mt-2 text-[10px] leading-[1.5] text-slate-600">
-              Medication facts, drug classes, and known interaction pairs come
-              from bundled reference data. The language model helps with
-              phrasing; it is not treated as the source of medical facts.
+              Medication details, routines, and questions stay connected in one
+              readable view, with clinical decisions left to the care team.
             </p>
           </div>
           <div>
-            <p className="northwell-print-label">Local by default</p>
+            <p className="northwell-print-label">Patient-controlled sharing</p>
             <p className="mt-2 text-[10px] leading-[1.5] text-slate-600">
-              Visit summarization and medication Q&amp;A run on the phone.
-              Caregiver sharing is end-to-end encrypted, so a server is not
-              asked to read the patient&apos;s record in order to coordinate
-              care.
+              The patient reviews the context first and decides when a trusted
+              caregiver or care professional should see it.
             </p>
           </div>
         </section>
@@ -285,7 +281,7 @@ export function NorthwellPrintSummary() {
         <section className="pt-3">
           <p className="northwell-print-label">The Northwell opportunity</p>
           <h2 className="northwell-print-title">
-            A trusted AI touchstone between visits
+            A trusted touchstone between visits
           </h2>
           <p className="northwell-print-lede max-w-[650px]">
             Medscribe gives Northwell a useful presence in the part of care no
@@ -338,7 +334,7 @@ export function NorthwellPrintSummary() {
             </div>
             <div>
               <h3 className="font-serif text-[16px] font-semibold text-slate-950">
-                The patient carries the missing context
+                The patient carries personal context
               </h3>
               <p className="mt-2 text-[10.5px] leading-[1.55] text-slate-600">
                 Non-Epic visits, medication changes, caregiver knowledge, and
@@ -356,10 +352,10 @@ export function NorthwellPrintSummary() {
               A patient promise people can understand
             </h3>
             <p className="mt-2 text-[10.5px] leading-[1.5] text-slate-600">
-              Private AI. One current picture. Ready for the caregiver, the new
-              doctor, or the ER. That is a more human story than &ldquo;AI in
-              healthcare,&rdquo; and it gives Northwell a visible way to stand
-              for continuity beyond its own walls.
+              Private by design. One current picture. Ready for the caregiver,
+              the new doctor, or the ER. That is a human story people can
+              understand, and it gives Northwell a visible way to stand for
+              continuity beyond its own walls.
             </p>
           </div>
           <div>
@@ -370,8 +366,8 @@ export function NorthwellPrintSummary() {
             <p className="mt-3 text-[10.5px] leading-[1.5] text-slate-600">
               A Bucknell computer science and engineering graduate who built
               Medscribe after watching his family lose the full picture of his
-              grandfather&apos;s care. The product is live in beta on iOS and
-              Android today.
+              grandfather&apos;s care. Medscribe is designed for iOS and
+              Android.
             </p>
           </div>
         </section>

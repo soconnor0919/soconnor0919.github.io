@@ -14,19 +14,18 @@ import { PhoneMockup } from "~/components/phone-mockup";
 import { SectionLabel } from "~/components/section-label";
 import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
-import { productClaims } from "~/content/product";
 
 export const metadata: Metadata = {
   title: "How it works",
   description:
-    "See how Medscribe turns visits and medication routines into one local record a person can review and carry.",
+    "See how Medscribe brings visits, medication routines, and important context into one reviewable record.",
 };
 
 const inputs = [
   {
     icon: Keyboard,
     title: "Type or paste",
-    body: "Start from notes you already have and keep the source close to the result.",
+    body: "Start from notes you already have and keep the original details easy to revisit.",
   },
   {
     icon: Camera,
@@ -36,12 +35,12 @@ const inputs = [
   {
     icon: FileText,
     title: "Attach a document",
-    body: "Use a photo or document as the input to a local review workflow.",
+    body: "Bring a photo or document into a guided review workflow.",
   },
   {
     icon: Mic,
     title: "Record with consent",
-    body: "Optional visit audio requires consent and is transcribed on the device.",
+    body: "With permission, turn optional visit audio into notes you can review.",
   },
 ] as const;
 
@@ -49,7 +48,7 @@ const boundaries = [
   "It does not diagnose or recommend treatment.",
   "It does not calculate, shift, or supply medication timing.",
   "It does not replace a pharmacist, prescribing team, or emergency service.",
-  "It does not automatically synchronize a household in the background.",
+  "It does not decide what you should share or who should receive it.",
 ] as const;
 
 export default function HowItWorksPage() {
@@ -57,14 +56,14 @@ export default function HowItWorksPage() {
     <>
       <section className="px-4 pt-16 pb-18 sm:px-6 sm:pt-22">
         <div className="mx-auto max-w-6xl">
-          <Badge variant="success">Current beta workflow</Badge>
+          <Badge variant="success">A day with Medscribe</Badge>
           <h1 className="text-foreground mt-6 max-w-4xl font-serif text-5xl leading-[1.02] font-semibold tracking-[-0.03em] sm:text-6xl">
             One record, built through everyday use.
           </h1>
           <p className="text-muted-foreground mt-6 max-w-2xl text-lg leading-relaxed sm:text-xl">
             Medscribe is useful at a handoff only if ordinary moments keep the
-            picture current. Every generated result has a person in the review
-            loop.
+            picture clear. You stay in the review loop from the first note to
+            the next conversation.
           </p>
         </div>
       </section>
@@ -73,7 +72,7 @@ export default function HowItWorksPage() {
         <div className="mx-auto max-w-6xl">
           <SectionLabel>Start where the information is</SectionLabel>
           <h2 className="text-foreground mt-4 max-w-3xl font-serif text-4xl font-semibold tracking-tight sm:text-5xl">
-            Four ways in. One review checkpoint.
+            Four ways in. One clear place to review.
           </h2>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {inputs.map((item, index) => {
@@ -108,9 +107,8 @@ export default function HowItWorksPage() {
               aria-hidden="true"
             />
             <p className="text-foreground text-sm leading-relaxed">
-              The person reviews summaries and extracted medication fields.
-              Medscribe does not silently turn model output into an
-              authoritative medical record.
+              You review summaries and medication details before they become
+              part of the record you carry.
             </p>
           </div>
         </div>
@@ -122,28 +120,27 @@ export default function HowItWorksPage() {
             <div>
               <SectionLabel>Review what changed</SectionLabel>
               <h2 className="text-foreground mt-4 font-serif text-4xl font-semibold tracking-tight sm:text-5xl">
-                A summary is a draft, not a verdict.
+                Keep the visit and the takeaway together.
               </h2>
               <p className="text-muted-foreground mt-5 leading-relaxed">
-                Supported transcription and summarization run locally. The visit
-                remains available beside the summary so a person can check
-                follow-ups and wording.
+                The visit remains available beside the summary so you can check
+                wording, follow-ups, and the details you want to remember.
               </p>
               <p className="border-border-soft bg-surface text-muted-foreground mt-5 rounded-2xl border p-5 text-sm leading-relaxed">
-                <strong className="text-foreground">What comes next:</strong> a
-                structured review inbox for accepting, correcting, or dismissing
-                changes inferred from a visit.
+                <strong className="text-foreground">Stay oriented:</strong> move
+                between the transcript and summary whenever you want the fuller
+                context.
               </p>
             </div>
             <div className="bg-primary-light/45 justify-self-center rounded-[2.5rem] p-7">
               <PhoneMockup
                 src="/screenshots/product-bezel-2026-08-20/summary-natural.webp"
                 darkSrc="/screenshots/product-bezel-2026-08-20/summary-natural-dark.webp"
-                alt="Synthetic Medscribe beta visit summary"
+                alt="Illustrative Medscribe visit summary"
                 width={235}
               />
               <p className="text-muted-foreground mt-4 text-center text-xs">
-                Synthetic demo data · beta interface
+                Illustrative profile · Medscribe interface
               </p>
             </div>
           </div>
@@ -153,22 +150,21 @@ export default function HowItWorksPage() {
               <PhoneMockup
                 src="/screenshots/product-bezel-2026-08-20/medication-detail-natural.webp"
                 darkSrc="/screenshots/product-bezel-2026-08-20/medication-detail-natural-dark.webp"
-                alt="Synthetic Medscribe beta medication detail"
+                alt="Illustrative Medscribe medication detail"
                 width={235}
               />
               <p className="text-muted-foreground mt-4 text-center text-xs">
-                Synthetic demo data · beta interface
+                Illustrative profile · Medscribe interface
               </p>
             </div>
             <div className="lg:order-2">
               <SectionLabel>Maintain the medication picture</SectionLabel>
               <h2 className="text-foreground mt-4 font-serif text-4xl font-semibold tracking-tight sm:text-5xl">
-                Facts and schedules carry their boundary with them.
+                Keep the daily routine easy to read.
               </h2>
               <p className="text-muted-foreground mt-5 leading-relaxed">
-                {productClaims.medicationFacts.publicCopy} Schedules can record
-                whether they are fixed-time or as-needed, the times supplied by
-                the person&apos;s source, confirmation, and timezone.
+                See medication details, schedules, reminders, and refill
+                information together without hunting through separate notes.
               </p>
               <p className="text-muted-foreground mt-5 text-sm leading-relaxed">
                 Medscribe records timing supplied by a label, pharmacist, or
@@ -185,27 +181,24 @@ export default function HowItWorksPage() {
                 Know Me is the view. Sharing is a separate choice.
               </h2>
               <p className="text-muted-foreground mt-5 leading-relaxed">
-                Open the local Know Me screen when someone needs a concise
-                picture. For a caregiver, pair devices, compare a safety number,
-                review the record, and manually export an encrypted snapshot.
+                Open Know Me when someone needs a concise picture. Review the
+                details first, then show or share the selected context with a
+                trusted caregiver.
               </p>
               <p className="text-muted-foreground mt-5 text-sm leading-relaxed">
-                The current import path does not yet require the sender to be in
-                the recipient&apos;s active trust list, so recipients must
-                verify the sender out of band. Revocation prevents a future
-                local export; it cannot invalidate already-exported ciphertext
-                or erase a copy the recipient imported.
+                You stay in control of the handoff: what is included, who sees
+                it, and when the conversation happens.
               </p>
             </div>
             <div className="bg-primary-light/45 justify-self-center rounded-[2.5rem] p-7">
               <PhoneMockup
                 src="/screenshots/product-bezel-2026-08-20/know-me-natural.webp"
                 darkSrc="/screenshots/product-bezel-2026-08-20/know-me-natural-dark.webp"
-                alt="Synthetic Medscribe beta Know Me handoff"
+                alt="Illustrative Medscribe Know Me handoff"
                 width={235}
               />
               <p className="text-muted-foreground mt-4 text-center text-xs">
-                Synthetic demo data · beta interface
+                Illustrative profile · Medscribe interface
               </p>
             </div>
           </div>
@@ -246,11 +239,11 @@ export default function HowItWorksPage() {
         <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-7 rounded-[2rem] bg-[#0f4f4b] px-7 py-10 text-white sm:px-10 md:flex-row md:items-center">
           <div>
             <h2 className="font-serif text-3xl font-semibold">
-              See the trust boundary task by task.
+              Privacy should feel understandable.
             </h2>
             <p className="mt-2 text-sm leading-relaxed text-teal-50/75">
-              Read what stays local, what can use a network, and what remains
-              unfinished.
+              See how Medscribe keeps you in control of the context you keep,
+              review, and share.
             </p>
           </div>
           <Button
@@ -260,7 +253,7 @@ export default function HowItWorksPage() {
             className="border-white/20 bg-white text-[#0f4f4b] hover:bg-teal-50"
           >
             <Link href="/privacy">
-              Privacy & evidence
+              Read about privacy
               <ArrowRight className="size-4" aria-hidden="true" />
             </Link>
           </Button>

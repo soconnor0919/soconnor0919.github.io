@@ -19,9 +19,8 @@ export default function NorthwellBriefPage() {
           The health-system executive summary
         </h1>
         <p className="text-muted-foreground mx-auto mt-5 max-w-xl leading-relaxed">
-          This private, search-excluded route preserves the existing three-page
-          print document. Use Print PDF (or Cmd+P, then Save as PDF) to export
-          it.
+          This page is formatted as a three-page print document. Use Print PDF
+          (or Cmd+P, then Save as PDF) to export it.
         </p>
         <div className="mt-8 flex justify-center">
           <PrintButton size="lg" />
