@@ -29,6 +29,7 @@ const visitMoments = [
     title: "The visit has a place to land.",
     body: "Keep the recording, transcript, and reviewed summary together instead of reconstructing the appointment from memory.",
     image: "/screenshots/pitch/visits-natural.webp",
+    darkImage: "/screenshots/pitch/visits-natural-dark.webp",
     alt: "Medscribe Visits screen in a natural titanium iPhone product bezel",
   },
   {
@@ -37,6 +38,7 @@ const visitMoments = [
     title: "Go back to what was actually said.",
     body: "Search the local transcript and compare it with the generated summary before anything becomes part of the record you rely on.",
     image: "/screenshots/pitch/transcript-black.webp",
+    darkImage: "/screenshots/pitch/transcript-black-dark.webp",
     alt: "Medscribe visit transcript in a black titanium iPhone product bezel",
   },
   {
@@ -45,6 +47,7 @@ const visitMoments = [
     title: "Review the useful part. Keep the uncertainty.",
     body: "Medications, follow-ups, diagnoses, and instructions are prepared on-device. Suggestions remain suggestions until a person checks them.",
     image: "/screenshots/pitch/summary-natural.webp",
+    darkImage: "/screenshots/pitch/summary-natural-dark.webp",
     alt: "Medscribe appointment summary in a natural titanium iPhone product bezel",
   },
 ] as const;
@@ -126,6 +129,7 @@ export default function HomePage() {
           <div className="absolute top-24 left-1/2 w-[17rem] -translate-x-[86%] -rotate-6 sm:top-28 sm:w-[22rem] lg:top-32 lg:w-[26rem]">
             <ProductDevice
               src="/screenshots/pitch/summary-natural.webp"
+              darkSrc="/screenshots/pitch/summary-natural-dark.webp"
               alt="Medscribe visit summary in a natural titanium iPhone product bezel"
               sizes="(min-width: 1024px) 416px, (min-width: 640px) 352px, 272px"
               priority
@@ -134,6 +138,7 @@ export default function HomePage() {
           <div className="absolute top-0 left-1/2 z-10 w-[18rem] -translate-x-[14%] rotate-5 sm:w-[23rem] lg:w-[28rem]">
             <ProductDevice
               src="/screenshots/pitch/home-black.webp"
+              darkSrc="/screenshots/pitch/home-black-dark.webp"
               alt="Medscribe home screen in a black titanium iPhone product bezel"
               sizes="(min-width: 1024px) 448px, (min-width: 640px) 368px, 288px"
               priority
@@ -210,6 +215,7 @@ export default function HomePage() {
                 <div className="relative mx-auto mt-10 w-[min(72vw,21rem)] translate-y-14">
                   <ProductDevice
                     src={moment.image}
+                    darkSrc={moment.darkImage}
                     alt={moment.alt}
                     sizes="(min-width: 1024px) 336px, (min-width: 640px) 320px, 72vw"
                   />
@@ -241,6 +247,7 @@ export default function HomePage() {
               <div className="absolute top-20 left-[4%] w-[17rem] -rotate-6 sm:w-[21rem] lg:w-[23rem]">
                 <ProductDevice
                   src="/screenshots/pitch/medication-detail-natural.webp"
+                  darkSrc="/screenshots/pitch/medication-detail-natural-dark.webp"
                   alt="Medscribe medication detail in a natural titanium iPhone product bezel"
                   sizes="(min-width: 1024px) 368px, (min-width: 640px) 336px, 272px"
                 />
@@ -248,6 +255,7 @@ export default function HomePage() {
               <div className="absolute top-0 right-[2%] z-10 w-[18rem] rotate-5 sm:w-[22rem] lg:w-[24rem]">
                 <ProductDevice
                   src="/screenshots/pitch/medications-black.webp"
+                  darkSrc="/screenshots/pitch/medications-black-dark.webp"
                   alt="Medscribe medication list in a black titanium iPhone product bezel"
                   sizes="(min-width: 1024px) 384px, (min-width: 640px) 352px, 288px"
                 />
@@ -309,6 +317,7 @@ export default function HomePage() {
           <div className="order-1 mx-auto w-[min(78vw,27rem)] lg:order-2">
             <ProductDevice
               src="/screenshots/pitch/ask-black.webp"
+              darkSrc="/screenshots/pitch/ask-black-dark.webp"
               alt="Medscribe Ask response grounded in local health context, shown in a black titanium iPhone product bezel"
               sizes="(min-width: 1024px) 432px, (min-width: 640px) 384px, 78vw"
             />
@@ -323,6 +332,7 @@ export default function HomePage() {
               <div className="bg-primary-light/70 absolute inset-[12%_-12%_8%] -z-10 rounded-[4rem] blur-2xl" />
               <ProductDevice
                 src="/screenshots/pitch/know-me-natural.webp"
+                darkSrc="/screenshots/pitch/know-me-natural-dark.webp"
                 alt="Medscribe Know Me handoff record in a natural titanium iPhone product bezel"
                 sizes="(min-width: 1024px) 448px, (min-width: 640px) 400px, 80vw"
               />

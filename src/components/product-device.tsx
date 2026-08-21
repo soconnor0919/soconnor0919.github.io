@@ -1,9 +1,10 @@
-import Image from "next/image";
+import { getImageProps } from "next/image";
 
 import { cn } from "~/lib/utils";
 
 type ProductDeviceProps = {
   src: string;
+  darkSrc?: string;
   alt: string;
   className?: string;
   sizes?: string;
@@ -17,23 +18,39 @@ type ProductDeviceProps = {
  */
 export function ProductDevice({
   src,
+  darkSrc,
   alt,
   className,
   sizes = "(min-width: 1024px) 360px, (min-width: 640px) 320px, 72vw",
   priority = false,
 }: ProductDeviceProps) {
+  const shared = {
+    alt,
+    width: 810,
+    height: 1656,
+    sizes,
+    priority,
+    className: cn(
+      "h-auto w-full drop-shadow-[0_35px_35px_rgba(15,23,42,0.22)] dark:drop-shadow-[0_38px_42px_rgba(0,0,0,0.5)]",
+      className,
+    ),
+  };
+  const { props: lightProps } = getImageProps({ src, ...shared });
+  const darkProps = darkSrc
+    ? getImageProps({ src: darkSrc, ...shared }).props
+    : null;
+
   return (
-    <Image
-      src={src}
-      alt={alt}
-      width={810}
-      height={1656}
-      sizes={sizes}
-      priority={priority}
-      className={cn(
-        "h-auto w-full drop-shadow-[0_35px_35px_rgba(15,23,42,0.22)] dark:drop-shadow-[0_38px_42px_rgba(0,0,0,0.5)]",
-        className,
-      )}
-    />
+    <picture className="block">
+      {darkProps ? (
+        <source
+          media="(prefers-color-scheme: dark)"
+          srcSet={darkProps.srcSet}
+          sizes={darkProps.sizes}
+        />
+      ) : null}
+      {/* next/image cannot art-direct by color scheme without downloading both sources. */}
+      <img {...lightProps} alt={alt} />
+    </picture>
   );
 }
