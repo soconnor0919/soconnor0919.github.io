@@ -26,8 +26,8 @@ const features = [
       "The person reviews generated information",
       "Structured visit-to-record change review is still roadmap",
     ],
-    image: "/screenshots/product-glass-2026-08-20/visits-light.png",
-    darkImage: "/screenshots/product-glass-2026-08-20/visits-dark.png",
+    image: "/screenshots/product-bezel-2026-08-20/visits-natural.webp",
+    darkImage: "/screenshots/product-bezel-2026-08-20/visits-natural-dark.webp",
     alt: "Synthetic Medscribe beta visit detail showing a visit summary and follow-up information",
   },
   {
@@ -42,9 +42,10 @@ const features = [
       "Bundled facts and known pairs use named reference datasets",
       "Coverage is intentionally bounded, not a complete interaction check",
     ],
-    image: "/screenshots/product-glass-2026-08-20/medication-detail-light.png",
+    image:
+      "/screenshots/product-bezel-2026-08-20/medication-detail-natural.webp",
     darkImage:
-      "/screenshots/product-glass-2026-08-20/medication-detail-dark.png",
+      "/screenshots/product-bezel-2026-08-20/medication-detail-natural-dark.webp",
     alt: "Synthetic Medscribe beta medication detail with schedule and medication information",
   },
   {
@@ -59,8 +60,8 @@ const features = [
       "The local model helps with conversational phrasing",
       "High-risk or unsupported questions defer to a professional",
     ],
-    image: "/screenshots/product-glass-2026-08-20/ask-light.png",
-    darkImage: "/screenshots/product-glass-2026-08-20/ask-dark.png",
+    image: "/screenshots/product-bezel-2026-08-20/ask-black.webp",
+    darkImage: "/screenshots/product-bezel-2026-08-20/ask-black-dark.webp",
     alt: "Synthetic Medscribe beta answer with medication context and a safety boundary",
   },
   {
@@ -75,8 +76,9 @@ const features = [
       "The person can show or share the snapshot they reviewed",
       "It complements—not replaces—clinical verification",
     ],
-    image: "/screenshots/product-glass-2026-08-20/know-me-light.png",
-    darkImage: "/screenshots/product-glass-2026-08-20/know-me-dark.png",
+    image: "/screenshots/product-bezel-2026-08-20/know-me-natural.webp",
+    darkImage:
+      "/screenshots/product-bezel-2026-08-20/know-me-natural-dark.webp",
     alt: "Synthetic Medscribe beta Know Me handoff with active medications and review state",
   },
 ] as const;

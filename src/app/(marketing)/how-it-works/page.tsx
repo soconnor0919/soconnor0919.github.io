@@ -137,8 +137,8 @@ export default function HowItWorksPage() {
             </div>
             <div className="bg-primary-light/45 justify-self-center rounded-[2.5rem] p-7">
               <PhoneMockup
-                src="/screenshots/product-glass-2026-08-20/summary-light.png"
-                darkSrc="/screenshots/product-glass-2026-08-20/summary-dark.png"
+                src="/screenshots/product-bezel-2026-08-20/summary-natural.webp"
+                darkSrc="/screenshots/product-bezel-2026-08-20/summary-natural-dark.webp"
                 alt="Synthetic Medscribe beta visit summary"
                 width={235}
               />
@@ -151,8 +151,8 @@ export default function HowItWorksPage() {
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div className="justify-self-center rounded-[2.5rem] bg-[#f4f0e8] p-7 lg:order-1 dark:bg-[#151b25]">
               <PhoneMockup
-                src="/screenshots/product-glass-2026-08-20/medication-detail-light.png"
-                darkSrc="/screenshots/product-glass-2026-08-20/medication-detail-dark.png"
+                src="/screenshots/product-bezel-2026-08-20/medication-detail-natural.webp"
+                darkSrc="/screenshots/product-bezel-2026-08-20/medication-detail-natural-dark.webp"
                 alt="Synthetic Medscribe beta medication detail"
                 width={235}
               />
@@ -199,8 +199,8 @@ export default function HowItWorksPage() {
             </div>
             <div className="bg-primary-light/45 justify-self-center rounded-[2.5rem] p-7">
               <PhoneMockup
-                src="/screenshots/product-glass-2026-08-20/know-me-light.png"
-                darkSrc="/screenshots/product-glass-2026-08-20/know-me-dark.png"
+                src="/screenshots/product-bezel-2026-08-20/know-me-natural.webp"
+                darkSrc="/screenshots/product-bezel-2026-08-20/know-me-natural-dark.webp"
                 alt="Synthetic Medscribe beta Know Me handoff"
                 width={235}
               />

@@ -53,12 +53,11 @@ bun run build
 bun run start
 ```
 
-Screenshots live in `public/screenshots/`. The long-form homepage uses
-precomposited, transparent iPhone product-bezel assets in
-`public/screenshots/pitch-glass-2026-08-20/`; supporting pages use versioned raw
-captures from `public/screenshots/product-glass-2026-08-20/` in the lightweight
-CSS frame. Versioned paths keep newly captured UI from being hidden by stale
-browser or image-optimizer caches.
+Screenshots live in `public/screenshots/`. Every route uses the same fresh,
+precomposited iPhone product-bezel assets in
+`public/screenshots/product-bezel-2026-08-20/`; there are no raw or CSS-framed
+product captures in the rendered site. The versioned path keeps newly captured
+UI from being hidden by stale browser or image-optimizer caches.
 Public pages label product imagery as synthetic demo data and beta UI.
 
 ### Capturing raw screenshots for the site
@@ -67,14 +66,13 @@ Export **in-app content only** from the simulator or device — no simulator chr
 
 1. Run the app on **iPhone 17 Pro** (or 16 Pro) simulator or device, or on an **Android** emulator/device.
 2. Capture each screen (⌘S in Simulator saves to Desktop; `adb exec-out screencap -p` on Android).
-3. Drop PNGs into `public/screenshots/` and update paths in the relevant route
-   or `src/components/feature-showcase.tsx`.
+3. Composite each 1206 × 2622 PNG into a 1350 × 2760 product bezel at offset
+   `+72+69`, export the transparent WebP, and update the shared versioned asset
+   directory referenced by the routes.
 
-The CSS frame dimensions assume tall iPhone screenshots and are controlled in
-`src/components/phone-mockup.tsx`. Use `captureMode="simulator"` only for old
-captures that already include device chrome. Homepage product images are
-composited at the bezel source size of 1350 × 2760 with transparent
-backgrounds and rendered responsively through
-`src/components/product-device.tsx`. The homepage uses CSS view timelines for
+Product images are composited at the bezel source size of 1350 × 2760 with
+transparent backgrounds and rendered responsively through
+`src/components/product-device.tsx`; the smaller `PhoneMockup` wrapper reuses
+that same component. The homepage uses CSS view timelines for
 scroll-scrubbed device and chapter motion on desktop and mobile, with a static
 fallback and a reduced-motion override.

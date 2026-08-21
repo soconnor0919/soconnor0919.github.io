@@ -124,16 +124,16 @@ export function NorthwellPrintSummary() {
             </div>
           </div>
 
-          <div className="mx-auto w-[194px] rounded-[28px] border-[6px] border-slate-950 bg-slate-950 p-1 shadow-[0_18px_45px_rgba(15,23,42,0.18)]">
-            <div className="overflow-hidden rounded-[19px] bg-white">
+          <div className="mx-auto w-[210px]">
+            <div>
               <Image
-                src="/screenshots/product-glass-2026-08-20/home-light.png"
+                src="/screenshots/product-bezel-2026-08-20/home-black.webp"
                 alt="Medscribe home screen"
-                width={1206}
-                height={2622}
+                width={1350}
+                height={2760}
                 priority
                 unoptimized
-                className="block h-auto w-full"
+                className="block h-auto w-full drop-shadow-[0_18px_30px_rgba(15,23,42,0.18)]"
               />
             </div>
           </div>

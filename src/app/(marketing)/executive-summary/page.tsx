@@ -161,8 +161,8 @@ export default function ExecutiveSummaryPage() {
 
           <div className="justify-self-center lg:justify-self-end">
             <PhoneMockup
-              src="/screenshots/product-glass-2026-08-20/home-light.png"
-              darkSrc="/screenshots/product-glass-2026-08-20/home-dark.png"
+              src="/screenshots/product-bezel-2026-08-20/home-black.webp"
+              darkSrc="/screenshots/product-bezel-2026-08-20/home-black-dark.webp"
               alt="Medscribe home screen"
               width={200}
               priority
@@ -333,15 +333,15 @@ export default function ExecutiveSummaryPage() {
             </p>
           </div>
           <div className="flex justify-end">
-            <div className="h-[1.78in] w-[0.88in] overflow-hidden rounded-[11px] border-[3px] border-slate-950 bg-white shadow-[0_8px_18px_rgba(15,23,42,0.14)]">
+            <div className="w-[0.96in]">
               <Image
-                src="/screenshots/product-glass-2026-08-20/home-light.png"
+                src="/screenshots/product-bezel-2026-08-20/home-black.webp"
                 alt="Medscribe home screen"
-                width={1206}
-                height={2622}
+                width={1350}
+                height={2760}
                 priority
                 unoptimized
-                className="h-full w-full object-cover object-top"
+                className="h-auto w-full"
               />
             </div>
           </div>
