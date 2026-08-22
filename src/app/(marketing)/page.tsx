@@ -37,9 +37,10 @@ const visitMoments = [
     eyebrow: "Words stay checkable",
     title: "Go back to what was actually said.",
     body: "Search the transcript and compare it with the generated summary before relying on it later.",
-    image: "/screenshots/product-bezel-2026-08-20/transcript-black.webp",
+    image:
+      "/screenshots/product-bezel-2026-08-20/transcript-populated-black.webp",
     darkImage:
-      "/screenshots/product-bezel-2026-08-20/transcript-black-dark.webp",
+      "/screenshots/product-bezel-2026-08-20/transcript-populated-black-dark.webp",
     alt: "Medscribe visit transcript in a black titanium iPhone product bezel",
   },
   {
@@ -47,9 +48,10 @@ const visitMoments = [
     eyebrow: "The next step stays visible",
     title: "Review the useful part. Keep your judgment.",
     body: "Bring medications, follow-ups, diagnoses, and instructions into view, then check the details that matter.",
-    image: "/screenshots/product-bezel-2026-08-20/summary-natural.webp",
+    image:
+      "/screenshots/product-bezel-2026-08-20/summary-reviewed-natural.webp",
     darkImage:
-      "/screenshots/product-bezel-2026-08-20/summary-natural-dark.webp",
+      "/screenshots/product-bezel-2026-08-20/summary-reviewed-natural-dark.webp",
     alt: "Medscribe appointment summary in a natural titanium iPhone product bezel",
   },
 ] as const;
@@ -130,8 +132,8 @@ export default function HomePage() {
         <div className="relative mx-auto mt-12 h-[44rem] max-w-5xl sm:h-[58rem] lg:mt-8 lg:h-[64rem]">
           <div className="absolute top-24 left-1/2 w-[17rem] -translate-x-[86%] -rotate-6 sm:top-28 sm:w-[22rem] lg:top-32 lg:w-[26rem]">
             <ProductDevice
-              src="/screenshots/product-bezel-2026-08-20/summary-natural.webp"
-              darkSrc="/screenshots/product-bezel-2026-08-20/summary-natural-dark.webp"
+              src="/screenshots/product-bezel-2026-08-20/summary-reviewed-natural.webp"
+              darkSrc="/screenshots/product-bezel-2026-08-20/summary-reviewed-natural-dark.webp"
               alt="Medscribe visit summary in a natural titanium iPhone product bezel"
               className="pitch-device-motion pitch-device-drift-left"
               sizes="(min-width: 1024px) 416px, (min-width: 640px) 352px, 272px"

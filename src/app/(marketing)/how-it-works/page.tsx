@@ -134,8 +134,8 @@ export default function HowItWorksPage() {
             </div>
             <div className="bg-primary-light/45 justify-self-center rounded-[2.5rem] p-7">
               <PhoneMockup
-                src="/screenshots/product-bezel-2026-08-20/summary-natural.webp"
-                darkSrc="/screenshots/product-bezel-2026-08-20/summary-natural-dark.webp"
+                src="/screenshots/product-bezel-2026-08-20/summary-reviewed-natural.webp"
+                darkSrc="/screenshots/product-bezel-2026-08-20/summary-reviewed-natural-dark.webp"
                 alt="Illustrative Medscribe visit summary"
                 width={235}
               />
