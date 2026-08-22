@@ -129,61 +129,6 @@
   --pitch-exit-rotate: -1.25deg;
 }
 
-/* The opening pair gets its own scroll story: meet, settle, then peel apart. */
-.pitch-hero-stage {
-  perspective: 1600px;
-}
-
-.pitch-hero-phone {
-  backface-visibility: hidden;
-  transform-origin: center;
-  transform-style: preserve-3d;
-}
-
-.pitch-hero-phone-left {
-  --hero-start-x: -4rem;
-  --hero-meet-x: 1.25rem;
-  --hero-exit-x: -5rem;
-  --hero-start-rotate: -6deg;
-  --hero-meet-rotate: 1.5deg;
-  --hero-exit-rotate: -5deg;
-}
-
-.pitch-hero-phone-right {
-  --hero-start-x: 4rem;
-  --hero-meet-x: -1rem;
-  --hero-exit-x: 5rem;
-  --hero-start-rotate: 6deg;
-  --hero-meet-rotate: -1.5deg;
-  --hero-exit-rotate: 5deg;
-}
-
-@keyframes pitch-hero-phone-scroll {
-  0% {
-    opacity: 0.38;
-    transform: translate3d(var(--hero-start-x), 4rem, -7rem) scale(0.86)
-      rotate(var(--hero-start-rotate));
-  }
-  30% {
-    opacity: 1;
-    transform: translate3d(0, 0.75rem, 0) scale(0.985) rotate(0deg);
-  }
-  58% {
-    opacity: 1;
-    transform: translate3d(var(--hero-meet-x), -2rem, 4rem) scale(1.04)
-      rotate(var(--hero-meet-rotate));
-  }
-  78% {
-    opacity: 1;
-    transform: translate3d(0, -3.5rem, 1rem) scale(1.015) rotate(0deg);
-  }
-  100% {
-    opacity: 0.76;
-    transform: translate3d(var(--hero-exit-x), -10rem, -4rem) scale(0.94)
-      rotate(var(--hero-exit-rotate));
-  }
-}
-
 @keyframes pitch-device-scroll {
   0% {
     opacity: 0.42;
@@ -227,14 +172,6 @@
   }
 }
 
-@supports (animation-timeline: scroll()) {
-  .pitch-hero-phone {
-    animation: pitch-hero-phone-scroll linear both;
-    animation-timeline: scroll(root block);
-    animation-range: 0px 1500px;
-  }
-}
-
 @supports (animation-timeline: view()) {
   .pitch-device-motion {
     animation: pitch-device-scroll linear both;
@@ -257,18 +194,6 @@
 
 /* Keep the product choreography visible on phones without crowding the copy. */
 @media (max-width: 639px) {
-  .pitch-hero-phone-left {
-    --hero-start-x: -1.5rem;
-    --hero-meet-x: 0.5rem;
-    --hero-exit-x: -1.75rem;
-  }
-
-  .pitch-hero-phone-right {
-    --hero-start-x: 1.5rem;
-    --hero-meet-x: -0.5rem;
-    --hero-exit-x: 1.75rem;
-  }
-
   .pitch-device-motion {
     --pitch-enter-y: 4rem;
     --pitch-exit-y: -3rem;
@@ -304,7 +229,6 @@
   }
 
   .pitch-device-motion,
-  .pitch-hero-phone,
   .pitch-copy-motion,
   .pitch-card-motion {
     animation: none !important;
