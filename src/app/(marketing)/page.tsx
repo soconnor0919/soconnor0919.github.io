@@ -99,7 +99,8 @@ export default function HomePage() {
   return (
     <>
       <section className="relative isolate min-h-[calc(100svh-4rem)] overflow-hidden px-4 pt-14 sm:px-6 sm:pt-20 lg:pt-24">
-        <div className="bg-primary-light/55 absolute top-0 left-1/2 -z-10 h-[38rem] w-[68rem] max-w-[120vw] -translate-x-1/2 rounded-full blur-3xl" />
+        <div className="bg-primary-light/60 absolute -top-32 left-1/2 -z-10 h-[42rem] w-[74rem] max-w-[125vw] -translate-x-1/2 rounded-full blur-3xl" />
+        <div className="absolute top-48 -right-28 -z-10 size-[28rem] rounded-full bg-[#d9ecff]/35 blur-3xl dark:bg-[#123d5b]/28" />
         <div className="mx-auto max-w-7xl text-center">
           <div className="animate-fade-in-up flex items-center justify-center gap-3">
             <span className="bg-success-light text-success rounded-full px-3 py-1.5 text-xs font-bold tracking-[0.12em] uppercase">
@@ -156,7 +157,7 @@ export default function HomePage() {
         </p>
       </section>
 
-      <section className="pitch-lazy border-border-soft bg-surface/80 flex min-h-[78svh] items-center border-y px-4 py-24 sm:px-6 lg:py-32">
+      <section className="pitch-lazy brand-warm border-border-soft/70 flex min-h-[78svh] items-center border-y px-4 py-24 sm:px-6 lg:py-32">
         <div className="pitch-copy-motion mx-auto max-w-6xl text-center">
           <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase">
             The connected picture
@@ -199,7 +200,7 @@ export default function HomePage() {
             {visitMoments.map((moment, index) => (
               <li
                 key={moment.number}
-                className="pitch-card-motion border-border-soft bg-surface relative overflow-hidden rounded-[2.5rem] border px-5 pt-8 shadow-[0_30px_90px_rgba(15,23,42,0.08)] sm:px-10 sm:pt-10 dark:shadow-[0_30px_90px_rgba(0,0,0,0.25)]"
+                className="pitch-card-motion glass-panel relative overflow-hidden rounded-[2.5rem] px-5 pt-8 sm:px-10 sm:pt-10"
               >
                 <div className="relative z-10 max-w-xl">
                   <div className="flex items-center gap-3">
@@ -233,8 +234,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="pitch-lazy relative isolate overflow-hidden bg-[#082f2c] px-4 py-24 text-white sm:px-6 lg:py-36">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_78%_18%,rgba(45,212,191,0.25),transparent_32%),radial-gradient(circle_at_16%_80%,rgba(20,184,166,0.15),transparent_28%)]" />
+      <section className="pitch-lazy brand-night relative isolate overflow-hidden px-4 py-24 text-white sm:px-6 lg:py-36">
         <div className="mx-auto max-w-7xl">
           <div className="pitch-copy-motion mx-auto max-w-4xl text-center">
             <p className="text-xs font-bold tracking-[0.2em] text-teal-200 uppercase">
@@ -288,7 +288,7 @@ export default function HomePage() {
               ].map((item) => (
                 <article
                   key={item.title}
-                  className="bg-[#0b3b37]/90 p-7 sm:p-9"
+                  className="bg-[#0c2727]/88 p-7 backdrop-blur-sm sm:p-9"
                 >
                   <Check className="size-5 text-teal-200" aria-hidden="true" />
                   <h3 className="mt-5 font-serif text-2xl font-semibold sm:text-3xl">
@@ -304,7 +304,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="pitch-lazy bg-[#f0ece4] px-4 py-24 sm:px-6 lg:py-36 dark:bg-[#111827]">
+      <section className="pitch-lazy brand-warm px-4 py-24 sm:px-6 lg:py-36">
         <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[1fr_0.9fr] lg:gap-24">
           <div className="pitch-copy-motion order-2 lg:order-1">
             <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase">
@@ -360,7 +360,7 @@ export default function HomePage() {
                 to review together.
               </p>
               <div className="mt-9 grid gap-4 sm:grid-cols-2">
-                <div className="border-border-soft bg-surface rounded-2xl border p-5">
+                <div className="glass-panel rounded-2xl p-5">
                   <ScanLine
                     className="text-primary size-6"
                     aria-hidden="true"
@@ -372,7 +372,7 @@ export default function HomePage() {
                     Show or share a selected, readable snapshot.
                   </p>
                 </div>
-                <div className="border-border-soft bg-surface rounded-2xl border p-5">
+                <div className="glass-panel rounded-2xl p-5">
                   <ContactRound
                     className="text-primary size-6"
                     aria-hidden="true"
@@ -388,7 +388,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="mt-24 overflow-hidden rounded-[2.5rem] bg-[#0f4f4b] p-7 text-white sm:p-10 lg:p-14">
+          <div className="brand-night mt-24 overflow-hidden rounded-[2.5rem] p-7 text-white shadow-[0_35px_90px_rgba(7,20,21,0.22)] sm:p-10 lg:p-14">
             <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
               <div>
                 <HeartHandshake
@@ -430,7 +430,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="pitch-lazy relative isolate overflow-hidden bg-[#070d15] px-4 py-24 text-white sm:px-6 lg:py-36">
+      <section className="pitch-lazy brand-night relative isolate overflow-hidden px-4 py-24 text-white sm:px-6 lg:py-36">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(45,212,191,0.13),transparent_36%)]" />
         <div className="mx-auto max-w-7xl">
           <div className="pitch-copy-motion mx-auto max-w-4xl text-center">
@@ -493,7 +493,7 @@ export default function HomePage() {
       </section>
 
       <section className="pitch-lazy flex min-h-[82svh] items-center px-4 py-24 sm:px-6 lg:py-32">
-        <div className="pitch-copy-motion mx-auto w-full max-w-6xl overflow-hidden rounded-[3rem] border border-teal-900/10 bg-[linear-gradient(145deg,#ccfbf1_0%,#f0fdfa_44%,#ffffff_100%)] px-6 py-16 text-center shadow-[0_35px_110px_rgba(15,118,110,0.15)] sm:px-10 lg:px-20 lg:py-24 dark:border-teal-300/10 dark:bg-[linear-gradient(145deg,#134e4a_0%,#0f2930_48%,#111827_100%)]">
+        <div className="pitch-copy-motion brand-warm border-border-soft/65 mx-auto w-full max-w-6xl overflow-hidden rounded-[3rem] border px-6 py-16 text-center shadow-[0_35px_110px_rgba(15,118,110,0.14)] sm:px-10 lg:px-20 lg:py-24">
           <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase">
             Made for people who carry a lot
           </p>

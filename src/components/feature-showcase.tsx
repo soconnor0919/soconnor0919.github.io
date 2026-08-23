@@ -143,7 +143,7 @@ export function FeatureShowcase() {
                   "focus-visible:ring-primary/40 inline-flex min-h-11 shrink-0 items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition-colors outline-none focus-visible:ring-2",
                   isActive
                     ? "border-primary-button bg-primary-button text-white shadow-sm"
-                    : "border-border-soft bg-surface text-muted-foreground hover:border-primary/30 hover:text-foreground",
+                    : "border-border-soft bg-surface/75 text-muted-foreground hover:border-primary/30 hover:text-foreground backdrop-blur-xl",
                 )}
               >
                 <Icon className="size-4" aria-hidden="true" />
@@ -187,7 +187,7 @@ export function FeatureShowcase() {
       </div>
 
       <div className="justify-self-center lg:justify-self-end">
-        <div className="border-border-soft bg-surface-soft/80 rounded-[2.5rem] border p-5 shadow-[0_30px_80px_rgba(15,23,42,0.10)] sm:p-7">
+        <div className="glass-panel rounded-[2.5rem] p-5 sm:p-7">
           <PhoneMockup
             src={active.image}
             darkSrc={active.darkImage}

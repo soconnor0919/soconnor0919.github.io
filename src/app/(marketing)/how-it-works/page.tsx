@@ -68,7 +68,7 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      <section className="border-border-soft bg-surface/75 border-y px-4 py-18 sm:px-6 lg:py-22">
+      <section className="brand-warm border-border-soft/70 border-y px-4 py-18 sm:px-6 lg:py-22">
         <div className="mx-auto max-w-6xl">
           <SectionLabel>Start where the information is</SectionLabel>
           <h2 className="text-foreground mt-4 max-w-3xl font-serif text-4xl font-semibold tracking-tight sm:text-5xl">
@@ -81,7 +81,7 @@ export default function HowItWorksPage() {
               return (
                 <article
                   key={item.title}
-                  className="border-border-soft bg-canvas rounded-2xl border p-6"
+                  className="glass-panel rounded-2xl p-6"
                 >
                   <div className="flex items-center justify-between">
                     <span className="bg-primary-light text-primary flex size-11 items-center justify-center rounded-xl">
@@ -126,7 +126,7 @@ export default function HowItWorksPage() {
                 The visit remains available beside the summary so you can check
                 wording, follow-ups, and the details you want to remember.
               </p>
-              <p className="border-border-soft bg-surface text-muted-foreground mt-5 rounded-2xl border p-5 text-sm leading-relaxed">
+              <p className="glass-panel text-muted-foreground mt-5 rounded-2xl p-5 text-sm leading-relaxed">
                 <strong className="text-foreground">Stay oriented:</strong> move
                 between the transcript and summary whenever you want the fuller
                 context.
@@ -146,7 +146,7 @@ export default function HowItWorksPage() {
           </div>
 
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-            <div className="justify-self-center rounded-[2.5rem] bg-[#f4f0e8] p-7 lg:order-1 dark:bg-[#151b25]">
+            <div className="brand-warm justify-self-center rounded-[2.5rem] p-7 lg:order-1">
               <PhoneMockup
                 src="/screenshots/product-bezel-2026-08-20/medication-detail-natural.webp"
                 darkSrc="/screenshots/product-bezel-2026-08-20/medication-detail-natural-dark.webp"
@@ -205,7 +205,7 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      <section className="border-border-soft border-t bg-[#f4f0e8]/75 px-4 py-20 sm:px-6 dark:bg-[#151b25]">
+      <section className="brand-warm border-border-soft/70 border-t px-4 py-20 sm:px-6">
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-2">
           <div>
             <div className="bg-primary-light text-primary flex size-12 items-center justify-center rounded-xl">
@@ -222,7 +222,7 @@ export default function HowItWorksPage() {
             {boundaries.map((item) => (
               <li
                 key={item}
-                className="border-border-soft bg-surface text-foreground flex gap-3 rounded-2xl border p-4 text-sm leading-relaxed"
+                className="glass-panel text-foreground flex gap-3 rounded-2xl p-4 text-sm leading-relaxed"
               >
                 <Check
                   className="text-primary mt-0.5 size-5 shrink-0"
@@ -236,7 +236,7 @@ export default function HowItWorksPage() {
       </section>
 
       <section className="px-4 py-20 sm:px-6">
-        <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-7 rounded-[2rem] bg-[#0f4f4b] px-7 py-10 text-white sm:px-10 md:flex-row md:items-center">
+        <div className="brand-night mx-auto flex max-w-6xl flex-col items-start justify-between gap-7 rounded-[2rem] px-7 py-10 text-white shadow-[0_28px_70px_rgba(7,20,21,0.2)] sm:px-10 md:flex-row md:items-center">
           <div>
             <h2 className="font-serif text-3xl font-semibold">
               Privacy should feel understandable.

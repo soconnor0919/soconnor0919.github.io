@@ -78,7 +78,7 @@ export default function AccessPage() {
             </p>
           </div>
 
-          <div className="border-border-soft bg-surface rounded-[2rem] border p-7 shadow-[0_24px_70px_rgba(15,23,42,0.08)] sm:p-9">
+          <div className="glass-panel rounded-[2rem] p-7 sm:p-9">
             <div className="bg-primary-light text-primary flex size-12 items-center justify-center rounded-xl">
               <Mail className="size-6" aria-hidden="true" />
             </div>
@@ -104,7 +104,7 @@ export default function AccessPage() {
         </div>
       </section>
 
-      <section className="border-border-soft border-y bg-[#f4f0e8]/75 px-4 py-20 sm:px-6 lg:py-24 dark:bg-[#151b25]">
+      <section className="brand-warm border-border-soft/70 border-y px-4 py-20 sm:px-6 lg:py-24">
         <div className="mx-auto max-w-6xl">
           <SectionLabel>Made for real life</SectionLabel>
           <h2 className="text-foreground mt-4 max-w-3xl font-serif text-4xl font-semibold tracking-tight sm:text-5xl">
@@ -118,7 +118,7 @@ export default function AccessPage() {
               return (
                 <article
                   key={item.title}
-                  className="border-border-soft bg-surface rounded-2xl border p-6"
+                  className="glass-panel rounded-2xl p-6"
                 >
                   <Icon className="text-primary size-6" aria-hidden="true" />
                   <h3 className="text-foreground mt-5 font-serif text-2xl font-semibold">
@@ -147,7 +147,7 @@ export default function AccessPage() {
               return (
                 <article
                   key={item.title}
-                  className="border-border-soft bg-surface rounded-2xl border p-6"
+                  className="glass-panel rounded-2xl p-6"
                 >
                   <Icon className="text-primary size-6" aria-hidden="true" />
                   <h3 className="text-foreground mt-5 font-serif text-2xl font-semibold">
@@ -161,7 +161,7 @@ export default function AccessPage() {
             })}
           </div>
 
-          <div className="mt-14 rounded-[2rem] bg-[#0f4f4b] p-7 text-white sm:p-10">
+          <div className="brand-night mt-14 rounded-[2rem] p-7 text-white shadow-[0_28px_70px_rgba(7,20,21,0.2)] sm:p-10">
             <p className="text-xs font-bold tracking-[0.14em] text-teal-100 uppercase">
               Keep your care team in the loop
             </p>

@@ -78,16 +78,13 @@ export default function PrivacyPage() {
         </div>
       </section>
 
-      <section className="border-border-soft border-y bg-[#f4f0e8]/75 px-4 py-20 sm:px-6 lg:py-24 dark:bg-[#151b25]">
+      <section className="brand-warm border-border-soft/70 border-y px-4 py-20 sm:px-6 lg:py-24">
         <div className="mx-auto grid max-w-6xl gap-4 md:grid-cols-3">
           {principles.map((item) => {
             const Icon = item.icon;
 
             return (
-              <article
-                key={item.title}
-                className="border-border-soft bg-surface rounded-2xl border p-6"
-              >
+              <article key={item.title} className="glass-panel rounded-2xl p-6">
                 <Icon className="text-primary size-6" aria-hidden="true" />
                 <h2 className="text-foreground mt-5 font-serif text-2xl font-semibold">
                   {item.title}
@@ -119,7 +116,7 @@ export default function PrivacyPage() {
             {commitments.map((item) => (
               <article
                 key={item.title}
-                className="border-border-soft bg-surface rounded-2xl border p-6 sm:p-7"
+                className="glass-panel rounded-2xl p-6 sm:p-7"
               >
                 <div className="flex items-start gap-4">
                   <div className="bg-primary-light text-primary flex size-10 shrink-0 items-center justify-center rounded-xl">
@@ -140,7 +137,7 @@ export default function PrivacyPage() {
         </div>
       </section>
 
-      <section className="bg-[#082f2c] px-4 py-20 text-white sm:px-6 lg:py-24">
+      <section className="brand-night px-4 py-20 text-white sm:px-6 lg:py-24">
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-2 lg:items-center">
           <div>
             <p className="text-xs font-bold tracking-[0.16em] text-teal-200 uppercase">
@@ -168,7 +165,7 @@ export default function PrivacyPage() {
       </section>
 
       <section className="px-4 py-18 sm:px-6">
-        <div className="border-border-soft bg-surface mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 rounded-[2rem] border p-7 sm:flex-row sm:items-center sm:p-9">
+        <div className="glass-panel mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 rounded-[2rem] p-7 sm:flex-row sm:items-center sm:p-9">
           <div>
             <h2 className="text-foreground font-serif text-3xl font-semibold">
               See how Medscribe fits into the day.

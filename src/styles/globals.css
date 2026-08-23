@@ -5,24 +5,30 @@
     var(--font-instrument-sans), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
 
-  /* Light palette: mirrors the app's `lightColors` (constants/colors.ts). */
-  --color-canvas: #f8fafc;
-  --color-surface: #ffffff;
-  --color-surface-soft: #f1f5f9;
+  /* Calm, layered palette shared with the current iOS visual language. */
+  --color-canvas: #f4f9f7;
+  --color-surface: #fcfffe;
+  --color-surface-soft: #e7f1ee;
   --color-primary: #0f766e;
-  --color-primary-light: #ccfbf1;
+  --color-primary-light: #d6f5ed;
   --color-primary-button: #0f766e;
-  --color-foreground: #0f172a;
-  --color-muted-foreground: #64748b;
-  --color-border-soft: #e2e8f0;
-  --color-success: #047857;
-  --color-success-light: #d1fae5;
+  --color-foreground: #102523;
+  --color-muted-foreground: #58716e;
+  --color-border-soft: #ccddda;
+  --color-success: #0f766e;
+  --color-success-light: #d6f5ed;
 }
 
 @layer base {
   :root {
     color-scheme: light;
-    --grid-line: rgba(15, 23, 42, 0.055);
+    --ambient-teal: rgba(83, 211, 192, 0.24);
+    --ambient-blue: rgba(132, 194, 255, 0.2);
+    --ambient-warm: rgba(244, 184, 128, 0.2);
+    --glass-fill: rgba(252, 255, 254, 0.74);
+    --glass-fill-strong: rgba(252, 255, 254, 0.9);
+    --glass-border: rgba(255, 255, 255, 0.78);
+    --glass-shadow: rgba(16, 65, 60, 0.13);
   }
 
   /*
@@ -34,18 +40,24 @@
   @media (prefers-color-scheme: dark) {
     :root {
       color-scheme: dark;
-      --color-canvas: #0b1220;
-      --color-surface: #1e293b;
-      --color-surface-soft: #111827;
+      --color-canvas: #071415;
+      --color-surface: #142728;
+      --color-surface-soft: #0e2021;
       --color-primary: #2dd4bf;
-      --color-primary-light: #134e4a;
+      --color-primary-light: #124842;
       --color-primary-button: #115e59;
-      --color-foreground: #f1f5f9;
-      --color-muted-foreground: #94a3b8;
-      --color-border-soft: #334155;
+      --color-foreground: #eaf6f2;
+      --color-muted-foreground: #96afab;
+      --color-border-soft: #294243;
       --color-success: #34d399;
-      --color-success-light: #064e3b;
-      --grid-line: rgba(45, 212, 191, 0.08);
+      --color-success-light: #124238;
+      --ambient-teal: rgba(45, 212, 191, 0.18);
+      --ambient-blue: rgba(41, 122, 179, 0.2);
+      --ambient-warm: rgba(161, 91, 55, 0.16);
+      --glass-fill: rgba(20, 39, 40, 0.68);
+      --glass-fill-strong: rgba(20, 39, 40, 0.9);
+      --glass-border: rgba(180, 228, 218, 0.13);
+      --glass-shadow: rgba(0, 0, 0, 0.34);
     }
   }
 
@@ -55,10 +67,93 @@
 
   body {
     @apply bg-canvas text-foreground font-sans antialiased;
+    min-height: 100svh;
   }
 
   ::selection {
     background: color-mix(in srgb, var(--color-primary) 24%, transparent);
+  }
+}
+
+.ambient-canvas {
+  background:
+    radial-gradient(
+      ellipse 78% 54% at 4% -8%,
+      var(--ambient-teal),
+      transparent 68%
+    ),
+    radial-gradient(
+      ellipse 66% 50% at 102% 22%,
+      var(--ambient-blue),
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 64% 48% at -8% 88%,
+      var(--ambient-warm),
+      transparent 72%
+    ),
+    var(--color-canvas);
+}
+
+.glass-panel {
+  border: 1px solid var(--glass-border);
+  background: var(--glass-fill);
+  box-shadow:
+    0 24px 70px var(--glass-shadow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.32);
+  backdrop-filter: blur(24px) saturate(140%);
+  -webkit-backdrop-filter: blur(24px) saturate(140%);
+}
+
+.glass-panel-strong {
+  border: 1px solid var(--glass-border);
+  background: var(--glass-fill-strong);
+  box-shadow:
+    0 18px 55px var(--glass-shadow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(30px) saturate(150%);
+  -webkit-backdrop-filter: blur(30px) saturate(150%);
+}
+
+.brand-warm {
+  background:
+    radial-gradient(
+      circle at 84% 12%,
+      color-mix(in srgb, var(--ambient-blue) 82%, transparent),
+      transparent 34%
+    ),
+    linear-gradient(145deg, #fbf1e7 0%, #f4f9f7 56%, #e8f7f3 100%);
+}
+
+.brand-night {
+  background:
+    radial-gradient(
+      circle at 82% 12%,
+      rgba(45, 212, 191, 0.21),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 8% 88%,
+      rgba(58, 134, 185, 0.17),
+      transparent 31%
+    ),
+    linear-gradient(150deg, #071415 0%, #0b2928 54%, #102b3c 100%);
+}
+
+@media (prefers-color-scheme: dark) {
+  .brand-warm {
+    background:
+      radial-gradient(
+        circle at 84% 12%,
+        rgba(41, 122, 179, 0.17),
+        transparent 34%
+      ),
+      radial-gradient(
+        circle at 8% 84%,
+        rgba(161, 91, 55, 0.14),
+        transparent 36%
+      ),
+      linear-gradient(145deg, #142421 0%, #0d1f20 58%, #102a32 100%);
   }
 }
 
