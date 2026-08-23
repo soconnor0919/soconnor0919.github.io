@@ -53,7 +53,7 @@ bun run start
 
 Screenshots live in `public/screenshots/`. Every route uses the same fresh,
 precomposited iPhone product-bezel assets in
-`public/screenshots/product-bezel-2026-08-20/`; there are no raw or CSS-framed
+`public/screenshots/product-bezel-2026-08-23/`; there are no raw or CSS-framed
 product captures in the rendered site. The versioned path keeps newly captured
 UI from being hidden by stale browser or image-optimizer caches.
 Public pages label product imagery as an illustrative profile and Medscribe

@@ -26,8 +26,8 @@ const features = [
       "Review important details before relying on them",
       "Carry follow-ups into the next conversation",
     ],
-    image: "/screenshots/product-bezel-2026-08-20/visits-natural.webp",
-    darkImage: "/screenshots/product-bezel-2026-08-20/visits-natural-dark.webp",
+    image: "/screenshots/product-bezel-2026-08-23/visits-natural.webp",
+    darkImage: "/screenshots/product-bezel-2026-08-23/visits-natural-dark.webp",
     alt: "Illustrative Medscribe visit detail showing a visit summary and follow-up information",
   },
   {
@@ -43,9 +43,9 @@ const features = [
       "Bring important questions to a clinician or pharmacist",
     ],
     image:
-      "/screenshots/product-bezel-2026-08-20/medication-detail-natural.webp",
+      "/screenshots/product-bezel-2026-08-23/medication-detail-natural.webp",
     darkImage:
-      "/screenshots/product-bezel-2026-08-20/medication-detail-natural-dark.webp",
+      "/screenshots/product-bezel-2026-08-23/medication-detail-natural-dark.webp",
     alt: "Illustrative Medscribe medication detail with schedule and medication information",
   },
   {
@@ -60,8 +60,8 @@ const features = [
       "Prepare for a clearer care conversation",
       "High-risk or unsupported questions defer to a professional",
     ],
-    image: "/screenshots/product-bezel-2026-08-20/ask-black.webp",
-    darkImage: "/screenshots/product-bezel-2026-08-20/ask-black-dark.webp",
+    image: "/screenshots/product-bezel-2026-08-23/ask-black.webp",
+    darkImage: "/screenshots/product-bezel-2026-08-23/ask-black-dark.webp",
     alt: "Illustrative Medscribe answer with medication context and a safety boundary",
   },
   {
@@ -76,9 +76,9 @@ const features = [
       "The person can show or share the snapshot they reviewed",
       "It complements—not replaces—clinical verification",
     ],
-    image: "/screenshots/product-bezel-2026-08-20/know-me-natural.webp",
+    image: "/screenshots/product-bezel-2026-08-23/know-me-natural.webp",
     darkImage:
-      "/screenshots/product-bezel-2026-08-20/know-me-natural-dark.webp",
+      "/screenshots/product-bezel-2026-08-23/know-me-natural-dark.webp",
     alt: "Illustrative Medscribe Know Me handoff with active medications and review state",
   },
 ] as const;
