@@ -161,7 +161,7 @@ export function CvsPrintSummary() {
           <div className="mx-auto w-[202px]">
             <div>
               <Image
-                src="/screenshots/product-bezel-2026-08-23/medications-black.webp"
+                src="/screenshots/product-bezel-2026-08-23-complete/medications-black.webp"
                 alt="Medscribe medications screen"
                 width={1350}
                 height={2760}
