@@ -21,7 +21,7 @@ function CardHeader({ className, ...props }: React.ComponentProps<"div">) {
 function CardTitle({ className, ...props }: React.ComponentProps<"h3">) {
   return (
     <h3
-      className={cn("font-serif text-lg font-semibold leading-tight", className)}
+      className={cn("font-display text-lg font-semibold leading-tight", className)}
       {...props}
     />
   );

@@ -3,7 +3,8 @@
 @theme {
   --font-sans:
     var(--font-instrument-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
+  --font-display:
+    var(--font-instrument-sans), ui-sans-serif, system-ui, sans-serif;
 
   /* Calm, layered palette shared with the current iOS visual language. */
   --color-canvas: #f4f9f7;
@@ -479,7 +480,8 @@
 
   .northwell-print-title {
     margin-top: 0.12in;
-    font-family: var(--font-playfair), Georgia, serif;
+    font-family: var(--font-instrument-sans), ui-sans-serif, system-ui,
+      sans-serif;
     font-size: 28px;
     line-height: 1.08;
     font-weight: 600;

@@ -19,7 +19,7 @@ function PrintPage({
           <div className="flex items-center gap-2.5">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img className="h-6 w-auto" src="/medscribe-ms-logo.svg" alt="" />
-            <span className="font-serif text-[17px] font-semibold text-slate-950">
+            <span className="font-display text-[17px] font-semibold text-slate-950">
               Medscribe
             </span>
           </div>
@@ -101,7 +101,7 @@ export function NorthwellPrintSummary() {
         <div className="grid grid-cols-[1.16fr_0.84fr] items-start gap-9 pt-5">
           <div>
             <p className="northwell-print-label">The patient-owned record</p>
-            <h1 className="mt-4 font-serif text-[44px] leading-[0.98] font-semibold tracking-[-0.035em] text-slate-950">
+            <h1 className="mt-4 font-display text-[44px] leading-[0.98] font-semibold tracking-[-0.035em] text-slate-950">
               Be known when care gets complicated
             </h1>
             <p className="mt-5 text-[16px] leading-[1.55] text-slate-600">
@@ -127,7 +127,7 @@ export function NorthwellPrintSummary() {
           <div className="mx-auto w-[210px]">
             <div>
               <Image
-                src="/screenshots/product-bezel-2026-08-24-clipped/home-black.webp"
+                src="/screenshots/product-bezel-2026-08-24-unified-type/home-black.webp"
                 alt="Medscribe home screen"
                 width={1350}
                 height={2760}
@@ -141,7 +141,7 @@ export function NorthwellPrintSummary() {
 
         <div className="mt-7 border-t border-teal-700/25 pt-5">
           <p className="northwell-print-label">The job</p>
-          <p className="mt-3 font-serif text-[25px] leading-[1.2] font-semibold text-slate-950">
+          <p className="mt-3 font-display text-[25px] leading-[1.2] font-semibold text-slate-950">
             One trustworthy picture that survives fragmented care, missed
             appointments, secondhand updates, and emergency handoffs.
           </p>
@@ -163,7 +163,7 @@ export function NorthwellPrintSummary() {
             ],
           ].map(([title, body]) => (
             <div key={title} className="pr-3">
-              <p className="font-serif text-[16px] font-semibold text-slate-950">
+              <p className="font-display text-[16px] font-semibold text-slate-950">
                 {title}
               </p>
               <p className="mt-2 text-[10.5px] leading-[1.5] text-slate-600">
@@ -210,7 +210,7 @@ export function NorthwellPrintSummary() {
                 <span className="text-[10px] font-bold text-teal-700">
                   0{index + 1}
                 </span>
-                <h3 className="mt-2 font-serif text-[17px] font-semibold text-slate-950">
+                <h3 className="mt-2 font-display text-[17px] font-semibold text-slate-950">
                   {title}
                 </h3>
                 <p className="mt-2 text-[10.5px] leading-[1.5] text-slate-600">
@@ -229,7 +229,7 @@ export function NorthwellPrintSummary() {
           <div className="mt-4 grid grid-cols-2 gap-x-7 gap-y-2">
             {people.map(([title, body]) => (
               <div key={title} className="min-h-[70px] pr-4">
-                <h3 className="font-serif text-[15px] font-semibold text-slate-950">
+                <h3 className="font-display text-[15px] font-semibold text-slate-950">
                   {title}
                 </h3>
                 <p className="mt-1.5 text-[10.5px] leading-[1.45] text-slate-600">
@@ -242,7 +242,7 @@ export function NorthwellPrintSummary() {
 
         <section className="mt-7 border-l-4 border-teal-600 bg-teal-50/50 py-5 pr-5 pl-6">
           <p className="northwell-print-label">What makes it different</p>
-          <h2 className="mt-3 font-serif text-[24px] font-semibold text-slate-950">
+          <h2 className="mt-3 font-display text-[24px] font-semibold text-slate-950">
             Every alternative owns a slice. Medscribe owns the whole job.
           </h2>
           <div className="mt-3 grid grid-cols-2 gap-6 text-[10.5px] leading-[1.55] text-slate-600">
@@ -294,7 +294,7 @@ export function NorthwellPrintSummary() {
                 <span className="text-[10px] font-bold text-teal-700">
                   0{index + 1}
                 </span>
-                <h3 className="font-serif text-[16px] font-semibold text-slate-950">
+                <h3 className="font-display text-[16px] font-semibold text-slate-950">
                   {title}
                 </h3>
                 <p className="mt-2 text-[10px] leading-[1.55] text-slate-600">
@@ -307,7 +307,7 @@ export function NorthwellPrintSummary() {
 
         <section className="mt-7 bg-teal-50/60 px-6 py-5">
           <p className="northwell-print-label">The touchstone</p>
-          <h2 className="mt-2 font-serif text-[24px] leading-[1.18] font-semibold text-slate-950">
+          <h2 className="mt-2 font-display text-[24px] leading-[1.18] font-semibold text-slate-950">
             MyChart organizes the appointment. Medscribe helps the patient live
             the plan.
           </h2>
@@ -323,7 +323,7 @@ export function NorthwellPrintSummary() {
           <p className="northwell-print-label">How it fits the stack</p>
           <div className="mt-4 grid grid-cols-2 gap-9">
             <div>
-              <h3 className="font-serif text-[16px] font-semibold text-slate-950">
+              <h3 className="font-display text-[16px] font-semibold text-slate-950">
                 Epic remains the record of care
               </h3>
               <p className="mt-2 text-[10.5px] leading-[1.55] text-slate-600">
@@ -333,7 +333,7 @@ export function NorthwellPrintSummary() {
               </p>
             </div>
             <div>
-              <h3 className="font-serif text-[16px] font-semibold text-slate-950">
+              <h3 className="font-display text-[16px] font-semibold text-slate-950">
                 The patient carries personal context
               </h3>
               <p className="mt-2 text-[10.5px] leading-[1.55] text-slate-600">
@@ -348,7 +348,7 @@ export function NorthwellPrintSummary() {
         <section className="mt-6 grid grid-cols-[1.12fr_0.88fr] gap-9 border-t border-slate-300 pt-5">
           <div>
             <p className="northwell-print-label">The marketing value</p>
-            <h3 className="mt-3 font-serif text-[19px] leading-[1.25] font-semibold text-slate-950">
+            <h3 className="mt-3 font-display text-[19px] leading-[1.25] font-semibold text-slate-950">
               A patient promise people can understand
             </h3>
             <p className="mt-2 text-[10.5px] leading-[1.5] text-slate-600">
@@ -360,7 +360,7 @@ export function NorthwellPrintSummary() {
           </div>
           <div>
             <p className="northwell-print-label">Built and live</p>
-            <h3 className="mt-3 font-serif text-[19px] font-semibold text-slate-950">
+            <h3 className="mt-3 font-display text-[19px] font-semibold text-slate-950">
               Sean O&apos;Connor
             </h3>
             <p className="mt-3 text-[10.5px] leading-[1.5] text-slate-600">

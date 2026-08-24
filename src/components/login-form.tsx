@@ -59,7 +59,7 @@ export function LoginForm({ redirectTo }: LoginFormProps) {
         <CardHeader className="items-center space-y-4 text-center">
           <MedscribeLogo className="h-8 w-[100px] text-foreground" />
           <div className="space-y-2">
-            <CardTitle className="font-serif text-2xl">
+            <CardTitle className="font-display text-2xl">
               Enter site password
             </CardTitle>
             <CardDescription>

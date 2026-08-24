@@ -50,7 +50,7 @@ export function SiteHeader() {
           aria-label="Medscribe home"
         >
           <MedscribeLogo className="h-7 w-auto" />
-          <span className="font-serif text-lg font-semibold tracking-tight">
+          <span className="font-display text-lg font-semibold tracking-tight">
             Medscribe
           </span>
         </Link>

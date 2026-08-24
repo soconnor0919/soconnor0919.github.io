@@ -12,9 +12,10 @@ type ProductDeviceProps = {
 };
 
 /**
- * A precomposited product capture using the licensed device bezels in
- * `public/screenshots/product-bezel-2026-08-24-clipped`. Keeping the frame in the source
- * image preserves the bezel details without adding layout or client-side work.
+ * A precomposited iPhone 17 Pro capture using the calibrated Silver bezel in
+ * `public/screenshots/product-bezel-2026-08-24-unified-type`. Keeping the frame in
+ * the source image preserves its fine edge detail without adding layout or
+ * client-side work.
  */
 export function ProductDevice({
   src,

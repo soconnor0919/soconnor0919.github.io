@@ -20,7 +20,10 @@ export function PhoneMockup({
   width = 280,
 }: PhoneMockupProps) {
   return (
-    <div className={cn("mx-auto", className)} style={{ width }}>
+    <div
+      className={cn("mx-auto", className)}
+      style={{ width: `min(${width}px, 78vw)` }}
+    >
       <ProductDevice
         src={src}
         darkSrc={darkSrc}

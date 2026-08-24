@@ -37,7 +37,7 @@ function PrintPage({
           <div className="flex items-center gap-2.5">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img className="h-6 w-auto" src="/medscribe-ms-logo.svg" alt="" />
-            <span className="font-serif text-[17px] font-semibold text-slate-950">
+            <span className="font-display text-[17px] font-semibold text-slate-950">
               Medscribe
             </span>
           </div>
@@ -134,7 +134,7 @@ export function WalgreensPrintSummary() {
         <div className="grid grid-cols-[1.16fr_0.84fr] items-start gap-9 pt-5">
           <div>
             <p className="northwell-print-label">What Medscribe is</p>
-            <h1 className="mt-4 font-serif text-[40px] leading-[1.0] font-semibold tracking-[-0.035em] text-slate-950">
+            <h1 className="mt-4 font-display text-[40px] leading-[1.0] font-semibold tracking-[-0.035em] text-slate-950">
               It captures, understands, and carries the patient&apos;s whole
               medical picture.
             </h1>
@@ -161,7 +161,7 @@ export function WalgreensPrintSummary() {
           <div className="mx-auto w-[202px]">
             <div>
               <Image
-                src="/screenshots/product-bezel-2026-08-24-clipped/medications-black.webp"
+                src="/screenshots/product-bezel-2026-08-24-unified-type/medications-black.webp"
                 alt="Medscribe medications screen"
                 width={1350}
                 height={2760}
@@ -175,7 +175,7 @@ export function WalgreensPrintSummary() {
 
         <div className="mt-8 border-t border-teal-700/25 pt-5">
           <p className="northwell-print-label">What it can do</p>
-          <h2 className="mt-2 font-serif text-[25px] leading-[1.12] font-semibold text-slate-950">
+          <h2 className="mt-2 font-display text-[25px] leading-[1.12] font-semibold text-slate-950">
             The daily tools patients need, connected in one place
           </h2>
         </div>
@@ -184,7 +184,7 @@ export function WalgreensPrintSummary() {
           {capabilities.map(({ icon: Icon, title, body }) => (
             <div key={title}>
               <Icon className="size-5 text-teal-700" strokeWidth={1.75} />
-              <h3 className="mt-2.5 font-serif text-[16px] leading-[1.15] font-semibold text-slate-950">
+              <h3 className="mt-2.5 font-display text-[16px] leading-[1.15] font-semibold text-slate-950">
                 {title}
               </h3>
               <p className="mt-1.5 text-[10px] leading-[1.5] text-slate-600">
@@ -210,7 +210,7 @@ export function WalgreensPrintSummary() {
             ],
           ].map(([title, body]) => (
             <div key={title}>
-              <p className="font-serif text-[14px] font-semibold text-slate-950">
+              <p className="font-display text-[14px] font-semibold text-slate-950">
                 {title}
               </p>
               <p className="mt-1.5 text-[9.5px] leading-[1.5] text-slate-600">
@@ -250,7 +250,7 @@ export function WalgreensPrintSummary() {
               className="grid grid-cols-[0.92fr_1.08fr] gap-8 border-t border-slate-200 py-3"
             >
               <div>
-                <h3 className="font-serif text-[14px] leading-[1.2] font-semibold text-slate-950">
+                <h3 className="font-display text-[14px] leading-[1.2] font-semibold text-slate-950">
                   {row.patientTitle}
                 </h3>
                 <p className="mt-1 text-[9.5px] leading-[1.45] text-slate-600">
@@ -258,7 +258,7 @@ export function WalgreensPrintSummary() {
                 </p>
               </div>
               <div className="border-l border-teal-600/30 pl-8">
-                <h3 className="font-serif text-[14px] leading-[1.2] font-semibold text-teal-900">
+                <h3 className="font-display text-[14px] leading-[1.2] font-semibold text-teal-900">
                   {row.bizTitle}
                 </h3>
                 <p className="mt-1 text-[9.5px] leading-[1.45] text-slate-600">
@@ -282,7 +282,7 @@ export function WalgreensPrintSummary() {
         <section className="mt-6 grid grid-cols-[1.12fr_0.88fr] items-start gap-9 border-t border-slate-300 pt-5">
           <div>
             <p className="northwell-print-label">The ask</p>
-            <h3 className="mt-3 font-serif text-[20px] leading-[1.22] font-semibold text-slate-950">
+            <h3 className="mt-3 font-display text-[20px] leading-[1.22] font-semibold text-slate-950">
               A short conversation about a record that moves adherence and keeps
               refills at Walgreens.
             </h3>
@@ -294,7 +294,7 @@ export function WalgreensPrintSummary() {
           </div>
           <div>
             <p className="northwell-print-label">Who is behind it</p>
-            <h3 className="mt-3 font-serif text-[19px] font-semibold text-slate-950">
+            <h3 className="mt-3 font-display text-[19px] font-semibold text-slate-950">
               Sean O&apos;Connor
             </h3>
             <p className="mt-3 text-[10.5px] leading-[1.5] text-slate-600">

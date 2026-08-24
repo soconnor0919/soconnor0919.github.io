@@ -57,7 +57,7 @@ export default function HowItWorksPage() {
       <section className="px-4 pt-16 pb-18 sm:px-6 sm:pt-22">
         <div className="mx-auto max-w-6xl">
           <Badge variant="success">A day with Medscribe</Badge>
-          <h1 className="text-foreground mt-6 max-w-4xl font-serif text-5xl leading-[1.02] font-semibold tracking-[-0.03em] sm:text-6xl">
+          <h1 className="text-foreground mt-6 max-w-4xl font-display text-5xl leading-[1.02] font-semibold tracking-[-0.03em] sm:text-6xl">
             One record, built through everyday use.
           </h1>
           <p className="text-muted-foreground mt-6 max-w-2xl text-lg leading-relaxed sm:text-xl">
@@ -71,7 +71,7 @@ export default function HowItWorksPage() {
       <section className="section-wash px-4 py-18 sm:px-6 lg:py-22">
         <div className="mx-auto max-w-6xl">
           <SectionLabel>Start with what matters</SectionLabel>
-          <h2 className="text-foreground mt-4 max-w-3xl font-serif text-4xl font-semibold tracking-tight sm:text-5xl">
+          <h2 className="text-foreground mt-4 max-w-3xl font-display text-4xl font-semibold tracking-tight sm:text-5xl">
             A clear rhythm from the moment to the next conversation.
           </h2>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -91,7 +91,7 @@ export default function HowItWorksPage() {
                       0{index + 1}
                     </span>
                   </div>
-                  <h3 className="text-foreground mt-5 font-serif text-2xl font-semibold">
+                  <h3 className="text-foreground mt-5 font-display text-2xl font-semibold">
                     {item.title}
                   </h3>
                   <p className="text-muted-foreground mt-3 text-sm leading-relaxed">
@@ -119,7 +119,7 @@ export default function HowItWorksPage() {
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div>
               <SectionLabel>Review what changed</SectionLabel>
-              <h2 className="text-foreground mt-4 font-serif text-4xl font-semibold tracking-tight sm:text-5xl">
+              <h2 className="text-foreground mt-4 font-display text-4xl font-semibold tracking-tight sm:text-5xl">
                 Keep the visit and the takeaway together.
               </h2>
               <p className="text-muted-foreground mt-5 leading-relaxed">
@@ -134,10 +134,10 @@ export default function HowItWorksPage() {
             </div>
             <div className="justify-self-center py-2">
               <PhoneMockup
-                src="/screenshots/product-bezel-2026-08-24-clipped/summary-reviewed-natural.webp"
-                darkSrc="/screenshots/product-bezel-2026-08-24-clipped/summary-reviewed-natural-dark.webp"
+                src="/screenshots/product-bezel-2026-08-24-unified-type/summary-reviewed-natural.webp"
+                darkSrc="/screenshots/product-bezel-2026-08-24-unified-type/summary-reviewed-natural-dark.webp"
                 alt="Illustrative Medscribe visit summary"
-                width={235}
+                width={280}
               />
               <p className="text-muted-foreground mt-4 text-center text-xs">
                 Illustrative profile · Medscribe interface
@@ -148,10 +148,10 @@ export default function HowItWorksPage() {
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div className="justify-self-center py-2 lg:order-1">
               <PhoneMockup
-                src="/screenshots/product-bezel-2026-08-24-clipped/medication-detail-natural.webp"
-                darkSrc="/screenshots/product-bezel-2026-08-24-clipped/medication-detail-natural-dark.webp"
+                src="/screenshots/product-bezel-2026-08-24-unified-type/medication-detail-natural.webp"
+                darkSrc="/screenshots/product-bezel-2026-08-24-unified-type/medication-detail-natural-dark.webp"
                 alt="Illustrative Medscribe medication detail"
-                width={235}
+                width={280}
               />
               <p className="text-muted-foreground mt-4 text-center text-xs">
                 Illustrative profile · Medscribe interface
@@ -159,7 +159,7 @@ export default function HowItWorksPage() {
             </div>
             <div className="lg:order-2">
               <SectionLabel>Maintain the medication picture</SectionLabel>
-              <h2 className="text-foreground mt-4 font-serif text-4xl font-semibold tracking-tight sm:text-5xl">
+              <h2 className="text-foreground mt-4 font-display text-4xl font-semibold tracking-tight sm:text-5xl">
                 Keep the daily routine easy to read.
               </h2>
               <p className="text-muted-foreground mt-5 leading-relaxed">
@@ -176,7 +176,7 @@ export default function HowItWorksPage() {
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div className="lg:order-2">
               <SectionLabel>Keep the next question</SectionLabel>
-              <h2 className="text-foreground mt-4 font-serif text-4xl font-semibold tracking-tight sm:text-5xl">
+              <h2 className="text-foreground mt-4 font-display text-4xl font-semibold tracking-tight sm:text-5xl">
                 Save it while it is on your mind.
               </h2>
               <p className="text-muted-foreground mt-5 leading-relaxed">
@@ -191,10 +191,10 @@ export default function HowItWorksPage() {
             </div>
             <div className="justify-self-center py-2 lg:order-1">
               <PhoneMockup
-                src="/screenshots/product-bezel-2026-08-24-clipped/questions-black.webp"
-                darkSrc="/screenshots/product-bezel-2026-08-24-clipped/questions-black-dark.webp"
+                src="/screenshots/product-bezel-2026-08-24-unified-type/questions-black.webp"
+                darkSrc="/screenshots/product-bezel-2026-08-24-unified-type/questions-black-dark.webp"
                 alt="Illustrative Medscribe Questions to ask interface"
-                width={235}
+                width={280}
               />
               <p className="text-muted-foreground mt-4 text-center text-xs">
                 Illustrative profile · Medscribe interface
@@ -205,7 +205,7 @@ export default function HowItWorksPage() {
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div>
               <SectionLabel>Prepare the handoff</SectionLabel>
-              <h2 className="text-foreground mt-4 font-serif text-4xl font-semibold tracking-tight sm:text-5xl">
+              <h2 className="text-foreground mt-4 font-display text-4xl font-semibold tracking-tight sm:text-5xl">
                 Know Me is the view. Sharing is a separate choice.
               </h2>
               <p className="text-muted-foreground mt-5 leading-relaxed">
@@ -220,10 +220,10 @@ export default function HowItWorksPage() {
             </div>
             <div className="justify-self-center py-2">
               <PhoneMockup
-                src="/screenshots/product-bezel-2026-08-24-clipped/know-me-natural.webp"
-                darkSrc="/screenshots/product-bezel-2026-08-24-clipped/know-me-natural-dark.webp"
+                src="/screenshots/product-bezel-2026-08-24-unified-type/know-me-natural.webp"
+                darkSrc="/screenshots/product-bezel-2026-08-24-unified-type/know-me-natural-dark.webp"
                 alt="Illustrative Medscribe Know Me handoff"
-                width={235}
+                width={280}
               />
               <p className="text-muted-foreground mt-4 text-center text-xs">
                 Illustrative profile · Medscribe interface
@@ -239,7 +239,7 @@ export default function HowItWorksPage() {
             <div className="bg-primary-light text-primary flex size-12 items-center justify-center rounded-xl">
               <ShieldAlert className="size-6" aria-hidden="true" />
             </div>
-            <h2 className="text-foreground mt-5 font-serif text-4xl font-semibold tracking-tight">
+            <h2 className="text-foreground mt-5 font-display text-4xl font-semibold tracking-tight">
               What Medscribe does not do
             </h2>
             <p className="text-muted-foreground mt-4 leading-relaxed">
@@ -266,7 +266,7 @@ export default function HowItWorksPage() {
       <section className="px-4 py-20 sm:px-6">
         <div className="night-card mx-auto flex max-w-6xl flex-col items-start justify-between gap-7 rounded-[2rem] px-7 py-10 text-white sm:px-10 md:flex-row md:items-center">
           <div>
-            <h2 className="font-serif text-3xl font-semibold">
+            <h2 className="font-display text-3xl font-semibold">
               Privacy should feel understandable.
             </h2>
             <p className="mt-2 text-sm leading-relaxed text-teal-50/75">

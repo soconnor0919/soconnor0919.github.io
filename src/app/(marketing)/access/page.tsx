@@ -68,7 +68,7 @@ export default function AccessPage() {
               <Badge variant="success">{productRelease.stage}</Badge>
               <Badge variant="outline">{productRelease.platforms}</Badge>
             </div>
-            <h1 className="text-foreground mt-6 max-w-3xl font-serif text-5xl leading-[1.02] font-semibold tracking-[-0.03em] sm:text-6xl">
+            <h1 className="text-foreground mt-6 max-w-3xl font-display text-5xl leading-[1.02] font-semibold tracking-[-0.03em] sm:text-6xl">
               Bring your care context together.
             </h1>
             <p className="text-muted-foreground mt-6 max-w-2xl text-lg leading-relaxed sm:text-xl">
@@ -82,7 +82,7 @@ export default function AccessPage() {
             <div className="bg-primary-light text-primary flex size-12 items-center justify-center rounded-xl">
               <Mail className="size-6" aria-hidden="true" />
             </div>
-            <h2 className="text-foreground mt-5 font-serif text-3xl font-semibold">
+            <h2 className="text-foreground mt-5 font-display text-3xl font-semibold">
               Request Medscribe access
             </h2>
             <p className="text-muted-foreground mt-4 text-sm leading-relaxed">
@@ -107,7 +107,7 @@ export default function AccessPage() {
       <section className="section-wash px-4 py-20 sm:px-6 lg:py-24">
         <div className="mx-auto max-w-6xl">
           <SectionLabel>Made for real life</SectionLabel>
-          <h2 className="text-foreground mt-4 max-w-3xl font-serif text-4xl font-semibold tracking-tight sm:text-5xl">
+          <h2 className="text-foreground mt-4 max-w-3xl font-display text-4xl font-semibold tracking-tight sm:text-5xl">
             Keep the details close without carrying the whole burden in your
             head.
           </h2>
@@ -121,7 +121,7 @@ export default function AccessPage() {
                   className="surface-panel rounded-2xl p-6"
                 >
                   <Icon className="text-primary size-6" aria-hidden="true" />
-                  <h3 className="text-foreground mt-5 font-serif text-2xl font-semibold">
+                  <h3 className="text-foreground mt-5 font-display text-2xl font-semibold">
                     {item.title}
                   </h3>
                   <p className="text-muted-foreground mt-3 text-sm leading-relaxed">
@@ -137,7 +137,7 @@ export default function AccessPage() {
       <section className="px-4 py-20 sm:px-6 lg:py-28">
         <div className="mx-auto max-w-6xl">
           <SectionLabel>One connected picture</SectionLabel>
-          <h2 className="text-foreground mt-4 max-w-3xl font-serif text-4xl font-semibold tracking-tight sm:text-5xl">
+          <h2 className="text-foreground mt-4 max-w-3xl font-display text-4xl font-semibold tracking-tight sm:text-5xl">
             Visits, medications, and the people who matter—together.
           </h2>
           <div className="mt-10 grid gap-4 md:grid-cols-3">
@@ -150,7 +150,7 @@ export default function AccessPage() {
                   className="surface-panel rounded-2xl p-6"
                 >
                   <Icon className="text-primary size-6" aria-hidden="true" />
-                  <h3 className="text-foreground mt-5 font-serif text-2xl font-semibold">
+                  <h3 className="text-foreground mt-5 font-display text-2xl font-semibold">
                     {item.title}
                   </h3>
                   <p className="text-muted-foreground mt-3 text-sm leading-relaxed">
@@ -165,7 +165,7 @@ export default function AccessPage() {
             <p className="text-xs font-bold tracking-[0.14em] text-teal-100 uppercase">
               Keep your care team in the loop
             </p>
-            <h2 className="mt-4 max-w-3xl font-serif text-3xl font-semibold sm:text-4xl">
+            <h2 className="mt-4 max-w-3xl font-display text-3xl font-semibold sm:text-4xl">
               Medscribe helps you prepare for better conversations. Medical
               decisions remain with you and your qualified care team.
             </h2>

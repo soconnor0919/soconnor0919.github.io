@@ -18,7 +18,7 @@ export function SiteFooter() {
             className="text-foreground focus-visible:ring-primary/40 inline-flex items-center gap-2.5 rounded-md outline-none focus-visible:ring-2"
           >
             <MedscribeLogo className="h-7 w-auto" />
-            <span className="font-serif text-lg font-semibold">Medscribe</span>
+            <span className="font-display text-lg font-semibold">Medscribe</span>
           </Link>
           <p className="text-muted-foreground mt-4 max-w-md leading-relaxed">
             A private, patient-controlled way to keep visits, medications, and

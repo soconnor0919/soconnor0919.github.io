@@ -28,10 +28,10 @@ const visitMoments = [
     eyebrow: "Visits stay findable",
     title: "The visit has a place to land.",
     body: "Keep the recording, transcript, and reviewed summary together instead of reconstructing the appointment from memory.",
-    image: "/screenshots/product-bezel-2026-08-24-clipped/visits-natural.webp",
+    image: "/screenshots/product-bezel-2026-08-24-unified-type/visits-natural.webp",
     darkImage:
-      "/screenshots/product-bezel-2026-08-24-clipped/visits-natural-dark.webp",
-    alt: "Medscribe Visits screen in a natural titanium iPhone product bezel",
+      "/screenshots/product-bezel-2026-08-24-unified-type/visits-natural-dark.webp",
+    alt: "Medscribe Visits screen in an iPhone 17 Pro product bezel",
   },
   {
     number: "02",
@@ -39,10 +39,10 @@ const visitMoments = [
     title: "Go back to what was actually said.",
     body: "Search the transcript and compare it with the generated summary before relying on it later.",
     image:
-      "/screenshots/product-bezel-2026-08-24-clipped/transcript-populated-black.webp",
+      "/screenshots/product-bezel-2026-08-24-unified-type/transcript-populated-black.webp",
     darkImage:
-      "/screenshots/product-bezel-2026-08-24-clipped/transcript-populated-black-dark.webp",
-    alt: "Medscribe visit transcript in a black titanium iPhone product bezel",
+      "/screenshots/product-bezel-2026-08-24-unified-type/transcript-populated-black-dark.webp",
+    alt: "Medscribe visit transcript in an iPhone 17 Pro product bezel",
   },
   {
     number: "03",
@@ -50,10 +50,10 @@ const visitMoments = [
     title: "Review the useful part. Keep your judgment.",
     body: "Bring medications, follow-ups, diagnoses, and instructions into view, then check the details that matter.",
     image:
-      "/screenshots/product-bezel-2026-08-24-clipped/summary-reviewed-natural.webp",
+      "/screenshots/product-bezel-2026-08-24-unified-type/summary-reviewed-natural.webp",
     darkImage:
-      "/screenshots/product-bezel-2026-08-24-clipped/summary-reviewed-natural-dark.webp",
-    alt: "Medscribe appointment summary in a natural titanium iPhone product bezel",
+      "/screenshots/product-bezel-2026-08-24-unified-type/summary-reviewed-natural-dark.webp",
+    alt: "Medscribe appointment summary in an iPhone 17 Pro product bezel",
   },
 ] as const;
 
@@ -109,7 +109,7 @@ export default function HomePage() {
               {productRelease.platforms}
             </span>
           </div>
-          <h1 className="animate-fade-in-up-delay-1 text-foreground mx-auto mt-7 max-w-6xl font-serif text-[clamp(3.6rem,9vw,8.5rem)] leading-[0.86] font-semibold tracking-[-0.055em]">
+          <h1 className="animate-fade-in-up-delay-1 text-foreground mx-auto mt-7 max-w-6xl font-display text-[clamp(3.6rem,9vw,8.5rem)] leading-[0.86] font-semibold tracking-[-0.055em]">
             Carry the context.
           </h1>
           <p className="animate-fade-in-up-delay-2 text-muted-foreground mx-auto mt-7 max-w-2xl text-lg leading-relaxed sm:text-xl lg:text-2xl">
@@ -132,9 +132,9 @@ export default function HomePage() {
         <div className="relative mx-auto mt-12 h-[44rem] max-w-5xl sm:h-[58rem] lg:mt-8 lg:h-[64rem]">
           <div className="absolute top-24 left-1/2 w-[17rem] -translate-x-[86%] -rotate-6 sm:top-28 sm:w-[22rem] lg:top-32 lg:w-[26rem]">
             <ProductDevice
-              src="/screenshots/product-bezel-2026-08-24-clipped/summary-reviewed-natural.webp"
-              darkSrc="/screenshots/product-bezel-2026-08-24-clipped/summary-reviewed-natural-dark.webp"
-              alt="Medscribe visit summary in a natural titanium iPhone product bezel"
+              src="/screenshots/product-bezel-2026-08-24-unified-type/summary-reviewed-natural.webp"
+              darkSrc="/screenshots/product-bezel-2026-08-24-unified-type/summary-reviewed-natural-dark.webp"
+              alt="Medscribe visit summary in an iPhone 17 Pro product bezel"
               className="pitch-device-motion pitch-device-drift-left"
               sizes="(min-width: 1024px) 416px, (min-width: 640px) 352px, 272px"
               priority
@@ -142,9 +142,9 @@ export default function HomePage() {
           </div>
           <div className="absolute top-0 left-1/2 z-10 w-[18rem] -translate-x-[14%] rotate-5 sm:w-[23rem] lg:w-[28rem]">
             <ProductDevice
-              src="/screenshots/product-bezel-2026-08-24-clipped/home-black.webp"
-              darkSrc="/screenshots/product-bezel-2026-08-24-clipped/home-black-dark.webp"
-              alt="Medscribe home screen in a black titanium iPhone product bezel"
+              src="/screenshots/product-bezel-2026-08-24-unified-type/home-black.webp"
+              darkSrc="/screenshots/product-bezel-2026-08-24-unified-type/home-black-dark.webp"
+              alt="Medscribe home screen in an iPhone 17 Pro product bezel"
               className="pitch-device-motion pitch-device-drift-right"
               sizes="(min-width: 1024px) 448px, (min-width: 640px) 368px, 288px"
               priority
@@ -161,7 +161,7 @@ export default function HomePage() {
           <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase">
             The connected picture
           </p>
-          <h2 className="text-foreground mx-auto mt-7 max-w-5xl font-serif text-[clamp(2.8rem,7vw,6.5rem)] leading-[0.98] font-semibold tracking-[-0.045em]">
+          <h2 className="text-foreground mx-auto mt-7 max-w-5xl font-display text-[clamp(2.8rem,7vw,6.5rem)] leading-[0.98] font-semibold tracking-[-0.045em]">
             Care happens in fragments. Your context shouldn&apos;t.
           </h2>
           <p className="text-muted-foreground mx-auto mt-8 max-w-2xl text-lg leading-relaxed sm:text-xl">
@@ -178,7 +178,7 @@ export default function HomePage() {
             <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase">
               After the visit
             </p>
-            <h2 className="text-foreground mt-6 max-w-xl font-serif text-5xl leading-[0.98] font-semibold tracking-[-0.04em] sm:text-6xl">
+            <h2 className="text-foreground mt-6 max-w-xl font-display text-5xl leading-[0.98] font-semibold tracking-[-0.04em] sm:text-6xl">
               Turn what happened into something you can check.
             </h2>
             <p className="text-muted-foreground mt-7 max-w-lg text-lg leading-relaxed">
@@ -210,7 +210,7 @@ export default function HomePage() {
                       {moment.eyebrow}
                     </p>
                   </div>
-                  <h3 className="text-foreground mt-5 font-serif text-3xl font-semibold tracking-[-0.025em] sm:text-4xl">
+                  <h3 className="text-foreground mt-5 font-display text-3xl font-semibold tracking-[-0.025em] sm:text-4xl">
                     {moment.title}
                   </h3>
                   <p className="text-muted-foreground mt-4 max-w-lg leading-relaxed">
@@ -239,7 +239,7 @@ export default function HomePage() {
             <p className="text-xs font-bold tracking-[0.2em] text-teal-200 uppercase">
               Between visits
             </p>
-            <h2 className="mt-6 font-serif text-[clamp(3rem,7vw,6.7rem)] leading-[0.94] font-semibold tracking-[-0.045em]">
+            <h2 className="mt-6 font-display text-[clamp(3rem,7vw,6.7rem)] leading-[0.94] font-semibold tracking-[-0.045em]">
               Keep the medication picture current.
             </h2>
             <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-teal-50/75 sm:text-xl">
@@ -252,18 +252,18 @@ export default function HomePage() {
             <div className="relative mx-auto h-[42rem] w-full max-w-2xl sm:h-[50rem] lg:h-[56rem]">
               <div className="absolute top-20 left-[4%] w-[17rem] -rotate-6 sm:w-[21rem] lg:w-[23rem]">
                 <ProductDevice
-                  src="/screenshots/product-bezel-2026-08-24-clipped/medication-detail-natural.webp"
-                  darkSrc="/screenshots/product-bezel-2026-08-24-clipped/medication-detail-natural-dark.webp"
-                  alt="Medscribe medication detail in a natural titanium iPhone product bezel"
+                  src="/screenshots/product-bezel-2026-08-24-unified-type/medication-detail-natural.webp"
+                  darkSrc="/screenshots/product-bezel-2026-08-24-unified-type/medication-detail-natural-dark.webp"
+                  alt="Medscribe medication detail in an iPhone 17 Pro product bezel"
                   className="pitch-device-motion pitch-device-drift-left"
                   sizes="(min-width: 1024px) 368px, (min-width: 640px) 336px, 272px"
                 />
               </div>
               <div className="absolute top-0 right-[2%] z-10 w-[18rem] rotate-5 sm:w-[22rem] lg:w-[24rem]">
                 <ProductDevice
-                  src="/screenshots/product-bezel-2026-08-24-clipped/medications-black.webp"
-                  darkSrc="/screenshots/product-bezel-2026-08-24-clipped/medications-black-dark.webp"
-                  alt="Medscribe medication list in a black titanium iPhone product bezel"
+                  src="/screenshots/product-bezel-2026-08-24-unified-type/medications-black.webp"
+                  darkSrc="/screenshots/product-bezel-2026-08-24-unified-type/medications-black-dark.webp"
+                  alt="Medscribe medication list in an iPhone 17 Pro product bezel"
                   className="pitch-device-motion pitch-device-drift-right"
                   sizes="(min-width: 1024px) 384px, (min-width: 640px) 352px, 288px"
                 />
@@ -290,7 +290,7 @@ export default function HomePage() {
                   className="border-white/10 border-t p-7 first:border-t-0 sm:p-9"
                 >
                   <Check className="size-5 text-teal-200" aria-hidden="true" />
-                  <h3 className="mt-5 font-serif text-2xl font-semibold sm:text-3xl">
+                  <h3 className="mt-5 font-display text-2xl font-semibold sm:text-3xl">
                     {item.title}
                   </h3>
                   <p className="mt-3 leading-relaxed text-teal-50/70">
@@ -312,7 +312,7 @@ export default function HomePage() {
             <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase">
               Questions for the doctor
             </p>
-            <h2 className="text-foreground mt-6 max-w-2xl font-serif text-[clamp(3.25rem,6vw,6.5rem)] leading-[0.94] font-semibold tracking-[-0.045em]">
+            <h2 className="text-foreground mt-6 max-w-2xl font-display text-[clamp(3.25rem,6vw,6.5rem)] leading-[0.94] font-semibold tracking-[-0.045em]">
               Ask now. Save what belongs in the room.
             </h2>
             <p className="text-muted-foreground mt-8 max-w-xl text-lg leading-relaxed sm:text-xl">
@@ -333,18 +333,18 @@ export default function HomePage() {
           <div className="mx-auto grid w-full max-w-[40rem] items-center justify-center gap-2 sm:grid-cols-2 lg:justify-end">
             <div className="mx-auto w-[min(72vw,18rem)] -rotate-2 sm:w-full">
               <ProductDevice
-                src="/screenshots/product-bezel-2026-08-24-clipped/ask-questions-black.webp"
-                darkSrc="/screenshots/product-bezel-2026-08-24-clipped/ask-questions-black-dark.webp"
-                alt="Medscribe Ask response shown in a black titanium iPhone product bezel"
+                src="/screenshots/product-bezel-2026-08-24-unified-type/ask-questions-black.webp"
+                darkSrc="/screenshots/product-bezel-2026-08-24-unified-type/ask-questions-black-dark.webp"
+                alt="Medscribe Ask response shown in an iPhone 17 Pro product bezel"
                 className="pitch-device-motion pitch-device-drift-left"
                 sizes="(min-width: 640px) 288px, 72vw"
               />
             </div>
             <div className="mx-auto w-[min(72vw,18rem)] rotate-2 sm:w-full">
               <ProductDevice
-                src="/screenshots/product-bezel-2026-08-24-clipped/questions-black.webp"
-                darkSrc="/screenshots/product-bezel-2026-08-24-clipped/questions-black-dark.webp"
-                alt="Medscribe Questions to ask interface shown in a black titanium iPhone product bezel"
+                src="/screenshots/product-bezel-2026-08-24-unified-type/questions-black.webp"
+                darkSrc="/screenshots/product-bezel-2026-08-24-unified-type/questions-black-dark.webp"
+                alt="Medscribe Questions to ask interface shown in an iPhone 17 Pro product bezel"
                 className="pitch-device-motion pitch-device-drift-right"
                 sizes="(min-width: 640px) 288px, 72vw"
               />
@@ -359,9 +359,9 @@ export default function HomePage() {
             <div className="relative mx-auto w-[min(80vw,28rem)]">
               <div className="bg-primary-light/70 absolute inset-[12%_-12%_8%] -z-10 rounded-[4rem] blur-2xl" />
               <ProductDevice
-                src="/screenshots/product-bezel-2026-08-24-clipped/know-me-natural.webp"
-                darkSrc="/screenshots/product-bezel-2026-08-24-clipped/know-me-natural-dark.webp"
-                alt="Medscribe Know Me handoff record in a natural titanium iPhone product bezel"
+                src="/screenshots/product-bezel-2026-08-24-unified-type/know-me-natural.webp"
+                darkSrc="/screenshots/product-bezel-2026-08-24-unified-type/know-me-natural-dark.webp"
+                alt="Medscribe Know Me handoff record in an iPhone 17 Pro product bezel"
                 className="pitch-device-motion pitch-device-drift-left"
                 sizes="(min-width: 1024px) 448px, (min-width: 640px) 400px, 80vw"
               />
@@ -370,7 +370,7 @@ export default function HomePage() {
               <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase">
                 At the handoff
               </p>
-              <h2 className="text-foreground mt-6 max-w-2xl font-serif text-[clamp(3.2rem,6vw,6.2rem)] leading-[0.95] font-semibold tracking-[-0.045em]">
+              <h2 className="text-foreground mt-6 max-w-2xl font-display text-[clamp(3.2rem,6vw,6.2rem)] leading-[0.95] font-semibold tracking-[-0.045em]">
                 Bring the picture when care gets complicated.
               </h2>
               <p className="text-muted-foreground mt-8 max-w-xl text-lg leading-relaxed sm:text-xl">
@@ -414,7 +414,7 @@ export default function HomePage() {
                   className="size-7 text-teal-200"
                   aria-hidden="true"
                 />
-                <h3 className="mt-5 font-serif text-4xl leading-tight font-semibold sm:text-5xl">
+                <h3 className="mt-5 font-display text-4xl leading-tight font-semibold sm:text-5xl">
                   Share with intention.
                 </h3>
                 <p className="mt-5 max-w-xl leading-relaxed text-teal-50/75">
@@ -435,7 +435,7 @@ export default function HomePage() {
                     <span className="flex size-8 items-center justify-center rounded-full bg-white/12 text-xs font-bold">
                       {number}
                     </span>
-                    <p className="mt-8 font-serif text-xl font-semibold">
+                    <p className="mt-8 font-display text-xl font-semibold">
                       {title}
                     </p>
                     <p className="mt-2 text-sm leading-relaxed text-teal-50/65">
@@ -456,7 +456,7 @@ export default function HomePage() {
             <p className="text-xs font-bold tracking-[0.2em] text-teal-300 uppercase">
               Privacy that feels personal
             </p>
-            <h2 className="mt-6 font-serif text-[clamp(3.2rem,7vw,7rem)] leading-[0.92] font-semibold tracking-[-0.05em]">
+            <h2 className="mt-6 font-display text-[clamp(3.2rem,7vw,7rem)] leading-[0.92] font-semibold tracking-[-0.05em]">
               Your health story stays centered on you.
             </h2>
             <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-slate-300 sm:text-xl">
@@ -472,7 +472,7 @@ export default function HomePage() {
                 className="px-5 py-2 text-center md:py-10 lg:py-14"
               >
                 <dt className="text-sm text-slate-400">{stat.label}</dt>
-                <dd className="mt-3 font-serif text-5xl font-semibold tracking-[-0.04em] text-teal-200 sm:text-6xl lg:text-7xl">
+                <dd className="mt-3 font-display text-5xl font-semibold tracking-[-0.04em] text-teal-200 sm:text-6xl lg:text-7xl">
                   {stat.value}
                 </dd>
               </div>
@@ -489,7 +489,7 @@ export default function HomePage() {
                   className="rounded-[1.75rem] bg-white/[0.05] p-7"
                 >
                   <Icon className="size-6 text-teal-200" aria-hidden="true" />
-                  <h3 className="mt-8 font-serif text-2xl font-semibold">
+                  <h3 className="mt-8 font-display text-2xl font-semibold">
                     {principle.title}
                   </h3>
                   <p className="mt-4 text-sm leading-relaxed text-slate-400">
@@ -516,7 +516,7 @@ export default function HomePage() {
           <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase">
             Made for people who carry a lot
           </p>
-          <h2 className="text-foreground mx-auto mt-6 max-w-4xl font-serif text-[clamp(3.2rem,7vw,7rem)] leading-[0.92] font-semibold tracking-[-0.05em]">
+          <h2 className="text-foreground mx-auto mt-6 max-w-4xl font-display text-[clamp(3.2rem,7vw,7rem)] leading-[0.92] font-semibold tracking-[-0.05em]">
             Carry the record that helps you move forward.
           </h2>
           <p className="text-muted-foreground mx-auto mt-8 max-w-2xl text-lg leading-relaxed sm:text-xl">

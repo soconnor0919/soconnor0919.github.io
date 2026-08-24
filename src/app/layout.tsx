@@ -1,18 +1,13 @@
 import "~/styles/globals.css";
 
 import { type Metadata, type Viewport } from "next";
-import { Instrument_Sans, Playfair_Display } from "next/font/google";
+import { Instrument_Sans } from "next/font/google";
 
 import { UmamiAnalytics } from "~/components/umami-analytics";
 
 const instrumentSans = Instrument_Sans({
   subsets: ["latin"],
   variable: "--font-instrument-sans",
-});
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
 });
 
 export const metadata: Metadata = {
@@ -53,10 +48,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="en"
-      className={`${instrumentSans.variable} ${playfair.variable}`}
-    >
+    <html lang="en" className={instrumentSans.variable}>
       <body className="min-h-screen">
         {children}
         <UmamiAnalytics />

@@ -15,7 +15,7 @@ export default function NorthwellBriefPage() {
       <NorthwellPrintSummary />
       <div className="print-hidden mx-auto max-w-2xl px-4 py-16 text-center sm:px-6 lg:py-24">
         <SectionLabel>Executive summary · Northwell Health</SectionLabel>
-        <h1 className="text-foreground mt-4 font-serif text-4xl font-semibold tracking-tight sm:text-5xl">
+        <h1 className="text-foreground mt-4 font-display text-4xl font-semibold tracking-tight sm:text-5xl">
           The health-system executive summary
         </h1>
         <p className="text-muted-foreground mx-auto mt-5 max-w-xl leading-relaxed">
