@@ -10,17 +10,26 @@ import {
 /**
  * Site-wide password gate via a login page and signed session cookie.
  *
- * Set `SITE_PASSWORD` in `.env` to require a password before the site loads.
- * Leave `SITE_PASSWORD` unset to disable the gate.
+ * Set `SITE_PASSWORD_ENABLED=true` and `SITE_PASSWORD` to require a password
+ * before the site loads. The gate is off by default.
  */
 export async function proxy(req: NextRequest) {
-  const password = process.env.SITE_PASSWORD;
+  const password =
+    process.env.SITE_PASSWORD_ENABLED === "true"
+      ? process.env.SITE_PASSWORD
+      : undefined;
+  const { pathname } = req.nextUrl;
 
-  if (!password) return NextResponse.next();
+  if (!password) {
+    if (pathname === "/login") {
+      return NextResponse.redirect(new URL("/", req.url));
+    }
+
+    return NextResponse.next();
+  }
 
   const token = req.cookies.get(AUTH_COOKIE_NAME)?.value;
   const isAuthed = await verifyAccessToken(password, token);
-  const { pathname } = req.nextUrl;
 
   if (pathname === "/login" || pathname === "/api/auth") {
     if (isAuthed && pathname === "/login") {

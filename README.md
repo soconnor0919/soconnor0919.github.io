@@ -25,6 +25,7 @@ Public routes include:
 - `/how-it-works` — review loop, medication maintenance, Questions, and handoff
 - `/privacy` — plain-language privacy and patient-control commitments
 - `/access` — health-data-free access request
+- `/medscribe-corporate-partner-overview.pdf` — public eight-slide partner deck
 
 Named partner print material remains isolated and excluded from search:
 
@@ -43,6 +44,19 @@ Set in `.env` (see `.env.example`):
 - `NEXT_PUBLIC_UMAMI_SCRIPT_URL` — optional; defaults to `https://cloud.umami.is/script.js` (use your self-hosted URL if needed)
 
 Leave the website ID unset to disable tracking (default for local dev).
+
+### Optional preview password
+
+The public site is open by default. To enable the private-preview gate, set
+both values in the deployment environment:
+
+```bash
+SITE_PASSWORD_ENABLED="true"
+SITE_PASSWORD="choose-a-strong-password"
+```
+
+Unset `SITE_PASSWORD_ENABLED` or set it to `false` to keep the site public. A
+stored password alone does not enable the gate.
 
 ## Build
 
@@ -66,11 +80,10 @@ Export **in-app content only** from the simulator or device — no simulator chr
 
 1. Run the app on an **iPhone 17 Pro** simulator or device.
 2. Capture each screen (⌘S in Simulator saves to Desktop).
-3. Fit each 1206 × 2622 capture into the bezel's 1201 × 2617 display opening,
-   clip it with a 198 px corner radius, and composite it into the 1350 × 2760
-   Silver bezel at offset `+74+71`. Export a transparent, lossless WebP and
-   update the shared versioned asset directory.
-   referenced by the routes.
+3. Place each 1206 × 2622 capture at native size in the 1350 × 2760 Silver
+   bezel at offset `+72+69`, clip it to the calibrated display-opening mask,
+   and export a transparent, lossless WebP into the shared versioned asset
+   directory referenced by the routes.
 
 Product images are composited at the bezel source size of 1350 × 2760 with
 transparent backgrounds and rendered responsively through

@@ -4,6 +4,10 @@ import { MedscribeLogo } from "~/components/medscribe-logo";
 
 const footerLinks = [
   { href: "/how-it-works", label: "How it works" },
+  {
+    href: "/medscribe-corporate-partner-overview.pdf",
+    label: "Partner deck",
+  },
   { href: "/privacy", label: "Privacy" },
   { href: "/access", label: "Request access" },
 ] as const;
@@ -23,6 +27,9 @@ export function SiteFooter() {
           <p className="text-muted-foreground mt-4 max-w-md leading-relaxed">
             A private, patient-controlled way to keep visits, medications, and
             important care context together.
+          </p>
+          <p className="text-muted-foreground mt-3 text-xs leading-relaxed">
+            Medscribe is a product of Hadlock Holdings LLC.
           </p>
           <p className="text-muted-foreground mt-3 text-xs leading-relaxed">
             Medscribe does not diagnose, prescribe, or replace emergency
@@ -48,20 +55,18 @@ export function SiteFooter() {
 
         <div>
           <p className="text-foreground font-semibold">Contact</p>
-          <p className="text-muted-foreground mt-3 leading-relaxed">
-            Built by{" "}
-            <a
-              href="https://soconnor.dev"
-              className="text-foreground focus-visible:ring-primary/40 rounded-sm underline-offset-4 outline-none hover:underline focus-visible:ring-2"
-            >
-              Sean O&apos;Connor
-            </a>
+          <p className="text-foreground mt-3 leading-relaxed">
+            Sean O&apos;Connor
+            <span className="text-muted-foreground mx-2" aria-hidden="true">
+              ·
+            </span>
+            Bill Vitriol
           </p>
           <a
-            href="mailto:sean@soconnor.dev?subject=Medscribe%20website%20question"
+            href="mailto:access@medscribe.dev?subject=Medscribe%20website%20question"
             className="text-foreground focus-visible:ring-primary/40 mt-2 inline-block rounded-sm underline-offset-4 outline-none hover:underline focus-visible:ring-2"
           >
-            sean@soconnor.dev
+            access@medscribe.dev
           </a>
           <p className="text-muted-foreground/80 mt-5 text-xs">
             &copy; {new Date().getFullYear()} Hadlock Holdings LLC

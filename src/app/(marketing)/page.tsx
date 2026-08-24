@@ -3,6 +3,8 @@ import {
   ArrowRight,
   Check,
   ContactRound,
+  Download,
+  FileText,
   HeartHandshake,
   LockKeyhole,
   ScanLine,
@@ -506,6 +508,54 @@ export default function HomePage() {
                 Read about privacy
                 <ArrowRight className="size-4" aria-hidden="true" />
               </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="partners"
+        className="pitch-lazy overflow-hidden px-4 py-20 sm:px-6 lg:py-28"
+      >
+        <div className="section-wash surface-panel mx-auto grid max-w-6xl gap-10 rounded-[2.75rem] px-6 py-12 sm:px-10 lg:grid-cols-[1fr_auto] lg:items-center lg:px-14 lg:py-16">
+          <div className="pitch-copy-motion max-w-3xl">
+            <div className="bg-primary-light text-primary flex size-12 items-center justify-center rounded-2xl">
+              <FileText className="size-6" aria-hidden="true" />
+            </div>
+            <p className="text-primary mt-7 text-xs font-bold tracking-[0.2em] uppercase">
+              For partners
+            </p>
+            <h2 className="text-foreground mt-4 font-display text-4xl leading-tight font-semibold tracking-[-0.035em] sm:text-5xl">
+              See the partnership story.
+            </h2>
+            <p className="text-muted-foreground mt-5 max-w-2xl text-lg leading-relaxed">
+              An eight-slide overview of the problem Medscribe addresses, the
+              product in practice, and the opportunity to bring it to more
+              patients and caregivers.
+            </p>
+            <p className="text-foreground mt-6 text-sm font-semibold tracking-[-0.01em]">
+              <span className="block">Hadlock Holdings LLC</span>
+              <span className="text-muted-foreground mt-1 block">
+                Sean O&apos;Connor · Bill Vitriol
+              </span>
+            </p>
+          </div>
+          <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
+            <Button asChild size="lg">
+              <a
+                href="/medscribe-corporate-partner-overview.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View pitch deck
+                <ArrowRight className="size-4" aria-hidden="true" />
+              </a>
+            </Button>
+            <Button asChild size="lg" variant="outline">
+              <a href="/medscribe-corporate-partner-overview.pdf" download>
+                Download PDF
+                <Download className="size-4" aria-hidden="true" />
+              </a>
             </Button>
           </div>
         </div>

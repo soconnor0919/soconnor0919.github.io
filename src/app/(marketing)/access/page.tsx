@@ -19,7 +19,7 @@ import { ACCESS_INVITE_MAILTO } from "~/lib/access";
 export const metadata: Metadata = {
   title: "Request access",
   description:
-    "Request access to Medscribe without including personal health information.",
+    "Request access to Medscribe's closed beta without including personal health information.",
 };
 
 const fitCards = [
@@ -86,8 +86,9 @@ export default function AccessPage() {
               Request Medscribe access
             </h2>
             <p className="text-muted-foreground mt-4 text-sm leading-relaxed">
-              Tell us your platform and whether you are interested as a patient,
-              caregiver, or both.
+              The beta is currently closed to a small group. Tell us your
+              platform and whether you are interested as a patient, caregiver,
+              or both, and we&apos;ll follow up as access becomes available.
             </p>
             <Button asChild size="lg" className="mt-7 w-full sm:w-auto">
               <a href={ACCESS_INVITE_MAILTO}>

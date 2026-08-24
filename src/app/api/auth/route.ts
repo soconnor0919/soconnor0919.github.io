@@ -8,7 +8,10 @@ import {
 const COOKIE_MAX_AGE = 60 * 60 * 24 * 30;
 
 export async function POST(req: Request) {
-  const password = process.env.SITE_PASSWORD;
+  const password =
+    process.env.SITE_PASSWORD_ENABLED === "true"
+      ? process.env.SITE_PASSWORD
+      : undefined;
 
   if (!password) {
     return NextResponse.json({ ok: true });

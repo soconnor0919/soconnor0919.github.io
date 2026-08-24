@@ -1,5 +1,5 @@
 export const productRelease = {
-  stage: "Private by design",
+  stage: "Closed beta",
   platforms: "iOS and Android",
 } as const;
 
