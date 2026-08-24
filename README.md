@@ -21,8 +21,8 @@ Open [http://localhost:3000](http://localhost:3000).
 
 Public routes include:
 
-- `/` — consumer-first portable-context story
-- `/how-it-works` — inputs, review loop, medication maintenance, and handoff
+- `/` — consumer-first portable-context story, including Questions
+- `/how-it-works` — review loop, medication maintenance, Questions, and handoff
 - `/privacy` — plain-language privacy and patient-control commitments
 - `/access` — health-data-free access request
 

@@ -1,6 +1,6 @@
 import "~/styles/globals.css";
 
-import { type Metadata } from "next";
+import { type Metadata, type Viewport } from "next";
 import { Instrument_Sans, Playfair_Display } from "next/font/google";
 
 import { UmamiAnalytics } from "~/components/umami-analytics";
@@ -40,6 +40,13 @@ export const metadata: Metadata = {
       "Carry the context when care gets complicated. Private, patient-controlled health context when you need it.",
     type: "website",
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f4f9f7" },
+    { media: "(prefers-color-scheme: dark)", color: "#071415" },
+  ],
 };
 
 export default function RootLayout({

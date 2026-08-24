@@ -20,7 +20,7 @@ const features = [
     icon: CalendarDays,
     title: "Turn a visit into context you can review",
     description:
-      "Type or paste notes, import a portal screenshot or document, or use consent-gated recording to create a summary you can check.",
+      "Keep the important details from a visit together in a summary you can check and revisit.",
     points: [
       "Keep the visit and summary easy to revisit",
       "Review important details before relying on them",
@@ -53,13 +53,13 @@ const features = [
     id: "questions",
     label: "Questions",
     icon: MessageCircle,
-    title: "Facts first, fluent answers second",
+    title: "Keep the question for the right conversation",
     description:
-      "Ask about a visit or medication using the context you have already collected. Dosing changes, diagnosis, and treatment decisions stay with a clinician or pharmacist.",
+      "Ask about a visit or medication. When professional judgment is needed, save the question and keep guidance on who may be helpful to ask.",
     points: [
-      "Keep answers connected to your own context",
-      "Prepare for a clearer care conversation",
-      "High-risk or unsupported questions defer to a professional",
+      "Capture questions as they come up",
+      "Keep a ready list for the next appointment",
+      "See whether a doctor, prescriber, or pharmacist may be helpful",
     ],
     image: "/screenshots/product-bezel-2026-08-23-complete/ask-black.webp",
     darkImage:
@@ -143,10 +143,10 @@ export function FeatureShowcase() {
                 onClick={() => setActiveId(feature.id)}
                 onKeyDown={onTabKeyDown}
                 className={cn(
-                  "focus-visible:ring-primary/40 inline-flex min-h-11 shrink-0 items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition-colors outline-none focus-visible:ring-2",
+                  "focus-visible:ring-primary/40 inline-flex min-h-11 shrink-0 items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition-colors outline-none focus-visible:ring-2",
                   isActive
-                    ? "border-primary-button bg-primary-button text-white shadow-sm"
-                    : "border-border-soft bg-surface/75 text-muted-foreground hover:border-primary/30 hover:text-foreground backdrop-blur-xl",
+                    ? "bg-primary-button text-white shadow-sm"
+                    : "bg-surface/75 text-muted-foreground hover:bg-surface-soft hover:text-foreground backdrop-blur-xl",
                 )}
               >
                 <Icon className="size-4" aria-hidden="true" />
@@ -190,7 +190,7 @@ export function FeatureShowcase() {
       </div>
 
       <div className="justify-self-center lg:justify-self-end">
-        <div className="glass-panel rounded-[2.5rem] p-5 sm:p-7">
+        <div className="surface-panel rounded-[2.5rem] p-5 sm:p-7">
           <PhoneMockup
             src={active.image}
             darkSrc={active.darkImage}

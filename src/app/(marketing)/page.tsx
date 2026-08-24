@@ -12,6 +12,7 @@ import {
 import Link from "next/link";
 
 import { ProductDevice } from "~/components/product-device";
+import { QuestionsPreview } from "~/components/questions-preview";
 import { Button } from "~/components/ui/button";
 import { productClaims, productRelease } from "~/content/product";
 import { ACCESS_INVITE_MAILTO } from "~/lib/access";
@@ -99,9 +100,7 @@ const accessFit = [
 export default function HomePage() {
   return (
     <>
-      <section className="relative isolate min-h-[calc(100svh-4rem)] overflow-hidden px-4 pt-14 sm:px-6 sm:pt-20 lg:pt-24">
-        <div className="bg-primary-light/60 absolute -top-32 left-1/2 -z-10 h-[42rem] w-[74rem] max-w-[125vw] -translate-x-1/2 rounded-full blur-3xl" />
-        <div className="absolute top-48 -right-28 -z-10 size-[28rem] rounded-full bg-[#d9ecff]/35 blur-3xl dark:bg-[#123d5b]/28" />
+      <section className="section-wash relative isolate min-h-[calc(100svh-4rem)] overflow-hidden px-4 pt-14 sm:px-6 sm:pt-20 lg:pt-24">
         <div className="mx-auto max-w-7xl text-center">
           <div className="animate-fade-in-up flex items-center justify-center gap-3">
             <span className="bg-success-light text-success rounded-full px-3 py-1.5 text-xs font-bold tracking-[0.12em] uppercase">
@@ -158,7 +157,7 @@ export default function HomePage() {
         </p>
       </section>
 
-      <section className="pitch-lazy brand-warm border-border-soft/70 flex min-h-[78svh] items-center border-y px-4 py-24 sm:px-6 lg:py-32">
+      <section className="pitch-lazy section-wash flex min-h-[78svh] items-center px-4 py-24 sm:px-6 lg:py-32">
         <div className="pitch-copy-motion mx-auto max-w-6xl text-center">
           <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase">
             The connected picture
@@ -184,11 +183,11 @@ export default function HomePage() {
               Turn what happened into something you can check.
             </h2>
             <p className="text-muted-foreground mt-7 max-w-lg text-lg leading-relaxed">
-              Bring in typed notes, a portal screenshot, a document, or an
-              optional consent-gated recording. You decide what is useful and
-              what belongs in your record.
+              Bring the important details from a visit into one reviewable
+              record. You decide what is useful and what belongs in the picture
+              you carry forward.
             </p>
-            <div className="border-primary/25 bg-primary-light/35 mt-8 max-w-lg rounded-2xl border p-5">
+            <div className="surface-panel mt-8 max-w-lg rounded-2xl p-5">
               <p className="text-foreground text-sm leading-relaxed">
                 <strong className="font-semibold">The safety loop:</strong>{" "}
                 review generated information before acting. Medscribe does not
@@ -201,7 +200,7 @@ export default function HomePage() {
             {visitMoments.map((moment, index) => (
               <li
                 key={moment.number}
-                className="pitch-card-motion glass-panel relative overflow-hidden rounded-[2.5rem] px-5 pt-8 sm:px-10 sm:pt-10"
+                className="pitch-card-motion surface-panel relative overflow-hidden rounded-[2.5rem] px-5 pt-8 sm:px-10 sm:pt-10"
               >
                 <div className="relative z-10 max-w-xl">
                   <div className="flex items-center gap-3">
@@ -272,7 +271,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="grid gap-px overflow-hidden rounded-[2rem] border border-white/12 bg-white/12">
+            <div className="overflow-hidden rounded-[2rem] bg-white/[0.055]">
               {[
                 {
                   title: "Keep schedules easy to understand",
@@ -289,7 +288,7 @@ export default function HomePage() {
               ].map((item) => (
                 <article
                   key={item.title}
-                  className="bg-[#0c2727]/88 p-7 backdrop-blur-sm sm:p-9"
+                  className="border-white/10 border-t p-7 first:border-t-0 sm:p-9"
                 >
                   <Check className="size-5 text-teal-200" aria-hidden="true" />
                   <h3 className="mt-5 font-serif text-2xl font-semibold sm:text-3xl">
@@ -305,32 +304,44 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="pitch-lazy brand-warm px-4 py-24 sm:px-6 lg:py-36">
-        <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[1fr_0.9fr] lg:gap-24">
-          <div className="pitch-copy-motion order-2 lg:order-1">
+      <section className="pitch-lazy section-wash overflow-hidden px-4 py-24 sm:px-6 lg:py-36">
+        <div
+          id="questions"
+          className="mx-auto grid max-w-7xl scroll-mt-4 items-center gap-14 lg:grid-cols-[0.82fr_1.18fr] lg:gap-20"
+        >
+          <div className="pitch-copy-motion">
             <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase">
-              Ask from the record
+              Questions for the doctor
             </p>
             <h2 className="text-foreground mt-6 max-w-2xl font-serif text-[clamp(3.25rem,6vw,6.5rem)] leading-[0.94] font-semibold tracking-[-0.045em]">
-              Better questions begin with your context.
+              Ask now. Save what belongs in the room.
             </h2>
             <p className="text-muted-foreground mt-8 max-w-xl text-lg leading-relaxed sm:text-xl">
-              Ask about a visit or medication using the context you have already
-              collected. Answers help you prepare for a clearer conversation.
+              Ask about a visit or medication. When the answer needs a care
+              professional&apos;s judgment, Medscribe can suggest saving the
+              question and who may be helpful to ask.
             </p>
-            <p className="border-primary/35 text-muted-foreground mt-7 max-w-xl border-l-2 pl-5 text-sm leading-relaxed">
-              Informational only. Medication changes still belong with a
-              clinician or pharmacist.
-            </p>
+            <div className="text-muted-foreground mt-7 flex max-w-xl items-start gap-3 text-sm leading-relaxed">
+              <span className="bg-primary-light text-primary mt-0.5 flex size-7 shrink-0 items-center justify-center rounded-full">
+                <Check className="size-3.5" aria-hidden="true" />
+              </span>
+              <p>
+                Keep a calm, ready list for your next appointment instead of
+                relying on memory when the conversation begins.
+              </p>
+            </div>
           </div>
-          <div className="order-1 mx-auto w-[min(78vw,27rem)] lg:order-2">
-            <ProductDevice
-              src="/screenshots/product-bezel-2026-08-23-complete/ask-black.webp"
-              darkSrc="/screenshots/product-bezel-2026-08-23-complete/ask-black-dark.webp"
-              alt="Medscribe Ask response shown in a black titanium iPhone product bezel"
-              className="pitch-device-motion pitch-device-drift-right"
-              sizes="(min-width: 1024px) 432px, (min-width: 640px) 384px, 78vw"
-            />
+          <div className="mx-auto grid w-full max-w-[43rem] items-center justify-center gap-2 sm:grid-cols-[minmax(0,18rem)_minmax(0,22rem)] lg:justify-end">
+            <div className="mx-auto w-[min(72vw,18rem)] -rotate-2 sm:w-full">
+              <ProductDevice
+                src="/screenshots/product-bezel-2026-08-23-complete/ask-black.webp"
+                darkSrc="/screenshots/product-bezel-2026-08-23-complete/ask-black-dark.webp"
+                alt="Medscribe Ask response shown in a black titanium iPhone product bezel"
+                className="pitch-device-motion pitch-device-drift-left"
+                sizes="(min-width: 640px) 288px, 72vw"
+              />
+            </div>
+            <QuestionsPreview className="pitch-card-motion w-full max-w-[22rem]" />
           </div>
         </div>
       </section>
@@ -361,7 +372,7 @@ export default function HomePage() {
                 to review together.
               </p>
               <div className="mt-9 grid gap-4 sm:grid-cols-2">
-                <div className="glass-panel rounded-2xl p-5">
+                <div className="surface-panel rounded-2xl p-5">
                   <ScanLine
                     className="text-primary size-6"
                     aria-hidden="true"
@@ -373,7 +384,7 @@ export default function HomePage() {
                     Show or share a selected, readable snapshot.
                   </p>
                 </div>
-                <div className="glass-panel rounded-2xl p-5">
+                <div className="surface-panel rounded-2xl p-5">
                   <ContactRound
                     className="text-primary size-6"
                     aria-hidden="true"
@@ -389,7 +400,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="brand-night mt-24 overflow-hidden rounded-[2.5rem] p-7 text-white shadow-[0_35px_90px_rgba(7,20,21,0.22)] sm:p-10 lg:p-14">
+          <div className="night-card mt-24 overflow-hidden rounded-[2.5rem] p-7 text-white sm:p-10 lg:p-14">
             <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
               <div>
                 <HeartHandshake
@@ -412,7 +423,7 @@ export default function HomePage() {
                 ].map(([number, title, body]) => (
                   <li
                     key={number}
-                    className="rounded-2xl border border-white/15 bg-white/8 p-5"
+                    className="rounded-2xl bg-white/[0.065] p-5"
                   >
                     <span className="flex size-8 items-center justify-center rounded-full bg-white/12 text-xs font-bold">
                       {number}
@@ -447,11 +458,11 @@ export default function HomePage() {
             </p>
           </div>
 
-          <dl className="mt-20 grid border-y border-white/12 md:grid-cols-3 md:divide-x md:divide-white/12">
+          <dl className="mt-20 grid gap-10 md:grid-cols-3 md:gap-0 md:divide-x md:divide-white/12">
             {proofStats.map((stat) => (
               <div
                 key={stat.label}
-                className="border-b border-white/12 px-5 py-10 text-center last:border-b-0 md:border-b-0 lg:py-14"
+                className="px-5 py-2 text-center md:py-10 lg:py-14"
               >
                 <dt className="text-sm text-slate-400">{stat.label}</dt>
                 <dd className="mt-3 font-serif text-5xl font-semibold tracking-[-0.04em] text-teal-200 sm:text-6xl lg:text-7xl">
@@ -468,7 +479,7 @@ export default function HomePage() {
               return (
                 <article
                   key={principle.title}
-                  className="rounded-[1.75rem] border border-white/12 bg-white/[0.045] p-7"
+                  className="rounded-[1.75rem] bg-white/[0.05] p-7"
                 >
                   <Icon className="size-6 text-teal-200" aria-hidden="true" />
                   <h3 className="mt-8 font-serif text-2xl font-semibold">
@@ -494,7 +505,7 @@ export default function HomePage() {
       </section>
 
       <section className="pitch-lazy flex min-h-[82svh] items-center px-4 py-24 sm:px-6 lg:py-32">
-        <div className="pitch-copy-motion brand-warm border-border-soft/65 mx-auto w-full max-w-6xl overflow-hidden rounded-[3rem] border px-6 py-16 text-center shadow-[0_35px_110px_rgba(15,118,110,0.14)] sm:px-10 lg:px-20 lg:py-24">
+        <div className="pitch-copy-motion section-wash surface-panel mx-auto w-full max-w-6xl overflow-hidden rounded-[3rem] px-6 py-16 text-center sm:px-10 lg:px-20 lg:py-24">
           <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase">
             Made for people who carry a lot
           </p>
@@ -509,7 +520,7 @@ export default function HomePage() {
             {accessFit.map((item) => (
               <li
                 key={item}
-                className="border-primary/15 bg-surface/65 text-foreground flex items-start gap-3 rounded-2xl border p-4 text-sm leading-relaxed"
+                className="bg-surface/65 text-foreground flex items-start gap-3 rounded-2xl p-4 text-sm leading-relaxed"
               >
                 <span className="bg-primary-light mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full">
                   <Check className="text-primary size-3" aria-hidden="true" />

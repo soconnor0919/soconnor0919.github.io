@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
 import {
   ArrowRight,
-  Camera,
+  CalendarDays,
   Check,
-  FileText,
-  Keyboard,
-  Mic,
+  ListChecks,
+  MessageCircleQuestion,
+  RotateCcw,
   ShieldAlert,
 } from "lucide-react";
 import Link from "next/link";
 
 import { PhoneMockup } from "~/components/phone-mockup";
+import { QuestionsPreview } from "~/components/questions-preview";
 import { SectionLabel } from "~/components/section-label";
 import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
@@ -21,26 +22,26 @@ export const metadata: Metadata = {
     "See how Medscribe brings visits, medication routines, and important context into one reviewable record.",
 };
 
-const inputs = [
+const dailyRhythm = [
   {
-    icon: Keyboard,
-    title: "Type or paste",
-    body: "Start from notes you already have and keep the original details easy to revisit.",
+    icon: CalendarDays,
+    title: "Start with the moment",
+    body: "Give each visit a clear place so the details remain easy to find later.",
   },
   {
-    icon: Camera,
-    title: "Import a screenshot",
-    body: "Bring in a portal summary or prescription label, then correct extracted fields.",
+    icon: ListChecks,
+    title: "Review what matters",
+    body: "Check the useful details and keep your own judgment in the loop.",
   },
   {
-    icon: FileText,
-    title: "Attach a document",
-    body: "Bring a photo or document into a guided review workflow.",
+    icon: MessageCircleQuestion,
+    title: "Keep the next question",
+    body: "Save what you want to ask while it is still fresh in your mind.",
   },
   {
-    icon: Mic,
-    title: "Record with consent",
-    body: "With permission, turn optional visit audio into notes you can review.",
+    icon: RotateCcw,
+    title: "Return when needed",
+    body: "Revisit the same picture before the next appointment or handoff.",
   },
 ] as const;
 
@@ -68,20 +69,20 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      <section className="brand-warm border-border-soft/70 border-y px-4 py-18 sm:px-6 lg:py-22">
+      <section className="section-wash px-4 py-18 sm:px-6 lg:py-22">
         <div className="mx-auto max-w-6xl">
-          <SectionLabel>Start where the information is</SectionLabel>
+          <SectionLabel>Start with what matters</SectionLabel>
           <h2 className="text-foreground mt-4 max-w-3xl font-serif text-4xl font-semibold tracking-tight sm:text-5xl">
-            Four ways in. One clear place to review.
+            A clear rhythm from the moment to the next conversation.
           </h2>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {inputs.map((item, index) => {
+            {dailyRhythm.map((item, index) => {
               const Icon = item.icon;
 
               return (
                 <article
                   key={item.title}
-                  className="glass-panel rounded-2xl p-6"
+                  className="surface-panel rounded-2xl p-6"
                 >
                   <div className="flex items-center justify-between">
                     <span className="bg-primary-light text-primary flex size-11 items-center justify-center rounded-xl">
@@ -101,14 +102,14 @@ export default function HowItWorksPage() {
               );
             })}
           </div>
-          <div className="border-primary/20 bg-primary-light/45 mt-6 flex gap-3 rounded-2xl border p-5">
+          <div className="surface-panel mt-6 flex gap-3 rounded-2xl p-5">
             <Check
               className="text-primary mt-0.5 size-5 shrink-0"
               aria-hidden="true"
             />
             <p className="text-foreground text-sm leading-relaxed">
-              You review summaries and medication details before they become
-              part of the record you carry.
+              You review the details before they become part of the picture you
+              carry.
             </p>
           </div>
         </div>
@@ -126,13 +127,13 @@ export default function HowItWorksPage() {
                 The visit remains available beside the summary so you can check
                 wording, follow-ups, and the details you want to remember.
               </p>
-              <p className="glass-panel text-muted-foreground mt-5 rounded-2xl p-5 text-sm leading-relaxed">
+              <p className="surface-panel text-muted-foreground mt-5 rounded-2xl p-5 text-sm leading-relaxed">
                 <strong className="text-foreground">Stay oriented:</strong> move
                 between the transcript and summary whenever you want the fuller
                 context.
               </p>
             </div>
-            <div className="bg-primary-light/45 justify-self-center rounded-[2.5rem] p-7">
+            <div className="section-wash justify-self-center rounded-[2.5rem] p-7">
               <PhoneMockup
                 src="/screenshots/product-bezel-2026-08-23-complete/summary-reviewed-natural.webp"
                 darkSrc="/screenshots/product-bezel-2026-08-23-complete/summary-reviewed-natural-dark.webp"
@@ -146,7 +147,7 @@ export default function HowItWorksPage() {
           </div>
 
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-            <div className="brand-warm justify-self-center rounded-[2.5rem] p-7 lg:order-1">
+            <div className="section-wash justify-self-center rounded-[2.5rem] p-7 lg:order-1">
               <PhoneMockup
                 src="/screenshots/product-bezel-2026-08-23-complete/medication-detail-natural.webp"
                 darkSrc="/screenshots/product-bezel-2026-08-23-complete/medication-detail-natural-dark.webp"
@@ -167,11 +168,29 @@ export default function HowItWorksPage() {
                 information together without hunting through separate notes.
               </p>
               <p className="text-muted-foreground mt-5 text-sm leading-relaxed">
-                Medscribe records timing supplied by a label, pharmacist, or
-                prescribing team. It does not calculate or shift medication
-                times.
+                Keep medication timing easy to read and confirm changes with
+                the care professional who gave you the instructions.
               </p>
             </div>
+          </div>
+
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+            <div className="lg:order-2">
+              <SectionLabel>Keep the next question</SectionLabel>
+              <h2 className="text-foreground mt-4 font-serif text-4xl font-semibold tracking-tight sm:text-5xl">
+                Save it while it is on your mind.
+              </h2>
+              <p className="text-muted-foreground mt-5 leading-relaxed">
+                Add questions as they come up between visits. If Ask reaches a
+                question that needs professional judgment, Medscribe can offer
+                to save it and suggest who may be helpful to ask.
+              </p>
+              <p className="text-muted-foreground mt-5 text-sm leading-relaxed">
+                Your list is ready when the appointment starts, so the most
+                important question does not disappear in the moment.
+              </p>
+            </div>
+            <QuestionsPreview className="justify-self-center lg:order-1 lg:w-full lg:max-w-md" />
           </div>
 
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
@@ -190,7 +209,7 @@ export default function HowItWorksPage() {
                 it, and when the conversation happens.
               </p>
             </div>
-            <div className="bg-primary-light/45 justify-self-center rounded-[2.5rem] p-7">
+            <div className="section-wash justify-self-center rounded-[2.5rem] p-7">
               <PhoneMockup
                 src="/screenshots/product-bezel-2026-08-23-complete/know-me-natural.webp"
                 darkSrc="/screenshots/product-bezel-2026-08-23-complete/know-me-natural-dark.webp"
@@ -205,7 +224,7 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      <section className="brand-warm border-border-soft/70 border-t px-4 py-20 sm:px-6">
+      <section className="section-wash px-4 py-20 sm:px-6">
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-2">
           <div>
             <div className="bg-primary-light text-primary flex size-12 items-center justify-center rounded-xl">
@@ -222,7 +241,7 @@ export default function HowItWorksPage() {
             {boundaries.map((item) => (
               <li
                 key={item}
-                className="glass-panel text-foreground flex gap-3 rounded-2xl p-4 text-sm leading-relaxed"
+                className="surface-panel text-foreground flex gap-3 rounded-2xl p-4 text-sm leading-relaxed"
               >
                 <Check
                   className="text-primary mt-0.5 size-5 shrink-0"
@@ -236,7 +255,7 @@ export default function HowItWorksPage() {
       </section>
 
       <section className="px-4 py-20 sm:px-6">
-        <div className="brand-night mx-auto flex max-w-6xl flex-col items-start justify-between gap-7 rounded-[2rem] px-7 py-10 text-white shadow-[0_28px_70px_rgba(7,20,21,0.2)] sm:px-10 md:flex-row md:items-center">
+        <div className="night-card mx-auto flex max-w-6xl flex-col items-start justify-between gap-7 rounded-[2rem] px-7 py-10 text-white sm:px-10 md:flex-row md:items-center">
           <div>
             <h2 className="font-serif text-3xl font-semibold">
               Privacy should feel understandable.

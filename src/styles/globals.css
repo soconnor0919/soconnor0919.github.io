@@ -22,13 +22,14 @@
 @layer base {
   :root {
     color-scheme: light;
-    --ambient-teal: rgba(83, 211, 192, 0.24);
-    --ambient-blue: rgba(132, 194, 255, 0.2);
-    --ambient-warm: rgba(244, 184, 128, 0.2);
-    --glass-fill: rgba(252, 255, 254, 0.74);
-    --glass-fill-strong: rgba(252, 255, 254, 0.9);
-    --glass-border: rgba(255, 255, 255, 0.78);
-    --glass-shadow: rgba(16, 65, 60, 0.13);
+    --ambient-teal: rgba(83, 211, 192, 0.16);
+    --ambient-blue: rgba(132, 194, 255, 0.12);
+    --ambient-warm: rgba(244, 184, 128, 0.12);
+    --surface-fill: rgba(252, 255, 254, 0.88);
+    --surface-fill-strong: rgba(252, 255, 254, 0.94);
+    --surface-shadow: rgba(16, 65, 60, 0.09);
+    --surface-highlight: rgba(255, 255, 255, 0.7);
+    --night: #0a1e1f;
   }
 
   /*
@@ -51,18 +52,20 @@
       --color-border-soft: #294243;
       --color-success: #34d399;
       --color-success-light: #124238;
-      --ambient-teal: rgba(45, 212, 191, 0.18);
-      --ambient-blue: rgba(41, 122, 179, 0.2);
-      --ambient-warm: rgba(161, 91, 55, 0.16);
-      --glass-fill: rgba(20, 39, 40, 0.68);
-      --glass-fill-strong: rgba(20, 39, 40, 0.9);
-      --glass-border: rgba(180, 228, 218, 0.13);
-      --glass-shadow: rgba(0, 0, 0, 0.34);
+      --ambient-teal: rgba(45, 212, 191, 0.11);
+      --ambient-blue: rgba(41, 122, 179, 0.13);
+      --ambient-warm: rgba(161, 91, 55, 0.1);
+      --surface-fill: rgba(20, 39, 40, 0.84);
+      --surface-fill-strong: rgba(20, 39, 40, 0.94);
+      --surface-shadow: rgba(0, 0, 0, 0.22);
+      --surface-highlight: rgba(180, 228, 218, 0.09);
+      --night: #061718;
     }
   }
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
   }
 
   body {
@@ -73,92 +76,118 @@
   ::selection {
     background: color-mix(in srgb, var(--color-primary) 24%, transparent);
   }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  a,
+  button,
+  summary {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
 }
 
 .ambient-canvas {
   background:
     radial-gradient(
-      ellipse 78% 54% at 4% -8%,
+      ellipse 72% 48% at 4% -8%,
       var(--ambient-teal),
-      transparent 68%
-    ),
-    radial-gradient(
-      ellipse 66% 50% at 102% 22%,
-      var(--ambient-blue),
-      transparent 70%
-    ),
-    radial-gradient(
-      ellipse 64% 48% at -8% 88%,
-      var(--ambient-warm),
       transparent 72%
+    ),
+    radial-gradient(
+      ellipse 62% 46% at 102% 24%,
+      var(--ambient-blue),
+      transparent 74%
+    ),
+    radial-gradient(
+      ellipse 60% 44% at -8% 88%,
+      var(--ambient-warm),
+      transparent 76%
     ),
     var(--color-canvas);
 }
 
-.glass-panel {
-  border: 1px solid var(--glass-border);
-  background: var(--glass-fill);
+.surface-panel {
+  background: var(--surface-fill);
   box-shadow:
-    0 24px 70px var(--glass-shadow),
-    inset 0 1px 0 rgba(255, 255, 255, 0.32);
-  backdrop-filter: blur(24px) saturate(140%);
-  -webkit-backdrop-filter: blur(24px) saturate(140%);
+    0 20px 58px var(--surface-shadow),
+    inset 0 1px 0 var(--surface-highlight);
+  backdrop-filter: blur(18px) saturate(115%);
+  -webkit-backdrop-filter: blur(18px) saturate(115%);
 }
 
-.glass-panel-strong {
-  border: 1px solid var(--glass-border);
-  background: var(--glass-fill-strong);
+.surface-panel-strong {
+  background: var(--surface-fill-strong);
   box-shadow:
-    0 18px 55px var(--glass-shadow),
-    inset 0 1px 0 rgba(255, 255, 255, 0.28);
-  backdrop-filter: blur(30px) saturate(150%);
-  -webkit-backdrop-filter: blur(30px) saturate(150%);
+    0 12px 42px var(--surface-shadow),
+    inset 0 1px 0 var(--surface-highlight);
+  backdrop-filter: blur(22px) saturate(120%);
+  -webkit-backdrop-filter: blur(22px) saturate(120%);
 }
 
-.brand-warm {
+.section-wash {
   background:
     radial-gradient(
-      circle at 84% 12%,
-      color-mix(in srgb, var(--ambient-blue) 82%, transparent),
-      transparent 34%
+      ellipse 52% 36% at 88% 30%,
+      color-mix(in srgb, var(--ambient-blue) 72%, transparent),
+      transparent 72%
     ),
-    linear-gradient(145deg, #fbf1e7 0%, #f4f9f7 56%, #e8f7f3 100%);
+    radial-gradient(
+      ellipse 48% 34% at 8% 68%,
+      color-mix(in srgb, var(--ambient-warm) 68%, transparent),
+      transparent 74%
+    );
 }
 
 .brand-night {
   background:
     radial-gradient(
-      circle at 82% 12%,
-      rgba(45, 212, 191, 0.21),
-      transparent 34%
+      ellipse 58% 30% at 82% 32%,
+      rgba(45, 212, 191, 0.1),
+      transparent 72%
     ),
     radial-gradient(
-      circle at 8% 88%,
-      rgba(58, 134, 185, 0.17),
-      transparent 31%
+      ellipse 46% 28% at 8% 72%,
+      rgba(58, 134, 185, 0.08),
+      transparent 76%
     ),
-    linear-gradient(150deg, #071415 0%, #0b2928 54%, #102b3c 100%);
+    linear-gradient(
+      to bottom,
+      color-mix(in srgb, var(--color-canvas) 100%, transparent) 0,
+      var(--night) 5rem,
+      var(--night) calc(100% - 5rem),
+      color-mix(in srgb, var(--color-canvas) 100%, transparent) 100%
+    );
 }
 
-@media (prefers-color-scheme: dark) {
-  .brand-warm {
-    background:
-      radial-gradient(
-        circle at 84% 12%,
-        rgba(41, 122, 179, 0.17),
-        transparent 34%
-      ),
-      radial-gradient(
-        circle at 8% 84%,
-        rgba(161, 91, 55, 0.14),
-        transparent 36%
-      ),
-      linear-gradient(145deg, #142421 0%, #0d1f20 58%, #102a32 100%);
-  }
+.night-card {
+  background:
+    radial-gradient(
+      ellipse 58% 42% at 88% 12%,
+      rgba(45, 212, 191, 0.12),
+      transparent 72%
+    ),
+    linear-gradient(145deg, #0a2021 0%, #0a1e1f 62%, #0d252d 100%);
+  box-shadow: 0 30px 82px rgba(4, 20, 21, 0.2);
 }
 
 .card-hover {
-  @apply transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(15,23,42,0.08)];
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
 }
 
 @keyframes fade-in-up {
@@ -188,12 +217,6 @@
   animation: fade-in-up 0.5s ease-out 0.3s both;
 }
 
-/* Long-form homepage chapters render as they approach the viewport. */
-.pitch-lazy {
-  content-visibility: auto;
-  contain-intrinsic-size: auto 1000px;
-}
-
 /*
  * Scroll-scrubbed product motion. This stays CSS-only so the long homepage
  * remains a server component and ships no scroll listener or animation
@@ -201,69 +224,61 @@
  */
 .pitch-device-motion {
   --pitch-enter-x: 0px;
-  --pitch-enter-y: 7rem;
-  --pitch-enter-rotate: 0deg;
+  --pitch-enter-y: 3.5rem;
   --pitch-exit-x: 0px;
-  --pitch-exit-y: -5rem;
-  --pitch-exit-rotate: 0deg;
+  --pitch-exit-y: -2rem;
   backface-visibility: hidden;
   transform-origin: center;
 }
 
 .pitch-device-drift-left {
-  --pitch-enter-x: -2.25rem;
-  --pitch-enter-rotate: -2deg;
-  --pitch-exit-x: 1.5rem;
-  --pitch-exit-rotate: 1.25deg;
+  --pitch-enter-x: -1rem;
+  --pitch-exit-x: 0.5rem;
 }
 
 .pitch-device-drift-right {
-  --pitch-enter-x: 2.25rem;
-  --pitch-enter-rotate: 2deg;
-  --pitch-exit-x: -1.5rem;
-  --pitch-exit-rotate: -1.25deg;
+  --pitch-enter-x: 1rem;
+  --pitch-exit-x: -0.5rem;
 }
 
 @keyframes pitch-device-scroll {
   0% {
-    opacity: 0.42;
-    transform: translate3d(var(--pitch-enter-x), var(--pitch-enter-y), 0)
-      scale(0.92) rotate(var(--pitch-enter-rotate));
+    opacity: 0.78;
+    transform: translate3d(var(--pitch-enter-x), var(--pitch-enter-y), 0);
   }
-  38% {
+  34% {
     opacity: 1;
-    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+    transform: translate3d(0, 0, 0);
   }
-  72% {
+  78% {
     opacity: 1;
-    transform: translate3d(0, -1.5rem, 0) scale(1.018) rotate(0deg);
+    transform: translate3d(0, -0.75rem, 0);
   }
   100% {
-    opacity: 0.78;
-    transform: translate3d(var(--pitch-exit-x), var(--pitch-exit-y), 0)
-      scale(0.97) rotate(var(--pitch-exit-rotate));
+    opacity: 0.92;
+    transform: translate3d(var(--pitch-exit-x), var(--pitch-exit-y), 0);
   }
 }
 
 @keyframes pitch-copy-scroll {
   from {
-    opacity: 0.2;
-    transform: translate3d(0, 3.5rem, 0) scale(0.985);
+    opacity: 0.56;
+    transform: translate3d(0, 2rem, 0);
   }
   to {
     opacity: 1;
-    transform: translate3d(0, 0, 0) scale(1);
+    transform: translate3d(0, 0, 0);
   }
 }
 
 @keyframes pitch-card-scroll {
   from {
-    opacity: 0.58;
-    transform: translate3d(0, 4rem, 0) scale(0.97);
+    opacity: 0.76;
+    transform: translate3d(0, 2rem, 0);
   }
   to {
     opacity: 1;
-    transform: translate3d(0, 0, 0) scale(1);
+    transform: translate3d(0, 0, 0);
   }
 }
 
@@ -277,31 +292,31 @@
   .pitch-copy-motion {
     animation: pitch-copy-scroll linear both;
     animation-timeline: view(block);
-    animation-range: entry 5% cover 38%;
+    animation-range: entry 0% cover 28%;
   }
 
   .pitch-card-motion {
     animation: pitch-card-scroll linear both;
     animation-timeline: view(block);
-    animation-range: entry 0% cover 32%;
+    animation-range: entry 0% cover 24%;
   }
 }
 
 /* Keep the product choreography visible on phones without crowding the copy. */
 @media (max-width: 639px) {
   .pitch-device-motion {
-    --pitch-enter-y: 4rem;
-    --pitch-exit-y: -3rem;
+    --pitch-enter-y: 2.5rem;
+    --pitch-exit-y: -1.25rem;
   }
 
   .pitch-device-drift-left {
-    --pitch-enter-x: -1.25rem;
-    --pitch-exit-x: 0.75rem;
+    --pitch-enter-x: -0.5rem;
+    --pitch-exit-x: 0.25rem;
   }
 
   .pitch-device-drift-right {
-    --pitch-enter-x: 1.25rem;
-    --pitch-exit-x: -0.75rem;
+    --pitch-enter-x: 0.5rem;
+    --pitch-exit-x: -0.25rem;
   }
 }
 

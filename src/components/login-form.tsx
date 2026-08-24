@@ -55,7 +55,7 @@ export function LoginForm({ redirectTo }: LoginFormProps) {
     <div className="relative flex min-h-screen items-center justify-center px-4 py-16">
       <ScreenBackground />
 
-      <Card className="w-full max-w-md border-border-soft/80 bg-surface/95 shadow-[0_20px_50px_rgba(15,23,42,0.12)] backdrop-blur-sm">
+      <Card className="w-full max-w-md bg-surface/95 shadow-[0_20px_50px_rgba(15,23,42,0.12)] backdrop-blur-sm">
         <CardHeader className="items-center space-y-4 text-center">
           <MedscribeLogo className="h-8 w-[100px] text-foreground" />
           <div className="space-y-2">
@@ -81,7 +81,6 @@ export function LoginForm({ redirectTo }: LoginFormProps) {
                   name="password"
                   type="password"
                   autoComplete="current-password"
-                  autoFocus
                   required
                   value={password}
                   onChange={(event) => setPassword(event.target.value)}
@@ -103,7 +102,7 @@ export function LoginForm({ redirectTo }: LoginFormProps) {
               className="w-full"
               disabled={isSubmitting || password.length === 0}
             >
-              {isSubmitting ? "Checking..." : "Continue"}
+              {isSubmitting ? "Checking…" : "Continue"}
             </Button>
           </form>
         </CardContent>

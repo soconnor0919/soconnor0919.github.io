@@ -11,7 +11,7 @@ const footerLinks = [
 export function SiteFooter() {
   return (
     <footer className="print-hidden px-3 pb-3 sm:px-5 sm:pb-5">
-      <div className="glass-panel mx-auto grid max-w-6xl gap-10 rounded-[2rem] px-6 py-10 text-sm sm:px-8 md:grid-cols-[1.3fr_0.7fr_0.7fr]">
+      <div className="surface-panel mx-auto grid max-w-6xl gap-10 rounded-[2rem] px-6 py-10 text-sm sm:px-8 md:grid-cols-[1.3fr_0.7fr_0.7fr]">
         <div>
           <Link
             href="/"
