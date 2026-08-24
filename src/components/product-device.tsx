@@ -13,7 +13,7 @@ type ProductDeviceProps = {
 
 /**
  * A precomposited product capture using the licensed device bezels in
- * `public/screenshots/product-bezel-2026-08-23-complete`. Keeping the frame in the source
+ * `public/screenshots/product-bezel-2026-08-24-clipped`. Keeping the frame in the source
  * image preserves the bezel details without adding layout or client-side work.
  */
 export function ProductDevice({
@@ -31,10 +31,7 @@ export function ProductDevice({
     sizes,
     priority,
     quality: 92,
-    className: cn(
-      "h-auto w-full translate-z-0 drop-shadow-[0_35px_35px_rgba(15,23,42,0.22)] dark:drop-shadow-[0_38px_42px_rgba(0,0,0,0.5)]",
-      className,
-    ),
+    className: cn("h-auto w-full translate-z-0", className),
   };
   const { props: lightProps } = getImageProps({ src, ...shared });
   const darkProps = darkSrc

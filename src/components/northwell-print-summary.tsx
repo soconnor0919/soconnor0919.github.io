@@ -127,13 +127,13 @@ export function NorthwellPrintSummary() {
           <div className="mx-auto w-[210px]">
             <div>
               <Image
-                src="/screenshots/product-bezel-2026-08-23-complete/home-black.webp"
+                src="/screenshots/product-bezel-2026-08-24-clipped/home-black.webp"
                 alt="Medscribe home screen"
                 width={1350}
                 height={2760}
                 priority
                 unoptimized
-                className="block h-auto w-full drop-shadow-[0_18px_30px_rgba(15,23,42,0.18)]"
+                className="block h-auto w-full"
               />
             </div>
           </div>

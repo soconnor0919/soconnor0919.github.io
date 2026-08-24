@@ -159,13 +159,7 @@
       rgba(58, 134, 185, 0.08),
       transparent 76%
     ),
-    linear-gradient(
-      to bottom,
-      color-mix(in srgb, var(--color-canvas) 100%, transparent) 0,
-      var(--night) 5rem,
-      var(--night) calc(100% - 5rem),
-      color-mix(in srgb, var(--color-canvas) 100%, transparent) 100%
-    );
+    var(--night);
 }
 
 .night-card {

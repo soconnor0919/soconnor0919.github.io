@@ -133,10 +133,10 @@ export default function HowItWorksPage() {
                 context.
               </p>
             </div>
-            <div className="section-wash justify-self-center rounded-[2.5rem] p-7">
+            <div className="justify-self-center py-2">
               <PhoneMockup
-                src="/screenshots/product-bezel-2026-08-23-complete/summary-reviewed-natural.webp"
-                darkSrc="/screenshots/product-bezel-2026-08-23-complete/summary-reviewed-natural-dark.webp"
+                src="/screenshots/product-bezel-2026-08-24-clipped/summary-reviewed-natural.webp"
+                darkSrc="/screenshots/product-bezel-2026-08-24-clipped/summary-reviewed-natural-dark.webp"
                 alt="Illustrative Medscribe visit summary"
                 width={235}
               />
@@ -147,10 +147,10 @@ export default function HowItWorksPage() {
           </div>
 
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-            <div className="section-wash justify-self-center rounded-[2.5rem] p-7 lg:order-1">
+            <div className="justify-self-center py-2 lg:order-1">
               <PhoneMockup
-                src="/screenshots/product-bezel-2026-08-23-complete/medication-detail-natural.webp"
-                darkSrc="/screenshots/product-bezel-2026-08-23-complete/medication-detail-natural-dark.webp"
+                src="/screenshots/product-bezel-2026-08-24-clipped/medication-detail-natural.webp"
+                darkSrc="/screenshots/product-bezel-2026-08-24-clipped/medication-detail-natural-dark.webp"
                 alt="Illustrative Medscribe medication detail"
                 width={235}
               />
@@ -209,10 +209,10 @@ export default function HowItWorksPage() {
                 it, and when the conversation happens.
               </p>
             </div>
-            <div className="section-wash justify-self-center rounded-[2.5rem] p-7">
+            <div className="justify-self-center py-2">
               <PhoneMockup
-                src="/screenshots/product-bezel-2026-08-23-complete/know-me-natural.webp"
-                darkSrc="/screenshots/product-bezel-2026-08-23-complete/know-me-natural-dark.webp"
+                src="/screenshots/product-bezel-2026-08-24-clipped/know-me-natural.webp"
+                darkSrc="/screenshots/product-bezel-2026-08-24-clipped/know-me-natural-dark.webp"
                 alt="Illustrative Medscribe Know Me handoff"
                 width={235}
               />

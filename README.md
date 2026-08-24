@@ -53,7 +53,7 @@ bun run start
 
 Screenshots live in `public/screenshots/`. Every route uses the same fresh,
 precomposited iPhone product-bezel assets in
-`public/screenshots/product-bezel-2026-08-23-complete/`; there are no raw or CSS-framed
+`public/screenshots/product-bezel-2026-08-24-clipped/`; there are no raw or CSS-framed
 product captures in the rendered site. The versioned path keeps newly captured
 UI from being hidden by stale browser or image-optimizer caches.
 Public pages label product imagery as an illustrative profile and Medscribe
@@ -65,9 +65,10 @@ Export **in-app content only** from the simulator or device — no simulator chr
 
 1. Run the app on **iPhone 17 Pro** (or 16 Pro) simulator or device, or on an **Android** emulator/device.
 2. Capture each screen (⌘S in Simulator saves to Desktop; `adb exec-out screencap -p` on Android).
-3. Composite each 1206 × 2622 PNG into a 1350 × 2760 product bezel at offset
-   `+72+69`, export the transparent WebP, and update the shared versioned asset
-   directory referenced by the routes.
+3. Clip each 1206 × 2622 capture to the bezel's rounded display opening, then
+   composite it into a 1350 × 2760 product bezel at offset `+72+69`. Export a
+   transparent, lossless WebP and update the shared versioned asset directory
+   referenced by the routes.
 
 Product images are composited at the bezel source size of 1350 × 2760 with
 transparent backgrounds and rendered responsively through
