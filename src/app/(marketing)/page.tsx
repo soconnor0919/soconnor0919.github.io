@@ -12,7 +12,6 @@ import {
 import Link from "next/link";
 
 import { ProductDevice } from "~/components/product-device";
-import { QuestionsPreview } from "~/components/questions-preview";
 import { Button } from "~/components/ui/button";
 import { productClaims, productRelease } from "~/content/product";
 import { ACCESS_INVITE_MAILTO } from "~/lib/access";
@@ -331,17 +330,25 @@ export default function HomePage() {
               </p>
             </div>
           </div>
-          <div className="mx-auto grid w-full max-w-[43rem] items-center justify-center gap-2 sm:grid-cols-[minmax(0,18rem)_minmax(0,22rem)] lg:justify-end">
+          <div className="mx-auto grid w-full max-w-[40rem] items-center justify-center gap-2 sm:grid-cols-2 lg:justify-end">
             <div className="mx-auto w-[min(72vw,18rem)] -rotate-2 sm:w-full">
               <ProductDevice
-                src="/screenshots/product-bezel-2026-08-24-clipped/ask-black.webp"
-                darkSrc="/screenshots/product-bezel-2026-08-24-clipped/ask-black-dark.webp"
+                src="/screenshots/product-bezel-2026-08-24-clipped/ask-questions-black.webp"
+                darkSrc="/screenshots/product-bezel-2026-08-24-clipped/ask-questions-black-dark.webp"
                 alt="Medscribe Ask response shown in a black titanium iPhone product bezel"
                 className="pitch-device-motion pitch-device-drift-left"
                 sizes="(min-width: 640px) 288px, 72vw"
               />
             </div>
-            <QuestionsPreview className="pitch-card-motion w-full max-w-[22rem]" />
+            <div className="mx-auto w-[min(72vw,18rem)] rotate-2 sm:w-full">
+              <ProductDevice
+                src="/screenshots/product-bezel-2026-08-24-clipped/questions-black.webp"
+                darkSrc="/screenshots/product-bezel-2026-08-24-clipped/questions-black-dark.webp"
+                alt="Medscribe Questions to ask interface shown in a black titanium iPhone product bezel"
+                className="pitch-device-motion pitch-device-drift-right"
+                sizes="(min-width: 640px) 288px, 72vw"
+              />
+            </div>
           </div>
         </div>
       </section>

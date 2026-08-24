@@ -61,9 +61,10 @@ const features = [
       "Keep a ready list for the next appointment",
       "See whether a doctor, prescriber, or pharmacist may be helpful",
     ],
-    image: "/screenshots/product-bezel-2026-08-24-clipped/ask-black.webp",
+    image:
+      "/screenshots/product-bezel-2026-08-24-clipped/ask-questions-black.webp",
     darkImage:
-      "/screenshots/product-bezel-2026-08-24-clipped/ask-black-dark.webp",
+      "/screenshots/product-bezel-2026-08-24-clipped/ask-questions-black-dark.webp",
     alt: "Illustrative Medscribe answer with medication context and a safety boundary",
   },
   {

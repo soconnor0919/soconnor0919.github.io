@@ -11,7 +11,6 @@ import {
 import Link from "next/link";
 
 import { PhoneMockup } from "~/components/phone-mockup";
-import { QuestionsPreview } from "~/components/questions-preview";
 import { SectionLabel } from "~/components/section-label";
 import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
@@ -190,7 +189,17 @@ export default function HowItWorksPage() {
                 important question does not disappear in the moment.
               </p>
             </div>
-            <QuestionsPreview className="justify-self-center lg:order-1 lg:w-full lg:max-w-md" />
+            <div className="justify-self-center py-2 lg:order-1">
+              <PhoneMockup
+                src="/screenshots/product-bezel-2026-08-24-clipped/questions-black.webp"
+                darkSrc="/screenshots/product-bezel-2026-08-24-clipped/questions-black-dark.webp"
+                alt="Illustrative Medscribe Questions to ask interface"
+                width={235}
+              />
+              <p className="text-muted-foreground mt-4 text-center text-xs">
+                Illustrative profile · Medscribe interface
+              </p>
+            </div>
           </div>
 
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
