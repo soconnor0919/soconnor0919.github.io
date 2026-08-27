@@ -344,8 +344,8 @@ export default function HomePage() {
             </div>
             <div className="mx-auto w-full rotate-2">
               <ProductDevice
-                src="/screenshots/product-bezel-2026-08-24-unified-type/questions-black.webp"
-                darkSrc="/screenshots/product-bezel-2026-08-24-unified-type/questions-black-dark.webp"
+                src="/screenshots/product-bezel-2026-08-24-unified-type/questions-inline-natural.webp"
+                darkSrc="/screenshots/product-bezel-2026-08-24-unified-type/questions-inline-natural-dark.webp"
                 alt="Medscribe Questions to ask interface shown in an iPhone 17 Pro product bezel"
                 className="pitch-device-motion pitch-device-drift-right"
                 sizes="(min-width: 640px) 288px, 72vw"

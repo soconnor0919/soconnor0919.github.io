@@ -191,8 +191,8 @@ export default function HowItWorksPage() {
             </div>
             <div className="justify-self-center py-2 lg:order-1">
               <PhoneMockup
-                src="/screenshots/product-bezel-2026-08-24-unified-type/questions-black.webp"
-                darkSrc="/screenshots/product-bezel-2026-08-24-unified-type/questions-black-dark.webp"
+                src="/screenshots/product-bezel-2026-08-24-unified-type/questions-inline-natural.webp"
+                darkSrc="/screenshots/product-bezel-2026-08-24-unified-type/questions-inline-natural-dark.webp"
                 alt="Illustrative Medscribe Questions to ask interface"
                 width={260}
               />
