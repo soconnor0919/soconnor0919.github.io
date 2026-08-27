@@ -68,13 +68,13 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      <section className="section-wash px-4 py-18 sm:px-6 lg:py-22">
+      <section className="section-wash px-4 py-16 sm:px-6 lg:py-18">
         <div className="mx-auto max-w-6xl">
           <SectionLabel>Start with what matters</SectionLabel>
           <h2 className="text-foreground mt-4 max-w-3xl font-display text-4xl font-semibold tracking-tight sm:text-5xl">
             A clear rhythm from the moment to the next conversation.
           </h2>
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {dailyRhythm.map((item, index) => {
               const Icon = item.icon;
 
@@ -114,9 +114,9 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      <section className="px-4 py-20 sm:px-6 lg:py-28">
-        <div className="mx-auto max-w-6xl space-y-24">
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+      <section className="px-4 py-16 sm:px-6 lg:py-20">
+        <div className="mx-auto max-w-6xl space-y-16 lg:space-y-20">
+          <div className="grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-12">
             <div>
               <SectionLabel>Review what changed</SectionLabel>
               <h2 className="text-foreground mt-4 font-display text-4xl font-semibold tracking-tight sm:text-5xl">
@@ -137,7 +137,7 @@ export default function HowItWorksPage() {
                 src="/screenshots/product-bezel-2026-08-24-unified-type/summary-reviewed-natural.webp"
                 darkSrc="/screenshots/product-bezel-2026-08-24-unified-type/summary-reviewed-natural-dark.webp"
                 alt="Illustrative Medscribe visit summary"
-                width={280}
+                width={260}
               />
               <p className="text-muted-foreground mt-4 text-center text-xs">
                 Illustrative profile · Medscribe interface
@@ -145,13 +145,13 @@ export default function HowItWorksPage() {
             </div>
           </div>
 
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+          <div className="grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-12">
             <div className="justify-self-center py-2 lg:order-1">
               <PhoneMockup
                 src="/screenshots/product-bezel-2026-08-24-unified-type/medication-detail-lisinopril-natural.webp"
                 darkSrc="/screenshots/product-bezel-2026-08-24-unified-type/medication-detail-lisinopril-natural-dark.webp"
                 alt="Illustrative Medscribe medication detail"
-                width={280}
+                width={260}
               />
               <p className="text-muted-foreground mt-4 text-center text-xs">
                 Illustrative profile · Medscribe interface
@@ -173,7 +173,7 @@ export default function HowItWorksPage() {
             </div>
           </div>
 
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+          <div className="grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-12">
             <div className="lg:order-2">
               <SectionLabel>Keep the next question</SectionLabel>
               <h2 className="text-foreground mt-4 font-display text-4xl font-semibold tracking-tight sm:text-5xl">
@@ -194,7 +194,7 @@ export default function HowItWorksPage() {
                 src="/screenshots/product-bezel-2026-08-24-unified-type/questions-black.webp"
                 darkSrc="/screenshots/product-bezel-2026-08-24-unified-type/questions-black-dark.webp"
                 alt="Illustrative Medscribe Questions to ask interface"
-                width={280}
+                width={260}
               />
               <p className="text-muted-foreground mt-4 text-center text-xs">
                 Illustrative profile · Medscribe interface
@@ -202,7 +202,7 @@ export default function HowItWorksPage() {
             </div>
           </div>
 
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+          <div className="grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-12">
             <div>
               <SectionLabel>Prepare the handoff</SectionLabel>
               <h2 className="text-foreground mt-4 font-display text-4xl font-semibold tracking-tight sm:text-5xl">
@@ -223,7 +223,7 @@ export default function HowItWorksPage() {
                 src="/screenshots/product-bezel-2026-08-24-unified-type/know-me-natural.webp"
                 darkSrc="/screenshots/product-bezel-2026-08-24-unified-type/know-me-natural-dark.webp"
                 alt="Illustrative Medscribe Know Me handoff"
-                width={280}
+                width={260}
               />
               <p className="text-muted-foreground mt-4 text-center text-xs">
                 Illustrative profile · Medscribe interface
@@ -233,8 +233,8 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      <section className="section-wash px-4 py-20 sm:px-6">
-        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-2">
+      <section className="section-wash px-4 py-16 sm:px-6">
+        <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-2 lg:gap-12">
           <div>
             <div className="bg-primary-light text-primary flex size-12 items-center justify-center rounded-xl">
               <ShieldAlert className="size-6" aria-hidden="true" />
@@ -263,7 +263,7 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      <section className="px-4 py-20 sm:px-6">
+      <section className="px-4 py-16 sm:px-6">
         <div className="night-card mx-auto flex max-w-6xl flex-col items-start justify-between gap-7 rounded-[2rem] px-7 py-10 text-white sm:px-10 md:flex-row md:items-center">
           <div>
             <h2 className="font-display text-3xl font-semibold">
