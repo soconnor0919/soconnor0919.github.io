@@ -65,6 +65,13 @@ bun run build
 bun run start
 ```
 
+## GitHub Pages
+
+Pushes to `master` also publish a static build to GitHub Pages through
+`.github/workflows/deploy-pages.yml`. The Pages build keeps the public product
+site and partner materials, while omitting the optional server-only password
+gate and legacy redirect routes that cannot run on static hosting.
+
 Screenshots live in `public/screenshots/`. Every route uses the same fresh,
 precomposited iPhone 17 Pro assets in
 `public/screenshots/product-bezel-2026-08-24-unified-type/`; there are no raw or
