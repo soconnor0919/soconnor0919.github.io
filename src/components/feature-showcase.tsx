@@ -44,9 +44,9 @@ const features = [
       "Bring important questions to a clinician or pharmacist",
     ],
     image:
-      "/screenshots/product-bezel-2026-08-24-unified-type/medication-detail-natural.webp",
+      "/screenshots/product-bezel-2026-08-24-unified-type/medication-detail-lisinopril-natural.webp",
     darkImage:
-      "/screenshots/product-bezel-2026-08-24-unified-type/medication-detail-natural-dark.webp",
+      "/screenshots/product-bezel-2026-08-24-unified-type/medication-detail-lisinopril-natural-dark.webp",
     alt: "Illustrative Medscribe medication detail with schedule and medication information",
   },
   {

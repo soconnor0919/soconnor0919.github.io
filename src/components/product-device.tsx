@@ -38,13 +38,14 @@ export function ProductDevice({
   const darkProps = darkSrc
     ? getImageProps({ src: darkSrc, ...shared }).props
     : null;
+  const darkSrcSet = darkProps?.srcSet ?? darkProps?.src;
 
   return (
     <picture className="block">
       {darkProps ? (
         <source
           media="(prefers-color-scheme: dark)"
-          srcSet={darkProps.srcSet}
+          srcSet={darkSrcSet}
           sizes={darkProps.sizes}
         />
       ) : null}

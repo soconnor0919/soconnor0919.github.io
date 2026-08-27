@@ -148,8 +148,8 @@ export default function HowItWorksPage() {
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div className="justify-self-center py-2 lg:order-1">
               <PhoneMockup
-                src="/screenshots/product-bezel-2026-08-24-unified-type/medication-detail-natural.webp"
-                darkSrc="/screenshots/product-bezel-2026-08-24-unified-type/medication-detail-natural-dark.webp"
+                src="/screenshots/product-bezel-2026-08-24-unified-type/medication-detail-lisinopril-natural.webp"
+                darkSrc="/screenshots/product-bezel-2026-08-24-unified-type/medication-detail-lisinopril-natural-dark.webp"
                 alt="Illustrative Medscribe medication detail"
                 width={280}
               />

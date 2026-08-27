@@ -254,8 +254,8 @@ export default function HomePage() {
             <div className="relative mx-auto h-[42rem] w-full max-w-2xl sm:h-[50rem] lg:h-[56rem]">
               <div className="absolute top-20 left-[4%] w-[17rem] -rotate-6 sm:w-[21rem] lg:w-[23rem]">
                 <ProductDevice
-                  src="/screenshots/product-bezel-2026-08-24-unified-type/medication-detail-natural.webp"
-                  darkSrc="/screenshots/product-bezel-2026-08-24-unified-type/medication-detail-natural-dark.webp"
+                  src="/screenshots/product-bezel-2026-08-24-unified-type/medication-detail-lisinopril-natural.webp"
+                  darkSrc="/screenshots/product-bezel-2026-08-24-unified-type/medication-detail-lisinopril-natural-dark.webp"
                   alt="Medscribe medication detail in an iPhone 17 Pro product bezel"
                   className="pitch-device-motion pitch-device-drift-left"
                   sizes="(min-width: 1024px) 368px, (min-width: 640px) 336px, 272px"
