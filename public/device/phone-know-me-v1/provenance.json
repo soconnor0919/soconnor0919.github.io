@@ -1,0 +1,30 @@
+{
+  "method": "Actual iOS Simulator screenshots placed at native resolution in the existing photographic bezel, using the simulator-captured display alpha and Dynamic Island mask. No image generation.",
+  "frame_source": "public/screenshots/product-bezel-2026-08-24-unified-type/visits-natural.webp",
+  "frame_sha256": "d16eb7afc9e95cd08afcf306b75107a302c842bc88160b841d6a2ac247676bd1",
+  "screen_offset": [
+    72,
+    69
+  ],
+  "screen_size": [
+    1206,
+    2622
+  ],
+  "screen_mask_source": "xcrun simctl io <preview> screenshot --mask=alpha; captured iPhone 17 Pro aperture and island pixels, no hand-drawn corner approximation",
+  "screen_alpha_sha256": "90a2f9827e65ede0ad010e091141e450cf12370c909e67cd4a1bafb02d1ec6d4",
+  "island_mask_sha256": "ea1564d15dad05c09baf04ebf4dc7541bd79760a4143f812932fcfc6244d2e6f",
+  "fixture": "Fictional Alex Morgan Know Me card seeded with seed-know-me.py; matches handheld name, allergies, conditions, medications, and care contact.",
+  "simulator_runtime": "iOS 27.0 (24A434)",
+  "device": "iPhone 17 Pro",
+  "physical_import_verified": false,
+  "captures": {
+    "know-me": {
+      "source_sha256": "7060f2b6876b44fa60e8c0e61b5baea126ac63792f3b18c6e8b152c16b4ea1ea",
+      "output_sha256": "99e3859839088f07c43afc52d1d056ba88a1cfb54a261a544ce196f7191cc4cf"
+    },
+    "know-me-dark": {
+      "source_sha256": "30764d4491a459d6cdc46bbc099cc66ba68d5059eaf0ddde9393446e0252f515",
+      "output_sha256": "1f8207b6b5a535eb83142afa43c479b08493b82905eabb71ecbacf59a72827b8"
+    }
+  }
+}

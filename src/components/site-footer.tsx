@@ -3,6 +3,8 @@ import Link from "next/link";
 import { MedscribeLogo } from "~/components/medscribe-logo";
 
 const footerLinks = [
+  { href: "/", label: "The Medscribe app" },
+  { href: "/device", label: "The Medscribe companion" },
   { href: "/how-it-works", label: "How it works" },
   {
     href: "/medscribe-corporate-partner-overview.pdf",
@@ -22,7 +24,9 @@ export function SiteFooter() {
             className="text-foreground focus-visible:ring-primary/40 inline-flex items-center gap-2.5 rounded-md outline-none focus-visible:ring-2"
           >
             <MedscribeLogo className="h-7 w-auto" />
-            <span className="font-display text-lg font-semibold">Medscribe</span>
+            <span className="font-display text-lg font-semibold">
+              Medscribe
+            </span>
           </Link>
           <p className="text-muted-foreground mt-4 max-w-md leading-relaxed">
             A private, patient-controlled way to keep visits, medications, and
@@ -40,16 +44,19 @@ export function SiteFooter() {
         <nav aria-label="Footer product navigation">
           <p className="text-foreground font-semibold">Product</p>
           <ul className="text-muted-foreground mt-3 space-y-2.5">
-            {footerLinks.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className="hover:text-foreground focus-visible:ring-primary/40 rounded-sm underline-offset-4 outline-none hover:underline focus-visible:ring-2"
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
+            {footerLinks.map((item) => {
+              const FooterLink = item.href.startsWith("/#") ? "a" : Link;
+              return (
+                <li key={item.href}>
+                  <FooterLink
+                    href={item.href}
+                    className="hover:text-foreground focus-visible:ring-primary/40 rounded-sm underline-offset-4 outline-none hover:underline focus-visible:ring-2"
+                  >
+                    {item.label}
+                  </FooterLink>
+                </li>
+              );
+            })}
           </ul>
         </nav>
 

@@ -1,0 +1,24 @@
+{
+  "method": "Local WebGL rendering of a copied and rebranded CAD assembly. No image generation.",
+  "cadSource": "device-cad/source/assembly.glb — paperOne V22.5, copied from the sibling paperOS project",
+  "cadBuild": "scripts/device-preview/build-cad.py",
+  "screenSource": "device-app/app.c, built as an ABI 1 SD/Wasm package",
+  "screenType": "Actual 480x800 C/LVGL framebuffer capture of the SD/Wasm app executed by WAMR with illustrative host service fixtures",
+  "renderSource": "scripts/device-preview/render.html + render.mjs",
+  "captureCommand": "CAD_PYTHON=<Python with CAD dependencies> bun scripts/device-preview/capture.mjs",
+  "assemblySha256": "0025e0179ca321c9e733df6df32e8929f60e822fc3db8c33c22e92d96e802af2",
+  "homeScreenSha256": "99fb2de29a2931342c7c70e8537f970ddba77ccd366be9089b19706201e6287b",
+  "homeRenderSha256": "56197d4c2cb21bc487d689ef3437bfdaf3daca922a3e25c1e77ed6e1a6a41a4d",
+  "sdAppBuild": {
+    "package": "device-cad/build/medscribe-sd-app.zip",
+    "source": "device-app/app.c",
+    "simulated_waveform": true,
+    "module_bytes": 38964,
+    "module_sha256": "99e129466f602707dc2d462e94a2b5f88ddf2c6fd41b5911f985d41e69fb28f1",
+    "module_fnv1a": 3307567639
+  },
+  "sdAppExecution": "paperOS SD loader + WAMR + native C/LVGL; run-capture.c assertions",
+  "physicalHardwareVerified": false,
+  "waveform": "Explicitly simulated demo data; not microphone amplitude",
+  "finish": "Pale mint matte polymer grain and smaller deep teal inlays"
+}

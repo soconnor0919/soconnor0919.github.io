@@ -217,6 +217,15 @@
  * remains a server component and ships no scroll listener or animation
  * runtime. Browsers without view timelines simply render the resting layout.
  */
+/* The companion shares the app's palette, type, and product-image treatment. */
+.medscribe-hardware {
+  background: color-mix(
+    in srgb,
+    var(--color-surface-soft) 62%,
+    var(--color-canvas)
+  );
+}
+
 .pitch-device-motion {
   --pitch-enter-x: 0px;
   --pitch-enter-y: 3.5rem;
@@ -480,8 +489,8 @@
 
   .northwell-print-title {
     margin-top: 0.12in;
-    font-family: var(--font-instrument-sans), ui-sans-serif, system-ui,
-      sans-serif;
+    font-family:
+      var(--font-instrument-sans), ui-sans-serif, system-ui, sans-serif;
     font-size: 28px;
     line-height: 1.08;
     font-weight: 600;

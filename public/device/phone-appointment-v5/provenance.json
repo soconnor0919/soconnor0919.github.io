@@ -1,0 +1,104 @@
+{
+  "method": "Actual iOS Simulator screenshots placed at native resolution in the existing photographic bezel, using the simulator-captured display alpha and Dynamic Island mask. No image generation.",
+  "frame_source": "public/screenshots/product-bezel-2026-08-24-unified-type/visits-natural.webp",
+  "frame_sha256": "d16eb7afc9e95cd08afcf306b75107a302c842bc88160b841d6a2ac247676bd1",
+  "screen_offset": [
+    72,
+    69
+  ],
+  "screen_size": [
+    1206,
+    2622
+  ],
+  "screen_mask_source": "xcrun simctl io <preview> screenshot --mask=alpha; captured iPhone 17 Pro aperture and island pixels, no hand-drawn corner approximation",
+  "screen_alpha_sha256": "90a2f9827e65ede0ad010e091141e450cf12370c909e67cd4a1bafb02d1ec6d4",
+  "island_mask_sha256": "ea1564d15dad05c09baf04ebf4dc7541bd79760a4143f812932fcfc6244d2e6f",
+  "fixture": {
+    "title": "Knee pain follow-up",
+    "profile": "Alex Morgan",
+    "provider": "Dr. Jordan Lee",
+    "consent_before_recording_seconds": 25,
+    "duration_ms": 81935,
+    "segments": [
+      {
+        "start_ms": 0,
+        "end_ms": 3465,
+        "text": "How has your right knee been since we last met, Alex?"
+      },
+      {
+        "start_ms": 3965,
+        "end_ms": 14456,
+        "text": "The stairs are still difficult. The pain is mostly at the front of my knee. Walking on level ground is easier, but I have stopped taking my usual afternoon walk."
+      },
+      {
+        "start_ms": 14956,
+        "end_ms": 18700,
+        "text": "Have you had any falls, or has the knee locked or given way?"
+      },
+      {
+        "start_ms": 19200,
+        "end_ms": 26679,
+        "text": "No falls and no locking. It feels stiff when I first get out of a chair. My walking stick helps outside."
+      },
+      {
+        "start_ms": 27179,
+        "end_ms": 35109,
+        "text": "We reviewed your knee X-ray together today. The changes fit with osteoarthritis. What would you most like to get back to doing?"
+      },
+      {
+        "start_ms": 35609,
+        "end_ms": 41612,
+        "text": "Walking to the park with Jamie. And I would like to manage the stairs at home with more confidence."
+      },
+      {
+        "start_ms": 42112,
+        "end_ms": 50671,
+        "text": "Let us make those the goals for your physiotherapy referral. We can review your progress at the follow-up rather than changing everything at once."
+      },
+      {
+        "start_ms": 51171,
+        "end_ms": 57759,
+        "text": "Could you write down the referral and the follow-up date? I sometimes forget the details once I get home."
+      },
+      {
+        "start_ms": 58259,
+        "end_ms": 68599,
+        "text": "Of course. The referral will be in your visit notes. Please book a follow-up in six weeks, and call the practice sooner if your symptoms change or you have concerns."
+      },
+      {
+        "start_ms": 69099,
+        "end_ms": 76563,
+        "text": "So I will arrange physiotherapy, keep track of how the knee affects my walking, and come back in six weeks."
+      },
+      {
+        "start_ms": 77063,
+        "end_ms": 81435,
+        "text": "Exactly. Before you leave, what other questions do you have?"
+      }
+    ],
+    "source": "Local fictional dialogue voiced by macOS speech synthesis; transcript fixture matches the script. No microphone or model inference used."
+  },
+  "appointment_count": 6,
+  "simulator_runtime": "iOS 27.0 (24A434)",
+  "device": "iPhone 17 Pro",
+  "consent_before_recording_seconds": 25,
+  "physical_import_verified": false,
+  "captures": {
+    "imported": {
+      "source_sha256": "e57439e1a3422428ee8a39041a82366e0eabc0c48bd74e4897d5617569ab3644",
+      "output_sha256": "a4e12e688b223860e1d41b23eb268bcdf50c87ad224c058bf62f69d22cd65c3a"
+    },
+    "playback": {
+      "source_sha256": "75c2c42c2e01d5f29bcca958e9216b529f46bb02092227174daa3648b5e9f946",
+      "output_sha256": "25f2eed69a7bc1a0472a4478d511d7a22fee65a7a4db4c728bffc39a689bbbc4"
+    },
+    "imported-dark": {
+      "source_sha256": "b1708bda08661ccb6a21b52f084be81d681d79ce0fab2703ac6e073612b26217",
+      "output_sha256": "0ddbc60668a8cf23e5f54df4abb548b328bee255bf9454b88f20f6738230ff10"
+    },
+    "playback-dark": {
+      "source_sha256": "88e6c406a90c50587d7aba0c5e5efb9717d9f750a25d7ee870a947192a51c246",
+      "output_sha256": "0f72c6e5583e7b107aad2a2e3e2c3044704fa13db89747f2f634867f07d5c5dd"
+    }
+  }
+}

@@ -5,6 +5,106 @@
 **Primary website job:** help a person recognize the care-context problem, understand the product in under two minutes, trust its privacy boundaries, and request beta access<br>
 **Secondary website job:** give health-system and pharmacy contacts a precise, evidence-backed path to evaluate a conversation without turning the consumer site into an enterprise pitch deck
 
+### Implementation update — October 15, 2026
+
+The consumer story now includes a Medscribe-branded e-paper companion alongside
+the phone app. It presents a care-only product; OS/platform branding and
+general-purpose device apps are outside the Medscribe visitor's journey.
+The original app homepage is restored; the device has its own `/device` page.
+Its hero uses a near-white mint textured-polymer CAD case (RGB 234, 245, 238),
+with unchanged smaller deep teal logo inlays and a real
+recording-screen capture, with a waveform generated from demonstration data. The companion
+section covers a reviewed Know Me card. Hardware assets are versioned under
+`public/device/pearl-v5/`; the original source CAD is preserved.
+
+The Know Me section follows the hardware overview and explains the practical
+handover: keep the companion with you, give a new clinician or care team quick
+context, and hand it over when words are difficult or a visit is unexpected.
+The hardware feature row names allergies, medications, care contacts, and
+communication support. The person chooses, reviews, and updates the card in
+Medscribe; the story keeps that control explicit.
+The section keeps a heading, short introduction, and review/update note,
+without a three-use-case list. One handheld card and one actual iPhone
+Emergency record capture share a responsive stage at all sizes: the phone is
+behind on the right, rotated 6 degrees, and the handheld overlaps in front on
+the left, rotated minus 6 degrees, with soft offset shadows. One caption reads
+“Carry it on your companion. Review it in Medscribe.” The phone capture
+references `public/device/phone-know-me-v1/`, with matching fictional Alex Morgan
+allergies, conditions, inhalers, and care contact seeded by the guarded
+`scripts/phone-preview/seed-know-me.py` into the dedicated iOS 27 preview
+simulator. This is not physical card-transfer verification.
+
+The real SD app defaults to a full-screen Know Me resting card, without a clock,
+footer, or on-screen buttons. Its dense fictional Alex Morgan page contains
+allergies, medications, conditions, care contact, support preferences, and care
+team phone numbers. Physical center opens appointment actions; Back from those
+actions and saving a recording return to the card. Optional multiple received
+pages use the physical rocker. A minimal sibling paperOS public SD API extension,
+`PAPER_FULLSCREEN`, supports this behavior, with SDK documentation updated.
+Running WAMR checks verify default-card, wake/action, consent, and save
+transitions; no board flash, physical power/sleep behavior, or panel retention
+is established.
+
+The resting card fits all six care sections on one full-screen page. A centered
+ms logo and 24 px Know Me title group sits above the centered 32 px patient
+name. Category headings are 24 px uppercase and body text is 24 px. Six
+outlined rounded groups with public SDK section icons fit the information on
+the full-screen 480 × 800 panel.
+The phone-reviewed card fixture shows a scheduled
+Budesonide inhaler with “Next dose: Oct 15 at 8 PM” and Albuterol “as needed”
+with “No scheduled dose.” These are supplied fixture values, not new medical
+advice, a live countdown, or a scheduling engine.
+
+Below 1024 px, recording and card hardware photos appear in
+`HardwareSection` as a side-by-side pair with slight overlap, rotations, and
+soft drop shadows; the separate hero image is hidden in the stacked layout.
+Desktop retains the separate hero and hardware-section renders.
+
+The iPhone workflow uses fresh captures
+of the actual Expo Medscribe app on an iPhone 17 Pro simulator running iOS 27.0
+(24A434). Two light/dark screens show Alex Morgan's six-appointment Visits list
+(knee follow-up, asthma review, physiotherapy, annual checkup, eye exam, and
+medication review), and real local audio playback with a timestamped transcript.
+The knee visit is marked as imported from the companion. Know Me and Companion remain parts of
+the Medscribe app story; transcript review happens on the phone.
+
+The fictional knee osteoarthritis conversation covers symptoms, the X-ray,
+physiotherapy goals, and a six-week follow-up. The website shows screenshots
+only, with no audio player, expandable conversation, or downloadable sample
+audio in the public asset directory. Local audio remains in the app for the
+playback screenshot. The fixture
+records consent 25 seconds before recording; consent dialogue is outside the
+audio. Assets and provenance are versioned under
+`public/device/phone-appointment-v5/`, with reproduction scripts under
+`scripts/phone-preview/`. Display alpha and Dynamic Island pixels captured with
+`simctl screenshot --mask=alpha` are retained in `scripts/phone-preview/assets/`.
+The native 1206 × 2622 screen is composited at offset `+72+69` into the existing
+1350 × 2760 photographic bezel, preserving the visible island without a
+hand-drawn corner mask. The fixture was seeded into a dedicated empty
+simulator; its speech-synthesized audio and script-derived transcript do not
+prove physical import or ASR accuracy. Generated iOS lifecycle files were
+patched locally for this iOS 27 preview, without production app changes.
+
+This is a website extension in the existing Instrument Sans, mint/teal,
+light/dark design system. The phone capture set and partner print documents
+remain the visual sources for their respective existing surfaces. The new
+hardware renders come from a separately edited CAD copy with actual 480 × 800
+framebuffer captures of an actual Medscribe SD/Wasm app mapped onto its display.
+They use no synthesized imagery. The package is built with the public SDK and
+executed by the SD loader, WAMR, and native C/LVGL renderer with fictional service
+fixtures. Appointment, OS consent/start/stop/save, animated simulated waveform, Know Me pagination, and phone-connection screens
+are captured from that running app. The native host is not an ESP32 emulator.
+Editable CAD, source hashes, capture scripts, and the reproduction workflow
+live under `device-cad/` and `scripts/device-preview/`. No additional public
+client-side viewer or UI dependency is required.
+
+Claim boundaries: hardware is in development, not available for purchase;
+device connection currently uses the native iPhone app; transcription runs on
+the phone; board originals remain encrypted and preserved on import. The
+public access flow is an app-beta request, not a hardware preorder. The render
+expresses the intended branded product and does not establish that a restricted
+Medscribe-only firmware build exists. Firmware changes require separate work.
+
 ### Implementation update — August 20, 2026
 
 The first coherent public slice is now built:

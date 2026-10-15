@@ -3,6 +3,13 @@ export const productRelease = {
   platforms: "iOS and Android",
 } as const;
 
+export const productHardware = {
+  name: "Medscribe companion",
+  availability: "Hardware is in development and is not available to purchase.",
+  renderLabel:
+    "CAD render · SD app simulator capture · Hardware in development",
+} as const;
+
 export const productClaims = {
   localAi: {
     publicCopy:
@@ -28,6 +35,7 @@ export const productClaims = {
 
 export const publicRoutes = [
   "/",
+  "/device",
   "/how-it-works",
   "/privacy",
   "/access",

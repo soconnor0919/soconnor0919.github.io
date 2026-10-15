@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8" /><title>Medscribe CAD studio</title>
+  <style>
+    body {
+      margin: 0;
+      background: #eaf1ec;
+      color: #172a24;
+      font:
+        15px Helvetica,
+        Arial,
+        sans-serif;
+    }
+    header {
+      position: absolute;
+      top: 20px;
+      left: 24px;
+      z-index: 1;
+    }
+    h1 {
+      font-size: 22px;
+    }
+    p {
+      max-width: 340px;
+      line-height: 1.5;
+    }
+    canvas {
+      width: 100vw;
+      height: 100vh;
+      display: block;
+    }
+    body.capture header {
+      display: none;
+    }
+  </style>
+  <header>
+    <h1>Medscribe CAD studio</h1>
+    <p>
+      Copied V22.5 geometry with modelled Medscribe inlays. The display uses a
+      framebuffer capture of the actual SD/Wasm app running in paperOS C/LVGL
+      and WAMR.
+    </p>
+    <p>
+      Drag to turn.
+      <a href="../../device-cad/build/screen-home.png"
+        >View the actual SD app capture</a
+      >
+    </p>
+  </header>
+  <canvas aria-label="Medscribe CAD model" id="model"></canvas>
+  <script type="module" src="render.mjs"></script>
+</html>

@@ -39,6 +39,10 @@ const principles = [
 
 const commitments = [
   {
+    title: "A deliberate device handoff",
+    body: "Recordings stay encrypted on the Medscribe companion until you choose to import them into the iPhone app. Transcription runs on your phone. Choose and review a Know Me card before sending it to the device; anyone looking at its screen can read the displayed details.",
+  },
+  {
     title: "No advertising profile",
     body: "Your health context is not for sale and is not used to target advertising.",
   },
@@ -68,7 +72,7 @@ export default function PrivacyPage() {
             <ShieldCheck className="size-7" aria-hidden="true" />
           </div>
           <SectionLabel className="mt-6">Privacy</SectionLabel>
-          <h1 className="text-foreground mx-auto mt-5 max-w-4xl font-display text-5xl leading-[1.02] font-semibold tracking-[-0.035em] sm:text-6xl lg:text-7xl">
+          <h1 className="text-foreground font-display mx-auto mt-5 max-w-4xl text-5xl leading-[1.02] font-semibold tracking-[-0.035em] sm:text-6xl lg:text-7xl">
             Your story stays yours.
           </h1>
           <p className="text-muted-foreground mx-auto mt-7 max-w-2xl text-lg leading-relaxed sm:text-xl">
@@ -89,7 +93,7 @@ export default function PrivacyPage() {
                 className="surface-panel rounded-2xl p-6"
               >
                 <Icon className="text-primary size-6" aria-hidden="true" />
-                <h2 className="text-foreground mt-5 font-display text-2xl font-semibold">
+                <h2 className="text-foreground font-display mt-5 text-2xl font-semibold">
                   {item.title}
                 </h2>
                 <p className="text-muted-foreground mt-3 text-sm leading-relaxed">
@@ -105,7 +109,7 @@ export default function PrivacyPage() {
         <div className="mx-auto grid max-w-6xl gap-14 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
           <div>
             <SectionLabel>Plain-language commitments</SectionLabel>
-            <h2 className="text-foreground mt-4 font-display text-4xl font-semibold tracking-tight sm:text-5xl">
+            <h2 className="text-foreground font-display mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
               Privacy should feel understandable.
             </h2>
             <p className="text-muted-foreground mt-5 leading-relaxed">
@@ -146,7 +150,7 @@ export default function PrivacyPage() {
             <p className="text-xs font-bold tracking-[0.16em] text-teal-200 uppercase">
               Your choices
             </p>
-            <h2 className="mt-5 font-display text-4xl font-semibold tracking-tight sm:text-5xl">
+            <h2 className="font-display mt-5 text-4xl font-semibold tracking-tight sm:text-5xl">
               Keep the context that helps. Share it when it matters.
             </h2>
           </div>
