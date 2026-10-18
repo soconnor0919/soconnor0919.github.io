@@ -2,7 +2,7 @@
 The source STEP is preserved; case exterior follows the vendor drawing.
 """
 from pathlib import Path
-import hashlib,json,math,re,xml.etree.ElementTree as ET
+import hashlib,json,math,re,zipfile,xml.etree.ElementTree as ET
 import cadquery as cq
 import manifold3d as md
 import numpy as np
@@ -12,6 +12,8 @@ from trimesh.visual.texture import TextureVisuals
 WEB=Path(__file__).resolve().parents[2]
 OUT=WEB/'pendant-cad/build';OUT.mkdir(parents=True,exist_ok=True)
 SOURCE=WEB/'device-cad/source'
+with zipfile.ZipFile(WEB/'pendant-cad/source/waveshare-dimensions.zip') as vendor_archive:
+    vendor_step=vendor_archive.read(next(name for name in vendor_archive.namelist() if name.lower().endswith(('.stp','.step'))))
 
 def profile(filename, width, flip=False):
     contours = []
@@ -175,7 +177,7 @@ for name,(m,color,finish) in parts.items():
     export=m.copy();export.apply_scale(.001);scene.add_geometry(export,node_name=name,geom_name=name)
 scene.export(OUT/'medscribe-pendant.glb')
 (OUT/'meshes.json').write_text(json.dumps(preview,separators=(',',':')))
-report={'concept_dimensions_mm':[39.8,53,16.9], 'display_active_mm':[27,27], 'display_pixels':[200,200], 'source_url':'https://github.com/waveshareteam/ESP32-S3-ePaper-1.54G/tree/main/Hardware/dimensions', 'source_step_sha256':hashlib.sha256((WEB/'pendant-cad/source/waveshare-original.step').read_bytes()).hexdigest(), 'source_note':'Vendor-linked drawing archive includes a touch-labelled STEP. Used as mechanical reference, not proof of 1.54G assembly fit.', 'reference_board_envelope_mm':[34.55,47.801,13.501], 'shell_watertight':parts['shell'][0].is_watertight, 'physical_fit_verified':False, 'notification_transport_implemented':False, 'ui':'Actual SD/Wasm app, WAMR and LVGL capture at 200x200. Upper hold opens pending request; upper tap cancels; lower key cycles five reviewed-card pages. No messages or emergency calls.', 'case_basis':'Vendor PDF envelope retained; case corners softened to R8 and edge radii to 1.6 mm for this concept. Board-only STEP preserved as reference.', 'cord_nonlocal_centerline_clearance_mm':round(self_clearance,3), 'cord_collision_volume_mm3':collisions, 'case_corner_radius_mm':8, 'case_edge_radius_mm':1.6, 'front_button':False, 'side_button_count':2, 'cord_length_mm':round(float(np.linalg.norm(np.diff(points,axis=0),axis=1).sum()),1), 'new_parts':'Rounded R8 shell derived from the vendor envelope. A continuous cord threads through the separate rear clip aperture. No front HELP button. Breakaway clasp, sealing, antenna clearance and wearable validation remain engineering work.'}
+report={'concept_dimensions_mm':[39.8,53,16.9], 'display_active_mm':[27,27], 'display_pixels':[200,200], 'source_url':'https://github.com/waveshareteam/ESP32-S3-ePaper-1.54G/tree/main/Hardware/dimensions', 'source_step_sha256':hashlib.sha256(vendor_step).hexdigest(), 'source_note':'Vendor-linked drawing archive includes a touch-labelled STEP. Used as mechanical reference, not proof of 1.54G assembly fit.', 'reference_board_envelope_mm':[34.55,47.801,13.501], 'shell_watertight':parts['shell'][0].is_watertight, 'physical_fit_verified':False, 'notification_transport_implemented':False, 'ui':'Actual SD/Wasm app, WAMR and LVGL capture at 200x200. Upper hold opens pending request; upper tap cancels; lower key cycles five reviewed-card pages. No messages or emergency calls.', 'case_basis':'Vendor PDF envelope retained; case corners softened to R8 and edge radii to 1.6 mm for this concept. Board-only STEP preserved as reference.', 'cord_nonlocal_centerline_clearance_mm':round(self_clearance,3), 'cord_collision_volume_mm3':collisions, 'case_corner_radius_mm':8, 'case_edge_radius_mm':1.6, 'front_button':False, 'side_button_count':2, 'cord_length_mm':round(float(np.linalg.norm(np.diff(points,axis=0),axis=1).sum()),1), 'new_parts':'Rounded R8 shell derived from the vendor envelope. A continuous cord threads through the separate rear clip aperture. No front HELP button. Breakaway clasp, sealing, antenna clearance and wearable validation remain engineering work.'}
 (OUT/'provenance.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps(report))
 

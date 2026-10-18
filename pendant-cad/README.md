@@ -16,7 +16,9 @@ visual engineering studies, not validated wearable safety components.
 
 ## Mechanical source and limits
 
-The unchanged vendor drawing ZIP, STEP, and PDF are retained in `source/`.
+The unchanged vendor drawing ZIP and PDF are retained in `source/`. The original
+STEP is preserved inside the ZIP; the build reads and hashes it there, avoiding
+a redundant uncompressed copy in Git.
 They come from the vendor's [linked dimensions archive](https://github.com/waveshareteam/ESP32-S3-ePaper-1.54G/tree/main/Hardware/dimensions).
 That archive includes a touch-labelled, board-only STEP, not original case
 CAD. The enclosure is reconstructed from the dimensioned PDF; it is not the
