@@ -3,31 +3,32 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 import { CompanionAppSection } from "~/components/companion-app-section";
+import { HardwareOptions } from "~/components/hardware-options";
+import { PendantSection } from "~/components/pendant-section";
 import { HardwareSection } from "~/components/hardware-section";
 import { KnowMeSection } from "~/components/know-me-section";
-import { MedscribeDevice } from "~/components/medscribe-device";
+import { HardwarePair } from "~/components/hardware-pair";
 import { Button } from "~/components/ui/button";
-import { productHardware } from "~/content/product";
 
 export const metadata: Metadata = {
-  title: "The Medscribe companion",
+  title: "The Medscribe companion & pendant",
   description:
-    "A dedicated e-paper companion for recording appointments and carrying your reviewed Know Me card. Hardware in development.",
+    "Meet the Medscribe companion and wearable pendant. Record appointments, keep your Know Me card close, and stay connected to your care.",
 };
 
 export default function DevicePage() {
   return (
     <>
-      <section className="px-4 pt-12 pb-8 sm:px-6 lg:pt-16 lg:pb-20">
-        <div className="mx-auto grid max-w-6xl items-center gap-6 lg:grid-cols-[1fr_1.05fr] lg:gap-4">
+      <section className="overflow-hidden px-4 pt-12 pb-8 sm:px-6 lg:pt-16 lg:pb-20">
+        <div className="mx-auto grid max-w-6xl items-center gap-2 lg:grid-cols-[1fr_1.15fr] lg:gap-0">
           <div className="max-w-xl">
             <h1 className="font-display text-[clamp(3.5rem,6vw,5.6rem)] leading-[0.98] font-semibold tracking-[-0.035em]">
-              Stay in the conversation.
+              Your care.<br />Close at hand.
             </h1>
             <p className="text-muted-foreground mt-6 max-w-lg text-lg leading-relaxed sm:text-xl">
-              A quiet e-paper companion for the moments that matter. Record the
-              appointment, carry your Know Me card, and pick up the details in
-              Medscribe.
+              Two ways to keep Medscribe close. Record appointments, carry your
+              Know Me card, and bring the conversation back to your phone.
+              Choose the companion or the wearable pendant.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg">
@@ -37,28 +38,17 @@ export default function DevicePage() {
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline">
-                <Link href="#workflow">See how it works</Link>
+                <Link href="#options">Explore both designs</Link>
               </Button>
             </div>
-            <p className="text-muted-foreground mt-5 max-w-sm text-sm leading-relaxed">
-              {productHardware.availability}
-            </p>
+
           </div>
-          <figure className="mx-auto hidden w-full max-w-[38rem] lg:block">
-            <MedscribeDevice
-              view="recording"
-              priority
-              sizes="(min-width: 1024px) 590px, (min-width: 640px) 560px, 100vw"
-            />
-            <figcaption className="text-muted-foreground text-center text-xs leading-relaxed">
-              Recording preview
-              <br />
-              {productHardware.renderLabel}
-            </figcaption>
-          </figure>
+          <HardwarePair />
         </div>
       </section>
+      <HardwareOptions />
       <HardwareSection />
+      <PendantSection />
       <KnowMeSection />
       <CompanionAppSection />
     </>

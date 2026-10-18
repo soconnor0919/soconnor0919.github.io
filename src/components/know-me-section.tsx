@@ -1,6 +1,5 @@
-import { MedscribeDevice } from "~/components/medscribe-device";
+import Image from "next/image";
 import { ProductDevice } from "~/components/product-device";
-import { productHardware } from "~/content/product";
 
 export function KnowMeSection() {
   return (
@@ -34,13 +33,15 @@ export function KnowMeSection() {
               />
             </div>
             <div className="absolute top-[14%] left-[8%] z-10 w-[49%] -rotate-6 drop-shadow-[12px_24px_18px_rgba(12,44,38,0.24)]">
-              <div className="relative aspect-[0.6] overflow-hidden">
-                <MedscribeDevice
-                  view="card"
-                  sizes="(min-width: 640px) 565px, 89vw"
-                  className="absolute -top-[8%] -left-[40%] w-[180%] max-w-none"
-                />
-              </div>
+              <Image
+                src="/device/pearl-v5/medscribe-sd-card-cutout.webp"
+                alt="The complete Medscribe companion showing Alex Morgan’s Know Me card"
+                width={1454}
+                height={2114}
+                sizes="(min-width: 640px) 314px, 49vw"
+                quality={92}
+                className="h-auto w-full"
+              />
             </div>
           </div>
           <figcaption className="mt-4 text-center text-sm font-medium">
@@ -51,9 +52,6 @@ export function KnowMeSection() {
           Choose what to share in the app and update your handheld card as your
           needs change. Your details stay on the e-paper screen, ready for the
           next conversation.
-        </p>
-        <p className="text-muted-foreground mt-4 text-center text-xs leading-relaxed">
-          {productHardware.renderLabel}
         </p>
       </div>
     </section>

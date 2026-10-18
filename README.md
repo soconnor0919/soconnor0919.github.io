@@ -86,6 +86,27 @@ recorded in technical provenance.
 
 ### Medscribe e-paper companion (October 15, 2026)
 
+The `/device` page presents the companion and pendant in an overlapping hero
+composition, with two concise product links below. `PendantSection` is a static
+product story; it has no demo controls or clickable render. Updated renders
+live under `public/device/pendant-v4/` and use captures from the actual 200 × 200
+SD/Wasm app. The Know Me screen has a compact brand header, centered name,
+allergy group, caregiver contact, and a quiet help/navigation footer.
+
+The pendant retains the vendor's 39.8 × 53 × 16.9 mm envelope with softer R8
+corners and 1.6 mm edge radii. A continuous approximately 393 mm cord threads
+through the rear attachment aperture, without the earlier overlapping metal
+connector and knot. Solid intersection checks assert that the cord clears the
+shell, back, attachment, and both buttons. These are local geometry checks,
+not physical-fit or wearable-safety validation.
+
+The local CAD studio still replays captured screens, and the native WAMR host
+runs the real app. Upper hold opens a pending help request, upper tap cancels,
+and lower Next cycles five pages. No website interactivity is required for the
+marketing imagery. There is no implemented board GPIO mapping, notification
+transport, cellular service, or emergency dispatch. See `pendant-app/README.md`
+and `pendant-cad/README.md` for reproduction and engineering limits.
+
 The public website presents a Medscribe-branded, care-only hardware concept.
 Visitors do not need the underlying paperOS/paperOne story. The original
 app-focused homepage is restored. The dedicated `/device` page covers recording,
@@ -212,3 +233,17 @@ were patched locally for the iOS 27 preview; this does not change production app
 behavior. Native hardware import remains in
 `native/Medscribe/PaperCompanionView.swift`, which this website change does not
 modify.
+
+The Know Me phone/companion composition uses the complete transparent companion
+silhouette (`pearl-v5/medscribe-sd-card-cutout.webp`), trimmed from the existing
+CAD render with transparent padding, rather than an overflow-clipped CSS crop.
+The pendant story also includes planned appointment recording: Waveshare lists
+an onboard microphone, ES8311 audio codec, and TF storage, but the current
+pendant SD app implements the card/help UI only, without audio capture.
+
+Device-page marketing copy presents the intended finished product in the present
+tense, at the product owner’s direction. Both devices include recording in that
+product story, and the pendant includes caregiver notification. This copy does
+not establish implementation or physical validation: current pendant firmware
+checks still cover the card/help UI only; transport and audio capture remain
+unimplemented. CAD provenance and reproduction limits stay in technical docs.

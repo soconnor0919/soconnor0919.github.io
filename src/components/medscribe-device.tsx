@@ -24,7 +24,7 @@ export function MedscribeDevice({
   return (
     <Image
       src={`/device/pearl-v5/medscribe-sd-${view}.webp`}
-      alt={`Medscribe e-paper companion CAD render with an actual SD app simulator capture showing ${screenDescriptions[view]}`}
+      alt={`Medscribe e-paper companion showing ${screenDescriptions[view]}`}
       width={2400}
       height={2400}
       sizes={sizes}

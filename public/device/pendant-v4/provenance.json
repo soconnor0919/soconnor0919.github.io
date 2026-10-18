@@ -1,0 +1,42 @@
+{
+  "concept_dimensions_mm": [
+    39.8,
+    53,
+    16.9
+  ],
+  "display_active_mm": [
+    27,
+    27
+  ],
+  "display_pixels": [
+    200,
+    200
+  ],
+  "source_url": "https://github.com/waveshareteam/ESP32-S3-ePaper-1.54G/tree/main/Hardware/dimensions",
+  "source_step_sha256": "2034a2f40dad52b1afe59c33eaef88f2433fe1b91d67b21cf4639aa5f73c40f0",
+  "source_note": "Vendor-linked drawing archive includes a touch-labelled STEP. Used as mechanical reference, not proof of 1.54G assembly fit.",
+  "reference_board_envelope_mm": [
+    34.55,
+    47.801,
+    13.501
+  ],
+  "shell_watertight": true,
+  "physical_fit_verified": false,
+  "notification_transport_implemented": false,
+  "ui": "Actual SD/Wasm app, WAMR and LVGL capture at 200x200. Upper hold opens pending request; upper tap cancels; lower key cycles five reviewed-card pages. No messages or emergency calls.",
+  "case_basis": "Vendor PDF envelope retained; case corners softened to R8 and edge radii to 1.6 mm for this concept. Board-only STEP preserved as reference.",
+  "cord_nonlocal_centerline_clearance_mm": 2.549,
+  "cord_collision_volume_mm3": {
+    "shell": 0.0,
+    "back": 0.0,
+    "pendant-clip": 0.0,
+    "boot-button": 0.0,
+    "power-button": 0.0
+  },
+  "case_corner_radius_mm": 8,
+  "case_edge_radius_mm": 1.6,
+  "front_button": false,
+  "side_button_count": 2,
+  "cord_length_mm": 393.4,
+  "new_parts": "Rounded R8 shell derived from the vendor envelope. A continuous cord threads through the separate rear clip aperture. No front HELP button. Breakaway clasp, sealing, antenna clearance and wearable validation remain engineering work."
+}

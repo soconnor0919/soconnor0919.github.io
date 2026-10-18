@@ -7,6 +7,23 @@
 
 ### Implementation update — October 15, 2026
 
+The device page layers the pendant in front of the companion in its hero,
+with concise links to each product story below. The pendant section uses
+static `public/device/pendant-v4/` renders, with no interactive demo controls.
+The case follows the vendor envelope with softened R8 corners and 1.6 mm
+edges. A continuous approximately 393 mm cord threads through the rear clip;
+the previous overlapping connector and knot are removed. Solid intersection
+checks verify cord clearance from the case, clip, back, and side buttons.
+Physical fit and wearable safety remain unverified.
+
+The renders use actual 200 × 200 SD/Wasm app captures for five Know Me pages
+and a pending help request. The local CAD studio retains capture-replay
+controls; the native WAMR simulator runs and verifies the real SD app. Upper
+hold opens help, upper tap cancels, and lower Next cycles pages. Board GPIO
+mapping, caregiver transport, cellular service, and emergency dispatch remain
+unimplemented. These limits are retained in technical docs and a short
+hardware-development note on the marketing page.
+
 The consumer story now includes a Medscribe-branded e-paper companion alongside
 the phone app. It presents a care-only product; OS/platform branding and
 general-purpose device apps are outside the Medscribe visitor's journey.
@@ -1157,3 +1174,11 @@ The richer website succeeds if it produces clarity, not merely visual density:
 - Northwell, CVS, and Walgreens print artifacts continue to work exactly as designed.
 
 That combination—human recognition, real product proof, and unusually exact limits—is a stronger expression of Medscribe's product thesis than a conventional “private medical AI” landing page.
+
+### Pendant presentation refinement
+
+The device hero layers the smaller pendant in front of the larger companion.
+Product links below lead to each design; the pendant section is a static
+marketing story without preview controls. The R8 case and threaded cord use
+actual SD-app captures. Geometry checks cover cord clearance from the shell,
+back, clip, and side buttons; physical wearable validation remains outstanding.

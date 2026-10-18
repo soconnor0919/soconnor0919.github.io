@@ -3,7 +3,6 @@ import Link from "next/link";
 
 import { MedscribeDevice } from "~/components/medscribe-device";
 import { Button } from "~/components/ui/button";
-import { productHardware } from "~/content/product";
 
 const deviceFunctions = [
   {
@@ -51,9 +50,6 @@ export function HardwareSection() {
           <div className="hidden lg:block">
             <MedscribeDevice view="card" />
           </div>
-          <figcaption className="text-muted-foreground mt-2 text-center text-xs leading-relaxed">
-            {productHardware.renderLabel}
-          </figcaption>
         </figure>
         <div>
           <h2
@@ -84,8 +80,8 @@ export function HardwareSection() {
             ))}
           </div>
           <p className="text-muted-foreground mt-3 max-w-xl text-sm leading-relaxed">
-            {productHardware.availability} The current device connection is in
-            the iPhone app; the Medscribe phone app also works on its own.
+            Connect your companion in the Medscribe iPhone app. Medscribe also
+            works on its own, whenever your phone is all you need.
           </p>
           <Button asChild variant="outline" className="mt-6">
             <Link href="#workflow">

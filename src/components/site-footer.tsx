@@ -4,7 +4,7 @@ import { MedscribeLogo } from "~/components/medscribe-logo";
 
 const footerLinks = [
   { href: "/", label: "The Medscribe app" },
-  { href: "/device", label: "The Medscribe companion" },
+  { href: "/device", label: "Companion & pendant" },
   { href: "/how-it-works", label: "How it works" },
   {
     href: "/medscribe-corporate-partner-overview.pdf",
