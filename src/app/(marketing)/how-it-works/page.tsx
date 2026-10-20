@@ -57,7 +57,7 @@ export default function HowItWorksPage() {
       <section className="px-4 pt-16 pb-18 sm:px-6 sm:pt-22">
         <div className="mx-auto max-w-6xl">
           <Badge variant="success">A day with Medscribe</Badge>
-          <h1 className="text-foreground mt-6 max-w-4xl font-display text-5xl leading-[1.02] font-semibold tracking-[-0.03em] sm:text-6xl">
+          <h1 className="text-foreground font-display mt-6 max-w-4xl text-5xl leading-[1.02] font-semibold tracking-[-0.03em] sm:text-6xl">
             One record, built through everyday use.
           </h1>
           <p className="text-muted-foreground mt-6 max-w-2xl text-lg leading-relaxed sm:text-xl">
@@ -71,7 +71,7 @@ export default function HowItWorksPage() {
       <section className="section-wash px-4 py-16 sm:px-6 lg:py-18">
         <div className="mx-auto max-w-6xl">
           <SectionLabel>Start with what matters</SectionLabel>
-          <h2 className="text-foreground mt-4 max-w-3xl font-display text-4xl font-semibold tracking-tight sm:text-5xl">
+          <h2 className="text-foreground font-display mt-4 max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
             A clear rhythm from the moment to the next conversation.
           </h2>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -91,7 +91,7 @@ export default function HowItWorksPage() {
                       0{index + 1}
                     </span>
                   </div>
-                  <h3 className="text-foreground mt-5 font-display text-2xl font-semibold">
+                  <h3 className="text-foreground font-display mt-5 text-2xl font-semibold">
                     {item.title}
                   </h3>
                   <p className="text-muted-foreground mt-3 text-sm leading-relaxed">
@@ -119,12 +119,14 @@ export default function HowItWorksPage() {
           <div className="grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-12">
             <div>
               <SectionLabel>Review what changed</SectionLabel>
-              <h2 className="text-foreground mt-4 font-display text-4xl font-semibold tracking-tight sm:text-5xl">
+              <h2 className="text-foreground font-display mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
                 Keep the visit and the takeaway together.
               </h2>
               <p className="text-muted-foreground mt-5 leading-relaxed">
-                The visit remains available beside the summary so you can check
-                wording, follow-ups, and the details you want to remember.
+                Record with permission, transcribe on your device, and review a
+                summary linked to the original words. Keep the recording so you
+                can check wording, follow-ups, and the details you want to
+                remember.
               </p>
               <p className="surface-panel text-muted-foreground mt-5 rounded-2xl p-5 text-sm leading-relaxed">
                 <strong className="text-foreground">Stay oriented:</strong> move
@@ -159,7 +161,7 @@ export default function HowItWorksPage() {
             </div>
             <div className="lg:order-2">
               <SectionLabel>Maintain the medication picture</SectionLabel>
-              <h2 className="text-foreground mt-4 font-display text-4xl font-semibold tracking-tight sm:text-5xl">
+              <h2 className="text-foreground font-display mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
                 Keep the daily routine easy to read.
               </h2>
               <p className="text-muted-foreground mt-5 leading-relaxed">
@@ -167,8 +169,8 @@ export default function HowItWorksPage() {
                 information together without hunting through separate notes.
               </p>
               <p className="text-muted-foreground mt-5 text-sm leading-relaxed">
-                Keep medication timing easy to read and confirm changes with
-                the care professional who gave you the instructions.
+                Keep medication timing easy to read and confirm changes with the
+                care professional who gave you the instructions.
               </p>
             </div>
           </div>
@@ -176,7 +178,7 @@ export default function HowItWorksPage() {
           <div className="grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-12">
             <div className="lg:order-2">
               <SectionLabel>Keep the next question</SectionLabel>
-              <h2 className="text-foreground mt-4 font-display text-4xl font-semibold tracking-tight sm:text-5xl">
+              <h2 className="text-foreground font-display mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
                 Save it while it is on your mind.
               </h2>
               <p className="text-muted-foreground mt-5 leading-relaxed">
@@ -205,7 +207,7 @@ export default function HowItWorksPage() {
           <div className="grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-12">
             <div>
               <SectionLabel>Prepare the handoff</SectionLabel>
-              <h2 className="text-foreground mt-4 font-display text-4xl font-semibold tracking-tight sm:text-5xl">
+              <h2 className="text-foreground font-display mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
                 Know Me is the view. Sharing is a separate choice.
               </h2>
               <p className="text-muted-foreground mt-5 leading-relaxed">
@@ -233,13 +235,51 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
+      <section className="px-4 pb-16 sm:px-6">
+        <div className="surface-panel mx-auto grid max-w-6xl gap-8 rounded-3xl p-6 sm:p-10 lg:grid-cols-2">
+          <div>
+            <SectionLabel>Caregiver catch-up</SectionLabel>
+            <h2 className="text-foreground font-display mt-4 text-4xl font-semibold tracking-tight">
+              Pick up since the last check-in.
+            </h2>
+            <p className="text-muted-foreground mt-5 leading-relaxed">
+              In the iPhone or desktop app, review your Know Me card and choose
+              whether to include recent care updates in an encrypted caregiver
+              copy. Inspect each item before it leaves your device.
+            </p>
+          </div>
+          <div className="space-y-4 text-sm leading-relaxed">
+            <p>
+              <strong>One briefing:</strong> visit notes, medication record
+              changes, follow-ups, questions, and Know Me details are grouped
+              together.
+            </p>
+            <p>
+              <strong>Details when needed:</strong> expand an update and its
+              included source words. Original audio, full transcripts, and chats
+              stay out of the copy.
+            </p>
+            <p>
+              <strong>A deliberate check-in:</strong> “I’m caught up” saves a
+              local review point. The next copy compares against it. Receiving
+              or opening a copy does not mark it reviewed.
+            </p>
+            <p className="text-muted-foreground">
+              These are selected, dated copies; they may be incomplete. Desktop
+              exchange is manual. An omitted medication never means it was
+              discontinued.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="section-wash px-4 py-16 sm:px-6">
         <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-2 lg:gap-12">
           <div>
             <div className="bg-primary-light text-primary flex size-12 items-center justify-center rounded-xl">
               <ShieldAlert className="size-6" aria-hidden="true" />
             </div>
-            <h2 className="text-foreground mt-5 font-display text-4xl font-semibold tracking-tight">
+            <h2 className="text-foreground font-display mt-5 text-4xl font-semibold tracking-tight">
               What Medscribe does not do
             </h2>
             <p className="text-muted-foreground mt-4 leading-relaxed">
@@ -264,12 +304,12 @@ export default function HowItWorksPage() {
       </section>
 
       <section className="px-4 py-16 sm:px-6">
-        <div className="night-card mx-auto flex max-w-6xl flex-col items-start justify-between gap-7 rounded-[2rem] px-7 py-10 text-white sm:px-10 md:flex-row md:items-center">
+        <div className="surface-panel text-foreground mx-auto flex max-w-6xl flex-col items-start justify-between gap-7 rounded-[2rem] px-7 py-10 sm:px-10 md:flex-row md:items-center">
           <div>
             <h2 className="font-display text-3xl font-semibold">
               Privacy should feel understandable.
             </h2>
-            <p className="mt-2 text-sm leading-relaxed text-teal-50/75">
+            <p className="text-muted-foreground mt-2 text-sm leading-relaxed">
               See how Medscribe keeps you in control of the context you keep,
               review, and share.
             </p>

@@ -28,11 +28,10 @@ const visitMoments = [
   {
     number: "01",
     eyebrow: "Visits stay findable",
-    title: "The visit has a place to land.",
-    body: "Keep the recording, transcript, and reviewed summary together instead of reconstructing the appointment from memory.",
+    title: "Be present. Keep the conversation.",
+    body: "With everyone’s permission, record the appointment. Keep the original audio beside its transcript and summary so you can return to the conversation later.",
     image: "/screenshots/native-marketing-2026-10-20-v2/visits.webp",
-    darkImage:
-      "/screenshots/native-marketing-2026-10-20-v2/visits-dark.webp",
+    darkImage: "/screenshots/native-marketing-2026-10-20-v2/visits-dark.webp",
     alt: "Medscribe Visits screen in a Silver iPhone product bezel",
   },
   {
@@ -40,8 +39,7 @@ const visitMoments = [
     eyebrow: "Words stay checkable",
     title: "Go back to what was actually said.",
     body: "Search the transcript and compare it with the generated summary before relying on it later.",
-    image:
-      "/screenshots/native-marketing-2026-10-20-v2/visit-text.webp",
+    image: "/screenshots/native-marketing-2026-10-20-v2/visit-text.webp",
     darkImage:
       "/screenshots/native-marketing-2026-10-20-v2/visit-text-dark.webp",
     alt: "Medscribe timestamped diabetes visit transcript in a Silver iPhone product bezel",
@@ -51,10 +49,8 @@ const visitMoments = [
     eyebrow: "The next step stays visible",
     title: "Review the useful part. Keep your judgment.",
     body: "Bring medications, follow-ups, diagnoses, and instructions into view, then check the details that matter.",
-    image:
-      "/screenshots/native-marketing-2026-10-20-v2/summary.webp",
-    darkImage:
-      "/screenshots/native-marketing-2026-10-20-v2/summary-dark.webp",
+    image: "/screenshots/native-marketing-2026-10-20-v2/summary.webp",
+    darkImage: "/screenshots/native-marketing-2026-10-20-v2/summary-dark.webp",
     alt: "Medscribe appointment summary in a Silver iPhone product bezel",
   },
 ] as const;
@@ -111,7 +107,7 @@ export default function HomePage() {
               {productRelease.platforms}
             </span>
           </div>
-          <h1 className="animate-fade-in-up-delay-1 text-foreground mx-auto mt-7 max-w-6xl font-display text-[clamp(3.6rem,9vw,8.5rem)] leading-[0.86] font-semibold tracking-[-0.055em]">
+          <h1 className="animate-fade-in-up-delay-1 text-foreground font-display mx-auto mt-7 max-w-6xl text-[clamp(3.6rem,9vw,8.5rem)] leading-[0.86] font-semibold tracking-[-0.055em]">
             Carry the context.
           </h1>
           <p className="animate-fade-in-up-delay-2 text-muted-foreground mx-auto mt-7 max-w-2xl text-lg leading-relaxed sm:text-xl lg:text-2xl">
@@ -163,7 +159,7 @@ export default function HomePage() {
           <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase">
             The connected picture
           </p>
-          <h2 className="text-foreground mx-auto mt-6 max-w-5xl font-display text-[clamp(2.8rem,7vw,6.5rem)] leading-[0.98] font-semibold tracking-[-0.045em]">
+          <h2 className="text-foreground font-display mx-auto mt-6 max-w-5xl text-[clamp(2.8rem,7vw,6.5rem)] leading-[0.98] font-semibold tracking-[-0.045em]">
             Care happens in fragments. Your context shouldn&apos;t.
           </h2>
           <p className="text-muted-foreground mx-auto mt-6 max-w-2xl text-lg leading-relaxed sm:text-xl">
@@ -180,13 +176,13 @@ export default function HomePage() {
             <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase">
               After the visit
             </p>
-            <h2 className="text-foreground mt-5 max-w-xl font-display text-5xl leading-[0.98] font-semibold tracking-[-0.04em] sm:text-6xl">
-              Turn what happened into something you can check.
+            <h2 className="text-foreground font-display mt-5 max-w-xl text-5xl leading-[0.98] font-semibold tracking-[-0.04em] sm:text-6xl">
+              Remember more of the visit.
             </h2>
             <p className="text-muted-foreground mt-6 max-w-lg text-lg leading-relaxed">
-              Bring the important details from a visit into one reviewable
-              record. You decide what is useful and what belongs in the picture
-              you carry forward.
+              You shouldn’t have to listen, ask questions, and remember every
+              instruction at once. Transcription and a source-linked summary
+              help you review the visit afterward, on your device.
             </p>
             <div className="surface-panel mt-6 max-w-lg rounded-2xl p-5">
               <p className="text-foreground text-sm leading-relaxed">
@@ -212,7 +208,7 @@ export default function HomePage() {
                       {moment.eyebrow}
                     </p>
                   </div>
-                  <h3 className="text-foreground mt-5 font-display text-3xl font-semibold tracking-[-0.025em] sm:text-4xl">
+                  <h3 className="text-foreground font-display mt-5 text-3xl font-semibold tracking-[-0.025em] sm:text-4xl">
                     {moment.title}
                   </h3>
                   <p className="text-muted-foreground mt-4 max-w-lg leading-relaxed">
@@ -235,16 +231,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="pitch-lazy brand-night relative isolate overflow-hidden px-4 py-20 text-white sm:px-6 lg:py-28">
+      <section className="pitch-lazy section-wash text-foreground relative isolate overflow-hidden px-4 py-20 sm:px-6 lg:py-28">
         <div className="mx-auto max-w-7xl">
           <div className="pitch-copy-motion mx-auto max-w-4xl text-center">
-            <p className="text-xs font-bold tracking-[0.2em] text-teal-200 uppercase">
+            <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase">
               Between visits
             </p>
-            <h2 className="mt-5 font-display text-[clamp(3rem,7vw,6.7rem)] leading-[0.94] font-semibold tracking-[-0.045em]">
+            <h2 className="font-display mt-5 text-[clamp(3rem,7vw,6.7rem)] leading-[0.94] font-semibold tracking-[-0.045em]">
               Keep the medication picture current.
             </h2>
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-teal-50/75 sm:text-xl">
+            <p className="text-muted-foreground mx-auto mt-6 max-w-2xl text-lg leading-relaxed sm:text-xl">
               The list, the label, the schedule, and the latest confirmation
               belong in the same view—not scattered across paper and memory.
             </p>
@@ -272,7 +268,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="overflow-hidden rounded-[2rem] bg-white/[0.055]">
+            <div className="bg-surface-soft overflow-hidden rounded-[2rem]">
               {[
                 {
                   title: "Keep schedules easy to understand",
@@ -289,13 +285,13 @@ export default function HomePage() {
               ].map((item) => (
                 <article
                   key={item.title}
-                  className="border-white/10 border-t p-6 first:border-t-0 sm:p-8"
+                  className="border-border-soft border-t p-6 first:border-t-0 sm:p-8"
                 >
-                  <Check className="size-5 text-teal-200" aria-hidden="true" />
-                  <h3 className="mt-4 font-display text-2xl font-semibold sm:text-3xl">
+                  <Check className="text-primary size-5" aria-hidden="true" />
+                  <h3 className="font-display mt-4 text-2xl font-semibold sm:text-3xl">
                     {item.title}
                   </h3>
-                  <p className="mt-3 leading-relaxed text-teal-50/70">
+                  <p className="text-muted-foreground mt-3 leading-relaxed">
                     {item.body}
                   </p>
                 </article>
@@ -314,7 +310,7 @@ export default function HomePage() {
             <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase">
               Questions for the doctor
             </p>
-            <h2 className="text-foreground mt-5 max-w-2xl font-display text-[clamp(3.25rem,6vw,6.5rem)] leading-[0.94] font-semibold tracking-[-0.045em]">
+            <h2 className="text-foreground font-display mt-5 max-w-2xl text-[clamp(3.25rem,6vw,6.5rem)] leading-[0.94] font-semibold tracking-[-0.045em]">
               Ask now. Save what belongs in the room.
             </h2>
             <p className="text-muted-foreground mt-6 max-w-xl text-lg leading-relaxed sm:text-xl">
@@ -372,13 +368,14 @@ export default function HomePage() {
               <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase">
                 At the handoff
               </p>
-              <h2 className="text-foreground mt-5 max-w-2xl font-display text-[clamp(3.2rem,6vw,6.2rem)] leading-[0.95] font-semibold tracking-[-0.045em]">
-                Bring the picture when care gets complicated.
+              <h2 className="text-foreground font-display mt-5 max-w-2xl text-[clamp(3.2rem,6vw,6.2rem)] leading-[0.95] font-semibold tracking-[-0.045em]">
+                Help someone understand you sooner.
               </h2>
               <p className="text-muted-foreground mt-6 max-w-xl text-lg leading-relaxed sm:text-xl">
-                Know Me gathers selected medications, allergies, conditions,
-                baseline, and contacts into one readable snapshot that is easy
-                to review together.
+                Your usual baseline, communication needs, medications,
+                allergies, and the people to call can change how an encounter
+                goes. Know Me puts the context you choose into a card you can
+                review, show, and share—without retelling your whole history.
               </p>
               <div className="mt-7 grid gap-4 sm:grid-cols-2">
                 <div className="surface-panel rounded-2xl p-5">
@@ -409,72 +406,90 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="night-card mt-16 overflow-hidden rounded-[2.5rem] p-6 text-white sm:p-8 lg:p-12">
+          <div className="surface-panel text-foreground mt-16 overflow-hidden rounded-[2.5rem] p-6 sm:p-8 lg:p-12">
             <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
               <div>
                 <HeartHandshake
-                  className="size-7 text-teal-200"
+                  className="text-primary size-7"
                   aria-hidden="true"
                 />
-                <h3 className="mt-5 font-display text-4xl leading-tight font-semibold sm:text-5xl">
-                  Share with intention.
+                <h3 className="font-display mt-5 text-4xl leading-tight font-semibold sm:text-5xl">
+                  Catch up without starting over.
                 </h3>
-                <p className="mt-5 max-w-xl leading-relaxed text-teal-50/75">
-                  Choose the context that helps, review it first, and share it
-                  with a trusted caregiver when the moment calls for it.
+                <p className="text-muted-foreground mt-5 max-w-xl leading-relaxed">
+                  When a caregiver returns, Medscribe brings together changes
+                  since the last copy they marked reviewed: visit notes,
+                  medication records, follow-ups, questions, and Know Me
+                  details. Expand the parts that matter and check the original
+                  words.
                 </p>
               </div>
               <ol className="grid gap-3 sm:grid-cols-3">
                 {[
-                  ["1", "You review", "Choose the context that helps"],
-                  ["2", "You share", "Send it to someone you trust"],
-                  ["3", "Stay aligned", "Keep the same picture in view"],
+                  [
+                    "1",
+                    "Choose what travels",
+                    "Care updates are optional. Review each included item before sharing.",
+                  ],
+                  [
+                    "2",
+                    "Send a private copy",
+                    "Only the verified caregiver can open the encrypted snapshot.",
+                  ],
+                  [
+                    "3",
+                    "Mark a check-in",
+                    "“I’m caught up” saves the comparison point on their device.",
+                  ],
                 ].map(([number, title, body]) => (
-                  <li
-                    key={number}
-                    className="rounded-2xl bg-white/[0.065] p-5"
-                  >
-                    <span className="flex size-8 items-center justify-center rounded-full bg-white/12 text-xs font-bold">
+                  <li key={number} className="bg-surface-soft rounded-2xl p-5">
+                    <span className="bg-primary-light flex size-8 items-center justify-center rounded-full text-xs font-bold">
                       {number}
                     </span>
-                    <p className="mt-5 font-display text-xl font-semibold">
+                    <p className="font-display mt-5 text-xl font-semibold">
                       {title}
                     </p>
-                    <p className="mt-2 text-sm leading-relaxed text-teal-50/65">
+                    <p className="text-muted-foreground mt-2 text-sm leading-relaxed">
                       {body}
                     </p>
                   </li>
                 ))}
               </ol>
             </div>
+            <p className="text-muted-foreground mt-7 max-w-4xl text-sm leading-relaxed">
+              Catch-up is available in the iPhone and desktop apps. It compares
+              selected shared copies, not a live care feed. Excluded information
+              may be missing; a missing medicine does not mean it was stopped.
+              Desktop copies are exchanged manually.
+            </p>
           </div>
         </div>
       </section>
 
-      <section className="pitch-lazy brand-night relative isolate overflow-hidden px-4 py-20 text-white sm:px-6 lg:py-28">
+      <section className="pitch-lazy section-wash text-foreground relative isolate overflow-hidden px-4 py-20 sm:px-6 lg:py-28">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(45,212,191,0.13),transparent_36%)]" />
         <div className="mx-auto max-w-7xl">
           <div className="pitch-copy-motion mx-auto max-w-4xl text-center">
             <p className="text-xs font-bold tracking-[0.2em] text-teal-300 uppercase">
               Privacy that feels personal
             </p>
-            <h2 className="mt-5 font-display text-[clamp(3.2rem,7vw,7rem)] leading-[0.92] font-semibold tracking-[-0.05em]">
+            <h2 className="font-display mt-5 text-[clamp(3.2rem,7vw,7rem)] leading-[0.92] font-semibold tracking-[-0.05em]">
               Your health story stays centered on you.
             </h2>
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-300 sm:text-xl">
+            <p className="text-muted-foreground mx-auto mt-6 max-w-2xl text-lg leading-relaxed sm:text-xl">
               Medscribe keeps the experience focused on your choices: what you
               keep, what you review, and what you share with people you trust.
             </p>
           </div>
 
-          <dl className="mt-14 grid gap-6 md:grid-cols-3 md:gap-0 md:divide-x md:divide-white/12">
+          <dl className="md:divide-border-soft mt-14 grid gap-6 md:grid-cols-3 md:gap-0 md:divide-x">
             {proofStats.map((stat) => (
               <div
                 key={stat.label}
                 className="px-5 py-2 text-center md:py-8 lg:py-10"
               >
-                <dt className="text-sm text-slate-400">{stat.label}</dt>
-                <dd className="mt-3 font-display text-4xl font-semibold tracking-[-0.04em] text-teal-200 sm:text-5xl lg:text-6xl">
+                <dt className="text-muted-foreground text-sm">{stat.label}</dt>
+                <dd className="font-display text-primary mt-3 text-4xl font-semibold tracking-[-0.04em] sm:text-5xl lg:text-6xl">
                   {stat.value}
                 </dd>
               </div>
@@ -488,13 +503,13 @@ export default function HomePage() {
               return (
                 <article
                   key={principle.title}
-                  className="rounded-[1.75rem] bg-white/[0.05] p-6"
+                  className="bg-surface-soft rounded-[1.75rem] p-6"
                 >
-                  <Icon className="size-6 text-teal-200" aria-hidden="true" />
-                  <h3 className="mt-5 font-display text-2xl font-semibold">
+                  <Icon className="text-primary size-6" aria-hidden="true" />
+                  <h3 className="font-display mt-5 text-2xl font-semibold">
                     {principle.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-slate-400">
+                  <p className="text-muted-foreground mt-3 text-sm leading-relaxed">
                     {principle.body}
                   </p>
                 </article>
@@ -525,13 +540,13 @@ export default function HomePage() {
             <p className="text-primary mt-7 text-xs font-bold tracking-[0.2em] uppercase">
               For partners
             </p>
-            <h2 className="text-foreground mt-4 font-display text-4xl leading-tight font-semibold tracking-[-0.035em] sm:text-5xl">
+            <h2 className="text-foreground font-display mt-4 text-4xl leading-tight font-semibold tracking-[-0.035em] sm:text-5xl">
               See the partnership story.
             </h2>
             <p className="text-muted-foreground mt-5 max-w-2xl text-lg leading-relaxed">
-              An eight-slide overview of the problem Medscribe addresses, the
-              product in practice, and the opportunity to bring it to more
-              patients and caregivers.
+              An overview of the problem Medscribe addresses, the product in
+              practice, and the opportunity to bring it to more patients and
+              caregivers.
             </p>
             <p className="text-foreground mt-6 text-sm font-semibold tracking-[-0.01em]">
               <span className="block">Hadlock Holdings LLC</span>
@@ -566,7 +581,7 @@ export default function HomePage() {
           <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase">
             Made for people who carry a lot
           </p>
-          <h2 className="text-foreground mx-auto mt-5 max-w-4xl font-display text-[clamp(3.2rem,7vw,7rem)] leading-[0.92] font-semibold tracking-[-0.05em]">
+          <h2 className="text-foreground font-display mx-auto mt-5 max-w-4xl text-[clamp(3.2rem,7vw,7rem)] leading-[0.92] font-semibold tracking-[-0.05em]">
             Carry the record that helps you move forward.
           </h2>
           <p className="text-muted-foreground mx-auto mt-6 max-w-2xl text-lg leading-relaxed sm:text-xl">

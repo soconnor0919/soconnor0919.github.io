@@ -26,7 +26,7 @@ Public routes include:
 - `/how-it-works` — review loop, medication maintenance, Questions, and handoff
 - `/privacy` — plain-language privacy and patient-control commitments
 - `/access` — health-data-free access request
-- `/medscribe-corporate-partner-overview.pdf` — public eight-slide partner deck
+- `/medscribe-corporate-partner-overview.pdf` — public twelve-slide partner deck
 
 Named partner print material remains isolated and excluded from search:
 
@@ -252,3 +252,18 @@ The pendant card is also recaptured from its actual 200 × 200 WAMR application
 and existing CAD, under `public/device/pendant-marketing-2026-10-20/`, so Alex’s
 allergy and Taylor’s contact agree across phone, handheld and pendant. These
 marketing fixtures do not establish caregiver delivery or physical device behavior.
+
+### Caregiver catch-up (October 20, 2026)
+
+The homepage and How it works now explain recording/transcription/source-linked
+review, the personal context in Know Me, and the native iPhone/desktop catch-up
+workflow described in `../native/CATCH_UP.md`. Catch-up compares optional,
+selected encrypted copies against an explicit local check-in; it is not a live
+feed. Desktop exchange is manual. Existing product captures remain the authored
+Alex Morgan set; no unverified screenshot of catch-up is presented. The partner
+PDF is the refreshed twelve-slide corporate deck with dedicated Know Me and
+caregiver catch-up pages, plus desktop and in-development hardware.
+
+Light appearance now keeps medication, caregiver, privacy, and access sections
+on the site's light surfaces. Those sections use semantic foreground, accent,
+muted text, and surface colors, which also adapt to the dark palette.

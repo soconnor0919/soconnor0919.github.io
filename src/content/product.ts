@@ -25,7 +25,7 @@ export const productClaims = {
   },
   caregiverSharing: {
     publicCopy:
-      "Share selected context with a trusted caregiver when you choose.",
+      "Share selected care updates privately, so a trusted caregiver can catch up since the last copy they reviewed.",
   },
   recordFreshness: {
     publicCopy:

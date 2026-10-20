@@ -167,7 +167,7 @@ export default function AccessPage() {
             })}
           </div>
 
-          <div className="night-card mt-14 rounded-[2rem] p-7 text-white sm:p-10">
+          <div className="surface-panel text-foreground mt-14 rounded-[2rem] p-7 sm:p-10">
             <p className="text-xs font-bold tracking-[0.14em] text-teal-100 uppercase">
               Keep your care team in the loop
             </p>

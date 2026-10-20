@@ -144,10 +144,10 @@ export default function PrivacyPage() {
         </div>
       </section>
 
-      <section className="brand-night px-4 py-20 text-white sm:px-6 lg:py-24">
+      <section className="section-wash text-foreground px-4 py-20 sm:px-6 lg:py-24">
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-2 lg:items-center">
           <div>
-            <p className="text-xs font-bold tracking-[0.16em] text-teal-200 uppercase">
+            <p className="text-primary text-xs font-bold tracking-[0.16em] uppercase">
               Your choices
             </p>
             <h2 className="font-display mt-5 text-4xl font-semibold tracking-tight sm:text-5xl">
@@ -158,10 +158,10 @@ export default function PrivacyPage() {
             {choices.map((item) => (
               <li
                 key={item}
-                className="flex items-start gap-3 rounded-xl bg-white/[0.06] p-4 text-sm leading-relaxed text-teal-50/90"
+                className="bg-surface-soft text-muted-foreground flex items-start gap-3 rounded-xl p-4 text-sm leading-relaxed"
               >
                 <Check
-                  className="mt-0.5 size-4 shrink-0 text-teal-200"
+                  className="text-primary mt-0.5 size-4 shrink-0"
                   aria-hidden="true"
                 />
                 {item}
