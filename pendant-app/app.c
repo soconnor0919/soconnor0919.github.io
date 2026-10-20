@@ -37,7 +37,7 @@ PAPER_EXPORT("paper_render") void render(int width,int height) {
     paper_mode(PAPER_TOP|PAPER_FULLSCREEN|PAPER_DIRECT);
     if(request) {
         label("Caregiver help",10,6,180,24,PAPER_FONT_BODY);
-        label("Jamie Morgan",10,36,180,28,PAPER_FONT_TITLE);
+        label("Taylor Morgan",10,36,180,28,PAPER_FONT_TITLE);
         panel(72,60);
         paper_icon(PAPER_ICON_PHONE,16,88,22);
         label("Waiting for phone",45,80,140,46,PAPER_FONT_BODY);
@@ -53,20 +53,22 @@ PAPER_EXPORT("paper_render") void render(int width,int height) {
         panel(72,62);
         label("ALLERGIES",16,75,168,20,PAPER_FONT_SMALL);
         label("Penicillin: hives",16,96,168,23,PAPER_FONT_BODY);
-        label("Latex: skin rash",16,116,168,20,PAPER_FONT_SMALL);
-        label("Jamie - caregiver",10,138,184,19,PAPER_FONT_SMALL);
-        label("617-555-0142",10,155,184,23,PAPER_FONT_BODY);
+
+        label("Taylor - partner",10,138,184,19,PAPER_FONT_SMALL);
+        label("617-555-0140",10,155,184,23,PAPER_FONT_BODY);
     } else if(page==1) {
         label("Medications",10,31,184,28,PAPER_FONT_TITLE);
-        label("Budesonide inhaler",10,67,184,24,PAPER_FONT_BODY);
-        label("Next: Oct 17, 8:00 PM",10,93,184,20,PAPER_FONT_SMALL);
-        label("Albuterol inhaler",10,119,184,24,PAPER_FONT_BODY);
-        label("As needed",10,142,184,19,PAPER_FONT_SMALL);
+        label("Metformin 500 mg",10,61,184,18,PAPER_FONT_SMALL);
+        label("Breakfast & dinner",10,79,184,18,PAPER_FONT_SMALL);
+        label("Lisinopril 10 mg",10,98,184,18,PAPER_FONT_SMALL);
+        label("Morning",10,116,184,18,PAPER_FONT_SMALL);
+        label("Atorvastatin 20 mg",10,135,184,18,PAPER_FONT_SMALL);
+        label("Evening",10,153,184,18,PAPER_FONT_SMALL);
     } else if(page==2) {
         label("Care contacts",10,31,184,28,PAPER_FONT_TITLE);
-        label("Jamie Morgan",10,62,184,24,PAPER_FONT_BODY);
-        label("Family caregiver",10,84,184,18,PAPER_FONT_SMALL);
-        label("617-555-0142",10,103,184,23,PAPER_FONT_BODY);
+        label("Taylor Morgan",10,62,184,24,PAPER_FONT_BODY);
+        label("Partner",10,84,184,18,PAPER_FONT_SMALL);
+        label("617-555-0140",10,103,184,23,PAPER_FONT_BODY);
         label("Dr. Jordan Lee",10,128,184,17,PAPER_FONT_SMALL);
         label("617-555-0168",10,145,184,16,PAPER_FONT_SMALL);
     } else if(page==3) {
@@ -78,8 +80,10 @@ PAPER_EXPORT("paper_render") void render(int width,int height) {
     } else {
         label("Conditions",10,31,184,28,PAPER_FONT_TITLE);
         panel(68,78);
-        label("Asthma",16,80,168,24,PAPER_FONT_BODY);
-        label("Osteoarthritis",16,113,168,24,PAPER_FONT_BODY);
+        label("Type 2 diabetes",16,79,168,18,PAPER_FONT_SMALL);
+        label("Hypertension",16,97,168,18,PAPER_FONT_SMALL);
+        label("High cholesterol",16,115,168,18,PAPER_FONT_SMALL);
+        label("Knee arthritis",16,133,168,18,PAPER_FONT_SMALL);
     }
     footer();
 }

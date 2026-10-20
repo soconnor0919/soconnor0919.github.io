@@ -26,10 +26,10 @@ const features = [
       "Review important details before relying on them",
       "Carry follow-ups into the next conversation",
     ],
-    image: "/screenshots/product-bezel-2026-08-24-unified-type/visits-natural.webp",
+    image: "/screenshots/native-marketing-2026-10-20-v2/visits.webp",
     darkImage:
-      "/screenshots/product-bezel-2026-08-24-unified-type/visits-natural-dark.webp",
-    alt: "Illustrative Medscribe visit detail showing a visit summary and follow-up information",
+      "/screenshots/native-marketing-2026-10-20-v2/visits-dark.webp",
+    alt: "Native Medscribe Visits screen with upcoming appointments",
   },
   {
     id: "medications",
@@ -44,9 +44,9 @@ const features = [
       "Bring important questions to a clinician or pharmacist",
     ],
     image:
-      "/screenshots/product-bezel-2026-08-24-unified-type/medication-detail-lisinopril-natural.webp",
+      "/screenshots/native-marketing-2026-10-20-v2/medication-detail.webp",
     darkImage:
-      "/screenshots/product-bezel-2026-08-24-unified-type/medication-detail-lisinopril-natural-dark.webp",
+      "/screenshots/native-marketing-2026-10-20-v2/medication-detail-dark.webp",
     alt: "Illustrative Medscribe medication detail with schedule and medication information",
   },
   {
@@ -62,10 +62,10 @@ const features = [
       "See whether a doctor, prescriber, or pharmacist may be helpful",
     ],
     image:
-      "/screenshots/product-bezel-2026-08-24-unified-type/ask-questions-black.webp",
+      "/screenshots/native-marketing-2026-10-20-v2/ask.webp",
     darkImage:
-      "/screenshots/product-bezel-2026-08-24-unified-type/ask-questions-black-dark.webp",
-    alt: "Illustrative Medscribe answer with medication context and a safety boundary",
+      "/screenshots/native-marketing-2026-10-20-v2/ask-dark.webp",
+    alt: "Native Medscribe Ask conversation with a question about the last visit, a linked transcript answer, and follow-up prompts",
   },
   {
     id: "handoff",
@@ -80,9 +80,9 @@ const features = [
       "It complements—not replaces—clinical verification",
     ],
     image:
-      "/screenshots/product-bezel-2026-08-24-unified-type/know-me-natural.webp",
+      "/screenshots/native-marketing-2026-10-20-v2/know-me.webp",
     darkImage:
-      "/screenshots/product-bezel-2026-08-24-unified-type/know-me-natural-dark.webp",
+      "/screenshots/native-marketing-2026-10-20-v2/know-me-dark.webp",
     alt: "Illustrative Medscribe Know Me handoff with active medications and review state",
   },
 ] as const;

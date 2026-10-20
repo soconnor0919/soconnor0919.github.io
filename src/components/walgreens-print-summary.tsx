@@ -161,7 +161,7 @@ export function WalgreensPrintSummary() {
           <div className="mx-auto w-[202px]">
             <div>
               <Image
-                src="/screenshots/product-bezel-2026-08-24-unified-type/medications-black.webp"
+                src="/screenshots/native-marketing-2026-10-20-v2/medications.webp"
                 alt="Medscribe medications screen"
                 width={1350}
                 height={2760}

@@ -1,0 +1,20 @@
+{
+  "method": "Actual WAMR C/LVGL framebuffer, existing CAD renderer, exported through studio Download transparent PNG using computer use. No image generation.",
+  "capture_date": "2026-10-20",
+  "fixture": "Fictional Alex Morgan, same diabetes, BP, cholesterol, knee arthritis, three medicines, allergy and Taylor Morgan contact as native marketing library.",
+  "framebuffer_sha256": "8abf2627ef1a482236a693b2ff7b57d38940cf0d064357e70791837ab1c994c9",
+  "download_sha256": "29c183f3fd96095873db31fd9fcb393059f5da4c18d59439413177aa2ff14471",
+  "render_sha256": "6b79be83b90c109e9896cdd18cb2b27c5bd7f05afb2d64c91b4b96eef1a60972",
+  "cutout_sha256": "e46dc9b57c65aff58bddff438a216bde09b87313fdce81dc6fadc902d399cf84",
+  "resized_to": [
+    2400,
+    2400
+  ],
+  "trim_box": [
+    505,
+    175,
+    1895,
+    2225
+  ],
+  "physical_hardware_verified": false
+}

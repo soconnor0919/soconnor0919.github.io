@@ -134,8 +134,8 @@ export default function HowItWorksPage() {
             </div>
             <div className="justify-self-center py-2">
               <PhoneMockup
-                src="/screenshots/product-bezel-2026-08-24-unified-type/summary-reviewed-natural.webp"
-                darkSrc="/screenshots/product-bezel-2026-08-24-unified-type/summary-reviewed-natural-dark.webp"
+                src="/screenshots/native-marketing-2026-10-20-v2/summary.webp"
+                darkSrc="/screenshots/native-marketing-2026-10-20-v2/summary-dark.webp"
                 alt="Illustrative Medscribe visit summary"
                 width={260}
               />
@@ -148,8 +148,8 @@ export default function HowItWorksPage() {
           <div className="grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-12">
             <div className="justify-self-center py-2 lg:order-1">
               <PhoneMockup
-                src="/screenshots/product-bezel-2026-08-24-unified-type/medication-detail-lisinopril-natural.webp"
-                darkSrc="/screenshots/product-bezel-2026-08-24-unified-type/medication-detail-lisinopril-natural-dark.webp"
+                src="/screenshots/native-marketing-2026-10-20-v2/medication-detail.webp"
+                darkSrc="/screenshots/native-marketing-2026-10-20-v2/medication-detail-dark.webp"
                 alt="Illustrative Medscribe medication detail"
                 width={260}
               />
@@ -191,8 +191,8 @@ export default function HowItWorksPage() {
             </div>
             <div className="justify-self-center py-2 lg:order-1">
               <PhoneMockup
-                src="/screenshots/product-bezel-2026-08-24-unified-type/questions-inline-natural.webp"
-                darkSrc="/screenshots/product-bezel-2026-08-24-unified-type/questions-inline-natural-dark.webp"
+                src="/screenshots/native-marketing-2026-10-20-v2/questions.webp"
+                darkSrc="/screenshots/native-marketing-2026-10-20-v2/questions-dark.webp"
                 alt="Illustrative Medscribe Questions to ask interface"
                 width={260}
               />
@@ -220,8 +220,8 @@ export default function HowItWorksPage() {
             </div>
             <div className="justify-self-center py-2">
               <PhoneMockup
-                src="/screenshots/product-bezel-2026-08-24-unified-type/know-me-natural.webp"
-                darkSrc="/screenshots/product-bezel-2026-08-24-unified-type/know-me-natural-dark.webp"
+                src="/screenshots/native-marketing-2026-10-20-v2/know-me.webp"
+                darkSrc="/screenshots/native-marketing-2026-10-20-v2/know-me-dark.webp"
                 alt="Illustrative Medscribe Know Me handoff"
                 width={260}
               />

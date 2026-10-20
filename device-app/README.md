@@ -90,9 +90,11 @@ care team and number. The patient name is centered at 32 px. The logo and 24 px 
 Six outlined rounded groups use public SDK section icons, 24 px uppercase
 labels, and 24 px body text. All care information fits on the full-screen
 480 × 800 panel.
-The scheduled inhaler shows an absolute date and time for its next dose; the
-as-needed inhaler has no scheduled dose. These are reviewed-card fixture values,
-not inferred dosing advice or a live countdown. All content fits above the panel edge. No field is hidden
+The October 20 marketing fixture matches the native app: metformin with breakfast
+and dinner, lisinopril in the morning, and atorvastatin in the evening, with
+diabetes, hypertension, high cholesterol, knee arthritis, penicillin allergy,
+and Taylor Morgan as care contact. These are authored fictional records,
+not inferred dosing advice. All content fits above the panel edge. No field is hidden
 behind navigation controls. The name matches the iPhone appointment preview.
 
 Laptop fixtures are fictional and use reserved 555 contact numbers. They are

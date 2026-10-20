@@ -4,19 +4,19 @@ import Link from "next/link";
 import { ProductDevice } from "~/components/product-device";
 import { Button } from "~/components/ui/button";
 
-const captures = "/device/phone-appointment-v5";
+const captures = "/screenshots/native-marketing-2026-10-20-v2";
 const phoneSteps = [
   {
-    title: "Your appointment, back on your phone.",
-    body: "After everyone agrees to recording, the companion captures the appointment. Bring it into Medscribe: the visit, clinician, and original audio stay together.",
-    image: "imported",
-    alt: "Medscribe on iOS 27 showing Knee pain follow-up with Dr. Jordan Lee, imported from the Medscribe companion",
+    title: "Your visits, together on your phone.",
+    body: "Keep upcoming appointments and saved visits together. Open a visit to prepare your questions or review the original material afterward.",
+    image: "visits",
+    alt: "Native Medscribe Visits screen showing Alex Morgan’s upcoming appointments",
   },
   {
-    title: "Listen again. Find the detail.",
-    body: "What did the doctor say about the X-ray? Open the transcript and tap a timestamp to hear that part again. Revisit the physiotherapy discussion and the plan for a six-week follow-up.",
-    image: "playback",
-    alt: "Medscribe playing the knee pain appointment with an audio progress bar and timestamped doctor and patient transcript",
+    title: "Return to the original words.",
+    body: "Review a recording’s transcript or imported document text beside the summary. Check the wording before keeping a takeaway or preparing your next question.",
+    image: "visit-text",
+    alt: "Native Medscribe showing timestamped dialogue from Alex Morgan’s diabetes and blood pressure visit",
   },
 ] as const;
 
@@ -29,9 +29,9 @@ export function CompanionAppSection() {
             Leave the appointment.<br className="hidden sm:block" />{" "}Keep the conversation.
           </h2>
           <p className="text-muted-foreground mt-6 max-w-2xl text-lg leading-relaxed">
-            Alex came in about knee pain. The conversation covered stairs, a
-            walking stick, the X-ray, and getting back to walks in the park.
-            At home, the recording and transcript help Alex return to the details.
+            A question before the visit. A detail to check afterward. Medscribe
+            keeps appointments, original words, and next steps close, so you
+            can pick up where the conversation left off.
           </p>
         </div>
         <div className="mx-auto mt-12 grid max-w-4xl gap-14 md:grid-cols-2 md:gap-16 lg:gap-24">

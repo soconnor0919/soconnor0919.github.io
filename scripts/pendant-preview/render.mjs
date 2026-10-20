@@ -94,9 +94,9 @@ if (params.get("angle") === "front") {
   angleX = 0;
   angleY = 0;
 }
-function draw() {
-  canvas.width = Math.round(canvas.clientWidth * devicePixelRatio);
-  canvas.height = Math.round(canvas.clientHeight * devicePixelRatio);
+function draw(exportSize) {
+  canvas.width = Array.isArray(exportSize) ? exportSize[0] : Math.round(canvas.clientWidth * devicePixelRatio);
+  canvas.height = Array.isArray(exportSize) ? exportSize[1] : Math.round(canvas.clientHeight * devicePixelRatio);
   gl.viewport(0, 0, canvas.width, canvas.height);
   gl.clearColor(0, 0, 0, 0);
   gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
@@ -182,3 +182,15 @@ help?.addEventListener("pointercancel",cancelHold);
 help?.addEventListener("keydown",event=>{if(["Enter"," "].includes(event.key)){event.preventDefault();if(!event.repeat){wasPending=pending;startHelp();}}});
 help?.addEventListener("keyup",event=>{if(["Enter"," "].includes(event.key)){event.preventDefault();cancelHold();if(wasPending){pending=false;void showCard();}}});
 next?.addEventListener("click",nextCard);
+
+document.querySelector("#download-render").addEventListener("click", () => {
+ draw([2000, 2400]);
+ canvas.toBlob((blob) => {
+  if (!blob) return;
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url; link.download = "medscribe-pendant.png"; link.click();
+  draw();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+ }, "image/png");
+});

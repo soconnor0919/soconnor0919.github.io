@@ -12,8 +12,8 @@ type ProductDeviceProps = {
 };
 
 /**
- * A precomposited iPhone 17 Pro capture using the calibrated Silver bezel in
- * `public/screenshots/product-bezel-2026-08-24-unified-type`. Keeping the frame in
+ * A native app capture composited into the calibrated Silver photographic bezel.
+ * Current assets live in `public/screenshots/native-marketing-2026-10-20-v2`. Keeping the frame in
  * the source image preserves its fine edge detail without adding layout or
  * client-side work.
  */

@@ -73,16 +73,18 @@ Pushes to `master` also publish a static build to GitHub Pages through
 site and partner materials, while omitting the optional server-only password
 gate and legacy redirect routes that cannot run on static hosting.
 
-Existing phone screenshots live in
-`public/screenshots/product-bezel-2026-08-24-unified-type/`. The device-page
-appointment captures live in `public/device/phone-appointment-v5/`. Both use
-the calibrated, precomposited iPhone 17 Pro bezel; there are no raw or
-CSS-framed phone captures in the rendered site. The neutral Silver bezel and
-the versioned path keep the imagery consistent and prevent stale optimizer
-caches from hiding a new capture set.
-The existing phone imagery retains its illustrative-profile labels. The new
-appointment captures and device UI use fictional fixtures, with their origin
-recorded in technical provenance.
+Current phone screenshots live in `public/screenshots/native-marketing-2026-10-20-v2/`.
+All marketing routes and partner print pages use this shared light/dark set,
+captured from the native SwiftUI app on iPhone 18 Pro / iOS 27.0 with the
+authored Alex Morgan diabetes/blood-pressure library. The nine screens cover Home, Visits, timestamped
+visit dialogue, summary, Today medication logging, Metformin scheduling, Ask,
+questions, and Know Me. No patient data or generated UI is included.
+
+The existing calibrated Silver photographic bezel and display masks are retained
+at 1350 × 2760 (1206 × 2622 screen, offset +72+69). This preserves consistent
+framing; it is not a new iPhone 18 Pro hardware photograph. The versioned paths
+prevent old optimizer caches from hiding the refresh. Older asset folders are
+retained only as historical sources.
 
 ### Medscribe e-paper companion (October 15, 2026)
 
@@ -184,55 +186,29 @@ unchanged.
 
 ### Capturing raw screenshots for the site
 
-Export **in-app content only** from the simulator or device — no simulator chrome or macOS capture toolbar. A normal in-app status bar/tab bar is fine.
+Use Device Hub’s Camera button to export **in-app content only**, without macOS
+or simulator chrome. Capture the nine names in both appearances at default text
+size: `home`, `visits`, `visit-text`, `summary`, `medications`,
+`medication-detail`, `ask`, `questions`, and `know-me`; append `-dark` for dark.
+The current iPhone 18 Pro simulator exports 1206 × 2622 pixels.
 
-1. Run the app on an **iPhone 17 Pro** simulator or device.
-2. Capture each screen (⌘S in Simulator saves to Desktop).
-3. Place each 1206 × 2622 capture at native size in the 1350 × 2760 Silver
-   bezel at offset `+72+69`, clip it to the calibrated display-opening mask,
-   and export a transparent, lossless WebP into the shared versioned asset
-   directory referenced by the routes.
+With Pillow installed, compose the raw directory deterministically:
 
-Product images are composited at the bezel source size of 1350 × 2760 with
-transparent backgrounds and rendered responsively through
-`src/components/product-device.tsx`; the smaller `PhoneMockup` wrapper reuses
-that same component. The homepage uses CSS view timelines for
-scroll-scrubbed device and chapter motion on desktop and mobile, with a static
-fallback and a reduced-motion override.
+```bash
+python3 scripts/phone-preview/compose-native.py /absolute/path/to/raw
+```
 
-### Device-page iPhone workflow
+The script retains the existing photographic frame and simulator-derived screen
+alpha/Dynamic Island masks, exports transparent lossless WebP, and writes source
+and output hashes to `public/screenshots/native-marketing-2026-10-20-v2/provenance.json`.
+No hand-drawn corner approximation or image generation is used. The raw captures
+for this refresh are in the local workspace’s `outputs/marketing-2026-10-20/raw`.
 
-`CompanionAppSection` uses fresh captures of the actual Expo Medscribe app on
-an iPhone 17 Pro simulator running iOS 27.0 (24A434), in light and dark mode.
-The two screens show Alex Morgan's Visits list with six fictional appointments
-(knee pain follow-up, asthma review, physiotherapy, annual checkup, eye exam,
-and medication review), and playback of real local audio alongside its
-timestamped transcript. The knee visit is marked as imported from the companion.
-Assets and provenance live in
-`public/device/phone-appointment-v5/`; reproduction scripts live in
-`scripts/phone-preview/`.
-
-The captures retain the visible Dynamic Island using display alpha and island
-pixels captured with `simctl screenshot --mask=alpha`, stored under
-`scripts/phone-preview/assets/`. Each 1206 × 2622 screen is placed at native
-resolution at offset `+72+69` inside the existing 1350 × 2760 photographic
-bezel. No hand-drawn corner mask is used.
-
-The fictional knee osteoarthritis follow-up covers symptoms, the X-ray,
-physiotherapy goals, and a six-week follow-up. The website presents screenshots
-only, with no audio player or expandable conversation. Local speech-synthesized
-audio remains inside the app for the playback capture; the public asset
-directory contains no downloadable sample audio. The fixture records consent
-25 seconds before recording begins; consent dialogue is excluded from the audio.
-
-The fixture was seeded into a dedicated empty simulator. These captures show
-the running app and local audio playback; they do not verify a physical
-companion import or ASR accuracy. Transcript text was seeded from the same
-fictional script, without model inference. The generated iOS lifecycle files
-were patched locally for the iOS 27 preview; this does not change production app
-behavior. Native hardware import remains in
-`native/Medscribe/PaperCompanionView.swift`, which this website change does not
-modify.
+`ProductDevice` and `PhoneMockup` render the shared assets responsively. The
+homepage retains its CSS view-timeline motion with reduced-motion fallbacks.
+The device page now shows the current native Visits and timestamped transcript screens;
+its copy no longer describes the older React Native knee-appointment fixture or
+implies that these authored captures verify hardware import, ASR accuracy, or model generation quality.
 
 The Know Me phone/companion composition uses the complete transparent companion
 silhouette (`pearl-v5/medscribe-sd-card-cutout.webp`), trimmed from the existing
@@ -247,3 +223,32 @@ product story, and the pendant includes caregiver notification. This copy does
 not establish implementation or physical validation: current pendant firmware
 checks still cover the card/help UI only; transport and audio capture remain
 unimplemented. CAD provenance and reproduction limits stay in technical docs.
+
+### Authored marketing patient library
+
+`native/scripts/marketing-fixture.py` creates a new isolated `DemoWorkspace` with
+a fictional Alex Morgan, diabetes/hypertension/high cholesterol, an authored
+77-second clinician/patient dialogue voiced locally, matching written transcript,
+source-linked summary and chat, pharmacy questions, confirmed medication routines,
+and Know Me fields. Metformin, lisinopril and atorvastatin match the visit; the
+Metformin detail includes a bundled NIH/NLM example pill photograph. All contacts
+and records are fictional. Review states and answers are presentation fixtures,
+not claims of model generation or clinical validation. The source script and
+generated `marketing-fixture.json` retain provenance; audio stays out of public assets.
+
+Generate into a new directory, then inject into a Debug simulator as described in
+`native/README.md`. Navigate and capture through Device Hub, checking both
+appearances. No real patient library is modified.
+
+The Know Me companion rendering is refreshed under
+`public/device/pearl-marketing-2026-10-20/`, with the same three medications,
+conditions, allergy and Taylor Morgan contact. `device-app/run-capture.c`
+provides the fictional host card; `device-app/run.py` renders the actual WAMR
+C/LVGL framebuffer. The local CAD studio now has a **Download transparent PNG**
+control for computer-use exports. Artwork provenance records hashes and the
+transparent trim, without implying physical hardware verification.
+
+The pendant card is also recaptured from its actual 200 × 200 WAMR application
+and existing CAD, under `public/device/pendant-marketing-2026-10-20/`, so Alex’s
+allergy and Taylor’s contact agree across phone, handheld and pendant. These
+marketing fixtures do not establish caregiver delivery or physical device behavior.

@@ -21,7 +21,7 @@ static bool companion_read(void *ctx, paper_companion_status *out) { (void)ctx; 
 static bool card(void *ctx,unsigned page,char *out,unsigned cap) {
     (void)ctx;
     if(page)return false;
-    snprintf(out,cap,"Alex Morgan\n# Allergies\nPenicillin - hives\nLatex - skin rash\n# Medications\nBudesonide inhaler\nNext dose: Oct 15 at 8:00 PM\nAlbuterol inhaler - as needed\nNo scheduled dose\n# Conditions\nAsthma; osteoarthritis\n# Care contact\nJamie Morgan - family caregiver\n(617) 555-0142\n# What helps me\nWalking aid. Time to answer.\nSpeak directly. Written next steps.\n# My care team\nDr. Jordan Lee - primary care\n(617) 555-0168");
+    snprintf(out,cap,"Alex Morgan\n# Allergies\nPenicillin - hives\n# Medications\nMetformin 500 mg - breakfast/dinner\nLisinopril 10 mg - morning\nAtorvastatin 20 mg - evening\n# Conditions\nType 2 diabetes; hypertension\nHigh cholesterol; knee arthritis\n# Care contact\nTaylor Morgan - partner\n(617) 555-0140\n# What helps me\nWalking stick for longer distances.\nSpeak directly. Written next steps.\n# My care team\nDr. Jordan Lee - primary care\n(617) 555-0168");
     return true;
 }
 static bk_result command(void *ctx,paper_companion_command op) {
@@ -128,9 +128,9 @@ int main(int argc,char **argv) {
     choose("All apps");choose("Medscribe");
     CHECK(store->status.loaded==1&&store->status.module_bytes>0);
     CHECK(named(lv_screen_active(),"Know Me"));CHECK(named(lv_screen_active(),"Alex Morgan"));
-    CHECK(named(lv_screen_active(),"MEDICATIONS"));CHECK(named(lv_screen_active(),"Next dose: Oct 15 at 8:00 PM"));
+    CHECK(named(lv_screen_active(),"MEDICATIONS"));CHECK(named(lv_screen_active(),"Metformin 500 mg - breakfast/dinner"));
     CHECK(named(lv_screen_active(),"CONDITIONS"));CHECK(named(lv_screen_active(),"WHAT HELPS ME"));CHECK(named(lv_screen_active(),"MY CARE TEAM"));
-    CHECK(named(lv_screen_active(),"(617) 555-0142"));CHECK(!named(lv_screen_active(),"Next"));CHECK(!named(lv_screen_active(),"Prev"));
+    CHECK(named(lv_screen_active(),"(617) 555-0140"));CHECK(!named(lv_screen_active(),"Next"));CHECK(!named(lv_screen_active(),"Prev"));
     capture(output_directory,"card");
     CHECK(paper_os_input(os,BK_SELECT)==BK_OK);settle();CHECK(named(lv_screen_active(),"Your appointment companion"));capture(output_directory,"home");
     choose("Know Me card");CHECK(named(lv_screen_active(),"Know Me"));CHECK(paper_os_input(os,BK_SELECT)==BK_OK);settle();choose("Connect to phone");CHECK(named(lv_screen_active(),"Connect to Medscribe"));capture(output_directory,"connect");

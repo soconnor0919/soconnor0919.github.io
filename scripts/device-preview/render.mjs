@@ -138,3 +138,17 @@ canvas.addEventListener("pointercancel", () => {
 new ResizeObserver(draw).observe(canvas);
 draw();
 window.cadReady = true;
+
+// Use the studio control to export the same rendered canvas with transparency.
+document.querySelector("#download-render").addEventListener("click", () => {
+  draw();
+  canvas.toBlob((blob) => {
+    if (!blob) return;
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = `medscribe-${params.get("screen") ?? "home"}.png`;
+    link.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }, "image/png");
+});

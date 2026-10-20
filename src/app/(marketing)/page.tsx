@@ -30,10 +30,10 @@ const visitMoments = [
     eyebrow: "Visits stay findable",
     title: "The visit has a place to land.",
     body: "Keep the recording, transcript, and reviewed summary together instead of reconstructing the appointment from memory.",
-    image: "/screenshots/product-bezel-2026-08-24-unified-type/visits-natural.webp",
+    image: "/screenshots/native-marketing-2026-10-20-v2/visits.webp",
     darkImage:
-      "/screenshots/product-bezel-2026-08-24-unified-type/visits-natural-dark.webp",
-    alt: "Medscribe Visits screen in an iPhone 17 Pro product bezel",
+      "/screenshots/native-marketing-2026-10-20-v2/visits-dark.webp",
+    alt: "Medscribe Visits screen in a Silver iPhone product bezel",
   },
   {
     number: "02",
@@ -41,10 +41,10 @@ const visitMoments = [
     title: "Go back to what was actually said.",
     body: "Search the transcript and compare it with the generated summary before relying on it later.",
     image:
-      "/screenshots/product-bezel-2026-08-24-unified-type/transcript-populated-black.webp",
+      "/screenshots/native-marketing-2026-10-20-v2/visit-text.webp",
     darkImage:
-      "/screenshots/product-bezel-2026-08-24-unified-type/transcript-populated-black-dark.webp",
-    alt: "Medscribe visit transcript in an iPhone 17 Pro product bezel",
+      "/screenshots/native-marketing-2026-10-20-v2/visit-text-dark.webp",
+    alt: "Medscribe timestamped diabetes visit transcript in a Silver iPhone product bezel",
   },
   {
     number: "03",
@@ -52,10 +52,10 @@ const visitMoments = [
     title: "Review the useful part. Keep your judgment.",
     body: "Bring medications, follow-ups, diagnoses, and instructions into view, then check the details that matter.",
     image:
-      "/screenshots/product-bezel-2026-08-24-unified-type/summary-reviewed-natural.webp",
+      "/screenshots/native-marketing-2026-10-20-v2/summary.webp",
     darkImage:
-      "/screenshots/product-bezel-2026-08-24-unified-type/summary-reviewed-natural-dark.webp",
-    alt: "Medscribe appointment summary in an iPhone 17 Pro product bezel",
+      "/screenshots/native-marketing-2026-10-20-v2/summary-dark.webp",
+    alt: "Medscribe appointment summary in a Silver iPhone product bezel",
   },
 ] as const;
 
@@ -134,9 +134,9 @@ export default function HomePage() {
         <div className="relative mx-auto mt-10 h-[42rem] max-w-5xl sm:h-[52rem] lg:mt-6 lg:h-[60rem]">
           <div className="absolute top-24 left-1/2 w-[17rem] -translate-x-[86%] -rotate-6 sm:top-28 sm:w-[22rem] lg:top-32 lg:w-[26rem]">
             <ProductDevice
-              src="/screenshots/product-bezel-2026-08-24-unified-type/summary-reviewed-natural.webp"
-              darkSrc="/screenshots/product-bezel-2026-08-24-unified-type/summary-reviewed-natural-dark.webp"
-              alt="Medscribe visit summary in an iPhone 17 Pro product bezel"
+              src="/screenshots/native-marketing-2026-10-20-v2/summary.webp"
+              darkSrc="/screenshots/native-marketing-2026-10-20-v2/summary-dark.webp"
+              alt="Medscribe visit summary in a Silver iPhone product bezel"
               className="pitch-device-motion pitch-device-drift-left"
               sizes="(min-width: 1024px) 416px, (min-width: 640px) 352px, 272px"
               priority
@@ -144,9 +144,9 @@ export default function HomePage() {
           </div>
           <div className="absolute top-0 left-1/2 z-10 w-[18rem] -translate-x-[14%] rotate-5 sm:w-[23rem] lg:w-[28rem]">
             <ProductDevice
-              src="/screenshots/product-bezel-2026-08-24-unified-type/home-black.webp"
-              darkSrc="/screenshots/product-bezel-2026-08-24-unified-type/home-black-dark.webp"
-              alt="Medscribe home screen in an iPhone 17 Pro product bezel"
+              src="/screenshots/native-marketing-2026-10-20-v2/home.webp"
+              darkSrc="/screenshots/native-marketing-2026-10-20-v2/home-dark.webp"
+              alt="Medscribe home screen in a Silver iPhone product bezel"
               className="pitch-device-motion pitch-device-drift-right"
               sizes="(min-width: 1024px) 448px, (min-width: 640px) 368px, 288px"
               priority
@@ -254,18 +254,18 @@ export default function HomePage() {
             <div className="relative mx-auto h-[36rem] w-full max-w-2xl sm:h-[44rem] lg:h-[50rem]">
               <div className="absolute top-12 left-[4%] w-[15rem] -rotate-6 sm:top-16 sm:w-[19rem] lg:w-[22rem]">
                 <ProductDevice
-                  src="/screenshots/product-bezel-2026-08-24-unified-type/medication-detail-lisinopril-natural.webp"
-                  darkSrc="/screenshots/product-bezel-2026-08-24-unified-type/medication-detail-lisinopril-natural-dark.webp"
-                  alt="Medscribe medication detail in an iPhone 17 Pro product bezel"
+                  src="/screenshots/native-marketing-2026-10-20-v2/medication-detail.webp"
+                  darkSrc="/screenshots/native-marketing-2026-10-20-v2/medication-detail-dark.webp"
+                  alt="Medscribe Metformin details and daily schedule in a Silver iPhone product bezel"
                   className="pitch-device-motion pitch-device-drift-left"
                   sizes="(min-width: 1024px) 368px, (min-width: 640px) 336px, 272px"
                 />
               </div>
               <div className="absolute top-0 right-[2%] z-10 w-[16rem] rotate-5 sm:w-[20rem] lg:w-[23rem]">
                 <ProductDevice
-                  src="/screenshots/product-bezel-2026-08-24-unified-type/medications-black.webp"
-                  darkSrc="/screenshots/product-bezel-2026-08-24-unified-type/medications-black-dark.webp"
-                  alt="Medscribe medication list in an iPhone 17 Pro product bezel"
+                  src="/screenshots/native-marketing-2026-10-20-v2/medications.webp"
+                  darkSrc="/screenshots/native-marketing-2026-10-20-v2/medications-dark.webp"
+                  alt="Medscribe Today medication logging rows in a Silver iPhone product bezel"
                   className="pitch-device-motion pitch-device-drift-right"
                   sizes="(min-width: 1024px) 384px, (min-width: 640px) 352px, 288px"
                 />
@@ -335,18 +335,18 @@ export default function HomePage() {
           <div className="mx-auto grid w-full max-w-[40rem] grid-cols-2 items-center justify-center gap-1 sm:gap-2 lg:justify-end">
             <div className="mx-auto w-full -rotate-2">
               <ProductDevice
-                src="/screenshots/product-bezel-2026-08-24-unified-type/ask-questions-black.webp"
-                darkSrc="/screenshots/product-bezel-2026-08-24-unified-type/ask-questions-black-dark.webp"
-                alt="Medscribe Ask response shown in an iPhone 17 Pro product bezel"
+                src="/screenshots/native-marketing-2026-10-20-v2/ask.webp"
+                darkSrc="/screenshots/native-marketing-2026-10-20-v2/ask-dark.webp"
+                alt="Medscribe Ask response shown in a Silver iPhone product bezel"
                 className="pitch-device-motion pitch-device-drift-left"
                 sizes="(min-width: 640px) 288px, 72vw"
               />
             </div>
             <div className="mx-auto w-full rotate-2">
               <ProductDevice
-                src="/screenshots/product-bezel-2026-08-24-unified-type/questions-inline-natural.webp"
-                darkSrc="/screenshots/product-bezel-2026-08-24-unified-type/questions-inline-natural-dark.webp"
-                alt="Medscribe Questions to ask interface shown in an iPhone 17 Pro product bezel"
+                src="/screenshots/native-marketing-2026-10-20-v2/questions.webp"
+                darkSrc="/screenshots/native-marketing-2026-10-20-v2/questions-dark.webp"
+                alt="Medscribe Questions to ask interface shown in a Silver iPhone product bezel"
                 className="pitch-device-motion pitch-device-drift-right"
                 sizes="(min-width: 640px) 288px, 72vw"
               />
@@ -361,9 +361,9 @@ export default function HomePage() {
             <div className="relative mx-auto w-[min(70vw,24rem)]">
               <div className="bg-primary-light/70 absolute inset-[12%_-12%_8%] -z-10 rounded-[4rem] blur-2xl" />
               <ProductDevice
-                src="/screenshots/product-bezel-2026-08-24-unified-type/know-me-natural.webp"
-                darkSrc="/screenshots/product-bezel-2026-08-24-unified-type/know-me-natural-dark.webp"
-                alt="Medscribe Know Me handoff record in an iPhone 17 Pro product bezel"
+                src="/screenshots/native-marketing-2026-10-20-v2/know-me.webp"
+                darkSrc="/screenshots/native-marketing-2026-10-20-v2/know-me-dark.webp"
+                alt="Medscribe Know Me handoff record in a Silver iPhone product bezel"
                 className="pitch-device-motion pitch-device-drift-left"
                 sizes="(min-width: 1024px) 448px, (min-width: 640px) 400px, 80vw"
               />

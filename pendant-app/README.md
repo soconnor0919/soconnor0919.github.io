@@ -62,3 +62,10 @@ The local CAD studio separately replays captured screens with projected button
 hit areas and toolbar controls. It does not run Wasm in the browser. The native
 simulator continues to run the real SD app, including help, cancellation, and
 page navigation. Neither preview implements caregiver delivery.
+
+The October 20 website fixture matches the native marketing library: Alex Morgan,
+penicillin causing hives, partner Taylor Morgan (617-555-0140), metformin,
+lisinopril and atorvastatin, diabetes/hypertension/high cholesterol/knee arthritis.
+These are authored fictional examples. The CAD studio has a transparent PNG
+export button for computer-use capture. Current card artwork lives in
+`public/device/pendant-marketing-2026-10-20/` with hashes and provenance.

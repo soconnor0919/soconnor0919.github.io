@@ -1,0 +1,96 @@
+{
+  "method": "Real native SwiftUI screenshots captured with Device Hub Camera, composited at native resolution into the existing photographic Silver bezel. No generated UI or image generation.",
+  "capture_date": "2026-10-20",
+  "capture_device": "iPhone 18 Pro simulator",
+  "capture_runtime": "iOS 27.0",
+  "appearance": "Light and Dark; default Dynamic Type size 3",
+  "fixture": "Isolated authored Alex Morgan diabetes/blood pressure library from native/scripts/marketing-fixture.py; synthetic speech, matching written transcript, source-linked summary and chat, medication routines and reviewed Know Me card. No real patient data. Authored presentation states, not model benchmark results.",
+  "pill_photos": "Bundled NIH/NLM RxImage photographs, ingredient-matched metformin and atorvastatin; example appearance, not identification of a dispensed pill. See native/VisitCore/Sources/VisitCore/Resources/pill-photo-provenance.json.",
+  "frame_source": "public/screenshots/product-bezel-2026-08-24-unified-type/visits-natural.webp",
+  "frame_sha256": "d16eb7afc9e95cd08afcf306b75107a302c842bc88160b841d6a2ac247676bd1",
+  "frame_note": "Existing iPhone 17 Pro photographic framing and display masks retained; current simulator shares the 1206 x 2622 capture size. Not a new hardware photograph.",
+  "screen_offset": [
+    72,
+    69
+  ],
+  "screen_size": [
+    1206,
+    2622
+  ],
+  "screen_alpha_sha256": "90a2f9827e65ede0ad010e091141e450cf12370c909e67cd4a1bafb02d1ec6d4",
+  "island_mask_sha256": "ea1564d15dad05c09baf04ebf4dc7541bd79760a4143f812932fcfc6244d2e6f",
+  "captures": {
+    "home": {
+      "source_sha256": "930ba595a4e3233d984d5d0dcb48bad60a5a02fd5edc6d8fb0f1c7d27633bed5",
+      "output_sha256": "3efb49407610556670f60b601024054f27033d786daacd56dc78c9ba27b05095"
+    },
+    "home-dark": {
+      "source_sha256": "11013d4ad0442e773bdddb04c27872c388f61f9bf9e7b7ed0fcb4ee8816b4b2d",
+      "output_sha256": "c576780d8f56d519b823fbb57767fbc9d7821b7b02746dc33ebc12ab424b3eb7"
+    },
+    "visits": {
+      "source_sha256": "611b6ad3e29157a3129c833f86ede1af277a6e6c91af2b7cef8b9e32cfc0684d",
+      "output_sha256": "e7507deefc87f787283ae8f0147d1284d1fab4a2ab482f67aeb6de7303362416"
+    },
+    "visits-dark": {
+      "source_sha256": "76cf3d2dffa8ff388aedf04b1590e6a57f009c21c813c7cbdc5496b5aba362e9",
+      "output_sha256": "9b57e85639f54567a6d653aaa3ba9157ee491e5b47be19bce6bf9d61a511a69c"
+    },
+    "visit-text": {
+      "source_sha256": "13778b3c784003be4c85b82029005792587e72aeab8a4371b9e1f48e6f1f46b1",
+      "output_sha256": "86ab687c258041a27f45a04f260f703ceaa3799248f3ec18a17a74f831d9c259"
+    },
+    "visit-text-dark": {
+      "source_sha256": "10c8ae0aa141db29ea19ba173cacfa560ae2c2fffd2ebbeada39b33ddca837e9",
+      "output_sha256": "d33814f177a8f6a4deefe0237e7e717d80490444db1f2b15339d6cd9e7439a06"
+    },
+    "summary": {
+      "source_sha256": "8df86bf949b7893af36dfb4757c48cf762107234662f88c8e822d9f831b753c3",
+      "output_sha256": "15eedd9a0dfb22cce10cf59f30d42b8724755c0560e57e5d2a2e6b2012a3e800"
+    },
+    "summary-dark": {
+      "source_sha256": "1360deb00ec248f7d8e499ed0198c2f8c76e7f526be10932360da7985db55f4c",
+      "output_sha256": "e809449f2dfc5096629e92eca46a911caf3527703238bb5709280a0911a818e3"
+    },
+    "medications": {
+      "source_sha256": "c77ba71bccfcfbeeb687cf42486ff6ec075e05469192b1a7c05b5638b8085d5f",
+      "output_sha256": "1f4da8a60ecfad95955b44beeb562b5f030337514138e7b19f62a1afd93ad54c"
+    },
+    "medications-dark": {
+      "source_sha256": "33f4915930802ab1f5be2f8e64821ae3e9ff817d2478b5d45a1d986a37a30b18",
+      "output_sha256": "edfbf89eabcd9f453f3f9c6df26edea5c9406dd34afbaf97473165631cebc418"
+    },
+    "medication-detail": {
+      "source_sha256": "311133b17ca0bedab67382ba15b85589ac626b7946ac531878e2d991923a0002",
+      "output_sha256": "742e0a13babe4fffd0603e070af302b9c788d290b73f584bf9662e5464f58b22"
+    },
+    "medication-detail-dark": {
+      "source_sha256": "8516971626b26ed0a3bee4814283154cd69a42912d7ab1391b1c47d7e8f6fe14",
+      "output_sha256": "95c281d2d26be5090e63860ceed7a361ed706c4e9107b61ab5c8929386f99bec"
+    },
+    "ask": {
+      "source_sha256": "756f6d22ce12161a477083ff22261377eb7175ece9c8df9f1536534df4e57725",
+      "output_sha256": "e16347c8eacdca33828d5b9be5401a0da01f6a1e3259e279f14e965737d58586"
+    },
+    "ask-dark": {
+      "source_sha256": "fef4f4a0a21590c72c64d9679bc38862eed0b17edf6e1d8836359d16bdac689d",
+      "output_sha256": "453f9d760464a6b8b3effb38a0d24c364bc2556fba596c7aed7b363c5b21977d"
+    },
+    "questions": {
+      "source_sha256": "d514a74a9ae48783986e722c13c9badf5402c411bd430ae4f3c77939f2905b1a",
+      "output_sha256": "8c1aa35c2b060b91414cac58a972146022c6e9f51b5edbe15ea2af69515e2fa8"
+    },
+    "questions-dark": {
+      "source_sha256": "efcc2ca88b8d6e91a862905ec08eeee0f9631ee926e323657f1aa44e926d93a0",
+      "output_sha256": "fcde9ccdea1722e6ca167555329a288a8c0d368396f47d0dcf03dd3e18de1dab"
+    },
+    "know-me": {
+      "source_sha256": "b10e59013b5449ff64abce64d1dba925dc32b3783f4e9a286593fef42204ca82",
+      "output_sha256": "718bdd21918990a678d42d1476e67ff6a4164738e16f30aaa9f99bb65e65c92e"
+    },
+    "know-me-dark": {
+      "source_sha256": "ebdbd7d73f8c907707ff53bbdf36442d18ae22743253a0565ef54d2c2a7d14ee",
+      "output_sha256": "e2242facd70792df118ffecce3719b2f741f65fa09321ee38250512cee6d3547"
+    }
+  }
+}

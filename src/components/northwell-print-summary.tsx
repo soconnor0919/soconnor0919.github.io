@@ -127,7 +127,7 @@ export function NorthwellPrintSummary() {
           <div className="mx-auto w-[210px]">
             <div>
               <Image
-                src="/screenshots/product-bezel-2026-08-24-unified-type/home-black.webp"
+                src="/screenshots/native-marketing-2026-10-20-v2/home.webp"
                 alt="Medscribe home screen"
                 width={1350}
                 height={2760}

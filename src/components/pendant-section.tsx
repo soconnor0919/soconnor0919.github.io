@@ -6,7 +6,7 @@ export function PendantSection() {
     <section id="pendant" aria-labelledby="pendant-title" className="medscribe-hardware scroll-mt-24 overflow-hidden px-4 py-16 sm:px-6 lg:py-24">
       <div className="mx-auto grid max-w-6xl items-center gap-4 lg:grid-cols-2 lg:gap-20">
         <figure className="mx-auto w-full max-w-[31rem] -rotate-3 drop-shadow-[12px_24px_24px_rgba(4,24,19,0.2)]">
-          <Image src="/device/pendant-v4/pendant-card.webp" alt="Medscribe pendant with rounded edges, a continuous cord through the rear attachment, and a readable Know Me card" width={2000} height={2400} sizes="(min-width: 1024px) 496px, 90vw" quality={92} className="h-auto w-full" />
+          <Image src="/device/pendant-marketing-2026-10-20/pendant-card.webp" alt="Medscribe pendant with rounded edges, a continuous cord through the rear attachment, and a readable Know Me card" width={2000} height={2400} sizes="(min-width: 1024px) 496px, 90vw" quality={92} className="h-auto w-full" />
         </figure>
         <div className="pb-4">
           <h2 id="pendant-title" className="font-display max-w-lg text-[clamp(2.8rem,4.5vw,4rem)] leading-[1.04] font-semibold tracking-[-0.03em] text-balance">Small enough to wear.<br />Personal enough to matter.</h2>

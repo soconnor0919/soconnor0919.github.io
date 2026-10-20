@@ -26,15 +26,15 @@ export function KnowMeSection() {
           <div className="relative isolate aspect-square">
             <div className="absolute top-[2%] right-[12%] w-[40%] rotate-6 drop-shadow-[0_18px_20px_rgba(12,44,38,0.16)]">
               <ProductDevice
-                src="/device/phone-know-me-v1/know-me.webp"
-                darkSrc="/device/phone-know-me-v1/know-me-dark.webp"
-                alt="Alex Morgan’s Know Me record in the Medscribe iPhone app, with matching allergies, conditions, medications, and care contact"
+                src="/screenshots/native-marketing-2026-10-20-v2/know-me.webp"
+                darkSrc="/screenshots/native-marketing-2026-10-20-v2/know-me-dark.webp"
+                alt="Alex Morgan’s Know Me record in the Medscribe iPhone app, with reviewed allergies, conditions, medications, and care contact"
                 sizes="(min-width: 640px) 256px, 40vw"
               />
             </div>
             <div className="absolute top-[14%] left-[8%] z-10 w-[49%] -rotate-6 drop-shadow-[12px_24px_18px_rgba(12,44,38,0.24)]">
               <Image
-                src="/device/pearl-v5/medscribe-sd-card-cutout.webp"
+                src="/device/pearl-marketing-2026-10-20/medscribe-sd-card-cutout.webp"
                 alt="The complete Medscribe companion showing Alex Morgan’s Know Me card"
                 width={1454}
                 height={2114}
