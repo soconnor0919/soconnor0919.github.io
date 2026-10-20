@@ -97,7 +97,7 @@ const accessFit = [
 export default function HomePage() {
   return (
     <>
-      <section className="section-wash relative isolate min-h-[calc(100svh-4rem)] overflow-hidden px-4 pt-12 sm:px-6 sm:pt-16 lg:pt-20">
+      <section className="section-wash relative isolate overflow-hidden px-4 pt-8 sm:px-6 sm:pt-10 lg:pt-12">
         <div className="mx-auto max-w-7xl text-center">
           <div className="animate-fade-in-up flex items-center justify-center gap-3">
             <span className="bg-success-light text-success rounded-full px-3 py-1.5 text-xs font-bold tracking-[0.12em] uppercase">
@@ -107,7 +107,7 @@ export default function HomePage() {
               {productRelease.platforms}
             </span>
           </div>
-          <h1 className="animate-fade-in-up-delay-1 text-foreground font-display mx-auto mt-7 max-w-6xl text-[clamp(3.6rem,9vw,8.5rem)] leading-[0.86] font-semibold tracking-[-0.055em]">
+          <h1 className="animate-fade-in-up-delay-1 text-foreground font-display mx-auto mt-7 max-w-6xl text-[clamp(3.4rem,8vw,6.5rem)] leading-[0.94] font-semibold tracking-[-0.04em]">
             Carry the context.
           </h1>
           <p className="animate-fade-in-up-delay-2 text-muted-foreground mx-auto mt-7 max-w-2xl text-lg leading-relaxed sm:text-xl lg:text-2xl">
@@ -127,24 +127,24 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="relative mx-auto mt-10 h-[42rem] max-w-5xl sm:h-[52rem] lg:mt-6 lg:h-[60rem]">
-          <div className="absolute top-24 left-1/2 w-[17rem] -translate-x-[86%] -rotate-6 sm:top-28 sm:w-[22rem] lg:top-32 lg:w-[26rem]">
+        <div className="relative mx-auto mt-8 h-[38rem] max-w-5xl sm:h-[46rem] lg:mt-6 lg:h-[52rem]">
+          <div className="absolute top-16 left-1/2 w-[15rem] -translate-x-[86%] -rotate-6 sm:top-20 sm:w-[19rem] lg:top-24 lg:w-[22rem]">
             <ProductDevice
               src="/screenshots/native-marketing-2026-10-20-v2/summary.webp"
               darkSrc="/screenshots/native-marketing-2026-10-20-v2/summary-dark.webp"
               alt="Medscribe visit summary in a Silver iPhone product bezel"
               className="pitch-device-motion pitch-device-drift-left"
-              sizes="(min-width: 1024px) 416px, (min-width: 640px) 352px, 272px"
+              sizes="(min-width: 1024px) 352px, (min-width: 640px) 304px, 240px"
               priority
             />
           </div>
-          <div className="absolute top-0 left-1/2 z-10 w-[18rem] -translate-x-[14%] rotate-5 sm:w-[23rem] lg:w-[28rem]">
+          <div className="absolute top-0 left-1/2 z-10 w-[16rem] -translate-x-[14%] rotate-5 sm:w-[20rem] lg:w-[24rem]">
             <ProductDevice
               src="/screenshots/native-marketing-2026-10-20-v2/home.webp"
               darkSrc="/screenshots/native-marketing-2026-10-20-v2/home-dark.webp"
               alt="Medscribe home screen in a Silver iPhone product bezel"
               className="pitch-device-motion pitch-device-drift-right"
-              sizes="(min-width: 1024px) 448px, (min-width: 640px) 368px, 288px"
+              sizes="(min-width: 1024px) 384px, (min-width: 640px) 320px, 256px"
               priority
             />
           </div>
@@ -154,12 +154,12 @@ export default function HomePage() {
         </p>
       </section>
 
-      <section className="pitch-lazy section-wash px-4 pt-12 pb-20 sm:px-6 lg:pt-16 lg:pb-24">
+      <section className="pitch-lazy section-wash px-4 pt-8 pb-12 sm:px-6 lg:pt-10 lg:pb-16">
         <div className="pitch-copy-motion mx-auto max-w-6xl text-center">
           <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase">
             The connected picture
           </p>
-          <h2 className="text-foreground font-display mx-auto mt-6 max-w-5xl text-[clamp(2.8rem,7vw,6.5rem)] leading-[0.98] font-semibold tracking-[-0.045em]">
+          <h2 className="text-foreground font-display mx-auto mt-6 max-w-5xl text-[clamp(2.5rem,5.5vw,4.5rem)] leading-[0.98] font-semibold tracking-[-0.045em]">
             Care happens in fragments. Your context shouldn&apos;t.
           </h2>
           <p className="text-muted-foreground mx-auto mt-6 max-w-2xl text-lg leading-relaxed sm:text-xl">
@@ -170,8 +170,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="pitch-lazy px-4 py-20 sm:px-6 lg:py-28">
-        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.78fr_1.22fr] lg:gap-20">
+      <section className="pitch-lazy px-4 py-14 sm:px-6 lg:py-18">
+        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.78fr_1.22fr] lg:gap-12">
           <div className="lg:sticky lg:top-28 lg:h-fit">
             <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase">
               After the visit
@@ -193,11 +193,11 @@ export default function HomePage() {
             </div>
           </div>
 
-          <ol className="space-y-6 sm:space-y-8">
+          <ol className="space-y-5">
             {visitMoments.map((moment, index) => (
               <li
                 key={moment.number}
-                className="pitch-card-motion surface-panel relative overflow-hidden rounded-[2.5rem] px-5 pt-7 sm:px-10 sm:pt-9"
+                className="pitch-card-motion surface-panel relative overflow-hidden rounded-[1.75rem] px-5 pt-6 sm:grid sm:grid-cols-[1fr_12rem] sm:gap-4 sm:p-6"
               >
                 <div className="relative z-10 max-w-xl">
                   <div className="flex items-center gap-3">
@@ -216,13 +216,13 @@ export default function HomePage() {
                   </p>
                 </div>
                 <div className="bg-primary-light/45 absolute -right-36 bottom-14 -z-0 size-96 rounded-full blur-3xl" />
-                <div className="relative mx-auto mt-8 w-[min(72vw,20rem)] translate-y-10">
+                <div className="relative mx-auto mt-6 h-[22rem] w-[15rem] translate-y-6 sm:mt-0 sm:h-[23rem] sm:w-[13rem]">
                   <ProductDevice
                     src={moment.image}
                     darkSrc={moment.darkImage}
                     alt={moment.alt}
                     className={`pitch-device-motion ${index % 2 === 0 ? "pitch-device-drift-right" : "pitch-device-drift-left"}`}
-                    sizes="(min-width: 1024px) 336px, (min-width: 640px) 320px, 72vw"
+                    sizes="(min-width: 640px) 208px, 240px"
                   />
                 </div>
               </li>
@@ -231,13 +231,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="pitch-lazy section-wash text-foreground relative isolate overflow-hidden px-4 py-20 sm:px-6 lg:py-28">
+      <section className="pitch-lazy section-wash text-foreground relative isolate overflow-hidden px-4 py-14 sm:px-6 lg:py-18">
         <div className="mx-auto max-w-7xl">
           <div className="pitch-copy-motion mx-auto max-w-4xl text-center">
             <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase">
               Between visits
             </p>
-            <h2 className="font-display mt-5 text-[clamp(3rem,7vw,6.7rem)] leading-[0.94] font-semibold tracking-[-0.045em]">
+            <h2 className="font-display mt-5 text-[clamp(2.5rem,5.5vw,4.5rem)] leading-[0.94] font-semibold tracking-[-0.045em]">
               Keep the medication picture current.
             </h2>
             <p className="text-muted-foreground mx-auto mt-6 max-w-2xl text-lg leading-relaxed sm:text-xl">
@@ -246,7 +246,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="mt-12 grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-6">
+          <div className="mt-8 grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-6">
             <div className="relative mx-auto h-[36rem] w-full max-w-2xl sm:h-[44rem] lg:h-[50rem]">
               <div className="absolute top-12 left-[4%] w-[15rem] -rotate-6 sm:top-16 sm:w-[19rem] lg:w-[22rem]">
                 <ProductDevice
@@ -301,7 +301,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="pitch-lazy section-wash overflow-hidden px-4 py-20 sm:px-6 lg:py-28">
+      <section className="pitch-lazy section-wash overflow-hidden px-4 py-14 sm:px-6 lg:py-18">
         <div
           id="questions"
           className="mx-auto grid max-w-7xl scroll-mt-24 items-center gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:gap-16"
@@ -351,9 +351,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="pitch-lazy overflow-hidden px-4 py-20 sm:px-6 lg:py-28">
+      <section className="pitch-lazy overflow-hidden px-4 py-14 sm:px-6 lg:py-18">
         <div className="mx-auto max-w-7xl">
-          <div className="grid items-center gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:gap-20">
+          <div className="grid items-center gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:gap-12">
             <div className="relative mx-auto w-[min(70vw,24rem)]">
               <div className="bg-primary-light/70 absolute inset-[12%_-12%_8%] -z-10 rounded-[4rem] blur-2xl" />
               <ProductDevice
@@ -368,7 +368,7 @@ export default function HomePage() {
               <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase">
                 At the handoff
               </p>
-              <h2 className="text-foreground font-display mt-5 max-w-2xl text-[clamp(3.2rem,6vw,6.2rem)] leading-[0.95] font-semibold tracking-[-0.045em]">
+              <h2 className="text-foreground font-display mt-5 max-w-2xl text-[clamp(2.5rem,5vw,4.25rem)] leading-[0.95] font-semibold tracking-[-0.045em]">
                 Help someone understand you sooner.
               </h2>
               <p className="text-muted-foreground mt-6 max-w-xl text-lg leading-relaxed sm:text-xl">
@@ -406,7 +406,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="surface-panel text-foreground mt-16 overflow-hidden rounded-[2.5rem] p-6 sm:p-8 lg:p-12">
+          <div className="surface-panel text-foreground mt-10 overflow-hidden rounded-[1.75rem] p-6 sm:p-8 lg:p-8">
             <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
               <div>
                 <HeartHandshake
@@ -466,14 +466,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="pitch-lazy section-wash text-foreground relative isolate overflow-hidden px-4 py-20 sm:px-6 lg:py-28">
+      <section className="pitch-lazy section-wash text-foreground relative isolate overflow-hidden px-4 py-14 sm:px-6 lg:py-18">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_0%,rgba(45,212,191,0.13),transparent_36%)]" />
         <div className="mx-auto max-w-7xl">
           <div className="pitch-copy-motion mx-auto max-w-4xl text-center">
-            <p className="text-xs font-bold tracking-[0.2em] text-teal-300 uppercase">
+            <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase">
               Privacy that feels personal
             </p>
-            <h2 className="font-display mt-5 text-[clamp(3.2rem,7vw,7rem)] leading-[0.92] font-semibold tracking-[-0.05em]">
+            <h2 className="font-display mt-5 text-[clamp(2.5rem,5.5vw,4.5rem)] leading-[0.92] font-semibold tracking-[-0.05em]">
               Your health story stays centered on you.
             </h2>
             <p className="text-muted-foreground mx-auto mt-6 max-w-2xl text-lg leading-relaxed sm:text-xl">
@@ -482,21 +482,21 @@ export default function HomePage() {
             </p>
           </div>
 
-          <dl className="md:divide-border-soft mt-14 grid gap-6 md:grid-cols-3 md:gap-0 md:divide-x">
+          <dl className="md:divide-border-soft mt-8 grid gap-6 md:grid-cols-3 md:gap-0 md:divide-x">
             {proofStats.map((stat) => (
               <div
                 key={stat.label}
-                className="px-5 py-2 text-center md:py-8 lg:py-10"
+                className="px-5 py-2 text-center md:py-5 lg:py-6"
               >
                 <dt className="text-muted-foreground text-sm">{stat.label}</dt>
-                <dd className="font-display text-primary mt-3 text-4xl font-semibold tracking-[-0.04em] sm:text-5xl lg:text-6xl">
+                <dd className="font-display text-primary mt-3 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl lg:text-5xl">
                   {stat.value}
                 </dd>
               </div>
             ))}
           </dl>
 
-          <div className="mt-12 grid gap-4 md:grid-cols-3">
+          <div className="mt-8 grid gap-4 md:grid-cols-3">
             {privacyPrinciples.map((principle) => {
               const Icon = principle.icon;
 
@@ -530,9 +530,9 @@ export default function HomePage() {
 
       <section
         id="partners"
-        className="pitch-lazy overflow-hidden px-4 py-16 sm:px-6 lg:py-20"
+        className="pitch-lazy overflow-hidden px-4 py-12 sm:px-6 lg:py-16"
       >
-        <div className="section-wash surface-panel mx-auto grid max-w-6xl gap-8 rounded-[2.75rem] px-6 py-10 sm:px-10 lg:grid-cols-[1fr_auto] lg:items-center lg:px-14 lg:py-12">
+        <div className="section-wash surface-panel mx-auto grid max-w-6xl gap-8 rounded-[2rem] px-6 py-8 sm:px-10 lg:grid-cols-[1fr_auto] lg:items-center lg:px-10 lg:py-10">
           <div className="pitch-copy-motion max-w-3xl">
             <div className="bg-primary-light text-primary flex size-12 items-center justify-center rounded-2xl">
               <FileText className="size-6" aria-hidden="true" />
@@ -576,12 +576,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="pitch-lazy px-4 py-20 sm:px-6 lg:py-24">
-        <div className="pitch-copy-motion section-wash surface-panel mx-auto w-full max-w-6xl overflow-hidden rounded-[3rem] px-6 py-14 text-center sm:px-10 lg:px-20 lg:py-18">
+      <section className="pitch-lazy px-4 py-14 sm:px-6 lg:py-18">
+        <div className="pitch-copy-motion section-wash surface-panel mx-auto w-full max-w-6xl overflow-hidden rounded-[2rem] px-6 py-10 text-center sm:px-10 lg:px-14 lg:py-12">
           <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase">
             Made for people who carry a lot
           </p>
-          <h2 className="text-foreground font-display mx-auto mt-5 max-w-4xl text-[clamp(3.2rem,7vw,7rem)] leading-[0.92] font-semibold tracking-[-0.05em]">
+          <h2 className="text-foreground font-display mx-auto mt-5 max-w-4xl text-[clamp(2.5rem,5.5vw,4.5rem)] leading-[0.92] font-semibold tracking-[-0.05em]">
             Carry the record that helps you move forward.
           </h2>
           <p className="text-muted-foreground mx-auto mt-6 max-w-2xl text-lg leading-relaxed sm:text-xl">
